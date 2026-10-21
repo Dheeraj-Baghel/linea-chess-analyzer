@@ -1,0 +1,361 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.crossbrowser.config.js",
+      "--project=webkit"
+    ],
+    "configFile": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/playwright.crossbrowser.config.js",
+    "rootDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/qa/global-setup.js",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "suite": "crossbrowser",
+      "production": false,
+      "liveProvider": false,
+      "engine": "Stockfish 19 Lite 19.0.1",
+      "engineVariant": "lite-single",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/crossbrowser-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "suite": "crossbrowser",
+          "production": false,
+          "liveProvider": false,
+          "engine": "Stockfish 19 Lite 19.0.1",
+          "engineVariant": "lite-single",
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "crossbrowser.spec.js"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/crossbrowser-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "suite": "crossbrowser",
+          "production": false,
+          "liveProvider": false,
+          "engine": "Stockfish 19 Lite 19.0.1",
+          "engineVariant": "lite-single",
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "crossbrowser.spec.js"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/crossbrowser-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "suite": "crossbrowser",
+          "production": false,
+          "liveProvider": false,
+          "engine": "Stockfish 19 Lite 19.0.1",
+          "engineVariant": "lite-single",
+          "actualWorkers": 1
+        },
+        "name": "webkit",
+        "testDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "snapshotDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "crossbrowser.spec.js"
+        ],
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4336",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "video": "off",
+          "actionTimeout": 10000,
+          "navigationTimeout": 20000,
+          "serviceWorkers": "block",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "screen": {
+            "width": 1792,
+            "height": 1120
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "artifacts/testing/crossbrowser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npx vite --host 127.0.0.1 --port 4336 --strictPort",
+      "url": "http://127.0.0.1:4336",
+      "reuseExistingServer": false,
+      "timeout": 30000,
+      "gracefulShutdown": {
+        "signal": "SIGTERM",
+        "timeout": 5000
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "crossbrowser.spec.js",
+      "file": "crossbrowser.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "native engine and actual MultiPV candidates work across browser engines",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 48450,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T05:46:48.789Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIyNy4yIiwKICAibGl2ZVByb3ZpZGVyIjogZmFsc2UsCiAgImZvbnRzIjogInN5c3RlbSBmYWxsYmFjayIsCiAgIndvcmtlcnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiCiAgXSwKICAiZXJyb3JzIjogW10sCiAgInJlcXVlc3RGYWlsdXJlcyI6IFtdLAogICJodHRwRXJyb3JzIjogW10sCiAgIm5hdmlnYXRpb25zIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9zYW1wbGUiCiAgXSwKICAidW5leHBlY3RlZFJlcXVlc3RzIjogW10KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "175949cae299d49db778-41b087c9dfb4ab94ad9d",
+          "file": "crossbrowser.spec.js",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "drag variations, annotations and navigation work across browser engines",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 75609,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T05:47:45.671Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/crossbrowser-output/crossbrowser-drag-variatio-d163b-work-across-browser-engines-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIyNy4yIiwKICAibGl2ZVByb3ZpZGVyIjogZmFsc2UsCiAgImZvbnRzIjogInN5c3RlbSBmYWxsYmFjayIsCiAgIndvcmtlcnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiCiAgXSwKICAiZXJyb3JzIjogW10sCiAgInJlcXVlc3RGYWlsdXJlcyI6IFtdLAogICJodHRwRXJyb3JzIjogW10sCiAgIm5hdmlnYXRpb25zIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9zYW1wbGUiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9yZXZpZXcvbG9jYWwlM0EwMjg3ZDA5MDYyZTkxMzExMWM0ODgyZTcxYjViOGJlZGQzODExMDdiNzk2OGRhNzkwMzYwNzBlMjRlZDA3ZGQ2P3BseT0wJnZpZXc9cmVwb3J0IgogIF0sCiAgInVuZXhwZWN0ZWRSZXF1ZXN0cyI6IFtdCn0="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/crossbrowser-output/crossbrowser-drag-variatio-d163b-work-across-browser-engines-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/crossbrowser-output/crossbrowser-drag-variatio-d163b-work-across-browser-engines-webkit/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "175949cae299d49db778-5ec79d07452e236526b5",
+          "file": "crossbrowser.spec.js",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "review accuracy, coaching and keyboard dialogs work across browser engines",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 34448,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T05:49:09.720Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIyNy4yIiwKICAibGl2ZVByb3ZpZGVyIjogZmFsc2UsCiAgImZvbnRzIjogInN5c3RlbSBmYWxsYmFjayIsCiAgIndvcmtlcnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiCiAgXSwKICAiZXJyb3JzIjogW10sCiAgInJlcXVlc3RGYWlsdXJlcyI6IFtdLAogICJodHRwRXJyb3JzIjogW10sCiAgIm5hdmlnYXRpb25zIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9zYW1wbGUiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9yZXZpZXcvbG9jYWwlM0E5MTE0ZjlhNjk3ZjlhYjViNmQyYWQyOTQ1OGY3MzMyNmM3YjQ0ZTNkYzMxM2M4NjE5ZGUxNjM4MDExZmY5YjQ2P3BseT0wJnZpZXc9cmVwb3J0IgogIF0sCiAgInVuZXhwZWN0ZWRSZXF1ZXN0cyI6IFtdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "175949cae299d49db778-3f55f83e41d2c60d2297",
+          "file": "crossbrowser.spec.js",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "small-screen layout, promotion and reduced-motion accessibility work across browser engines",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 22402,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T05:49:50.502Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIyNy4yIiwKICAibGl2ZVByb3ZpZGVyIjogZmFsc2UsCiAgImZvbnRzIjogInN5c3RlbSBmYWxsYmFjayIsCiAgIndvcmtlcnMiOiBbXSwKICAiZXJyb3JzIjogW10sCiAgInJlcXVlc3RGYWlsdXJlcyI6IFtdLAogICJodHRwRXJyb3JzIjogW10sCiAgIm5hdmlnYXRpb25zIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9zYW1wbGUiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9yZXZpZXcvbG9jYWwlM0FiZjUyNTY3ZWRjOGQ4ZTUyN2M2M2RlYWZjMDNlMWM1NmIxNWM5NDI4ZTg5ZDI1YzU3NzI3ZDg3ODU1MWQ5ZGNiP3BseT0wJnZpZXc9bW92ZXMiCiAgXSwKICAidW5leHBlY3RlZFJlcXVlc3RzIjogW10KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "175949cae299d49db778-aa0617b1b7573f899ec7",
+          "file": "crossbrowser.spec.js",
+          "line": 34,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-21T05:46:31.740Z",
+    "duration": 222445.299,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

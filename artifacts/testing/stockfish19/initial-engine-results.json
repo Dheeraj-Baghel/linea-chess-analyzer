@@ -1,0 +1,814 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.engine.config.js"
+    ],
+    "configFile": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/playwright.engine.config.js",
+    "rootDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/qa/global-setup.js",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "suite": "engine-browser",
+      "production": false,
+      "liveProvider": false,
+      "engine": "Stockfish 19 Lite 19.0.1",
+      "engineVariant": "lite-single",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/engine-browser-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "suite": "engine-browser",
+          "production": false,
+          "liveProvider": false,
+          "engine": "Stockfish 19 Lite 19.0.1",
+          "engineVariant": "lite-single",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "engine-review.spec.js",
+          "smoke.spec.js"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/engine-browser-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "suite": "engine-browser",
+          "production": false,
+          "liveProvider": false,
+          "engine": "Stockfish 19 Lite 19.0.1",
+          "engineVariant": "lite-single",
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "snapshotDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "engine-review.spec.js",
+          "smoke.spec.js"
+        ],
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4336",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "video": "off",
+          "actionTimeout": 10000,
+          "navigationTimeout": 20000,
+          "serviceWorkers": "block",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "artifacts/testing/engine-browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npx vite --host 127.0.0.1 --port 4336 --strictPort",
+      "url": "http://127.0.0.1:4336",
+      "reuseExistingServer": false,
+      "timeout": 30000,
+      "gracefulShutdown": {
+        "signal": "SIGTERM",
+        "timeout": 5000
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "engine-review.spec.js",
+      "file": "engine-review.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "position and review workers report the pinned Stockfish 19 Lite UCI identity without cross-origin isolation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4160,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T18:05:43.716Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiCiAgXSwKICAiZXJyb3JzIjogW10sCiAgInJlcXVlc3RGYWlsdXJlcyI6IFtdLAogICJodHRwRXJyb3JzIjogW10sCiAgIm5hdmlnYXRpb25zIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi8iCiAgXSwKICAidW5leHBlY3RlZFJlcXVlc3RzIjogW10KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-b8d69c17f5d3df0de17e",
+          "file": "engine-review.spec.js",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "real Stockfish evaluates, supports 3 candidate lines, pause/resume and separate engine arrows",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6691,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T18:05:48.812Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-5c287dc195141b803f29",
+          "file": "engine-review.spec.js",
+          "line": 59,
+          "column": 1
+        },
+        {
+          "title": "an actual engine candidate matching the recorded move navigates the mainline without a false variation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3103,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T18:05:55.511Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-79d8a565c321d84e0f12",
+          "file": "engine-review.spec.js",
+          "line": 98,
+          "column": 1
+        },
+        {
+          "title": "real engine remains responsive through rapid navigation and keeps score bound to the current position",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3151,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T18:05:58.621Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-0cbef44666775ba7ee2a",
+          "file": "engine-review.spec.js",
+          "line": 118,
+          "column": 1
+        },
+        {
+          "title": "full real-engine review yields genuine per-player accuracy, move feedback, coaching and chart navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3629,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T18:06:01.778Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiCiAgXSwKICAiZXJyb3JzIjogW10sCiAgInJlcXVlc3RGYWlsdXJlcyI6IFtdLAogICJodHRwRXJyb3JzIjogW10sCiAgIm5hdmlnYXRpb25zIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi8iCiAgXSwKICAidW5leHBlY3RlZFJlcXVlc3RzIjogW10KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-91c1410a31369604a5e7",
+          "file": "engine-review.spec.js",
+          "line": 136,
+          "column": 1
+        },
+        {
+          "title": "review pause and resume preserves coverage and game replacement cancels old work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5548,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T18:06:05.414Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE5LWxpdGUtc2luZ2xlLmpzIgogIF0sCiAgImVycm9ycyI6IFtdLAogICJyZXF1ZXN0RmFpbHVyZXMiOiBbXSwKICAiaHR0cEVycm9ycyI6IFtdLAogICJuYXZpZ2F0aW9ucyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvIgogIF0sCiAgInVuZXhwZWN0ZWRSZXF1ZXN0cyI6IFtdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-4dc0d42fecc15a9fade3",
+          "file": "engine-review.spec.js",
+          "line": 160,
+          "column": 1
+        },
+        {
+          "title": "real local engine js transport failure is explained and retry restores analysis without losing the board",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1467,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T18:06:10.968Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogWwogICAgewogICAgICAidXJsIjogImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE5LWxpdGUtc2luZ2xlLmpzIiwKICAgICAgImVycm9yIjogIm5ldDo6RVJSX0FCT1JURUQiCiAgICB9CiAgXSwKICAiaHR0cEVycm9ycyI6IFtdLAogICJuYXZpZ2F0aW9ucyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvIgogIF0sCiAgInVuZXhwZWN0ZWRSZXF1ZXN0cyI6IFtdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-82142a6711ea0bfcfd1f",
+          "file": "engine-review.spec.js",
+          "line": 180,
+          "column": 37
+        },
+        {
+          "title": "real local engine wasm transport failure is explained and retry restores analysis without losing the board",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 37130,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T18:06:12.444Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiCiAgXSwKICAiZXJyb3JzIjogWwogICAgIkZhaWxlZCB0byBmZXRjaCIKICBdLAogICJyZXF1ZXN0RmFpbHVyZXMiOiBbCiAgICB7CiAgICAgICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUud2FzbSIsCiAgICAgICJlcnJvciI6ICJuZXQ6OkVSUl9GQUlMRUQiCiAgICB9CiAgXSwKICAiaHR0cEVycm9ycyI6IFtdLAogICJuYXZpZ2F0aW9ucyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvIgogIF0sCiAgInVuZXhwZWN0ZWRSZXF1ZXN0cyI6IFtdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-03e39f5cd024f7bca883",
+          "file": "engine-review.spec.js",
+          "line": 180,
+          "column": 37
+        },
+        {
+          "title": "native Stockfish sacrifice evidence and Linea Brilliant classification use actual engine scores",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 944,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T18:06:49.582Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiCiAgXSwKICAiZXJyb3JzIjogW10sCiAgInJlcXVlc3RGYWlsdXJlcyI6IFtdLAogICJodHRwRXJyb3JzIjogW10sCiAgIm5hdmlnYXRpb25zIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi8iCiAgXSwKICAidW5leHBlY3RlZFJlcXVlc3RzIjogW10KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-904a9369f5303883dc3d",
+          "file": "engine-review.spec.js",
+          "line": 192,
+          "column": 1
+        },
+        {
+          "title": "historical exchange sacrifice is marked Brilliant only after native engine validation",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 3837,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"d1d4\"\u001b[39m\nReceived: \u001b[31m\"a5c6\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"d1d4\"\u001b[39m\nReceived: \u001b[31m\"a5c6\"\u001b[39m\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/engine-review.spec.js:241:31",
+                    "location": {
+                      "file": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/engine-review.spec.js",
+                      "column": 31,
+                      "line": 241
+                    },
+                    "snippet": "  239 |   }, pgn);\n  240 |   await fs.writeFile('artifacts/testing/kasparov-sacrifice.json', JSON.stringify(result, null, 2));\n> 241 |   expect(result.before.pv[0]).toBe('d1d4'); expect(result.candidate?.cost).toBe(3);\n      |                               ^\n  242 |   expect(result.accepted.depth).toBeGreaterThanOrEqual(12); expect(result.final.type).toBe('brilliant');\n  243 | });\n  244 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/engine-review.spec.js",
+                        "column": 31,
+                        "line": 241
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"d1d4\"\u001b[39m\nReceived: \u001b[31m\"a5c6\"\u001b[39m\n\n  239 |   }, pgn);\n  240 |   await fs.writeFile('artifacts/testing/kasparov-sacrifice.json', JSON.stringify(result, null, 2));\n> 241 |   expect(result.before.pv[0]).toBe('d1d4'); expect(result.candidate?.cost).toBe(3);\n      |                               ^\n  242 |   expect(result.accepted.depth).toBeGreaterThanOrEqual(12); expect(result.final.type).toBe('brilliant');\n  243 | });\n  244 |\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/engine-review.spec.js:241:31"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T18:06:50.539Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/engine-browser-output/engine-review-historical-e-6ab26-er-native-engine-validation-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiCiAgXSwKICAiZXJyb3JzIjogW10sCiAgInJlcXVlc3RGYWlsdXJlcyI6IFtdLAogICJodHRwRXJyb3JzIjogW10sCiAgIm5hdmlnYXRpb25zIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi8iCiAgXSwKICAidW5leHBlY3RlZFJlcXVlc3RzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/engine-browser-output/engine-review-historical-e-6ab26-er-native-engine-validation-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/engine-browser-output/engine-review-historical-e-6ab26-er-native-engine-validation-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/engine-review.spec.js",
+                    "column": 31,
+                    "line": 241
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-7d23fee6c3bd72be8b8f",
+          "file": "engine-review.spec.js",
+          "line": 224,
+          "column": 1
+        },
+        {
+          "title": "the actual game-review UI shows an independently verified Brilliant sacrifice",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 26357,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.move-entry').last()\nExpected pattern: \u001b[32m/Rxd4\\s*!!\\s*Brilliant/\u001b[39m\nReceived string:  \u001b[31m\"Rxd4✓Excellent\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.move-entry').last() with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.move-entry').last()\u001b[22m\n\u001b[2m    24 × locator resolved to <button class=\"move-entry \" aria-label=\"Go to 24. Rxd4, Excellent\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"Rxd4✓Excellent\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.move-entry').last()\nExpected pattern: \u001b[32m/Rxd4\\s*!!\\s*Brilliant/\u001b[39m\nReceived string:  \u001b[31m\"Rxd4✓Excellent\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.move-entry').last() with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.move-entry').last()\u001b[22m\n\u001b[2m    24 × locator resolved to <button class=\"move-entry \" aria-label=\"Go to 24. Rxd4, Excellent\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"Rxd4✓Excellent\"\u001b[22m\n\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/engine-review.spec.js:252:52",
+                    "location": {
+                      "file": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/engine-review.spec.js",
+                      "column": 52,
+                      "line": 252
+                    },
+                    "snippet": "  250 |   await page.getByRole('button', { name: 'Review game', exact: true }).click();\n  251 |   await expect(page.getByRole('button', { name: 'Reviewed', exact: true })).toBeVisible({ timeout: 100000 });\n> 252 |   await expect(page.locator('.move-entry').last()).toHaveText(/Rxd4\\s*!!\\s*Brilliant/);\n      |                                                    ^\n  253 |   await page.locator('.move-entry').last().click(); await expect(page.locator('.board-feedback')).toHaveText('!!');\n  254 |   await page.getByRole('tab', { name: 'Insights', exact: true }).click();\n  255 |   await expect(page.locator('.brilliant-evidence')).toHaveText(/acceptance search depth 1[2-6]/);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/engine-review.spec.js",
+                        "column": 52,
+                        "line": 252
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.move-entry').last()\nExpected pattern: \u001b[32m/Rxd4\\s*!!\\s*Brilliant/\u001b[39m\nReceived string:  \u001b[31m\"Rxd4✓Excellent\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.move-entry').last() with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.move-entry').last()\u001b[22m\n\u001b[2m    24 × locator resolved to <button class=\"move-entry \" aria-label=\"Go to 24. Rxd4, Excellent\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"Rxd4✓Excellent\"\u001b[22m\n\n\n  250 |   await page.getByRole('button', { name: 'Review game', exact: true }).click();\n  251 |   await expect(page.getByRole('button', { name: 'Reviewed', exact: true })).toBeVisible({ timeout: 100000 });\n> 252 |   await expect(page.locator('.move-entry').last()).toHaveText(/Rxd4\\s*!!\\s*Brilliant/);\n      |                                                    ^\n  253 |   await page.locator('.move-entry').last().click(); await expect(page.locator('.board-feedback')).toHaveText('!!');\n  254 |   await page.getByRole('tab', { name: 'Insights', exact: true }).click();\n  255 |   await expect(page.locator('.brilliant-evidence')).toHaveText(/acceptance search depth 1[2-6]/);\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/engine-review.spec.js:252:52"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T18:06:55.078Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/engine-browser-output/engine-review-the-actual-g-a4839-erified-Brilliant-sacrifice-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiCiAgXSwKICAiZXJyb3JzIjogW10sCiAgInJlcXVlc3RGYWlsdXJlcyI6IFtdLAogICJodHRwRXJyb3JzIjogW10sCiAgIm5hdmlnYXRpb25zIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi8iCiAgXSwKICAidW5leHBlY3RlZFJlcXVlc3RzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/engine-browser-output/engine-review-the-actual-g-a4839-erified-Brilliant-sacrifice-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/engine-browser-output/engine-review-the-actual-g-a4839-erified-Brilliant-sacrifice-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/engine-review.spec.js",
+                    "column": 52,
+                    "line": 252
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-2982300a77de85c26691",
+          "file": "engine-review.spec.js",
+          "line": 245,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "smoke.spec.js",
+      "file": "smoke.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "desktop opens the real board and completes local engine evaluation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2138,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T18:07:22.452Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2c14808d47b386fba9eb-251167061c1d043f318c",
+          "file": "smoke.spec.js",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "an optional Google Fonts outage does not block the board or real local engine",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1671,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T18:07:25.239Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbCiAgICB7CiAgICAgICJtZXNzYWdlIjogIkZhaWxlZCB0byBsb2FkIHJlc291cmNlOiBuZXQ6OkVSUl9JTlRFUk5FVF9ESVNDT05ORUNURUQiLAogICAgICAibG9jYXRpb24iOiB7CiAgICAgICAgInVybCI6ICJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PURNK1NhbnM6d2dodEA0MDA7NTAwOzU1MDs2MDA7NjUwOzcwMCZkaXNwbGF5PXN3YXAiLAogICAgICAgICJsaW5lIjogMCwKICAgICAgICAiY29sdW1uIjogMCwKICAgICAgICAibGluZU51bWJlciI6IDAsCiAgICAgICAgImNvbHVtbk51bWJlciI6IDAKICAgICAgfQogICAgfQogIF0sCiAgInJlcXVlc3RGYWlsdXJlcyI6IFsKICAgIHsKICAgICAgInVybCI6ICJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PURNK1NhbnM6d2dodEA0MDA7NTAwOzU1MDs2MDA7NjUwOzcwMCZkaXNwbGF5PXN3YXAiLAogICAgICAiZXJyb3IiOiAibmV0OjpFUlJfSU5URVJORVRfRElTQ09OTkVDVEVEIgogICAgfQogIF0sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2c14808d47b386fba9eb-d6fb3cac82444ae2707d",
+          "file": "smoke.spec.js",
+          "line": 33,
+          "column": 1
+        }
+      ],
+      "suites": [
+        {
+          "title": "mobile smoke",
+          "file": "smoke.spec.js",
+          "line": 57,
+          "column": 6,
+          "specs": [
+            {
+              "title": "mobile opens the board and switches between all workspace views",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 850,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T18:07:26.916Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "runtime-and-network-evidence",
+                          "contentType": "application/json",
+                          "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c14808d47b386fba9eb-4352d6010376cd5540ba",
+              "file": "smoke.spec.js",
+              "line": 59,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-19T18:05:42.050Z",
+    "duration": 105801.53,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

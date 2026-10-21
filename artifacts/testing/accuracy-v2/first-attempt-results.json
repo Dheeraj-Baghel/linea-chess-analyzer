@@ -1,0 +1,280 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.engine.config.js",
+      "accuracy-v2.spec.js"
+    ],
+    "configFile": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/playwright.engine.config.js",
+    "rootDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/qa/global-setup.js",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "suite": "engine-browser",
+      "production": false,
+      "liveProvider": false,
+      "engine": "Stockfish 19 Lite 19.0.1",
+      "engineVariant": "lite-single",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/engine-browser-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "suite": "engine-browser",
+          "production": false,
+          "liveProvider": false,
+          "engine": "Stockfish 19 Lite 19.0.1",
+          "engineVariant": "lite-single",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "engine-review.spec.js",
+          "smoke.spec.js",
+          "accuracy-v2.spec.js"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/engine-browser-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "suite": "engine-browser",
+          "production": false,
+          "liveProvider": false,
+          "engine": "Stockfish 19 Lite 19.0.1",
+          "engineVariant": "lite-single",
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "snapshotDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "engine-review.spec.js",
+          "smoke.spec.js",
+          "accuracy-v2.spec.js"
+        ],
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4336",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "video": "off",
+          "actionTimeout": 10000,
+          "navigationTimeout": 20000,
+          "serviceWorkers": "block",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "artifacts/testing/engine-browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npx vite --host 127.0.0.1 --port 4336 --strictPort",
+      "url": "http://127.0.0.1:4336",
+      "reuseExistingServer": false,
+      "timeout": 30000,
+      "gracefulShutdown": {
+        "signal": "SIGTERM",
+        "timeout": 5000
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "accuracy-v2.spec.js",
+      "file": "accuracy-v2.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "accuracy v2 actual Stockfish scenarios, common-root search and policy variability",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 133004,
+                  "error": {
+                    "message": "Error: White-mate/balanced\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"\"\u001b[39m\nReceived: \u001b[31m\"Stockfish could not start. Use a browser with WebAssembly enabled, then retry.\"\u001b[39m",
+                    "stack": "Error: White-mate/balanced\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"\"\u001b[39m\nReceived: \u001b[31m\"Stockfish could not start. Use a browser with WebAssembly enabled, then retry.\"\u001b[39m\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/accuracy-v2.spec.js:49:68",
+                    "location": {
+                      "file": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/accuracy-v2.spec.js",
+                      "column": 68,
+                      "line": 49
+                    },
+                    "snippet": "  47 |   await fs.writeFile(`${output}/native-benchmark.json`, JSON.stringify(evidence, null, 2));\n  48 |   for (const result of evidence.results) {\n> 49 |     expect(result.state.error, `${result.name}/${result.quality}`).toBe('');\n     |                                                                    ^\n  50 |     expect(result.state.done).toBe(result.state.total); expect(result.state.generation.accuracyVersion).toBe('linea-accuracy-2');\n  51 |     for (const record of Object.values(result.state.records)) {\n  52 |       expect(record.accuracy).toBeGreaterThanOrEqual(0); expect(record.accuracy).toBeLessThanOrEqual(100);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/accuracy-v2.spec.js",
+                        "column": 68,
+                        "line": 49
+                      },
+                      "message": "Error: White-mate/balanced\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"\"\u001b[39m\nReceived: \u001b[31m\"Stockfish could not start. Use a browser with WebAssembly enabled, then retry.\"\u001b[39m\n\n  47 |   await fs.writeFile(`${output}/native-benchmark.json`, JSON.stringify(evidence, null, 2));\n  48 |   for (const result of evidence.results) {\n> 49 |     expect(result.state.error, `${result.name}/${result.quality}`).toBe('');\n     |                                                                    ^\n  50 |     expect(result.state.done).toBe(result.state.total); expect(result.state.generation.accuracyVersion).toBe('linea-accuracy-2');\n  51 |     for (const record of Object.values(result.state.records)) {\n  52 |       expect(record.accuracy).toBeGreaterThanOrEqual(0); expect(record.accuracy).toBeLessThanOrEqual(100);\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/accuracy-v2.spec.js:49:68"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T10:27:25.893Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/engine-browser-output/accuracy-v2-accuracy-v2-ac-fd7f6-arch-and-policy-variability-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE5LWxpdGUtc2luZ2xlLmpzIiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE5LWxpdGUtc2luZ2xlLmpzIiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE5LWxpdGUtc2luZ2xlLmpzIiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE5LWxpdGUtc2luZ2xlLmpzIiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE5LWxpdGUtc2luZ2xlLmpzIiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE5LWxpdGUtc2luZ2xlLmpzIgogIF0sCiAgImVycm9ycyI6IFtdLAogICJyZXF1ZXN0RmFpbHVyZXMiOiBbXSwKICAiaHR0cEVycm9ycyI6IFtdLAogICJuYXZpZ2F0aW9ucyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvIgogIF0sCiAgInVuZXhwZWN0ZWRSZXF1ZXN0cyI6IFtdCn0="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/engine-browser-output/accuracy-v2-accuracy-v2-ac-fd7f6-arch-and-policy-variability-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/engine-browser-output/accuracy-v2-accuracy-v2-ac-fd7f6-arch-and-policy-variability-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/accuracy-v2.spec.js",
+                    "column": 68,
+                    "line": 49
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fd5d0b8a0f717f6b1467-a42275c40d8f82e762b3",
+          "file": "accuracy-v2.spec.js",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "review evidence download, eleven labels, experimental Elo and mobile accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7242,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T10:29:40.609Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiCiAgXSwKICAiZXJyb3JzIjogW10sCiAgInJlcXVlc3RGYWlsdXJlcyI6IFtdLAogICJodHRwRXJyb3JzIjogW10sCiAgIm5hdmlnYXRpb25zIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi8iCiAgXSwKICAidW5leHBlY3RlZFJlcXVlc3RzIjogW10KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fd5d0b8a0f717f6b1467-c803060ff49cba6ba5cb",
+          "file": "accuracy-v2.spec.js",
+          "line": 68,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-20T10:27:24.048Z",
+    "duration": 144358.21300000002,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

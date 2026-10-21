@@ -1,0 +1,906 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.engine.config.js"
+    ],
+    "configFile": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/playwright.engine.config.js",
+    "rootDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/qa/global-setup.js",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "suite": "engine-browser",
+      "production": false,
+      "liveProvider": false,
+      "engine": "Stockfish 19 Lite 19.0.1",
+      "engineVariant": "lite-single",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/engine-browser-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "suite": "engine-browser",
+          "production": false,
+          "liveProvider": false,
+          "engine": "Stockfish 19 Lite 19.0.1",
+          "engineVariant": "lite-single",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "engine-review.spec.js",
+          "smoke.spec.js",
+          "accuracy-v2.spec.js"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/engine-browser-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "suite": "engine-browser",
+          "production": false,
+          "liveProvider": false,
+          "engine": "Stockfish 19 Lite 19.0.1",
+          "engineVariant": "lite-single",
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "snapshotDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "engine-review.spec.js",
+          "smoke.spec.js",
+          "accuracy-v2.spec.js"
+        ],
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4336",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "video": "off",
+          "actionTimeout": 10000,
+          "navigationTimeout": 20000,
+          "serviceWorkers": "block",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "artifacts/testing/engine-browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npx vite --host 127.0.0.1 --port 4336 --strictPort",
+      "url": "http://127.0.0.1:4336",
+      "reuseExistingServer": false,
+      "timeout": 30000,
+      "gracefulShutdown": {
+        "signal": "SIGTERM",
+        "timeout": 5000
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "accuracy-v2.spec.js",
+      "file": "accuracy-v2.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "accuracy v2 actual Stockfish scenarios, common-root search and policy variability",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 153637,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:01:36.144Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE5LWxpdGUtc2luZ2xlLmpzIiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE5LWxpdGUtc2luZ2xlLmpzIiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE5LWxpdGUtc2luZ2xlLmpzIiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE5LWxpdGUtc2luZ2xlLmpzIiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE5LWxpdGUtc2luZ2xlLmpzIiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE5LWxpdGUtc2luZ2xlLmpzIiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE5LWxpdGUtc2luZ2xlLmpzIgogIF0sCiAgImVycm9ycyI6IFtdLAogICJyZXF1ZXN0RmFpbHVyZXMiOiBbXSwKICAiaHR0cEVycm9ycyI6IFtdLAogICJuYXZpZ2F0aW9ucyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvIgogIF0sCiAgInVuZXhwZWN0ZWRSZXF1ZXN0cyI6IFtdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fd5d0b8a0f717f6b1467-a42275c40d8f82e762b3",
+          "file": "accuracy-v2.spec.js",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "review evidence download, eleven labels, experimental Elo and mobile accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16927,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:04:10.352Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTkxMTRmOWE2OTdmOWFiNWI2ZDJhZDI5NDU4ZjczMzI2YzdiNDRlM2RjMzEzYzg2MTlkZTE2MzgwMTFmZjliNDY/cGx5PTAmdmlldz1tb3ZlcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTkxMTRmOWE2OTdmOWFiNWI2ZDJhZDI5NDU4ZjczMzI2YzdiNDRlM2RjMzEzYzg2MTlkZTE2MzgwMTFmZjliNDY/cGx5PTAmdmlldz1yZXBvcnQiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9yZXZpZXcvbG9jYWwlM0E0Yzk1YTVjZWE4ZmYwYmVlMWRlMTZmOTU5YjE3ZWMxNGRmNGFkNThhMTBhZTYwOTllZWQwZDk0ODIzODhkN2ViP3BseT0wJnZpZXc9bW92ZXMiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9yZXZpZXcvbG9jYWwlM0E0Yzk1YTVjZWE4ZmYwYmVlMWRlMTZmOTU5YjE3ZWMxNGRmNGFkNThhMTBhZTYwOTllZWQwZDk0ODIzODhkN2ViP3BseT0wJnZpZXc9cmVwb3J0IgogIF0sCiAgInVuZXhwZWN0ZWRSZXF1ZXN0cyI6IFtdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fd5d0b8a0f717f6b1467-c803060ff49cba6ba5cb",
+          "file": "accuracy-v2.spec.js",
+          "line": 77,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "engine-review.spec.js",
+      "file": "engine-review.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "one shared position/review worker reports the pinned Stockfish 19 Lite UCI identity without cross-origin isolation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4898,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:04:27.337Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTkxMTRmOWE2OTdmOWFiNWI2ZDJhZDI5NDU4ZjczMzI2YzdiNDRlM2RjMzEzYzg2MTlkZTE2MzgwMTFmZjliNDY/cGx5PTAmdmlldz1tb3ZlcyIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-2725be8b2448f19281c8",
+          "file": "engine-review.spec.js",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "real Stockfish evaluates, supports 3 candidate lines, pause/resume and separate engine arrows",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6835,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:04:32.241Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-5c287dc195141b803f29",
+          "file": "engine-review.spec.js",
+          "line": 60,
+          "column": 1
+        },
+        {
+          "title": "an actual engine candidate matching the recorded move navigates the mainline without a false variation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3136,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:04:39.082Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTQxZmI1NDFkZDJjMDg0ZGU5NmVhOGJiOTAwZTNjNTlkNmViOWVmODQ0YjNhYTNlNDVmYzA1ODU4YTI1YzBmYmU/cGx5PTAmdmlldz1tb3ZlcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTQxZmI1NDFkZDJjMDg0ZGU5NmVhOGJiOTAwZTNjNTlkNmViOWVmODQ0YjNhYTNlNDVmYzA1ODU4YTI1YzBmYmU/cGx5PTEmdmlldz1tb3ZlcyIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-79d8a565c321d84e0f12",
+          "file": "engine-review.spec.js",
+          "line": 99,
+          "column": 1
+        },
+        {
+          "title": "real engine remains responsive through rapid navigation and keeps score bound to the current position",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3499,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:04:42.224Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTAyODdkMDkwNjJlOTEzMTExYzQ4ODJlNzFiNWI4YmVkZDM4MTEwN2I3OTY4ZGE3OTAzNjA3MGUyNGVkMDdkZDY/cGx5PTAmdmlldz1tb3ZlcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTAyODdkMDkwNjJlOTEzMTExYzQ4ODJlNzFiNWI4YmVkZDM4MTEwN2I3OTY4ZGE3OTAzNjA3MGUyNGVkMDdkZDY/cGx5PTEmdmlldz1tb3ZlcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTAyODdkMDkwNjJlOTEzMTExYzQ4ODJlNzFiNWI4YmVkZDM4MTEwN2I3OTY4ZGE3OTAzNjA3MGUyNGVkMDdkZDY/cGx5PTImdmlldz1tb3ZlcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTAyODdkMDkwNjJlOTEzMTExYzQ4ODJlNzFiNWI4YmVkZDM4MTEwN2I3OTY4ZGE3OTAzNjA3MGUyNGVkMDdkZDY/cGx5PTMmdmlldz1tb3ZlcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTAyODdkMDkwNjJlOTEzMTExYzQ4ODJlNzFiNWI4YmVkZDM4MTEwN2I3OTY4ZGE3OTAzNjA3MGUyNGVkMDdkZDY/cGx5PTQmdmlldz1tb3ZlcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTAyODdkMDkwNjJlOTEzMTExYzQ4ODJlNzFiNWI4YmVkZDM4MTEwN2I3OTY4ZGE3OTAzNjA3MGUyNGVkMDdkZDY/cGx5PTUmdmlldz1tb3ZlcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTAyODdkMDkwNjJlOTEzMTExYzQ4ODJlNzFiNWI4YmVkZDM4MTEwN2I3OTY4ZGE3OTAzNjA3MGUyNGVkMDdkZDY/cGx5PTYmdmlldz1tb3ZlcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTAyODdkMDkwNjJlOTEzMTExYzQ4ODJlNzFiNWI4YmVkZDM4MTEwN2I3OTY4ZGE3OTAzNjA3MGUyNGVkMDdkZDY/cGx5PTcmdmlldz1tb3ZlcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTAyODdkMDkwNjJlOTEzMTExYzQ4ODJlNzFiNWI4YmVkZDM4MTEwN2I3OTY4ZGE3OTAzNjA3MGUyNGVkMDdkZDY/cGx5PTYmdmlldz1tb3ZlcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTAyODdkMDkwNjJlOTEzMTExYzQ4ODJlNzFiNWI4YmVkZDM4MTEwN2I3OTY4ZGE3OTAzNjA3MGUyNGVkMDdkZDY/cGx5PTUmdmlldz1tb3ZlcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTAyODdkMDkwNjJlOTEzMTExYzQ4ODJlNzFiNWI4YmVkZDM4MTEwN2I3OTY4ZGE3OTAzNjA3MGUyNGVkMDdkZDY/cGx5PTQmdmlldz1tb3ZlcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTAyODdkMDkwNjJlOTEzMTExYzQ4ODJlNzFiNWI4YmVkZDM4MTEwN2I3OTY4ZGE3OTAzNjA3MGUyNGVkMDdkZDY/cGx5PTMmdmlldz1tb3ZlcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTAyODdkMDkwNjJlOTEzMTExYzQ4ODJlNzFiNWI4YmVkZDM4MTEwN2I3OTY4ZGE3OTAzNjA3MGUyNGVkMDdkZDY/cGx5PTQmdmlldz1tb3ZlcyIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-0cbef44666775ba7ee2a",
+          "file": "engine-review.spec.js",
+          "line": 119,
+          "column": 1
+        },
+        {
+          "title": "full real-engine review yields genuine per-player accuracy, move feedback, coaching and chart navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4849,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:04:45.730Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTkxMTRmOWE2OTdmOWFiNWI2ZDJhZDI5NDU4ZjczMzI2YzdiNDRlM2RjMzEzYzg2MTlkZTE2MzgwMTFmZjliNDY/cGx5PTAmdmlldz1tb3ZlcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTkxMTRmOWE2OTdmOWFiNWI2ZDJhZDI5NDU4ZjczMzI2YzdiNDRlM2RjMzEzYzg2MTlkZTE2MzgwMTFmZjliNDY/cGx5PTAmdmlldz1yZXBvcnQiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9yZXZpZXcvbG9jYWwlM0E5MTE0ZjlhNjk3ZjlhYjViNmQyYWQyOTQ1OGY3MzMyNmM3YjQ0ZTNkYzMxM2M4NjE5ZGUxNjM4MDExZmY5YjQ2P3BseT00JnZpZXc9cmVwb3J0IiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvcmV2aWV3L2xvY2FsJTNBOTExNGY5YTY5N2Y5YWI1YjZkMmFkMjk0NThmNzMzMjZjN2I0NGUzZGMzMTNjODYxOWRlMTYzODAxMWZmOWI0Nj9wbHk9MyZ2aWV3PXJlcG9ydCIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTkxMTRmOWE2OTdmOWFiNWI2ZDJhZDI5NDU4ZjczMzI2YzdiNDRlM2RjMzEzYzg2MTlkZTE2MzgwMTFmZjliNDY/cGx5PTImdmlldz1yZXBvcnQiCiAgXSwKICAidW5leHBlY3RlZFJlcXVlc3RzIjogW10KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-91c1410a31369604a5e7",
+          "file": "engine-review.spec.js",
+          "line": 138,
+          "column": 1
+        },
+        {
+          "title": "review pause and resume preserves coverage and game replacement cancels old work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6996,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:04:50.585Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTAyODdkMDkwNjJlOTEzMTExYzQ4ODJlNzFiNWI4YmVkZDM4MTEwN2I3OTY4ZGE3OTAzNjA3MGUyNGVkMDdkZDY/cGx5PTAmdmlldz1tb3ZlcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTAyODdkMDkwNjJlOTEzMTExYzQ4ODJlNzFiNWI4YmVkZDM4MTEwN2I3OTY4ZGE3OTAzNjA3MGUyNGVkMDdkZDY/cGx5PTAmdmlldz1yZXBvcnQiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9yZXZpZXcvbG9jYWwlM0E5MTE0ZjlhNjk3ZjlhYjViNmQyYWQyOTQ1OGY3MzMyNmM3YjQ0ZTNkYzMxM2M4NjE5ZGUxNjM4MDExZmY5YjQ2P3BseT0wJnZpZXc9bW92ZXMiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9yZXZpZXcvbG9jYWwlM0E5MTE0ZjlhNjk3ZjlhYjViNmQyYWQyOTQ1OGY3MzMyNmM3YjQ0ZTNkYzMxM2M4NjE5ZGUxNjM4MDExZmY5YjQ2P3BseT0wJnZpZXc9cmVwb3J0IiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvcmV2aWV3L2xvY2FsJTNBNjM4NDc4OWU5M2M3ODQ3NjVhM2I0NmU5YmYwYmUzZmUyZjMyZjMxYjg0ZDlkOWFkZDY3ZDI0NjA4OTQ3OTMzMz9wbHk9MCZ2aWV3PW1vdmVzIiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvcmV2aWV3L2xvY2FsJTNBNjM4NDc4OWU5M2M3ODQ3NjVhM2I0NmU5YmYwYmUzZmUyZjMyZjMxYjg0ZDlkOWFkZDY3ZDI0NjA4OTQ3OTMzMz9wbHk9MCZ2aWV3PXJlcG9ydCIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-4dc0d42fecc15a9fade3",
+          "file": "engine-review.spec.js",
+          "line": 162,
+          "column": 1
+        },
+        {
+          "title": "real local engine js transport failure is explained and retry restores analysis without losing the board",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1547,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:04:57.588Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogWwogICAgewogICAgICAidXJsIjogImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE5LWxpdGUtc2luZ2xlLmpzIiwKICAgICAgImVycm9yIjogIm5ldDo6RVJSX0FCT1JURUQiCiAgICB9CiAgXSwKICAiaHR0cEVycm9ycyI6IFtdLAogICJuYXZpZ2F0aW9ucyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvIgogIF0sCiAgInVuZXhwZWN0ZWRSZXF1ZXN0cyI6IFtdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-82142a6711ea0bfcfd1f",
+          "file": "engine-review.spec.js",
+          "line": 195,
+          "column": 37
+        },
+        {
+          "title": "real local engine wasm transport failure is explained and retry restores analysis without losing the board",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 37134,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:04:59.142Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiCiAgXSwKICAiZXJyb3JzIjogWwogICAgIkZhaWxlZCB0byBmZXRjaCIKICBdLAogICJyZXF1ZXN0RmFpbHVyZXMiOiBbCiAgICB7CiAgICAgICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUud2FzbSIsCiAgICAgICJlcnJvciI6ICJuZXQ6OkVSUl9GQUlMRUQiCiAgICB9CiAgXSwKICAiaHR0cEVycm9ycyI6IFtdLAogICJuYXZpZ2F0aW9ucyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvIgogIF0sCiAgInVuZXhwZWN0ZWRSZXF1ZXN0cyI6IFtdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-03e39f5cd024f7bca883",
+          "file": "engine-review.spec.js",
+          "line": 195,
+          "column": 37
+        },
+        {
+          "title": "native Stockfish sacrifice evidence and Linea Brilliant classification use actual engine scores",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1061,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:05:36.284Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-904a9369f5303883dc3d",
+          "file": "engine-review.spec.js",
+          "line": 208,
+          "column": 1
+        },
+        {
+          "title": "historical sacrifice follows Stockfish 19 Lite preference rather than inheriting the old engine label",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3472,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:05:37.352Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-2bac0184ef74e8b4ec85",
+          "file": "engine-review.spec.js",
+          "line": 240,
+          "column": 1
+        },
+        {
+          "title": "historical full-game review UI truthfully shows the new engine classification",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16580,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:05:40.831Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQWVmOTY4ODgyOWZlNDkwNjU0N2Q2YjMxY2YzYjFhNjViN2E5ZTg5MDA0MzNjMGU2ODc4NzE5MTk1YmYwNDMxMGY/cGx5PTAmdmlldz1tb3ZlcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQWVmOTY4ODgyOWZlNDkwNjU0N2Q2YjMxY2YzYjFhNjViN2E5ZTg5MDA0MzNjMGU2ODc4NzE5MTk1YmYwNDMxMGY/cGx5PTQ3JnZpZXc9bW92ZXMiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9yZXZpZXcvbG9jYWwlM0FlZjk2ODg4MjlmZTQ5MDY1NDdkNmIzMWNmM2IxYTY1YjdhOWU4OTAwNDMzYzBlNjg3ODcxOTE5NWJmMDQzMTBmP3BseT00NyZ2aWV3PXJlcG9ydCIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-784fc52e3e3bdcfef0cc",
+          "file": "engine-review.spec.js",
+          "line": 265,
+          "column": 1
+        },
+        {
+          "title": "Stockfish 19 independently validates a drawing sacrifice with before, after and accepting-capture searches",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 727,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:05:57.417Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-be251426dd6c14c94074",
+          "file": "engine-review.spec.js",
+          "line": 297,
+          "column": 1
+        },
+        {
+          "title": "actual game-review UI shows a native Stockfish 19 verified Brilliant without changing the heuristic",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2090,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:05:58.150Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTAxNjE2MmM0ZDM1MzcyYzNiZWZjOWJlMzk1Zjg1NzA5MzA0NGI3YmE4NDk4YjNjZjUwMmE5MzdmNTNiOTdiOTc/cGx5PTAmdmlldz1tb3ZlcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTAxNjE2MmM0ZDM1MzcyYzNiZWZjOWJlMzk1Zjg1NzA5MzA0NGI3YmE4NDk4YjNjZjUwMmE5MzdmNTNiOTdiOTc/cGx5PTEmdmlldz1tb3ZlcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTAxNjE2MmM0ZDM1MzcyYzNiZWZjOWJlMzk1Zjg1NzA5MzA0NGI3YmE4NDk4YjNjZjUwMmE5MzdmNTNiOTdiOTc/cGx5PTEmdmlldz1yZXBvcnQiCiAgXSwKICAidW5leHBlY3RlZFJlcXVlc3RzIjogW10KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-eff81a1564bc39fe146c",
+          "file": "engine-review.spec.js",
+          "line": 324,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "smoke.spec.js",
+      "file": "smoke.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "desktop opens the real board and completes local engine evaluation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2157,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:06:00.261Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2c14808d47b386fba9eb-251167061c1d043f318c",
+          "file": "smoke.spec.js",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "an optional Google Fonts outage does not block the board or real local engine",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2980,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:06:02.425Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbCiAgICB7CiAgICAgICJtZXNzYWdlIjogIkZhaWxlZCB0byBsb2FkIHJlc291cmNlOiBuZXQ6OkVSUl9JTlRFUk5FVF9ESVNDT05ORUNURUQiLAogICAgICAibG9jYXRpb24iOiB7CiAgICAgICAgInVybCI6ICJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PURNK1NhbnM6d2dodEA0MDA7NTAwOzU1MDs2MDA7NjUwOzcwMCZkaXNwbGF5PXN3YXAiLAogICAgICAgICJsaW5lIjogMCwKICAgICAgICAiY29sdW1uIjogMCwKICAgICAgICAibGluZU51bWJlciI6IDAsCiAgICAgICAgImNvbHVtbk51bWJlciI6IDAKICAgICAgfQogICAgfQogIF0sCiAgInJlcXVlc3RGYWlsdXJlcyI6IFsKICAgIHsKICAgICAgInVybCI6ICJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PURNK1NhbnM6d2dodEA0MDA7NTAwOzU1MDs2MDA7NjUwOzcwMCZkaXNwbGF5PXN3YXAiLAogICAgICAiZXJyb3IiOiAibmV0OjpFUlJfSU5URVJORVRfRElTQ09OTkVDVEVEIgogICAgfQogIF0sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2c14808d47b386fba9eb-d6fb3cac82444ae2707d",
+          "file": "smoke.spec.js",
+          "line": 34,
+          "column": 1
+        }
+      ],
+      "suites": [
+        {
+          "title": "mobile smoke",
+          "file": "smoke.spec.js",
+          "line": 59,
+          "column": 6,
+          "specs": [
+            {
+              "title": "mobile opens the board and switches between all workspace views",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1022,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-20T18:06:05.416Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "runtime-and-network-evidence",
+                          "contentType": "application/json",
+                          "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFtdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c14808d47b386fba9eb-4352d6010376cd5540ba",
+              "file": "smoke.spec.js",
+              "line": 61,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-20T18:01:34.025Z",
+    "duration": 272676.874,
+    "expected": 18,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

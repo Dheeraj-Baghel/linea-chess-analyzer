@@ -1,0 +1,69 @@
+{
+  "categories": [
+    {
+      "category": "book",
+      "w": 0,
+      "b": 0
+    },
+    {
+      "category": "forced",
+      "w": 0,
+      "b": 0
+    },
+    {
+      "category": "brilliant",
+      "w": 0,
+      "b": 0
+    },
+    {
+      "category": "great",
+      "w": 0,
+      "b": 0
+    },
+    {
+      "category": "best",
+      "w": 0,
+      "b": 1
+    },
+    {
+      "category": "excellent",
+      "w": 0,
+      "b": 0
+    },
+    {
+      "category": "good",
+      "w": 0,
+      "b": 0
+    },
+    {
+      "category": "inaccuracy",
+      "w": 0,
+      "b": 0
+    },
+    {
+      "category": "mistake",
+      "w": 0,
+      "b": 0
+    },
+    {
+      "category": "miss",
+      "w": 0,
+      "b": 0
+    },
+    {
+      "category": "blunder",
+      "w": 0,
+      "b": 0
+    }
+  ],
+  "w": {
+    "reviewed": 0,
+    "unreviewed": 0,
+    "total": 0
+  },
+  "b": {
+    "reviewed": 1,
+    "unreviewed": 0,
+    "total": 1
+  }
+}

@@ -1,0 +1,1212 @@
+{
+  "observed": [
+    {
+      "gameId": "49bb0c39-7c20-406e-afcc-54a67877b99e",
+      "total": 1,
+      "selectedQuality": "quick",
+      "records": {
+        "1": {
+          "type": "brilliant",
+          "loss": 0,
+          "before": {
+            "rank": 1,
+            "depth": 12,
+            "cp": -11,
+            "mate": null,
+            "pv": [
+              "c3c2",
+              "d2c2",
+              "h1g1",
+              "c2d3",
+              "g1f1",
+              "d3d2",
+              "f1g1",
+              "d2e2",
+              "g1h1",
+              "e2e3",
+              "h1g1",
+              "e3d2"
+            ],
+            "source": "engine",
+            "kind": "search",
+            "exact": false,
+            "nodes": 2998,
+            "nps": 230615,
+            "bestMove": "c3c2",
+            "targetDepth": 12,
+            "budgetMs": 450,
+            "elapsedMs": 15,
+            "generationId": "cd61f37c-859e-4c8c-ab6a-f1b8bcd8890c",
+            "ply": 0,
+            "phase": "position",
+            "fen": "8/8/8/8/8/2R3p1/2pk2P1/7K w - - 0 1",
+            "claims": {
+              "threefold": false,
+              "fiftyMove": false
+            },
+            "legalMovesCount": 13,
+            "evaluatedAt": "2026-10-20T17:59:30.931Z"
+          },
+          "after": {
+            "rank": 1,
+            "depth": 12,
+            "cp": -7,
+            "mate": null,
+            "pv": [
+              "d2c2",
+              "h1g1",
+              "c2d3",
+              "g1h1",
+              "d3d2",
+              "h1g1",
+              "d2c2",
+              "g1f1",
+              "c2d1",
+              "f1g1",
+              "d1d2",
+              "g1f1",
+              "d2e3",
+              "f1e1"
+            ],
+            "source": "engine",
+            "kind": "search",
+            "exact": false,
+            "nodes": 3330,
+            "nps": 416250,
+            "bestMove": "d2c2",
+            "targetDepth": 12,
+            "budgetMs": 450,
+            "elapsedMs": 10,
+            "generationId": "cd61f37c-859e-4c8c-ab6a-f1b8bcd8890c",
+            "ply": 1,
+            "phase": "position",
+            "fen": "8/8/8/8/8/6p1/2Rk2P1/7K b - - 0 1",
+            "claims": {
+              "threefold": false,
+              "fiftyMove": false
+            },
+            "legalMovesCount": 5,
+            "evaluatedAt": "2026-10-20T17:59:30.941Z"
+          },
+          "alternative": "c3c2",
+          "legalMovesCount": 13,
+          "isBookMove": false,
+          "bookSource": null,
+          "provisional": false,
+          "recheck": null,
+          "pvGap": null,
+          "opponentError": false,
+          "brilliance": {
+            "verified": true,
+            "cost": 4,
+            "acceptance": "d2c2",
+            "san": "Kxc2",
+            "offeredPiece": "r",
+            "square": "c2",
+            "evaluation": {
+              "rank": 1,
+              "depth": 12,
+              "cp": -7,
+              "mate": null,
+              "pv": [
+                "h1g1",
+                "c2d2",
+                "g1f1",
+                "d2d1",
+                "f1g1",
+                "d1e2",
+                "g1h1",
+                "e2d3",
+                "h1g1",
+                "d3d4",
+                "g1f1",
+                "d4e5"
+              ],
+              "source": "engine",
+              "kind": "search",
+              "exact": false,
+              "nodes": 1189,
+              "nps": 1189000,
+              "bestMove": "h1g1",
+              "targetDepth": 12,
+              "budgetMs": 600,
+              "elapsedMs": 2,
+              "generationId": "cd61f37c-859e-4c8c-ab6a-f1b8bcd8890c",
+              "ply": 1,
+              "phase": "sacrifice",
+              "fen": "8/8/8/8/8/6p1/2k3P1/7K w - - 0 2",
+              "claims": {
+                "threefold": false,
+                "fiftyMove": false
+              },
+              "legalMovesCount": 1,
+              "evaluatedAt": "2026-10-20T17:59:30.944Z"
+            },
+            "depth": 12,
+            "explanation": "Offers a rook on c2. Bounded legal exchange analysis estimates 4 points at risk; after Kxc2, Stockfish still finds compensation at depth 12."
+          },
+          "accuracy": 100,
+          "provenance": {
+            "generationId": "cd61f37c-859e-4c8c-ab6a-f1b8bcd8890c",
+            "gameId": "49bb0c39-7c20-406e-afcc-54a67877b99e",
+            "gameSignature": "016162c4d35372c3befc9be395f857093044b7ba8498b3cf502a937f53b97b97",
+            "engine": {
+              "name": "Stockfish 19 Lite",
+              "version": "19.0.1",
+              "variant": "lite-single",
+              "threads": 1,
+              "uciName": "Stockfish 19 Lite WASM",
+              "workerUrl": "/engine/stockfish-19-lite-single.js",
+              "wasmUrl": "/engine/stockfish-19-lite-single.wasm",
+              "release": "https://github.com/nmrugg/stockfish.js/releases/tag/v19.0.1",
+              "sourceCommit": "0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6",
+              "workerSha256": "ccb130d7ff29408531c47d859a49f91d59d4f482d05a53eb1a3231a4f624c91a",
+              "wasmSha256": "ee4f115bdb2d32cadf96cada104a05b5ec257d7ad6f57582190b49bc71f096de"
+            },
+            "policy": {
+              "id": "quick",
+              "label": "Quick",
+              "version": "linea-review-policy-2",
+              "targetDepth": 12,
+              "positionMs": 450,
+              "sacrificeMs": 600,
+              "description": "Shorter searches; more depth-limited judgments."
+            },
+            "classifierVersion": "linea-classifier-2",
+            "accuracyVersion": "linea-accuracy-2",
+            "reviewedAt": "2026-10-20T17:59:30.944Z",
+            "ply": 1,
+            "color": "w",
+            "uci": "c3c2",
+            "san": "Rxc2+"
+          },
+          "sacrificeCheck": {
+            "status": "verified",
+            "minimumDepth": 12,
+            "candidate": {
+              "cost": 4,
+              "acceptance": "d2c2",
+              "san": "Kxc2",
+              "fen": "8/8/8/8/8/6p1/2k3P1/7K w - - 0 2",
+              "offeredPiece": "r",
+              "square": "c2",
+              "exchangeCompleteWithinBounds": true
+            },
+            "evaluation": {
+              "rank": 1,
+              "depth": 12,
+              "cp": -7,
+              "mate": null,
+              "pv": [
+                "h1g1",
+                "c2d2",
+                "g1f1",
+                "d2d1",
+                "f1g1",
+                "d1e2",
+                "g1h1",
+                "e2d3",
+                "h1g1",
+                "d3d4",
+                "g1f1",
+                "d4e5"
+              ],
+              "source": "engine",
+              "kind": "search",
+              "exact": false,
+              "nodes": 1189,
+              "nps": 1189000,
+              "bestMove": "h1g1",
+              "targetDepth": 12,
+              "budgetMs": 600,
+              "elapsedMs": 2,
+              "generationId": "cd61f37c-859e-4c8c-ab6a-f1b8bcd8890c",
+              "ply": 1,
+              "phase": "sacrifice",
+              "fen": "8/8/8/8/8/6p1/2k3P1/7K w - - 0 2",
+              "claims": {
+                "threefold": false,
+                "fiftyMove": false
+              },
+              "legalMovesCount": 1,
+              "evaluatedAt": "2026-10-20T17:59:30.944Z"
+            }
+          }
+        }
+      },
+      "positions": {
+        "0": {
+          "rank": 1,
+          "depth": 12,
+          "cp": -11,
+          "mate": null,
+          "pv": [
+            "c3c2",
+            "d2c2",
+            "h1g1",
+            "c2d3",
+            "g1f1",
+            "d3d2",
+            "f1g1",
+            "d2e2",
+            "g1h1",
+            "e2e3",
+            "h1g1",
+            "e3d2"
+          ],
+          "source": "engine",
+          "kind": "search",
+          "exact": false,
+          "nodes": 2998,
+          "nps": 230615,
+          "bestMove": "c3c2",
+          "targetDepth": 12,
+          "budgetMs": 450,
+          "elapsedMs": 15,
+          "generationId": "cd61f37c-859e-4c8c-ab6a-f1b8bcd8890c",
+          "ply": 0,
+          "phase": "position",
+          "fen": "8/8/8/8/8/2R3p1/2pk2P1/7K w - - 0 1",
+          "claims": {
+            "threefold": false,
+            "fiftyMove": false
+          },
+          "legalMovesCount": 13,
+          "evaluatedAt": "2026-10-20T17:59:30.931Z"
+        },
+        "1": {
+          "rank": 1,
+          "depth": 12,
+          "cp": -7,
+          "mate": null,
+          "pv": [
+            "d2c2",
+            "h1g1",
+            "c2d3",
+            "g1h1",
+            "d3d2",
+            "h1g1",
+            "d2c2",
+            "g1f1",
+            "c2d1",
+            "f1g1",
+            "d1d2",
+            "g1f1",
+            "d2e3",
+            "f1e1"
+          ],
+          "source": "engine",
+          "kind": "search",
+          "exact": false,
+          "nodes": 3330,
+          "nps": 416250,
+          "bestMove": "d2c2",
+          "targetDepth": 12,
+          "budgetMs": 450,
+          "elapsedMs": 10,
+          "generationId": "cd61f37c-859e-4c8c-ab6a-f1b8bcd8890c",
+          "ply": 1,
+          "phase": "position",
+          "fen": "8/8/8/8/8/6p1/2Rk2P1/7K b - - 0 1",
+          "claims": {
+            "threefold": false,
+            "fiftyMove": false
+          },
+          "legalMovesCount": 5,
+          "evaluatedAt": "2026-10-20T17:59:30.941Z"
+        }
+      },
+      "acceptances": {
+        "1": {
+          "rank": 1,
+          "depth": 12,
+          "cp": -7,
+          "mate": null,
+          "pv": [
+            "h1g1",
+            "c2d2",
+            "g1f1",
+            "d2d1",
+            "f1g1",
+            "d1e2",
+            "g1h1",
+            "e2d3",
+            "h1g1",
+            "d3d4",
+            "g1f1",
+            "d4e5"
+          ],
+          "source": "engine",
+          "kind": "search",
+          "exact": false,
+          "nodes": 1189,
+          "nps": 1189000,
+          "bestMove": "h1g1",
+          "targetDepth": 12,
+          "budgetMs": 600,
+          "elapsedMs": 2,
+          "generationId": "cd61f37c-859e-4c8c-ab6a-f1b8bcd8890c",
+          "ply": 1,
+          "phase": "sacrifice",
+          "fen": "8/8/8/8/8/6p1/2k3P1/7K w - - 0 2",
+          "claims": {
+            "threefold": false,
+            "fiftyMove": false
+          },
+          "legalMovesCount": 1,
+          "evaluatedAt": "2026-10-20T17:59:30.944Z"
+        }
+      },
+      "rechecks": {},
+      "generation": {
+        "id": "cd61f37c-859e-4c8c-ab6a-f1b8bcd8890c",
+        "game": {
+          "id": "49bb0c39-7c20-406e-afcc-54a67877b99e",
+          "signature": "016162c4d35372c3befc9be395f857093044b7ba8498b3cf502a937f53b97b97",
+          "signatureAlgorithm": "SHA-256",
+          "initialFen": "8/8/8/8/8/2R3p1/2pk2P1/7K w - - 0 1",
+          "plies": 1,
+          "white": "Fixture White",
+          "black": "Fixture Black",
+          "provider": null,
+          "providerGameId": null
+        },
+        "engine": {
+          "name": "Stockfish 19 Lite",
+          "version": "19.0.1",
+          "variant": "lite-single",
+          "threads": 1,
+          "uciName": "Stockfish 19 Lite WASM",
+          "workerUrl": "/engine/stockfish-19-lite-single.js",
+          "wasmUrl": "/engine/stockfish-19-lite-single.wasm",
+          "release": "https://github.com/nmrugg/stockfish.js/releases/tag/v19.0.1",
+          "sourceCommit": "0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6",
+          "workerSha256": "ccb130d7ff29408531c47d859a49f91d59d4f482d05a53eb1a3231a4f624c91a",
+          "wasmSha256": "ee4f115bdb2d32cadf96cada104a05b5ec257d7ad6f57582190b49bc71f096de"
+        },
+        "policy": {
+          "id": "quick",
+          "label": "Quick",
+          "version": "linea-review-policy-2",
+          "targetDepth": 12,
+          "positionMs": 450,
+          "sacrificeMs": 600,
+          "description": "Shorter searches; more depth-limited judgments."
+        },
+        "classifierVersion": "linea-classifier-2",
+        "accuracyVersion": "linea-accuracy-2",
+        "createdAt": "2026-10-20T17:59:30.772Z",
+        "updatedAt": "2026-10-20T17:59:30.944Z",
+        "completedAt": "2026-10-20T17:59:30.944Z",
+        "pausedAt": null,
+        "resumedAt": null,
+        "resumeCount": 0,
+        "status": "completed",
+        "coverage": {
+          "reviewed": 1,
+          "total": 1,
+          "unreviewed": 0,
+          "complete": true
+        }
+      },
+      "running": false,
+      "stage": "",
+      "error": "",
+      "done": 1
+    },
+    {
+      "gameId": "216d8fb7-c6d7-4671-a723-ee870b2f9c1b",
+      "total": 1,
+      "selectedQuality": "balanced",
+      "records": {
+        "1": {
+          "type": "brilliant",
+          "loss": 0,
+          "before": {
+            "rank": 1,
+            "depth": 16,
+            "cp": 0,
+            "mate": null,
+            "pv": [
+              "c3c2",
+              "d2c2",
+              "h1g1",
+              "c2d2",
+              "g1f1",
+              "d2d1",
+              "f1g1"
+            ],
+            "source": "engine",
+            "kind": "search",
+            "exact": false,
+            "nodes": 16319,
+            "nps": 777095,
+            "bestMove": "c3c2",
+            "targetDepth": 16,
+            "budgetMs": 1100,
+            "elapsedMs": 21,
+            "generationId": "2e1ae1f0-b70e-4e3c-a6b6-930a815c9427",
+            "ply": 0,
+            "phase": "position",
+            "fen": "8/8/8/8/8/2R3p1/2pk2P1/7K w - - 0 1",
+            "claims": {
+              "threefold": false,
+              "fiftyMove": false
+            },
+            "legalMovesCount": 13,
+            "evaluatedAt": "2026-10-20T17:59:31.108Z"
+          },
+          "after": {
+            "rank": 1,
+            "depth": 16,
+            "cp": 0,
+            "mate": null,
+            "pv": [
+              "d2c2",
+              "h1g1",
+              "c2d1",
+              "g1f1",
+              "d1d2",
+              "f1g1",
+              "d2c1",
+              "g1f1",
+              "c1d1",
+              "f1g1"
+            ],
+            "source": "engine",
+            "kind": "search",
+            "exact": false,
+            "nodes": 1513,
+            "nps": 1513000,
+            "bestMove": "d2c2",
+            "targetDepth": 16,
+            "budgetMs": 1100,
+            "elapsedMs": 2,
+            "generationId": "2e1ae1f0-b70e-4e3c-a6b6-930a815c9427",
+            "ply": 1,
+            "phase": "position",
+            "fen": "8/8/8/8/8/6p1/2Rk2P1/7K b - - 0 1",
+            "claims": {
+              "threefold": false,
+              "fiftyMove": false
+            },
+            "legalMovesCount": 5,
+            "evaluatedAt": "2026-10-20T17:59:31.110Z"
+          },
+          "alternative": "c3c2",
+          "legalMovesCount": 13,
+          "isBookMove": false,
+          "bookSource": null,
+          "provisional": false,
+          "recheck": null,
+          "pvGap": null,
+          "opponentError": false,
+          "brilliance": {
+            "verified": true,
+            "cost": 4,
+            "acceptance": "d2c2",
+            "san": "Kxc2",
+            "offeredPiece": "r",
+            "square": "c2",
+            "evaluation": {
+              "rank": 1,
+              "depth": 16,
+              "cp": 0,
+              "mate": null,
+              "pv": [
+                "h1g1",
+                "c2d1",
+                "g1f1",
+                "d1d2",
+                "f1g1",
+                "d2e2",
+                "g1h1",
+                "e2d1",
+                "h1g1"
+              ],
+              "source": "engine",
+              "kind": "search",
+              "exact": false,
+              "nodes": 1301,
+              "nps": 433666,
+              "bestMove": "h1g1",
+              "targetDepth": 16,
+              "budgetMs": 1400,
+              "elapsedMs": 3,
+              "generationId": "2e1ae1f0-b70e-4e3c-a6b6-930a815c9427",
+              "ply": 1,
+              "phase": "sacrifice",
+              "fen": "8/8/8/8/8/6p1/2k3P1/7K w - - 0 2",
+              "claims": {
+                "threefold": false,
+                "fiftyMove": false
+              },
+              "legalMovesCount": 1,
+              "evaluatedAt": "2026-10-20T17:59:31.113Z"
+            },
+            "depth": 16,
+            "explanation": "Offers a rook on c2. Bounded legal exchange analysis estimates 4 points at risk; after Kxc2, Stockfish still finds compensation at depth 16."
+          },
+          "accuracy": 100,
+          "provenance": {
+            "generationId": "2e1ae1f0-b70e-4e3c-a6b6-930a815c9427",
+            "gameId": "216d8fb7-c6d7-4671-a723-ee870b2f9c1b",
+            "gameSignature": "016162c4d35372c3befc9be395f857093044b7ba8498b3cf502a937f53b97b97",
+            "engine": {
+              "name": "Stockfish 19 Lite",
+              "version": "19.0.1",
+              "variant": "lite-single",
+              "threads": 1,
+              "uciName": "Stockfish 19 Lite WASM",
+              "workerUrl": "/engine/stockfish-19-lite-single.js",
+              "wasmUrl": "/engine/stockfish-19-lite-single.wasm",
+              "release": "https://github.com/nmrugg/stockfish.js/releases/tag/v19.0.1",
+              "sourceCommit": "0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6",
+              "workerSha256": "ccb130d7ff29408531c47d859a49f91d59d4f482d05a53eb1a3231a4f624c91a",
+              "wasmSha256": "ee4f115bdb2d32cadf96cada104a05b5ec257d7ad6f57582190b49bc71f096de"
+            },
+            "policy": {
+              "id": "balanced",
+              "label": "Balanced",
+              "version": "linea-review-policy-2",
+              "targetDepth": 16,
+              "positionMs": 1100,
+              "sacrificeMs": 1400,
+              "description": "The existing default review budget."
+            },
+            "classifierVersion": "linea-classifier-2",
+            "accuracyVersion": "linea-accuracy-2",
+            "reviewedAt": "2026-10-20T17:59:31.114Z",
+            "ply": 1,
+            "color": "w",
+            "uci": "c3c2",
+            "san": "Rxc2+"
+          },
+          "sacrificeCheck": {
+            "status": "verified",
+            "minimumDepth": 12,
+            "candidate": {
+              "cost": 4,
+              "acceptance": "d2c2",
+              "san": "Kxc2",
+              "fen": "8/8/8/8/8/6p1/2k3P1/7K w - - 0 2",
+              "offeredPiece": "r",
+              "square": "c2",
+              "exchangeCompleteWithinBounds": true
+            },
+            "evaluation": {
+              "rank": 1,
+              "depth": 16,
+              "cp": 0,
+              "mate": null,
+              "pv": [
+                "h1g1",
+                "c2d1",
+                "g1f1",
+                "d1d2",
+                "f1g1",
+                "d2e2",
+                "g1h1",
+                "e2d1",
+                "h1g1"
+              ],
+              "source": "engine",
+              "kind": "search",
+              "exact": false,
+              "nodes": 1301,
+              "nps": 433666,
+              "bestMove": "h1g1",
+              "targetDepth": 16,
+              "budgetMs": 1400,
+              "elapsedMs": 3,
+              "generationId": "2e1ae1f0-b70e-4e3c-a6b6-930a815c9427",
+              "ply": 1,
+              "phase": "sacrifice",
+              "fen": "8/8/8/8/8/6p1/2k3P1/7K w - - 0 2",
+              "claims": {
+                "threefold": false,
+                "fiftyMove": false
+              },
+              "legalMovesCount": 1,
+              "evaluatedAt": "2026-10-20T17:59:31.113Z"
+            }
+          }
+        }
+      },
+      "positions": {
+        "0": {
+          "rank": 1,
+          "depth": 16,
+          "cp": 0,
+          "mate": null,
+          "pv": [
+            "c3c2",
+            "d2c2",
+            "h1g1",
+            "c2d2",
+            "g1f1",
+            "d2d1",
+            "f1g1"
+          ],
+          "source": "engine",
+          "kind": "search",
+          "exact": false,
+          "nodes": 16319,
+          "nps": 777095,
+          "bestMove": "c3c2",
+          "targetDepth": 16,
+          "budgetMs": 1100,
+          "elapsedMs": 21,
+          "generationId": "2e1ae1f0-b70e-4e3c-a6b6-930a815c9427",
+          "ply": 0,
+          "phase": "position",
+          "fen": "8/8/8/8/8/2R3p1/2pk2P1/7K w - - 0 1",
+          "claims": {
+            "threefold": false,
+            "fiftyMove": false
+          },
+          "legalMovesCount": 13,
+          "evaluatedAt": "2026-10-20T17:59:31.108Z"
+        },
+        "1": {
+          "rank": 1,
+          "depth": 16,
+          "cp": 0,
+          "mate": null,
+          "pv": [
+            "d2c2",
+            "h1g1",
+            "c2d1",
+            "g1f1",
+            "d1d2",
+            "f1g1",
+            "d2c1",
+            "g1f1",
+            "c1d1",
+            "f1g1"
+          ],
+          "source": "engine",
+          "kind": "search",
+          "exact": false,
+          "nodes": 1513,
+          "nps": 1513000,
+          "bestMove": "d2c2",
+          "targetDepth": 16,
+          "budgetMs": 1100,
+          "elapsedMs": 2,
+          "generationId": "2e1ae1f0-b70e-4e3c-a6b6-930a815c9427",
+          "ply": 1,
+          "phase": "position",
+          "fen": "8/8/8/8/8/6p1/2Rk2P1/7K b - - 0 1",
+          "claims": {
+            "threefold": false,
+            "fiftyMove": false
+          },
+          "legalMovesCount": 5,
+          "evaluatedAt": "2026-10-20T17:59:31.110Z"
+        }
+      },
+      "acceptances": {
+        "1": {
+          "rank": 1,
+          "depth": 16,
+          "cp": 0,
+          "mate": null,
+          "pv": [
+            "h1g1",
+            "c2d1",
+            "g1f1",
+            "d1d2",
+            "f1g1",
+            "d2e2",
+            "g1h1",
+            "e2d1",
+            "h1g1"
+          ],
+          "source": "engine",
+          "kind": "search",
+          "exact": false,
+          "nodes": 1301,
+          "nps": 433666,
+          "bestMove": "h1g1",
+          "targetDepth": 16,
+          "budgetMs": 1400,
+          "elapsedMs": 3,
+          "generationId": "2e1ae1f0-b70e-4e3c-a6b6-930a815c9427",
+          "ply": 1,
+          "phase": "sacrifice",
+          "fen": "8/8/8/8/8/6p1/2k3P1/7K w - - 0 2",
+          "claims": {
+            "threefold": false,
+            "fiftyMove": false
+          },
+          "legalMovesCount": 1,
+          "evaluatedAt": "2026-10-20T17:59:31.113Z"
+        }
+      },
+      "rechecks": {},
+      "generation": {
+        "id": "2e1ae1f0-b70e-4e3c-a6b6-930a815c9427",
+        "game": {
+          "id": "216d8fb7-c6d7-4671-a723-ee870b2f9c1b",
+          "signature": "016162c4d35372c3befc9be395f857093044b7ba8498b3cf502a937f53b97b97",
+          "signatureAlgorithm": "SHA-256",
+          "initialFen": "8/8/8/8/8/2R3p1/2pk2P1/7K w - - 0 1",
+          "plies": 1,
+          "white": "Fixture White",
+          "black": "Fixture Black",
+          "provider": null,
+          "providerGameId": null
+        },
+        "engine": {
+          "name": "Stockfish 19 Lite",
+          "version": "19.0.1",
+          "variant": "lite-single",
+          "threads": 1,
+          "uciName": "Stockfish 19 Lite WASM",
+          "workerUrl": "/engine/stockfish-19-lite-single.js",
+          "wasmUrl": "/engine/stockfish-19-lite-single.wasm",
+          "release": "https://github.com/nmrugg/stockfish.js/releases/tag/v19.0.1",
+          "sourceCommit": "0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6",
+          "workerSha256": "ccb130d7ff29408531c47d859a49f91d59d4f482d05a53eb1a3231a4f624c91a",
+          "wasmSha256": "ee4f115bdb2d32cadf96cada104a05b5ec257d7ad6f57582190b49bc71f096de"
+        },
+        "policy": {
+          "id": "balanced",
+          "label": "Balanced",
+          "version": "linea-review-policy-2",
+          "targetDepth": 16,
+          "positionMs": 1100,
+          "sacrificeMs": 1400,
+          "description": "The existing default review budget."
+        },
+        "classifierVersion": "linea-classifier-2",
+        "accuracyVersion": "linea-accuracy-2",
+        "createdAt": "2026-10-20T17:59:30.945Z",
+        "updatedAt": "2026-10-20T17:59:31.114Z",
+        "completedAt": "2026-10-20T17:59:31.114Z",
+        "pausedAt": null,
+        "resumedAt": null,
+        "resumeCount": 0,
+        "status": "completed",
+        "coverage": {
+          "reviewed": 1,
+          "total": 1,
+          "unreviewed": 0,
+          "complete": true
+        }
+      },
+      "running": false,
+      "stage": "",
+      "error": "",
+      "done": 1
+    },
+    {
+      "gameId": "dfb32af7-2beb-44e1-8197-2e195e530f21",
+      "total": 1,
+      "selectedQuality": "deeper",
+      "records": {
+        "1": {
+          "type": "brilliant",
+          "loss": 0,
+          "before": {
+            "rank": 1,
+            "depth": 20,
+            "cp": 0,
+            "mate": null,
+            "pv": [
+              "c3c2",
+              "d2c2",
+              "h1g1",
+              "c2d2",
+              "g1f1",
+              "d2d1",
+              "f1g1"
+            ],
+            "source": "engine",
+            "kind": "search",
+            "exact": false,
+            "nodes": 20668,
+            "nps": 826720,
+            "bestMove": "c3c2",
+            "targetDepth": 20,
+            "budgetMs": 3000,
+            "elapsedMs": 25,
+            "generationId": "9ead5bc8-b75b-4d45-ac64-04dfc15f99af",
+            "ply": 0,
+            "phase": "position",
+            "fen": "8/8/8/8/8/2R3p1/2pk2P1/7K w - - 0 1",
+            "claims": {
+              "threefold": false,
+              "fiftyMove": false
+            },
+            "legalMovesCount": 13,
+            "evaluatedAt": "2026-10-20T17:59:31.268Z"
+          },
+          "after": {
+            "rank": 1,
+            "depth": 20,
+            "cp": 0,
+            "mate": null,
+            "pv": [
+              "d2c2",
+              "h1g1",
+              "c2d2",
+              "g1f1",
+              "d2d3",
+              "f1e1",
+              "d3e3",
+              "e1f1",
+              "e3d2",
+              "f1g1",
+              "d2d3",
+              "g1f1",
+              "d3d2"
+            ],
+            "source": "engine",
+            "kind": "search",
+            "exact": false,
+            "nodes": 4476,
+            "nps": 2238000,
+            "bestMove": "d2c2",
+            "targetDepth": 20,
+            "budgetMs": 3000,
+            "elapsedMs": 3,
+            "generationId": "9ead5bc8-b75b-4d45-ac64-04dfc15f99af",
+            "ply": 1,
+            "phase": "position",
+            "fen": "8/8/8/8/8/6p1/2Rk2P1/7K b - - 0 1",
+            "claims": {
+              "threefold": false,
+              "fiftyMove": false
+            },
+            "legalMovesCount": 5,
+            "evaluatedAt": "2026-10-20T17:59:31.271Z"
+          },
+          "alternative": "c3c2",
+          "legalMovesCount": 13,
+          "isBookMove": false,
+          "bookSource": null,
+          "provisional": false,
+          "recheck": null,
+          "pvGap": null,
+          "opponentError": false,
+          "brilliance": {
+            "verified": true,
+            "cost": 4,
+            "acceptance": "d2c2",
+            "san": "Kxc2",
+            "offeredPiece": "r",
+            "square": "c2",
+            "evaluation": {
+              "rank": 1,
+              "depth": 20,
+              "cp": 0,
+              "mate": null,
+              "pv": [
+                "h1g1",
+                "c2d3",
+                "g1h1",
+                "d3e3",
+                "h1g1"
+              ],
+              "source": "engine",
+              "kind": "search",
+              "exact": false,
+              "nodes": 4946,
+              "nps": 2473000,
+              "bestMove": "h1g1",
+              "targetDepth": 20,
+              "budgetMs": 4000,
+              "elapsedMs": 3,
+              "generationId": "9ead5bc8-b75b-4d45-ac64-04dfc15f99af",
+              "ply": 1,
+              "phase": "sacrifice",
+              "fen": "8/8/8/8/8/6p1/2k3P1/7K w - - 0 2",
+              "claims": {
+                "threefold": false,
+                "fiftyMove": false
+              },
+              "legalMovesCount": 1,
+              "evaluatedAt": "2026-10-20T17:59:31.274Z"
+            },
+            "depth": 20,
+            "explanation": "Offers a rook on c2. Bounded legal exchange analysis estimates 4 points at risk; after Kxc2, Stockfish still finds compensation at depth 20."
+          },
+          "accuracy": 100,
+          "provenance": {
+            "generationId": "9ead5bc8-b75b-4d45-ac64-04dfc15f99af",
+            "gameId": "dfb32af7-2beb-44e1-8197-2e195e530f21",
+            "gameSignature": "016162c4d35372c3befc9be395f857093044b7ba8498b3cf502a937f53b97b97",
+            "engine": {
+              "name": "Stockfish 19 Lite",
+              "version": "19.0.1",
+              "variant": "lite-single",
+              "threads": 1,
+              "uciName": "Stockfish 19 Lite WASM",
+              "workerUrl": "/engine/stockfish-19-lite-single.js",
+              "wasmUrl": "/engine/stockfish-19-lite-single.wasm",
+              "release": "https://github.com/nmrugg/stockfish.js/releases/tag/v19.0.1",
+              "sourceCommit": "0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6",
+              "workerSha256": "ccb130d7ff29408531c47d859a49f91d59d4f482d05a53eb1a3231a4f624c91a",
+              "wasmSha256": "ee4f115bdb2d32cadf96cada104a05b5ec257d7ad6f57582190b49bc71f096de"
+            },
+            "policy": {
+              "id": "deeper",
+              "label": "Deeper",
+              "version": "linea-review-policy-2",
+              "targetDepth": 20,
+              "positionMs": 3000,
+              "sacrificeMs": 4000,
+              "description": "More time per position; still not a guaranteed depth or verdict."
+            },
+            "classifierVersion": "linea-classifier-2",
+            "accuracyVersion": "linea-accuracy-2",
+            "reviewedAt": "2026-10-20T17:59:31.274Z",
+            "ply": 1,
+            "color": "w",
+            "uci": "c3c2",
+            "san": "Rxc2+"
+          },
+          "sacrificeCheck": {
+            "status": "verified",
+            "minimumDepth": 12,
+            "candidate": {
+              "cost": 4,
+              "acceptance": "d2c2",
+              "san": "Kxc2",
+              "fen": "8/8/8/8/8/6p1/2k3P1/7K w - - 0 2",
+              "offeredPiece": "r",
+              "square": "c2",
+              "exchangeCompleteWithinBounds": true
+            },
+            "evaluation": {
+              "rank": 1,
+              "depth": 20,
+              "cp": 0,
+              "mate": null,
+              "pv": [
+                "h1g1",
+                "c2d3",
+                "g1h1",
+                "d3e3",
+                "h1g1"
+              ],
+              "source": "engine",
+              "kind": "search",
+              "exact": false,
+              "nodes": 4946,
+              "nps": 2473000,
+              "bestMove": "h1g1",
+              "targetDepth": 20,
+              "budgetMs": 4000,
+              "elapsedMs": 3,
+              "generationId": "9ead5bc8-b75b-4d45-ac64-04dfc15f99af",
+              "ply": 1,
+              "phase": "sacrifice",
+              "fen": "8/8/8/8/8/6p1/2k3P1/7K w - - 0 2",
+              "claims": {
+                "threefold": false,
+                "fiftyMove": false
+              },
+              "legalMovesCount": 1,
+              "evaluatedAt": "2026-10-20T17:59:31.274Z"
+            }
+          }
+        }
+      },
+      "positions": {
+        "0": {
+          "rank": 1,
+          "depth": 20,
+          "cp": 0,
+          "mate": null,
+          "pv": [
+            "c3c2",
+            "d2c2",
+            "h1g1",
+            "c2d2",
+            "g1f1",
+            "d2d1",
+            "f1g1"
+          ],
+          "source": "engine",
+          "kind": "search",
+          "exact": false,
+          "nodes": 20668,
+          "nps": 826720,
+          "bestMove": "c3c2",
+          "targetDepth": 20,
+          "budgetMs": 3000,
+          "elapsedMs": 25,
+          "generationId": "9ead5bc8-b75b-4d45-ac64-04dfc15f99af",
+          "ply": 0,
+          "phase": "position",
+          "fen": "8/8/8/8/8/2R3p1/2pk2P1/7K w - - 0 1",
+          "claims": {
+            "threefold": false,
+            "fiftyMove": false
+          },
+          "legalMovesCount": 13,
+          "evaluatedAt": "2026-10-20T17:59:31.268Z"
+        },
+        "1": {
+          "rank": 1,
+          "depth": 20,
+          "cp": 0,
+          "mate": null,
+          "pv": [
+            "d2c2",
+            "h1g1",
+            "c2d2",
+            "g1f1",
+            "d2d3",
+            "f1e1",
+            "d3e3",
+            "e1f1",
+            "e3d2",
+            "f1g1",
+            "d2d3",
+            "g1f1",
+            "d3d2"
+          ],
+          "source": "engine",
+          "kind": "search",
+          "exact": false,
+          "nodes": 4476,
+          "nps": 2238000,
+          "bestMove": "d2c2",
+          "targetDepth": 20,
+          "budgetMs": 3000,
+          "elapsedMs": 3,
+          "generationId": "9ead5bc8-b75b-4d45-ac64-04dfc15f99af",
+          "ply": 1,
+          "phase": "position",
+          "fen": "8/8/8/8/8/6p1/2Rk2P1/7K b - - 0 1",
+          "claims": {
+            "threefold": false,
+            "fiftyMove": false
+          },
+          "legalMovesCount": 5,
+          "evaluatedAt": "2026-10-20T17:59:31.271Z"
+        }
+      },
+      "acceptances": {
+        "1": {
+          "rank": 1,
+          "depth": 20,
+          "cp": 0,
+          "mate": null,
+          "pv": [
+            "h1g1",
+            "c2d3",
+            "g1h1",
+            "d3e3",
+            "h1g1"
+          ],
+          "source": "engine",
+          "kind": "search",
+          "exact": false,
+          "nodes": 4946,
+          "nps": 2473000,
+          "bestMove": "h1g1",
+          "targetDepth": 20,
+          "budgetMs": 4000,
+          "elapsedMs": 3,
+          "generationId": "9ead5bc8-b75b-4d45-ac64-04dfc15f99af",
+          "ply": 1,
+          "phase": "sacrifice",
+          "fen": "8/8/8/8/8/6p1/2k3P1/7K w - - 0 2",
+          "claims": {
+            "threefold": false,
+            "fiftyMove": false
+          },
+          "legalMovesCount": 1,
+          "evaluatedAt": "2026-10-20T17:59:31.274Z"
+        }
+      },
+      "rechecks": {},
+      "generation": {
+        "id": "9ead5bc8-b75b-4d45-ac64-04dfc15f99af",
+        "game": {
+          "id": "dfb32af7-2beb-44e1-8197-2e195e530f21",
+          "signature": "016162c4d35372c3befc9be395f857093044b7ba8498b3cf502a937f53b97b97",
+          "signatureAlgorithm": "SHA-256",
+          "initialFen": "8/8/8/8/8/2R3p1/2pk2P1/7K w - - 0 1",
+          "plies": 1,
+          "white": "Fixture White",
+          "black": "Fixture Black",
+          "provider": null,
+          "providerGameId": null
+        },
+        "engine": {
+          "name": "Stockfish 19 Lite",
+          "version": "19.0.1",
+          "variant": "lite-single",
+          "threads": 1,
+          "uciName": "Stockfish 19 Lite WASM",
+          "workerUrl": "/engine/stockfish-19-lite-single.js",
+          "wasmUrl": "/engine/stockfish-19-lite-single.wasm",
+          "release": "https://github.com/nmrugg/stockfish.js/releases/tag/v19.0.1",
+          "sourceCommit": "0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6",
+          "workerSha256": "ccb130d7ff29408531c47d859a49f91d59d4f482d05a53eb1a3231a4f624c91a",
+          "wasmSha256": "ee4f115bdb2d32cadf96cada104a05b5ec257d7ad6f57582190b49bc71f096de"
+        },
+        "policy": {
+          "id": "deeper",
+          "label": "Deeper",
+          "version": "linea-review-policy-2",
+          "targetDepth": 20,
+          "positionMs": 3000,
+          "sacrificeMs": 4000,
+          "description": "More time per position; still not a guaranteed depth or verdict."
+        },
+        "classifierVersion": "linea-classifier-2",
+        "accuracyVersion": "linea-accuracy-2",
+        "createdAt": "2026-10-20T17:59:31.114Z",
+        "updatedAt": "2026-10-20T17:59:31.274Z",
+        "completedAt": "2026-10-20T17:59:31.274Z",
+        "pausedAt": null,
+        "resumedAt": null,
+        "resumeCount": 0,
+        "status": "completed",
+        "coverage": {
+          "reviewed": 1,
+          "total": 1,
+          "unreviewed": 0,
+          "complete": true
+        }
+      },
+      "running": false,
+      "stage": "",
+      "error": "",
+      "done": 1
+    }
+  ],
+  "workerJobs": [
+    {
+      "url": "/engine/stockfish-19-lite-single.js",
+      "searches": [
+        "go depth 12 movetime 450",
+        "go depth 12 movetime 450",
+        "go depth 12 movetime 600"
+      ]
+    },
+    {
+      "url": "/engine/stockfish-19-lite-single.js",
+      "searches": [
+        "go depth 16 movetime 1100",
+        "go depth 16 movetime 1100",
+        "go depth 16 movetime 1400"
+      ]
+    },
+    {
+      "url": "/engine/stockfish-19-lite-single.js",
+      "searches": [
+        "go depth 20 movetime 3000",
+        "go depth 20 movetime 3000",
+        "go depth 20 movetime 4000"
+      ]
+    }
+  ]
+}

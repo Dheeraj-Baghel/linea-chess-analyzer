@@ -1,0 +1,17 @@
+{
+  "Date": "Mon, 19 Oct 2026 23:16:57 GMT",
+  "Content-Type": "application/json",
+  "Transfer-Encoding": "chunked",
+  "Connection": "close",
+  "Server": "cloudflare",
+  "vary": "Origin",
+  "permissions-policy": "screen-wake-lock=(self \"https://lichess1.org\"), microphone=(self), fullscreen=(self)",
+  "content-disposition": "attachment; filename=lichess_pgn_2017.12.28_Lance5500_vs_TryingHard87.q7ZvsdUF.json",
+  "access-control-allow-origin": "*",
+  "access-control-allow-headers": "Origin, Authorization, If-Modified-Since, Cache-Control, Content-Type",
+  "access-control-allow-methods": "OPTIONS, GET, POST, PUT, DELETE",
+  "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+  "x-frame-options": "DENY",
+  "cf-cache-status": "BYPASS",
+  "CF-RAY": "a4d37e4c7db0a7f4-DEL"
+}

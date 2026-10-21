@@ -1,0 +1,376 @@
+[
+  {
+    "fen": "8/2R5/8/8/8/8/2pk4/K7 w - - 0 1",
+    "move": "Kb2",
+    "before": {
+      "rank": 1,
+      "depth": 16,
+      "cp": 445,
+      "mate": null,
+      "pv": [
+        "a1b2",
+        "c2c1q",
+        "c7c1",
+        "d2e3",
+        "b2c3",
+        "e3e4",
+        "c1e1",
+        "e4f5",
+        "c3d4",
+        "f5f6",
+        "e1a1",
+        "f6f5"
+      ]
+    },
+    "after": {
+      "rank": 1,
+      "depth": 16,
+      "cp": 451,
+      "mate": null,
+      "pv": [
+        "c2c1q",
+        "c7c1",
+        "d2d3",
+        "c1e1",
+        "d3d2",
+        "e1f1",
+        "d2e3",
+        "b2c3",
+        "e3e4",
+        "f1e1",
+        "e4d5",
+        "e1e8",
+        "d5d6",
+        "c3c4",
+        "d6d7",
+        "e8e4",
+        "d7c6",
+        "e4e1"
+      ]
+    },
+    "candidate": null,
+    "accepted": null,
+    "terminal": null,
+    "final": {
+      "type": "best",
+      "loss": 0,
+      "before": {
+        "rank": 1,
+        "depth": 16,
+        "cp": 445,
+        "mate": null,
+        "pv": [
+          "a1b2",
+          "c2c1q",
+          "c7c1",
+          "d2e3",
+          "b2c3",
+          "e3e4",
+          "c1e1",
+          "e4f5",
+          "c3d4",
+          "f5f6",
+          "e1a1",
+          "f6f5"
+        ]
+      },
+      "after": {
+        "rank": 1,
+        "depth": 16,
+        "cp": 451,
+        "mate": null,
+        "pv": [
+          "c2c1q",
+          "c7c1",
+          "d2d3",
+          "c1e1",
+          "d3d2",
+          "e1f1",
+          "d2e3",
+          "b2c3",
+          "e3e4",
+          "f1e1",
+          "e4d5",
+          "e1e8",
+          "d5d6",
+          "c3c4",
+          "d6d7",
+          "e8e4",
+          "d7c6",
+          "e4e1"
+        ]
+      },
+      "alternative": "a1b2",
+      "brilliance": null,
+      "accuracy": 100
+    }
+  },
+  {
+    "fen": "8/8/8/8/2R5/8/2pk4/K7 w - - 0 1",
+    "move": "Kb2",
+    "before": {
+      "rank": 1,
+      "depth": 16,
+      "cp": 481,
+      "mate": null,
+      "pv": [
+        "a1b2",
+        "c2c1n",
+        "c4c1",
+        "d2e3",
+        "c1f1",
+        "e3e4",
+        "b2a2",
+        "e4e5",
+        "f1f8",
+        "e5e6"
+      ]
+    },
+    "after": {
+      "rank": 1,
+      "depth": 16,
+      "cp": 468,
+      "mate": null,
+      "pv": [
+        "d2d3",
+        "c4c2",
+        "d3e4",
+        "c2f2",
+        "e4e5",
+        "b2c3",
+        "e5d6",
+        "c3d3",
+        "d6e7"
+      ]
+    },
+    "candidate": null,
+    "accepted": null,
+    "terminal": null,
+    "final": {
+      "type": "best",
+      "loss": 0.6108388561525735,
+      "before": {
+        "rank": 1,
+        "depth": 16,
+        "cp": 481,
+        "mate": null,
+        "pv": [
+          "a1b2",
+          "c2c1n",
+          "c4c1",
+          "d2e3",
+          "c1f1",
+          "e3e4",
+          "b2a2",
+          "e4e5",
+          "f1f8",
+          "e5e6"
+        ]
+      },
+      "after": {
+        "rank": 1,
+        "depth": 16,
+        "cp": 468,
+        "mate": null,
+        "pv": [
+          "d2d3",
+          "c4c2",
+          "d3e4",
+          "c2f2",
+          "e4e5",
+          "b2c3",
+          "e5d6",
+          "c3d3",
+          "d6e7"
+        ]
+      },
+      "alternative": "a1b2",
+      "brilliance": null,
+      "accuracy": 96.99197500565657
+    }
+  },
+  {
+    "fen": "8/8/8/2R5/8/8/2pk4/K7 w - - 0 1",
+    "move": "Kb2",
+    "before": {
+      "rank": 1,
+      "depth": 16,
+      "cp": 491,
+      "mate": null,
+      "pv": [
+        "a1b2",
+        "d2d3",
+        "c5c8",
+        "d3e4",
+        "b2b3",
+        "e4d5",
+        "b3c2",
+        "d5e6",
+        "c2d2",
+        "e6e7"
+      ]
+    },
+    "after": {
+      "rank": 1,
+      "depth": 16,
+      "cp": 452,
+      "mate": null,
+      "pv": [
+        "d2d3",
+        "c5c8",
+        "d3e4",
+        "b2c2",
+        "e4f5",
+        "c2d3",
+        "f5f6",
+        "d3e3",
+        "f6e5",
+        "e3f3",
+        "e5e6",
+        "f3f4"
+      ]
+    },
+    "candidate": null,
+    "accepted": null,
+    "terminal": null,
+    "final": {
+      "type": "best",
+      "loss": 1.8428486711717929,
+      "before": {
+        "rank": 1,
+        "depth": 16,
+        "cp": 491,
+        "mate": null,
+        "pv": [
+          "a1b2",
+          "d2d3",
+          "c5c8",
+          "d3e4",
+          "b2b3",
+          "e4d5",
+          "b3c2",
+          "d5e6",
+          "c2d2",
+          "e6e7"
+        ]
+      },
+      "after": {
+        "rank": 1,
+        "depth": 16,
+        "cp": 452,
+        "mate": null,
+        "pv": [
+          "d2d3",
+          "c5c8",
+          "d3e4",
+          "b2c2",
+          "e4f5",
+          "c2d3",
+          "f5f6",
+          "d3e3",
+          "f6e5",
+          "e3f3",
+          "e5e6",
+          "f3f4"
+        ]
+      },
+      "alternative": "a1b2",
+      "brilliance": null,
+      "accuracy": 91.19752444144774
+    }
+  },
+  {
+    "fen": "8/8/8/8/8/2R5/2pk4/K7 w - - 0 1",
+    "move": "Kb2",
+    "before": {
+      "rank": 1,
+      "depth": 16,
+      "cp": 476,
+      "mate": null,
+      "pv": [
+        "a1b2",
+        "c2c1q",
+        "c3c1",
+        "d2e3",
+        "b2c3",
+        "e3e4",
+        "c1e1",
+        "e4f5",
+        "c3c4",
+        "f5g4"
+      ]
+    },
+    "after": {
+      "rank": 1,
+      "depth": 16,
+      "cp": 463,
+      "mate": null,
+      "pv": [
+        "c2c1r",
+        "c3c1",
+        "d2d3",
+        "c1e1",
+        "d3d2",
+        "e1e8",
+        "d2d3",
+        "b2c1",
+        "d3c3",
+        "e8d8",
+        "c3b3",
+        "d8c8",
+        "b3a4",
+        "c1c2"
+      ]
+    },
+    "candidate": null,
+    "accepted": null,
+    "terminal": null,
+    "final": {
+      "type": "best",
+      "loss": 0.6165466982779866,
+      "before": {
+        "rank": 1,
+        "depth": 16,
+        "cp": 476,
+        "mate": null,
+        "pv": [
+          "a1b2",
+          "c2c1q",
+          "c3c1",
+          "d2e3",
+          "b2c3",
+          "e3e4",
+          "c1e1",
+          "e4f5",
+          "c3c4",
+          "f5g4"
+        ]
+      },
+      "after": {
+        "rank": 1,
+        "depth": 16,
+        "cp": 463,
+        "mate": null,
+        "pv": [
+          "c2c1r",
+          "c3c1",
+          "d2d3",
+          "c1e1",
+          "d3d2",
+          "e1e8",
+          "d2d3",
+          "b2c1",
+          "d3c3",
+          "e8d8",
+          "c3b3",
+          "d8c8",
+          "b3a4",
+          "c1c2"
+        ]
+      },
+      "alternative": "a1b2",
+      "brilliance": null,
+      "accuracy": 96.96429821117555
+    }
+  }
+]

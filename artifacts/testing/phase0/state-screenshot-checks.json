@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-19T16:13:38.266Z",
+  "origin": "http://127.0.0.1:4325",
+  "browser": "156.0.8078.4",
+  "checks": [
+    "Loading screenshot held only worker script transport; release reached a real completed search.",
+    "Unavailable/error screenshot: board navigable; retry restored native search at preserved ply 29.",
+    "FEN-only empty game screenshot: zero recorded moves, review unavailable; no fabricated game report."
+  ],
+  "fonts": "system fallback",
+  "status": "passed"
+}

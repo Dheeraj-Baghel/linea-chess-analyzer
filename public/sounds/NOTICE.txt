@@ -1,0 +1,4 @@
+move-self.mp3, capture.mp3: https://www.chess.com/bundles/web/sounds/
+move-check.mp3: https://images.chesscomfiles.com/chess-themes/sounds/_MP3_/default/
+Downloaded 2026-10-21 at the user's request. These are Chess.com assets; no licence was
+verified. Local/personal use only - replace before any public deployment.

@@ -1,0 +1,7 @@
+import { useEffect, useState } from 'react';
+import { Modal } from './UI';
+export default function SavedReportsDialog({ batch, onOpen, onClose }) {
+  const [rows, setRows] = useState(null), [error, setError] = useState('');
+  useEffect(() => { let alive = true; batch.list().then(values => { if (alive) setRows(values); }).catch(reason => { if (alive) setError(reason.message); }); return () => { alive = false; }; }, [batch]);
+  return <Modal title="Recent player reports" subtitle="Frozen samples and saved evidence in this browser. No cloud sync." onClose={onClose} className="import-modal">{error && <p role="alert" className="inline-error">{error}</p>}<div className="local-game-list">{rows?.map(row => <button className="archive-game" key={row.key} onClick={() => onOpen(row.key)}><span className="archive-players"><strong>{row.username} · {row.filter}</strong><small>{row.selectedGames.length} selected · {row.quality} · {row.status.replaceAll('-', ' ')}</small><small>{new Date(row.createdAt).toLocaleString()}</small></span><span aria-hidden="true">↗</span></button>)}{rows?.length === 0 && <p className="archive-empty">No saved reports yet. Import a public account and choose Analyze me or up to ten selected games.</p>}{rows === null && !error && <p role="status">Loading browser-local reports…</p>}</div><p className="subtle-note">Deleting a report’s source game removes dependent reports. Clear Linea local data from Recent local games to remove the full library.</p></Modal>;
+}

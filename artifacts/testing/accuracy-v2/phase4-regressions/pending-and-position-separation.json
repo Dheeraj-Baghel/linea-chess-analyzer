@@ -1,0 +1,84 @@
+{
+  "generation": "1b8ad13e-321f-4eda-a093-e88fd0095265",
+  "baselineJobs": [
+    {
+      "url": "/engine/stockfish-19-lite-single.js",
+      "searches": []
+    },
+    {
+      "url": "/engine/stockfish-19-lite-single.js",
+      "searches": [
+        "go depth 16 movetime 1100",
+        "go depth 16 movetime 1100",
+        "go depth 18 movetime 2200",
+        "go depth 18 movetime 2200 searchmoves f2f3",
+        "go depth 16 movetime 1100",
+        "go depth 16 movetime 1100",
+        "go depth 18 movetime 2200",
+        "go depth 18 movetime 2200 searchmoves g2g4"
+      ]
+    }
+  ],
+  "separated": [
+    {
+      "url": "/engine/stockfish-19-lite-single.js",
+      "searches": [
+        "go depth 16 movetime 2600",
+        "go depth 12 movetime 2600"
+      ]
+    },
+    {
+      "url": "/engine/stockfish-19-lite-single.js",
+      "searches": [
+        "go depth 16 movetime 1100",
+        "go depth 16 movetime 1100",
+        "go depth 18 movetime 2200",
+        "go depth 18 movetime 2200 searchmoves f2f3",
+        "go depth 16 movetime 1100",
+        "go depth 16 movetime 1100",
+        "go depth 18 movetime 2200",
+        "go depth 18 movetime 2200 searchmoves g2g4"
+      ]
+    }
+  ],
+  "updatedJobs": [
+    {
+      "url": "/engine/stockfish-19-lite-single.js",
+      "searches": [
+        "go depth 16 movetime 2600",
+        "go depth 12 movetime 2600"
+      ]
+    },
+    {
+      "url": "/engine/stockfish-19-lite-single.js",
+      "searches": [
+        "go depth 16 movetime 1100",
+        "go depth 16 movetime 1100",
+        "go depth 18 movetime 2200",
+        "go depth 18 movetime 2200 searchmoves f2f3",
+        "go depth 16 movetime 1100",
+        "go depth 16 movetime 1100",
+        "go depth 18 movetime 2200",
+        "go depth 18 movetime 2200 searchmoves g2g4"
+      ]
+    },
+    {
+      "url": "/engine/stockfish-19-lite-single.js",
+      "searches": [
+        "go depth 20 movetime 3000",
+        "go depth 20 movetime 3000",
+        "go depth 22 movetime 6000",
+        "go depth 22 movetime 6000 searchmoves f2f3",
+        "go depth 20 movetime 3000",
+        "go depth 20 movetime 3000",
+        "go depth 22 movetime 6000",
+        "go depth 22 movetime 6000 searchmoves g2g4"
+      ]
+    }
+  ],
+  "scores": [
+    "26.7%",
+    "100.0%"
+  ],
+  "originalPgnPreserved": true
+}

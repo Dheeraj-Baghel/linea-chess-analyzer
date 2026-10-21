@@ -1,0 +1,31 @@
+{
+  "repo": "lichess-org/api",
+  "sha": "fedb6b86d1a6bca1e93b0f1960f2260f78b421a7",
+  "url": "https://github.com/lichess-org/api/commit/fedb6b86d1a6bca1e93b0f1960f2260f78b421a7",
+  "commit": {
+    "author": {
+      "name": "dependabot[bot]",
+      "email": "49699333+dependabot[bot]@users.noreply.github.com",
+      "date": "2026-10-17T15:54:53Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-10-17T15:54:53Z"
+    },
+    "message": "Bump source-map-js from 1.2.1 to 1.2.2 in /doc (#681)\n\nBumps [source-map-js](https://github.com/7rulnik/source-map-js) from 1.2.1 to 1.2.2.\n- [Release notes](https://github.com/7rulnik/source-map-js/releases)\n- [Changelog](https://github.com/7rulnik/source-map-js/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/7rulnik/source-map-js/compare/v1.2.1...v1.2.2)\n\n---\nupdated-dependencies:\n- dependency-name: source-map-js\n  dependency-version: 1.2.2\n  dependency-type: indirect\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+    "tree": {
+      "sha": "f521cfd624fe9635d4a2b047076c23eaeace6bf0",
+      "url": "https://api.github.com/repos/lichess-org/api/git/trees/f521cfd624fe9635d4a2b047076c23eaeace6bf0"
+    },
+    "url": "https://api.github.com/repos/lichess-org/api/git/commits/fedb6b86d1a6bca1e93b0f1960f2260f78b421a7",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJq05pNCRC1aQ7uu5UhlAAAO5kQAIClL649T09YLCE3DXZ5cVk+\ndrog1Av3oFzNBHzFRgxn/Oy1kdJWKMdCT0+zs5Sv03QSoPS6JVAVGGD26NBCVTqk\nEofnoMdRB78HL2irBInXcJGtpwhm2cgbM6HAHsApqq/n//+g3F1yN2nGUO6+7+cb\nOavTpwC+j6aY08/T2wtb8ADDThQhKB2LL9LZPqoi6yp5QNi5P14oCob3bTXbYUfB\nkTWFWp5cwtSi89mRI2CdIBbyk+DIMk844fZNUzW379gtiPl0oatfxkze9rnh00vj\nT1e5zXbllu/kvXIcoSk8xnXnc7qC0VYIv82MKAk2GixlAczIo0ZSKNhcu1Xuht74\nYyMO+oIUiXU5Gxm3M6wRMAWAwI8X8GtfACHEVaWB6AiJfXrQV5VPKclxipDrvRWa\nIetXJo1M+NHwfE9Jro1n52UK1lh5unwfv1ffXIjvEKnMEmNvSAWAy5J9tbbuWvby\n9SQB5Qst766HEN3Z0tgnQXNMOF5XFdvRLri4rI43hJygie9QEpq5UrBbDHz+FzU1\n2rgCsFCHyusMK7g7GBV6pc5pyJ0AJyBiRxBN98YMO7GZBV5w4ODHbPYdsmYVRglq\n56Ld9F6UYuQrnoiMEszgBCFeu5QwOcrQHGKc4RGKz4UzPUFXP95Ob4kc8HMMUQ58\n1yvr6a63bNozoKVM6ZlG\n=bUiF\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree f521cfd624fe9635d4a2b047076c23eaeace6bf0\nparent 36d3afe2676745d559e381a08159bc8bd24482be\nauthor dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com> 1792252493 +0100\ncommitter GitHub <noreply@github.com> 1792252493 +0100\n\nBump source-map-js from 1.2.1 to 1.2.2 in /doc (#681)\n\nBumps [source-map-js](https://github.com/7rulnik/source-map-js) from 1.2.1 to 1.2.2.\n- [Release notes](https://github.com/7rulnik/source-map-js/releases)\n- [Changelog](https://github.com/7rulnik/source-map-js/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/7rulnik/source-map-js/compare/v1.2.1...v1.2.2)\n\n---\nupdated-dependencies:\n- dependency-name: source-map-js\n  dependency-version: 1.2.2\n  dependency-type: indirect\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+      "verified_at": "2026-10-17T15:54:53Z"
+    }
+  }
+}

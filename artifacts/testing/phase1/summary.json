@@ -1,0 +1,375 @@
+{
+  "phase": 1,
+  "verifiedAt": "2026-10-19T17:07:26.773936+00:00",
+  "implementation": "complete; awaiting user visual review",
+  "acceptance": {
+    "L02": "verified by token, computed-contrast, visual and browser checks",
+    "L01": "partially addressed by compact shell; composition remains Phase 2",
+    "L03-L05": "open; Phase 2",
+    "F01-F04": "open; later phases",
+    "F05-F06-E01": "deferred"
+  },
+  "sourceSha256": "e0fc98f228cccb8192a2acc49dbf12b43628168af283984eb1f680c8ea66f022",
+  "checkpointSha256": "a4e20235715cd7c16197a9d219364f97c119fdfb8bf70380f47c584ea139d632",
+  "runtime": {
+    "node": "v24.13.0",
+    "platform": "darwin",
+    "osRelease": "27.2.0",
+    "arch": "arm64",
+    "browsers": {
+      "chromium": "156.0.8078.4",
+      "firefox": "157.0",
+      "webkit": "27.2"
+    }
+  },
+  "unit": {
+    "numTotalTests": 133,
+    "numPassedTests": 133,
+    "numFailedTests": 0,
+    "numPendingTests": 0,
+    "success": true
+  },
+  "browserSuites": [
+    {
+      "suite": "browser",
+      "startTime": "2026-10-19T16:50:05.045Z",
+      "duration": 97969.47,
+      "expected": 48,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "reportLevelErrors": [],
+      "sourceSha256": "e0fc98f228cccb8192a2acc49dbf12b43628168af283984eb1f680c8ea66f022",
+      "sourceUnchanged": true,
+      "executionGaps": [],
+      "origin": "http://127.0.0.1:4336",
+      "unexpectedRequests": []
+    },
+    {
+      "suite": "engine-browser",
+      "startTime": "2026-10-19T16:51:43.569Z",
+      "duration": 83770.656,
+      "expected": 13,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "reportLevelErrors": [],
+      "sourceSha256": "e0fc98f228cccb8192a2acc49dbf12b43628168af283984eb1f680c8ea66f022",
+      "sourceUnchanged": true,
+      "executionGaps": [],
+      "origin": "http://127.0.0.1:4336",
+      "unexpectedRequests": []
+    },
+    {
+      "suite": "crossbrowser",
+      "startTime": "2026-10-19T16:53:07.967Z",
+      "duration": 30688.870000000003,
+      "expected": 6,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "reportLevelErrors": [],
+      "sourceSha256": "e0fc98f228cccb8192a2acc49dbf12b43628168af283984eb1f680c8ea66f022",
+      "sourceUnchanged": true,
+      "executionGaps": [],
+      "origin": "http://127.0.0.1:4336",
+      "unexpectedRequests": []
+    },
+    {
+      "suite": "production-browser",
+      "startTime": "2026-10-19T16:53:39.365Z",
+      "duration": 10155.125,
+      "expected": 3,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "reportLevelErrors": [],
+      "sourceSha256": "e0fc98f228cccb8192a2acc49dbf12b43628168af283984eb1f680c8ea66f022",
+      "sourceUnchanged": true,
+      "executionGaps": [],
+      "origin": "http://127.0.0.1:4337",
+      "unexpectedRequests": []
+    }
+  ],
+  "automatedAccessibility": [
+    {
+      "path": "artifacts/testing/accessibility/firefox-mobile.json",
+      "violations": 0,
+      "incomplete": 2
+    },
+    {
+      "path": "artifacts/testing/accessibility/archive-results.json",
+      "violations": 0,
+      "incomplete": 2
+    },
+    {
+      "path": "artifacts/testing/accessibility/fen-dialog.json",
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "path": "artifacts/testing/accessibility/promotion-dialog.json",
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "path": "artifacts/testing/accessibility/production-coaching.json",
+      "violations": 0,
+      "incomplete": 2
+    },
+    {
+      "path": "artifacts/testing/accessibility/chesscom-dialog.json",
+      "violations": 0,
+      "incomplete": 1
+    },
+    {
+      "path": "artifacts/testing/accessibility/webkit-mobile.json",
+      "violations": 0,
+      "incomplete": 2
+    },
+    {
+      "path": "artifacts/testing/accessibility/mobile-insights.json",
+      "violations": 0,
+      "incomplete": 2
+    },
+    {
+      "path": "artifacts/testing/accessibility/url-error.json",
+      "violations": 0,
+      "incomplete": 1
+    },
+    {
+      "path": "artifacts/testing/accessibility/mobile-board.json",
+      "violations": 0,
+      "incomplete": 2
+    },
+    {
+      "path": "artifacts/testing/accessibility/reviewed-moves.json",
+      "violations": 0,
+      "incomplete": 2
+    },
+    {
+      "path": "artifacts/testing/accessibility/desktop-board.json",
+      "violations": 0,
+      "incomplete": 2
+    },
+    {
+      "path": "artifacts/testing/accessibility/coaching.json",
+      "violations": 0,
+      "incomplete": 2
+    },
+    {
+      "path": "artifacts/testing/accessibility/settings-dialog.json",
+      "violations": 0,
+      "incomplete": 1
+    },
+    {
+      "path": "artifacts/testing/accessibility/pgn-dialog.json",
+      "violations": 0,
+      "incomplete": 1
+    },
+    {
+      "path": "artifacts/testing/phase1/axe-desktop-report.json",
+      "violations": 0,
+      "incomplete": 3
+    },
+    {
+      "path": "artifacts/testing/phase1/axe-mobile-report.json",
+      "violations": 0,
+      "incomplete": 2
+    },
+    {
+      "path": "artifacts/testing/phase1/axe-reviewed-yellow-move.json",
+      "violations": 0,
+      "incomplete": 3
+    }
+  ],
+  "selectedMoveContrastMinimum": {
+    "notationRatio": 11.86671920453432,
+    "badgeRatio": 7.872169548324232,
+    "iconRatio": 7.872169548324232
+  },
+  "protectedUnchangedFiles": [
+    "src/engine.js",
+    "src/useEngine.js",
+    "src/review.js",
+    "src/chesscom.js",
+    "src/ChessComImport.jsx",
+    "src/ReviewInsights.jsx",
+    "src/main.jsx",
+    "server/chesscom-resolver.js",
+    "package.json",
+    "package-lock.json",
+    "vite.config.js",
+    "public/engine/LICENSE.txt",
+    "public/engine/stockfish-18-lite-single.js",
+    "public/engine/stockfish-18-lite-single.wasm",
+    "public/favicon.svg",
+    "public/pieces/skak/LICENSE-LPPL-1.3c.txt",
+    "public/pieces/skak/NOTICE.txt",
+    "public/pieces/skak/bb.svg",
+    "public/pieces/skak/bk.svg",
+    "public/pieces/skak/bn.svg",
+    "public/pieces/skak/bp.svg",
+    "public/pieces/skak/bq.svg",
+    "public/pieces/skak/br.svg",
+    "public/pieces/skak/wb.svg",
+    "public/pieces/skak/wk.svg",
+    "public/pieces/skak/wn.svg",
+    "public/pieces/skak/wp.svg",
+    "public/pieces/skak/wq.svg",
+    "public/pieces/skak/wr.svg"
+  ],
+  "chessFunctionsUnchanged": true,
+  "paletteMigration": "v1 choices retained; v2 board-only settings; Neutral for new users",
+  "native200PercentZoom": {
+    "checkedAt": "2026-10-19T16:47:55.831Z",
+    "mechanism": "chrome.tabs.setZoom via a disposable isolated Chromium profile; native zoom API and geometry verified",
+    "checks": [
+      "Native API reports zoom 2, devicePixelRatio 2 and half-width CSS viewport",
+      "No CSS/pinch zoom and no horizontal overflow",
+      "Board transport and keyboard settings work at 200%"
+    ],
+    "worker": "chrome-extension://jgjklciageiecdkmlogpbeffjplgkmbm/background.js",
+    "nativeZoom": {
+      "factor": 2,
+      "settings": {
+        "defaultZoomFactor": 1,
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    "geometry": {
+      "innerWidth": 720,
+      "innerHeight": 406,
+      "outerWidth": 1440,
+      "outerHeight": 900,
+      "devicePixelRatio": 2,
+      "cssZoom": "1",
+      "visualScale": 1,
+      "pageWidth": 720
+    },
+    "status": "passed",
+    "capture": {
+      "at": "2026-10-19T16:56:32.107Z",
+      "method": "Unclipped CDP device-pixel viewport capture; original Playwright native-zoom clip artifact corrected",
+      "noCssZoom": true
+    }
+  },
+  "fontDelivery": {
+    "checkedAt": "2026-10-19T16:48:59.956Z",
+    "origin": "http://127.0.0.1:4325",
+    "fontRequests": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;650;700&display=swap",
+        "status": 200
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2",
+        "status": 200
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;650;700&display=swap",
+        "status": 200
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2",
+        "status": 200
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;650;700&display=swap",
+        "status": 200
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2",
+        "status": 200
+      }
+    ],
+    "requestFailures": [
+      {
+        "url": "http://127.0.0.1:4325/engine/stockfish-18-lite-single.js",
+        "failure": "net::ERR_ABORTED"
+      }
+    ],
+    "checks": [
+      "Real DM Sans loaded from Google Fonts without interception or errors",
+      "Real-font desktop and mobile layouts have no horizontal overflow",
+      "Styled loading and error states captured by held/aborted JS transport; release/retry uses the real engine"
+    ],
+    "fonts": {
+      "declared": "\"DM Sans\", -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "faces": [
+        {
+          "family": "DM Sans",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "DM Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "DM Sans",
+          "weight": "500",
+          "status": "unloaded"
+        },
+        {
+          "family": "DM Sans",
+          "weight": "500",
+          "status": "loaded"
+        },
+        {
+          "family": "DM Sans",
+          "weight": "550",
+          "status": "unloaded"
+        },
+        {
+          "family": "DM Sans",
+          "weight": "550",
+          "status": "unloaded"
+        },
+        {
+          "family": "DM Sans",
+          "weight": "600",
+          "status": "unloaded"
+        },
+        {
+          "family": "DM Sans",
+          "weight": "600",
+          "status": "loaded"
+        },
+        {
+          "family": "DM Sans",
+          "weight": "650",
+          "status": "unloaded"
+        },
+        {
+          "family": "DM Sans",
+          "weight": "650",
+          "status": "loaded"
+        },
+        {
+          "family": "DM Sans",
+          "weight": "700",
+          "status": "unloaded"
+        },
+        {
+          "family": "DM Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    "status": "passed"
+  },
+  "liveProviderTests": "Not rerun in Phase 1; provider implementation unchanged and fixture regressions pass. Phase 0 live success remains historical.",
+  "limitations": [
+    "Phase 2 workspace/report composition not implemented.",
+    "User visual approval remains pending.",
+    "Automated touch/WebKit is not physical-phone, installed-Safari or assistive-technology certification.",
+    "Blocked WASM startup retains its existing 35-second timeout before Retry.",
+    "Initial classification fixture CJS import and zoom-capture harness probes were corrected; no app logic workaround or retry was used."
+  ],
+  "published": false,
+  "deployed": false
+}

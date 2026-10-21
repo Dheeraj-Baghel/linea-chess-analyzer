@@ -1,0 +1,81 @@
+{
+  "width": 1440,
+  "height": 900,
+  "pageWidth": 1440,
+  "header": {
+    "x": 0,
+    "y": 0,
+    "width": 1440,
+    "height": 64,
+    "top": 0,
+    "right": 1440,
+    "bottom": 64,
+    "left": 0
+  },
+  "board": {
+    "x": 197,
+    "y": 198,
+    "width": 570,
+    "height": 570,
+    "top": 198,
+    "right": 767,
+    "bottom": 768,
+    "left": 197
+  },
+  "evaluation": {
+    "x": 165,
+    "y": 198,
+    "width": 24,
+    "height": 570,
+    "top": 198,
+    "right": 189,
+    "bottom": 768,
+    "left": 165
+  },
+  "transport": {
+    "x": 197,
+    "y": 842,
+    "width": 570,
+    "height": 50,
+    "top": 842,
+    "right": 767,
+    "bottom": 892,
+    "left": 197
+  },
+  "shell": {
+    "x": 60,
+    "y": 64,
+    "width": 1320,
+    "height": 1183,
+    "top": 64,
+    "right": 1380,
+    "bottom": 1247,
+    "left": 60
+  },
+  "smallText": [
+    {
+      "text": "10 min + 5 secUnfinished game",
+      "font": 12
+    },
+    {
+      "text": "1876",
+      "font": 12
+    },
+    {
+      "text": "1842",
+      "font": 12
+    },
+    {
+      "text": "Run Review game to calculate accuracy, Brilliant moves and coaching.",
+      "font": 12
+    },
+    {
+      "text": "Search complete",
+      "font": 12
+    },
+    {
+      "text": "Depth 16/ 16",
+      "font": 12
+    }
+  ]
+}

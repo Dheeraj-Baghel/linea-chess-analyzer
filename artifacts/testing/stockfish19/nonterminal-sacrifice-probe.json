@@ -1,0 +1,219 @@
+[
+  {
+    "fen": "8/8/8/8/8/2R3p1/2pk2P1/7K w - - 0 1",
+    "move": "Rxc2+",
+    "before": {
+      "rank": 1,
+      "depth": 16,
+      "cp": 0,
+      "mate": null,
+      "pv": [
+        "c3c2",
+        "d2c2",
+        "h1g1",
+        "c2d2",
+        "g1f1",
+        "d2d1",
+        "f1g1"
+      ]
+    },
+    "after": {
+      "rank": 1,
+      "depth": 16,
+      "cp": 0,
+      "mate": null,
+      "pv": [
+        "d2c2",
+        "h1g1",
+        "c2d1",
+        "g1f1",
+        "d1d2",
+        "f1g1",
+        "d2c1",
+        "g1f1",
+        "c1d1",
+        "f1g1"
+      ]
+    },
+    "candidate": {
+      "cost": 4,
+      "acceptance": "d2c2",
+      "san": "Kxc2",
+      "fen": "8/8/8/8/8/6p1/2k3P1/7K w - - 0 2",
+      "offeredPiece": "r",
+      "square": "c2"
+    },
+    "accepted": {
+      "rank": 1,
+      "depth": 16,
+      "cp": 0,
+      "mate": null,
+      "pv": [
+        "h1g1",
+        "c2d1",
+        "g1f1",
+        "d1d2",
+        "f1g1",
+        "d2e2",
+        "g1h1",
+        "e2d1",
+        "h1g1"
+      ]
+    },
+    "final": {
+      "type": "brilliant",
+      "loss": 0,
+      "before": {
+        "rank": 1,
+        "depth": 16,
+        "cp": 0,
+        "mate": null,
+        "pv": [
+          "c3c2",
+          "d2c2",
+          "h1g1",
+          "c2d2",
+          "g1f1",
+          "d2d1",
+          "f1g1"
+        ]
+      },
+      "after": {
+        "rank": 1,
+        "depth": 16,
+        "cp": 0,
+        "mate": null,
+        "pv": [
+          "d2c2",
+          "h1g1",
+          "c2d1",
+          "g1f1",
+          "d1d2",
+          "f1g1",
+          "d2c1",
+          "g1f1",
+          "c1d1",
+          "f1g1"
+        ]
+      },
+      "alternative": "c3c2",
+      "brilliance": {
+        "verified": true,
+        "cost": 4,
+        "acceptance": "d2c2",
+        "san": "Kxc2",
+        "offeredPiece": "r",
+        "square": "c2",
+        "evaluation": {
+          "rank": 1,
+          "depth": 16,
+          "cp": 0,
+          "mate": null,
+          "pv": [
+            "h1g1",
+            "c2d1",
+            "g1f1",
+            "d1d2",
+            "f1g1",
+            "d2e2",
+            "g1h1",
+            "e2d1",
+            "h1g1"
+          ]
+        },
+        "depth": 16,
+        "explanation": "Offers a rook on c2. Bounded legal exchange analysis estimates 4 points at risk; after Kxc2, Stockfish still finds compensation at depth 16."
+      },
+      "accuracy": 100
+    }
+  },
+  {
+    "fen": "6n1/8/8/8/8/2R5/2pk4/6NK w - - 0 1",
+    "move": "Rxc2+",
+    "before": {
+      "rank": 1,
+      "depth": 16,
+      "cp": 5,
+      "mate": null,
+      "pv": [
+        "c3c5",
+        "c2c1q",
+        "c5c1",
+        "d2c1",
+        "g1f3",
+        "g8h6",
+        "f3d4",
+        "h6g8",
+        "d4b3",
+        "c1b2",
+        "b3c5"
+      ]
+    },
+    "after": {
+      "rank": 1,
+      "depth": 16,
+      "cp": 2,
+      "mate": null,
+      "pv": [
+        "d2c2",
+        "g1f3",
+        "g8h6",
+        "f3e5",
+        "c2d2",
+        "e5c4",
+        "d2d1",
+        "h1g2",
+        "h6g4",
+        "g2f3",
+        "g4f6"
+      ]
+    },
+    "candidate": null,
+    "accepted": null,
+    "final": {
+      "type": "excellent",
+      "loss": 0.22726594473431172,
+      "before": {
+        "rank": 1,
+        "depth": 16,
+        "cp": 5,
+        "mate": null,
+        "pv": [
+          "c3c5",
+          "c2c1q",
+          "c5c1",
+          "d2c1",
+          "g1f3",
+          "g8h6",
+          "f3d4",
+          "h6g8",
+          "d4b3",
+          "c1b2",
+          "b3c5"
+        ]
+      },
+      "after": {
+        "rank": 1,
+        "depth": 16,
+        "cp": 2,
+        "mate": null,
+        "pv": [
+          "d2c2",
+          "g1f3",
+          "g8h6",
+          "f3e5",
+          "c2d2",
+          "e5c4",
+          "d2d1",
+          "h1g2",
+          "h6g4",
+          "g2f3",
+          "g4f6"
+        ]
+      },
+      "alternative": "c3c5",
+      "brilliance": null,
+      "accuracy": 98.87010211717431
+    }
+  }
+]

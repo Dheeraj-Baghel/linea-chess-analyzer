@@ -1,0 +1,203 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.engine.config.js",
+      "engine-review.spec.js",
+      "-g",
+      "full real-engine"
+    ],
+    "configFile": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/playwright.engine.config.js",
+    "rootDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/qa/global-setup.js",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "suite": "engine-browser",
+      "production": false,
+      "liveProvider": false,
+      "engine": "Stockfish 19 Lite 19.0.1",
+      "engineVariant": "lite-single",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/engine-browser-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "suite": "engine-browser",
+          "production": false,
+          "liveProvider": false,
+          "engine": "Stockfish 19 Lite 19.0.1",
+          "engineVariant": "lite-single",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "engine-review.spec.js",
+          "smoke.spec.js",
+          "accuracy-v2.spec.js"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/engine-browser-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "suite": "engine-browser",
+          "production": false,
+          "liveProvider": false,
+          "engine": "Stockfish 19 Lite 19.0.1",
+          "engineVariant": "lite-single",
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "snapshotDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "engine-review.spec.js",
+          "smoke.spec.js",
+          "accuracy-v2.spec.js"
+        ],
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4336",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "video": "off",
+          "actionTimeout": 10000,
+          "navigationTimeout": 20000,
+          "serviceWorkers": "block",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "artifacts/testing/engine-browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npx vite --host 127.0.0.1 --port 4336 --strictPort",
+      "url": "http://127.0.0.1:4336",
+      "reuseExistingServer": false,
+      "timeout": 30000,
+      "gracefulShutdown": {
+        "signal": "SIGTERM",
+        "timeout": 5000
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "engine-review.spec.js",
+      "file": "engine-review.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "full real-engine review yields genuine per-player accuracy, move feedback, coaching and chart navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6808,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T01:53:01.751Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3NhbXBsZSIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTkxMTRmOWE2OTdmOWFiNWI2ZDJhZDI5NDU4ZjczMzI2YzdiNDRlM2RjMzEzYzg2MTlkZTE2MzgwMTFmZjliNDY/cGx5PTAmdmlldz1yZXBvcnQiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9yZXZpZXcvbG9jYWwlM0E5MTE0ZjlhNjk3ZjlhYjViNmQyYWQyOTQ1OGY3MzMyNmM3YjQ0ZTNkYzMxM2M4NjE5ZGUxNjM4MDExZmY5YjQ2P3BseT0xJnZpZXc9Z3VpZGVkIiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvcmV2aWV3L2xvY2FsJTNBOTExNGY5YTY5N2Y5YWI1YjZkMmFkMjk0NThmNzMzMjZjN2I0NGUzZGMzMTNjODYxOWRlMTYzODAxMWZmOWI0Nj9wbHk9NCZ2aWV3PWd1aWRlZCIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L3Jldmlldy9sb2NhbCUzQTkxMTRmOWE2OTdmOWFiNWI2ZDJhZDI5NDU4ZjczMzI2YzdiNDRlM2RjMzEzYzg2MTlkZTE2MzgwMTFmZjliNDY/cGx5PTMmdmlldz1ndWlkZWQiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9yZXZpZXcvbG9jYWwlM0E5MTE0ZjlhNjk3ZjlhYjViNmQyYWQyOTQ1OGY3MzMyNmM3YjQ0ZTNkYzMxM2M4NjE5ZGUxNjM4MDExZmY5YjQ2P3BseT0yJnZpZXc9Z3VpZGVkIgogIF0sCiAgInVuZXhwZWN0ZWRSZXF1ZXN0cyI6IFtdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-91c1410a31369604a5e7",
+          "file": "engine-review.spec.js",
+          "line": 138,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-21T01:52:59.821Z",
+    "duration": 9560.912,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

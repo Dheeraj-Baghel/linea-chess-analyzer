@@ -1,0 +1,100 @@
+{
+  "empty": {
+    "categories": [
+      {
+        "category": "brilliant",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "best",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "excellent",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "good",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "inaccuracy",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "mistake",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "blunder",
+        "w": 0,
+        "b": 0
+      }
+    ],
+    "w": {
+      "reviewed": 0,
+      "unreviewed": 4,
+      "total": 4
+    },
+    "b": {
+      "reviewed": 0,
+      "unreviewed": 4,
+      "total": 4
+    }
+  },
+  "full": {
+    "categories": [
+      {
+        "category": "brilliant",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "best",
+        "w": 3,
+        "b": 4
+      },
+      {
+        "category": "excellent",
+        "w": 1,
+        "b": 0
+      },
+      {
+        "category": "good",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "inaccuracy",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "mistake",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "blunder",
+        "w": 0,
+        "b": 0
+      }
+    ],
+    "w": {
+      "reviewed": 4,
+      "unreviewed": 0,
+      "total": 4
+    },
+    "b": {
+      "reviewed": 4,
+      "unreviewed": 0,
+      "total": 4
+    }
+  }
+}

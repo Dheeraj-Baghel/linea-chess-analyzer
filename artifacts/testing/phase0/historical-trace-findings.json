@@ -1,0 +1,781 @@
+[
+  {
+    "report": "browser-results.json",
+    "test": "chesscom-import.spec.js > Chess.com HTTP 503 remains a recoverable import error",
+    "externalOrFailedRequests": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+        "status": 200,
+        "failure": null,
+        "start": "2026-10-19T12:29:55.745Z"
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjg.woff2",
+        "status": 200,
+        "failure": null,
+        "start": "2026-10-19T12:29:55.993Z"
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K4.woff2",
+        "status": 200,
+        "failure": null,
+        "start": "2026-10-19T12:29:55.991Z"
+      },
+      {
+        "url": "http://127.0.0.1:4325/engine/stockfish-18-lite-single.wasm",
+        "status": 200,
+        "failure": "net::ERR_NETWORK_IO_SUSPENDED",
+        "start": "2026-10-19T12:29:56.413Z"
+      },
+      {
+        "url": "https://api.chess.com/pub/player/fixture-player/games/archives",
+        "status": 503,
+        "failure": null,
+        "start": "2026-10-19T12:29:57.685Z"
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+        "status": 200,
+        "failure": null,
+        "start": "2026-10-19T12:29:59.114Z"
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjg.woff2",
+        "status": 200,
+        "failure": null,
+        "start": "2026-10-19T12:29:59.636Z"
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K4.woff2",
+        "status": 200,
+        "failure": null,
+        "start": "2026-10-19T12:29:59.634Z"
+      }
+    ],
+    "consoleErrors": [
+      {
+        "type": "console",
+        "messageType": "error",
+        "text": "WASM streaming failed: TypeError: WebAssembly compilation aborted: Network error: Failed to read from a ReadableStream.\n    at e (http://127.0.0.1:4325/engine/stockfish-18-lite-single.js:11:17443)",
+        "args": [
+          {
+            "preview": "WASM streaming failed:",
+            "value": "WASM streaming failed:"
+          },
+          {
+            "preview": "TypeError: WebAssembly compilation aborted: Network error: Failed to read from a ReadableStream.\n    at e (http://127.0.0.1:4325/engine/stockfish-18-lite-single.js:11:17443)"
+          }
+        ],
+        "location": {
+          "url": "http://127.0.0.1:4325/engine/stockfish-18-lite-single.js",
+          "lineNumber": 10,
+          "columnNumber": 18166
+        },
+        "time": 100383.128,
+        "pageId": "page@792dd8127bc867bbee77187a0a5c4be6"
+      },
+      {
+        "type": "console",
+        "messageType": "error",
+        "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+        "args": [],
+        "location": {
+          "url": "https://api.chess.com/pub/player/fixture-player/games/archives",
+          "lineNumber": 0,
+          "columnNumber": 0
+        },
+        "time": 100770.295,
+        "pageId": "page@792dd8127bc867bbee77187a0a5c4be6"
+      }
+    ],
+    "failedCalls": [
+      {
+        "type": "after",
+        "callId": "livx@4412",
+        "endTime": 185575.021,
+        "annotations": [],
+        "error": {
+          "name": "",
+          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog').getByRole('button', { name: 'Find games', exact: true })\nExpected: enabled\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeEnabled\" getByRole('dialog').getByRole('button', { name: 'Find games', exact: true }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog').getByRole('button', { name: 'Find games', exact: true })\u001b[22m\n\u001b[2m    - waiting for navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"http://127.0.0.1:4325/\"\u001b[22m\n",
+          "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog').getByRole('button', { name: 'Find games', exact: true })\nExpected: enabled\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeEnabled\" getByRole('dialog').getByRole('button', { name: 'Find games', exact: true }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog').getByRole('button', { name: 'Find games', exact: true })\u001b[22m\n\u001b[2m    - waiting for navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"http://127.0.0.1:4325/\"\u001b[22m\n\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/chesscom-import.spec.js:73:136"
+        }
+      },
+      {
+        "type": "after",
+        "callId": "livx@4412",
+        "endTime": 185176.175,
+        "error": {
+          "message": "Expect failed",
+          "stack": "ExpectError: Expect failed\n    at _Frame.expect (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:25606:17)\n    at runNextTicks (node:internal/process/task_queues:64:5)\n    at processTimers (node:internal/timers:538:9)\n    at _FrameDispatcher.expect (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:56333:11)\n    at _ProgressController.run (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:13018:27)\n    at DispatcherConnection.dispatch (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:20191:27)",
+          "name": "ExpectError"
+        }
+      }
+    ]
+  },
+  {
+    "report": "browser-results.json",
+    "test": "engine-review.spec.js > real Stockfish evaluates, supports 3 candidate lines, pause/resume and separate engine arrows",
+    "externalOrFailedRequests": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+        "status": -1,
+        "failure": "net::ERR_INTERNET_DISCONNECTED",
+        "start": "2026-10-19T12:32:10.541Z"
+      }
+    ],
+    "consoleErrors": [
+      {
+        "type": "console",
+        "messageType": "error",
+        "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+        "args": [],
+        "location": {
+          "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+          "lineNumber": 0,
+          "columnNumber": 0
+        },
+        "time": 233587.581,
+        "pageId": "page@37aca451fa3683a1b17ea70f712a07b0"
+      }
+    ],
+    "failedCalls": [
+      {
+        "type": "after",
+        "callId": "aszd@326",
+        "endTime": 265590.34,
+        "annotations": [],
+        "error": {
+          "name": "",
+          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.variation-banner')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.variation-banner') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.variation-banner')\u001b[22m\n",
+          "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.variation-banner')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.variation-banner') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.variation-banner')\u001b[22m\n\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/engine-review.spec.js:26:51"
+        }
+      },
+      {
+        "type": "after",
+        "callId": "aszd@326",
+        "endTime": 264726.476,
+        "error": {
+          "message": "Expect failed",
+          "stack": "ExpectError: Expect failed\n    at _Frame.expect (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:25606:17)\n    at _FrameDispatcher.expect (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:56333:11)\n    at _ProgressController.run (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:13018:27)\n    at DispatcherConnection.dispatch (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:20191:27)",
+          "name": "ExpectError"
+        }
+      }
+    ]
+  },
+  {
+    "report": "browser-results.json",
+    "test": "engine-review.spec.js > real engine remains responsive through rapid navigation and keeps score bound to the current position",
+    "externalOrFailedRequests": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+        "status": -1,
+        "failure": "net::ERR_NAME_NOT_RESOLVED",
+        "start": "2026-10-19T12:34:05.923Z"
+      }
+    ],
+    "consoleErrors": [
+      {
+        "type": "console",
+        "messageType": "error",
+        "text": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+        "args": [],
+        "location": {
+          "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+          "lineNumber": 0,
+          "columnNumber": 0
+        },
+        "time": 349019.647,
+        "pageId": "page@2ff76edf14d8a66e11b6ecffd7bc8d5d"
+      }
+    ],
+    "failedCalls": [
+      {
+        "type": "after",
+        "callId": "lvrw@102",
+        "endTime": 351650.439,
+        "annotations": [],
+        "error": {
+          "name": "",
+          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: net::ERR_NAME_NOT_RESOLVED\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+          "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: net::ERR_NAME_NOT_RESOLVED\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/engine-review.spec.js:43:104"
+        }
+      }
+    ]
+  },
+  {
+    "report": "browser-results.json",
+    "test": "engine-review.spec.js > full real-engine review yields genuine per-player accuracy, move feedback, coaching and chart navigation",
+    "externalOrFailedRequests": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+        "status": -1,
+        "failure": "net::ERR_INTERNET_DISCONNECTED",
+        "start": "2026-10-19T12:34:14.105Z"
+      }
+    ],
+    "consoleErrors": [
+      {
+        "type": "console",
+        "messageType": "error",
+        "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+        "args": [],
+        "location": {
+          "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+          "lineNumber": 0,
+          "columnNumber": 0
+        },
+        "time": 357200.794,
+        "pageId": "page@17986ecb134fc87134620a2668dbb3b2"
+      }
+    ],
+    "failedCalls": [
+      {
+        "type": "after",
+        "callId": "jbce@117",
+        "endTime": 365912.222,
+        "annotations": [],
+        "error": {
+          "name": "",
+          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: net::ERR_INTERNET_DISCONNECTED\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+          "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: net::ERR_INTERNET_DISCONNECTED\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/engine-review.spec.js:67:18"
+        }
+      }
+    ]
+  },
+  {
+    "report": "browser-results.json",
+    "test": "engine-review.spec.js > review pause and resume preserves coverage and game replacement cancels old work",
+    "externalOrFailedRequests": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+        "status": -1,
+        "failure": "net::ERR_INTERNET_DISCONNECTED",
+        "start": "2026-10-19T12:34:32.126Z"
+      }
+    ],
+    "consoleErrors": [
+      {
+        "type": "console",
+        "messageType": "error",
+        "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+        "args": [],
+        "location": {
+          "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+          "lineNumber": 0,
+          "columnNumber": 0
+        },
+        "time": 375169.315,
+        "pageId": "page@66c114258d74282e7581ab4c80f928fa"
+      }
+    ],
+    "failedCalls": [
+      {
+        "type": "after",
+        "callId": "zszf@64",
+        "endTime": 703413.175,
+        "annotations": [],
+        "error": {
+          "name": "",
+          "message": "Error: locator.click: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').getByRole('button', { name: 'PGN game', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"\" aria-pressed=\"false\">PGN game</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is not stable\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n",
+          "stack": "Error: locator.click: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').getByRole('button', { name: 'PGN game', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"\" aria-pressed=\"false\">PGN game</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is not stable\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\n    at importText (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/helpers.js:33:65)\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/engine-review.spec.js:71:58"
+        }
+      }
+    ]
+  },
+  {
+    "report": "browser-results.json",
+    "test": "engine-review.spec.js > the actual game-review UI shows an independently verified Brilliant sacrifice",
+    "externalOrFailedRequests": [],
+    "consoleErrors": [],
+    "failedCalls": [
+      {
+        "type": "after",
+        "callId": "qtai@321",
+        "endTime": 1758778.004,
+        "annotations": [],
+        "error": {
+          "name": "",
+          "message": "\u001b[31mTest timeout of 60000ms exceeded while setting up \"page\".\u001b[39m",
+          "stack": "\u001b[31mTest timeout of 60000ms exceeded while setting up \"page\".\u001b[39m"
+        }
+      },
+      {
+        "type": "after",
+        "callId": "qtai@289",
+        "endTime": 1758778.084,
+        "annotations": [],
+        "error": {
+          "name": "",
+          "message": "\u001b[31mTest timeout of 60000ms exceeded while setting up \"page\".\u001b[39m",
+          "stack": "\u001b[31mTest timeout of 60000ms exceeded while setting up \"page\".\u001b[39m"
+        }
+      }
+    ]
+  },
+  {
+    "report": "browser-results.json",
+    "test": "live-chesscom.spec.js > live Chess.com username import and exact-ID link lookup",
+    "externalOrFailedRequests": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+        "status": -1,
+        "failure": "net::ERR_INTERNET_DISCONNECTED",
+        "start": "2026-10-19T12:57:37.357Z"
+      },
+      {
+        "url": "https://api.chess.com/pub/player/erik/games/archives",
+        "status": -1,
+        "failure": "net::ERR_INTERNET_DISCONNECTED",
+        "start": "2026-10-19T12:57:38.273Z"
+      }
+    ],
+    "consoleErrors": [
+      {
+        "type": "console",
+        "messageType": "error",
+        "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+        "args": [],
+        "location": {
+          "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+          "lineNumber": 0,
+          "columnNumber": 0
+        },
+        "time": 1760387.389,
+        "pageId": "page@d9c1db367cbad6b00a42ca203c9f1e67"
+      },
+      {
+        "type": "console",
+        "messageType": "error",
+        "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+        "args": [],
+        "location": {
+          "url": "https://api.chess.com/pub/player/erik/games/archives",
+          "lineNumber": 0,
+          "columnNumber": 0
+        },
+        "time": 1761318.647,
+        "pageId": "page@d9c1db367cbad6b00a42ca203c9f1e67"
+      }
+    ],
+    "failedCalls": [
+      {
+        "type": "after",
+        "callId": "zsal@60",
+        "endTime": 2766461.725,
+        "annotations": [],
+        "error": {
+          "name": "",
+          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog').locator('.archive-game').first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog').locator('.archive-game').first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog').locator('.archive-game').first()\u001b[22m\n",
+          "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog').locator('.archive-game').first()\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog').locator('.archive-game').first() with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog').locator('.archive-game').first()\u001b[22m\n\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/live-chesscom.spec.js:19:57"
+        }
+      },
+      {
+        "type": "after",
+        "callId": "zsal@60",
+        "endTime": 2766314.686,
+        "error": {
+          "message": "Expect failed",
+          "stack": "ExpectError: Expect failed\n    at _Frame.expect (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:25606:17)\n    at runNextTicks (node:internal/process/task_queues:64:5)\n    at processTimers (node:internal/timers:538:9)\n    at _FrameDispatcher.expect (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:56333:11)\n    at _ProgressController.run (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:13018:27)\n    at DispatcherConnection.dispatch (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:20191:27)",
+          "name": "ExpectError"
+        }
+      }
+    ]
+  },
+  {
+    "report": "browser-results.json",
+    "test": "mobile.spec.js > phone tap-to-move, hints, Return to game and all workspace tabs work",
+    "externalOrFailedRequests": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+        "status": -1,
+        "failure": "net::ERR_INTERNET_DISCONNECTED",
+        "start": "2026-10-19T13:45:12.196Z"
+      }
+    ],
+    "consoleErrors": [
+      {
+        "type": "console",
+        "messageType": "error",
+        "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+        "args": [],
+        "location": {
+          "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+          "lineNumber": 0,
+          "columnNumber": 0
+        },
+        "time": 4615300.43,
+        "pageId": "page@bdfc360be2fff089ee3760010a73274c"
+      }
+    ],
+    "failedCalls": [
+      {
+        "type": "after",
+        "callId": "mjyl@45",
+        "endTime": 4615270.018,
+        "annotations": [],
+        "error": {
+          "name": "",
+          "message": "TimeoutError: page.goto: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4325/\", waiting until \"load\"\u001b[22m\n",
+          "stack": "TimeoutError: page.goto: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4325/\", waiting until \"load\"\u001b[22m\n\n    at open (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/mobile.spec.js:6:40)\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/mobile.spec.js:19:9"
+        }
+      },
+      {
+        "type": "after",
+        "callId": "mjyl@45",
+        "endTime": 4615175.168,
+        "error": {
+          "message": "Timeout 20000ms exceeded.",
+          "stack": "TimeoutError: Timeout 20000ms exceeded.\n    at _ProgressController.run (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:13004:32)\n    at DispatcherConnection.dispatch (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:20191:44)",
+          "name": "TimeoutError"
+        }
+      }
+    ]
+  },
+  {
+    "report": "browser-results.json",
+    "test": "mobile.spec.js > touch annotation mode, two-tap arrows, highlights and eraser lock piece moves",
+    "externalOrFailedRequests": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+        "status": -1,
+        "failure": "net::ERR_INTERNET_DISCONNECTED",
+        "start": "2026-10-19T13:45:15.478Z"
+      }
+    ],
+    "consoleErrors": [
+      {
+        "type": "console",
+        "messageType": "error",
+        "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+        "args": [],
+        "location": {
+          "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+          "lineNumber": 0,
+          "columnNumber": 0
+        },
+        "time": 4618500.173,
+        "pageId": "page@a48ddc564dc0c38fcc14b3ee1f37dd59"
+      }
+    ],
+    "failedCalls": [
+      {
+        "type": "after",
+        "callId": "ihik@250",
+        "endTime": 5599310.398,
+        "annotations": [],
+        "error": {
+          "name": "",
+          "message": "TimeoutError: locator.tap: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Clear annotations for this position', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"icon-button  \" title=\"Clear annotations for this position\" aria-label=\"Clear annotations for this position\">\u2026</button>\u001b[22m\n\u001b[2m  - attempting tap action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing tap action\u001b[22m\n",
+          "stack": "TimeoutError: locator.tap: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Clear annotations for this position', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"icon-button  \" title=\"Clear annotations for this position\" aria-label=\"Clear annotations for this position\">\u2026</button>\u001b[22m\n\u001b[2m  - attempting tap action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing tap action\u001b[22m\n\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/mobile.spec.js:40:96"
+        }
+      },
+      {
+        "type": "after",
+        "callId": "ihik@250",
+        "endTime": 5599286.228,
+        "error": {
+          "message": "Timeout 10000ms exceeded.",
+          "stack": "TimeoutError: Timeout 10000ms exceeded.\n    at _ProgressController.run (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:13004:32)\n    at DispatcherConnection.dispatch (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:20191:44)",
+          "name": "TimeoutError"
+        }
+      }
+    ]
+  },
+  {
+    "report": "browser-results.json",
+    "test": "mobile.spec.js > phone review, player coaching and engine continuation navigation are functional",
+    "externalOrFailedRequests": [],
+    "consoleErrors": [],
+    "failedCalls": [
+      {
+        "type": "after",
+        "callId": "vskv@167",
+        "endTime": 6521821.305,
+        "annotations": [],
+        "error": {
+          "name": "",
+          "message": "\u001b[31mTest timeout of 60000ms exceeded while setting up \"page\".\u001b[39m",
+          "stack": "\u001b[31mTest timeout of 60000ms exceeded while setting up \"page\".\u001b[39m"
+        }
+      },
+      {
+        "type": "after",
+        "callId": "vskv@135",
+        "endTime": 6521821.484,
+        "annotations": [],
+        "error": {
+          "name": "",
+          "message": "\u001b[31mTest timeout of 60000ms exceeded while setting up \"page\".\u001b[39m",
+          "stack": "\u001b[31mTest timeout of 60000ms exceeded while setting up \"page\".\u001b[39m"
+        }
+      }
+    ]
+  },
+  {
+    "report": "browser-results.json",
+    "test": "smoke.spec.js > desktop opens the real board and completes local engine evaluation",
+    "externalOrFailedRequests": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+        "status": -1,
+        "failure": "net::ERR_INTERNET_DISCONNECTED",
+        "start": "2026-10-19T13:14:28.229Z"
+      }
+    ],
+    "consoleErrors": [
+      {
+        "type": "console",
+        "messageType": "error",
+        "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+        "args": [],
+        "location": {
+          "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+          "lineNumber": 0,
+          "columnNumber": 0
+        },
+        "time": 2771288.311,
+        "pageId": "page@300efa29ac8e2a36cc60ec2b8d570d85"
+      }
+    ],
+    "failedCalls": [
+      {
+        "type": "after",
+        "callId": "apje@167",
+        "endTime": 3701841.895,
+        "annotations": [],
+        "error": {
+          "name": "",
+          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.engine-status')\nExpected: \u001b[32m\"Search complete\"\u001b[39m\nReceived: \u001b[31m\"Loading locally\"\u001b[39m\nTimeout:  30000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.engine-status') with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for locator('.engine-status')\u001b[22m\n\u001b[2m    5 \u00d7 locator resolved to <span class=\"engine-status loading\">\u2026</span>\u001b[22m\n\u001b[2m      - unexpected value \"Loading locally\"\u001b[22m\n",
+          "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.engine-status')\nExpected: \u001b[32m\"Search complete\"\u001b[39m\nReceived: \u001b[31m\"Loading locally\"\u001b[39m\nTimeout:  30000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.engine-status') with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for locator('.engine-status')\u001b[22m\n\u001b[2m    5 \u00d7 locator resolved to <span class=\"engine-status loading\">\u2026</span>\u001b[22m\n\u001b[2m      - unexpected value \"Loading locally\"\u001b[22m\n\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/smoke.spec.js:13:48"
+        }
+      },
+      {
+        "type": "after",
+        "callId": "apje@167",
+        "endTime": 3701318.352,
+        "error": {
+          "message": "Expect failed",
+          "stack": "ExpectError: Expect failed\n    at _Frame.expect (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:25606:17)\n    at runNextTicks (node:internal/process/task_queues:64:5)\n    at processTimers (node:internal/timers:538:9)\n    at _FrameDispatcher.expect (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:56333:11)\n    at _ProgressController.run (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:13018:27)\n    at DispatcherConnection.dispatch (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:20191:27)",
+          "name": "ExpectError"
+        }
+      }
+    ]
+  },
+  {
+    "report": "crossbrowser-results.json",
+    "test": "crossbrowser.spec.js > native engine, drag variations, annotations and navigation work across browser engines",
+    "externalOrFailedRequests": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+        "status": 200,
+        "failure": null,
+        "start": "2026-10-19T12:29:50.825Z"
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z8GXhnU0.woff2",
+        "status": 200,
+        "failure": null,
+        "start": "2026-10-19T12:29:52.269Z"
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z8GXhnU0.woff2",
+        "status": 200,
+        "failure": null,
+        "start": "2026-10-19T12:29:52.439Z"
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z8GXhnU0.woff2",
+        "status": 200,
+        "failure": null,
+        "start": "2026-10-19T12:29:52.447Z"
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z8GXhnU0.woff2",
+        "status": 200,
+        "failure": null,
+        "start": "2026-10-19T12:29:52.447Z"
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z8GXhnU0.woff2",
+        "status": 200,
+        "failure": null,
+        "start": "2026-10-19T12:29:52.463Z"
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjg.woff2",
+        "status": 200,
+        "failure": null,
+        "start": "2026-10-19T12:29:52.458Z"
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z8GXhnU0.woff2",
+        "status": 200,
+        "failure": null,
+        "start": "2026-10-19T12:29:55.627Z"
+      }
+    ],
+    "consoleErrors": [],
+    "failedCalls": [
+      {
+        "type": "after",
+        "callId": "qovm@72",
+        "endTime": 114496.385,
+        "annotations": [],
+        "error": {
+          "name": "",
+          "message": "Error: locator.fill: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').locator('#import-text')\u001b[22m\n",
+          "stack": "Error: locator.fill: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').locator('#import-text')\u001b[22m\n\n    at importText (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/helpers.js:34:40)\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/crossbrowser.spec.js:10:93"
+        }
+      }
+    ]
+  },
+  {
+    "report": "crossbrowser-results.json",
+    "test": "crossbrowser.spec.js > review accuracy, coaching and keyboard dialogs work across browser engines",
+    "externalOrFailedRequests": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+        "status": -1,
+        "failure": "NS_ERROR_UNKNOWN_HOST",
+        "start": "2026-10-19T12:32:49.100Z"
+      }
+    ],
+    "consoleErrors": [],
+    "failedCalls": [
+      {
+        "type": "after",
+        "callId": "npdf@68",
+        "endTime": 269981.447,
+        "annotations": [],
+        "error": {
+          "name": "",
+          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Reviewed', exact: true })\nExpected: visible\nTimeout: 45000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('button', { name: 'Reviewed', exact: true }) with timeout 45000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Reviewed', exact: true })\u001b[22m\n",
+          "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Reviewed', exact: true })\nExpected: visible\nTimeout: 45000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('button', { name: 'Reviewed', exact: true }) with timeout 45000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Reviewed', exact: true })\u001b[22m\n\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/crossbrowser.spec.js:22:155"
+        }
+      },
+      {
+        "type": "after",
+        "callId": "npdf@68",
+        "endTime": 269890.458,
+        "error": {
+          "message": "Expect failed",
+          "stack": "ExpectError: Expect failed\n    at _Frame.expect (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:25606:17)\n    at _FrameDispatcher.expect (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:56333:11)\n    at _ProgressController.run (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:13018:27)\n    at DispatcherConnection.dispatch (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/playwright-core/lib/coreBundle.js:20191:27)",
+          "name": "ExpectError"
+        }
+      }
+    ]
+  },
+  {
+    "report": "crossbrowser-results.json",
+    "test": "crossbrowser.spec.js > small-screen layout, promotion and reduced-motion accessibility work across browser engines",
+    "externalOrFailedRequests": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+        "status": -1,
+        "failure": "NS_ERROR_UNKNOWN_HOST",
+        "start": "2026-10-19T12:34:26.091Z"
+      }
+    ],
+    "consoleErrors": [],
+    "failedCalls": []
+  },
+  {
+    "report": "crossbrowser-results.json",
+    "test": "crossbrowser.spec.js > native engine, drag variations, annotations and navigation work across browser engines",
+    "externalOrFailedRequests": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+        "status": -1,
+        "failure": "The Internet connection appears to be offline.",
+        "start": "2026-10-19T12:40:11.041Z"
+      }
+    ],
+    "consoleErrors": [
+      {
+        "type": "console",
+        "messageType": "error",
+        "text": "Failed to load resource: The Internet connection appears to be offline.",
+        "args": [],
+        "location": {
+          "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+          "lineNumber": 0,
+          "columnNumber": 0
+        },
+        "time": 638556.928,
+        "pageId": "page@ba2862ae900de41df5a88c348dfac54f"
+      }
+    ],
+    "failedCalls": [
+      {
+        "type": "after",
+        "callId": "nbsd@86",
+        "endTime": 1682823.3,
+        "annotations": [],
+        "error": {
+          "name": "",
+          "message": "Error: locator.click: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.variation-banner').getByRole('button', { name: 'Return to game', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button>\u2026</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n",
+          "stack": "Error: locator.click: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.variation-banner').getByRole('button', { name: 'Return to game', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button>\u2026</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/crossbrowser.spec.js:12:104"
+        }
+      }
+    ]
+  },
+  {
+    "report": "crossbrowser-results.json",
+    "test": "crossbrowser.spec.js > review accuracy, coaching and keyboard dialogs work across browser engines",
+    "externalOrFailedRequests": [],
+    "consoleErrors": [],
+    "failedCalls": [
+      {
+        "type": "after",
+        "callId": "webd@46",
+        "endTime": 2690708.442,
+        "annotations": [],
+        "error": {
+          "name": "",
+          "message": "Error: page.goto: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4325/\", waiting until \"load\"\u001b[22m\n",
+          "stack": "Error: page.goto: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4325/\", waiting until \"load\"\u001b[22m\n\n    at start (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/helpers.js:22:14)\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/crossbrowser.spec.js:21:45"
+        }
+      }
+    ]
+  },
+  {
+    "report": "crossbrowser-results.json",
+    "test": "crossbrowser.spec.js > small-screen layout, promotion and reduced-motion accessibility work across browser engines",
+    "externalOrFailedRequests": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+        "status": -1,
+        "failure": "The Internet connection appears to be offline.",
+        "start": "2026-10-19T13:14:27.912Z"
+      }
+    ],
+    "consoleErrors": [
+      {
+        "type": "console",
+        "messageType": "error",
+        "text": "Failed to load resource: The Internet connection appears to be offline.",
+        "args": [],
+        "location": {
+          "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap",
+          "lineNumber": 0,
+          "columnNumber": 0
+        },
+        "time": 2694510.78,
+        "pageId": "page@4c44b1f895a855443acd95e78d25b310"
+      }
+    ],
+    "failedCalls": [
+      {
+        "type": "after",
+        "callId": "ozus@64",
+        "endTime": 3626486.27,
+        "annotations": [],
+        "error": {
+          "name": "",
+          "message": "Error: locator.click: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').getByRole('button', { name: 'FEN position', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"\" aria-pressed=\"false\">FEN position</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is not stable\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n",
+          "stack": "Error: locator.click: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').getByRole('button', { name: 'FEN position', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"\" aria-pressed=\"false\">FEN position</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is not stable\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\n    at importText (/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/helpers.js:33:65)\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/crossbrowser.spec.js:32:3"
+        }
+      }
+    ]
+  }
+]

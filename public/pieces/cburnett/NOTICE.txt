@@ -1,0 +1,4 @@
+Chess pieces: "Cburnett" set by Colin M.L. Burnett, Wikimedia Commons
+https://commons.wikimedia.org/wiki/Category:SVG_chess_pieces (Chess_{k,q,r,b,n,p}{l,d}t45.svg)
+License: triple-licensed GFDL / BSD / GPL (GPLv2+). Linea uses it under the 3-clause BSD option:
+Redistribution permitted with this attribution retained. Downloaded 2026-10-21; viewBox added for scaling.

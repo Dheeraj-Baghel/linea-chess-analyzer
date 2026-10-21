@@ -1,0 +1,21 @@
+browserType.launchPersistentContext: Failed to launch the browser process.
+Browser logs:
+
+<launching> /Users/dheerazzz/Library/Caches/ms-playwright/firefox-1555/firefox/Nightly.app/Contents/MacOS/firefox -no-remote -headless -profile /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/firefox-profile -juggler-pipe about:blank
+<launched> pid=47497
+[pid=47497][err] *** You are running in headless mode.
+[pid=47497][err] Could not find profile folder.
+[pid=47497] <process did exit: exitCode=1, signal=null>
+[pid=47497] starting temporary directories cleanup
+Call log:
+  - <launching> /Users/dheerazzz/Library/Caches/ms-playwright/firefox-1555/firefox/Nightly.app/Contents/MacOS/firefox -no-remote -headless -profile /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/firefox-profile -juggler-pipe about:blank
+  - <launched> pid=47497
+  - [pid=47497][err] *** You are running in headless mode.
+  - [pid=47497][err] Could not find profile folder.
+  - [pid=47497] <process did exit: exitCode=1, signal=null>
+  - [pid=47497] starting temporary directories cleanup
+  - [pid=47497] <gracefully close start>
+  - [pid=47497] <kill>
+  - [pid=47497] <skipped force kill spawnedProcess.killed=false processClosed=true>
+  - [pid=47497] finished temporary directories cleanup
+  - [pid=47497] <gracefully close end>

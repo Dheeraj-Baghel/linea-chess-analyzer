@@ -1,0 +1,140 @@
+{
+  "empty": {
+    "categories": [
+      {
+        "category": "book",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "forced",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "brilliant",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "great",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "best",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "excellent",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "good",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "inaccuracy",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "mistake",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "miss",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "blunder",
+        "w": 0,
+        "b": 0
+      }
+    ],
+    "w": {
+      "reviewed": 0,
+      "unreviewed": 4,
+      "total": 4
+    },
+    "b": {
+      "reviewed": 0,
+      "unreviewed": 4,
+      "total": 4
+    }
+  },
+  "full": {
+    "categories": [
+      {
+        "category": "book",
+        "w": 4,
+        "b": 4
+      },
+      {
+        "category": "forced",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "brilliant",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "great",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "best",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "excellent",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "good",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "inaccuracy",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "mistake",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "miss",
+        "w": 0,
+        "b": 0
+      },
+      {
+        "category": "blunder",
+        "w": 0,
+        "b": 0
+      }
+    ],
+    "w": {
+      "reviewed": 4,
+      "unreviewed": 0,
+      "total": 4
+    },
+    "b": {
+      "reviewed": 4,
+      "unreviewed": 0,
+      "total": 4
+    }
+  }
+}

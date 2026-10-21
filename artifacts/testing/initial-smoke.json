@@ -1,0 +1,19 @@
+{
+  "title": "Linea — Chess analysis studio",
+  "width": 1440,
+  "scrollWidth": 1440,
+  "board": {
+    "x": 400,
+    "y": 244,
+    "width": 640,
+    "height": 640,
+    "top": 244,
+    "right": 1040,
+    "bottom": 884,
+    "left": 400
+  },
+  "eval": "+0.50\nWhite is better\nDepth 16/ 16",
+  "topLeft": "a8",
+  "topLeftTheme": "square light    ",
+  "errors": []
+}

@@ -1,0 +1,315 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.engine.config.js",
+      "--grep",
+      "real Stockfish evaluates|an actual engine candidate|transport failure",
+      "--reporter=list,json",
+      "--output=artifacts/testing/phase0/harness-focused-output"
+    ],
+    "configFile": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/playwright.engine.config.js",
+    "rootDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/qa/global-setup.js",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "suite": "engine-browser",
+      "production": false,
+      "liveProvider": false,
+      "engine": "real local single-thread Stockfish 18",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/phase0/harness-focused-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "suite": "engine-browser",
+          "production": false,
+          "liveProvider": false,
+          "engine": "real local single-thread Stockfish 18",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "engine-review.spec.js",
+          "smoke.spec.js"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/phase0/harness-focused-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "suite": "engine-browser",
+          "production": false,
+          "liveProvider": false,
+          "engine": "real local single-thread Stockfish 18",
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "snapshotDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "engine-review.spec.js",
+          "smoke.spec.js"
+        ],
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4336",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "video": "off",
+          "actionTimeout": 10000,
+          "navigationTimeout": 20000,
+          "serviceWorkers": "block",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npx vite --host 127.0.0.1 --port 4336 --strictPort",
+      "url": "http://127.0.0.1:4336",
+      "reuseExistingServer": false,
+      "timeout": 30000,
+      "gracefulShutdown": {
+        "signal": "SIGTERM",
+        "timeout": 5000
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "engine-review.spec.js",
+      "file": "engine-review.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real Stockfish evaluates, supports 3 candidate lines, pause/resume and separate engine arrows",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8222,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T15:55:05.237Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOC1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-5c287dc195141b803f29",
+          "file": "engine-review.spec.js",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "an actual engine candidate matching the recorded move navigates the mainline without a false variation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4093,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T15:55:14.492Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOC1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-79d8a565c321d84e0f12",
+          "file": "engine-review.spec.js",
+          "line": 46,
+          "column": 1
+        },
+        {
+          "title": "real local engine js transport failure is explained and retry restores analysis without losing the board",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1891,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T15:55:18.595Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOC1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogWwogICAgewogICAgICAidXJsIjogImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE4LWxpdGUtc2luZ2xlLmpzIiwKICAgICAgImVycm9yIjogIm5ldDo6RVJSX0FCT1JURUQiCiAgICB9CiAgXSwKICAiaHR0cEVycm9ycyI6IFtdLAogICJuYXZpZ2F0aW9ucyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvIgogIF0sCiAgInVuZXhwZWN0ZWRSZXF1ZXN0cyI6IFtdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-82142a6711ea0bfcfd1f",
+          "file": "engine-review.spec.js",
+          "line": 128,
+          "column": 37
+        },
+        {
+          "title": "real local engine wasm transport failure is explained and retry restores analysis without losing the board",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 37401,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T15:55:20.492Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOC1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTgtbGl0ZS1zaW5nbGUuanMiCiAgXSwKICAiZXJyb3JzIjogWwogICAgewogICAgICAibWVzc2FnZSI6ICJXQVNNIHN0cmVhbWluZyBmYWlsZWQ6IFR5cGVFcnJvcjogRmFpbGVkIHRvIGZldGNoXG4gICAgYXQgYSAoaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTgtbGl0ZS1zaW5nbGUuanM6MTE6MTcxNTIpXG4gICAgYXQgT2JqZWN0Lmluc3RhbnRpYXRlV2FzbSAoaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTgtbGl0ZS1zaW5nbGUuanM6MTE6MTc5OTYpXG4gICAgYXQgaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTgtbGl0ZS1zaW5nbGUuanM6MTE6MTIzNThcbiAgICBhdCBlIChodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOC1saXRlLXNpbmdsZS5qczoxMToxMjc5MClcbiAgICBhdCBkIChodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOC1saXRlLXNpbmdsZS5qczoxMToxODIxMClcbiAgICBhdCBodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOC1saXRlLXNpbmdsZS5qczoxMToyMDY2MFxuICAgIGF0IGh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE4LWxpdGUtc2luZ2xlLmpzOjExOjIxMDY0IiwKICAgICAgImxvY2F0aW9uIjogewogICAgICAgICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTgtbGl0ZS1zaW5nbGUuanMiLAogICAgICAgICJsaW5lIjogMTAsCiAgICAgICAgImNvbHVtbiI6IDE4MTY2LAogICAgICAgICJsaW5lTnVtYmVyIjogMTAsCiAgICAgICAgImNvbHVtbk51bWJlciI6IDE4MTY2CiAgICAgIH0KICAgIH0sCiAgICAiRmFpbGVkIHRvIGZldGNoIgogIF0sCiAgInJlcXVlc3RGYWlsdXJlcyI6IFsKICAgIHsKICAgICAgInVybCI6ICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOC1saXRlLXNpbmdsZS53YXNtIiwKICAgICAgImVycm9yIjogIm5ldDo6RVJSX0ZBSUxFRCIKICAgIH0KICBdLAogICJodHRwRXJyb3JzIjogW10sCiAgIm5hdmlnYXRpb25zIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi8iCiAgXSwKICAidW5leHBlY3RlZFJlcXVlc3RzIjogW10KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c902a70e4fcb6b54b629-03e39f5cd024f7bca883",
+          "file": "engine-review.spec.js",
+          "line": 128,
+          "column": 37
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-19T15:55:03.527Z",
+    "duration": 54571.316,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

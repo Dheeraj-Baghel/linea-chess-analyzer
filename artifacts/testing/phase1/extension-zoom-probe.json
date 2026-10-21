@@ -1,0 +1,7 @@
+{
+  "checkedAt": "2026-10-19T16:46:46.724Z",
+  "mechanism": "chrome.tabs.setZoom(2) in a disposable test-profile-only extension; no CSS zoom/transform or pinch emulation",
+  "checks": [],
+  "status": "failed",
+  "error": "expect(received).toBe(expected) // Object.is equality\n\nExpected: 2\nReceived: 1\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate"
+}

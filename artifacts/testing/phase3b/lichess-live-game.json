@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-20T00:39:26.862Z",
+  "id": "q7ZvsdUF",
+  "players": {
+    "white": {
+      "user": {
+        "name": "Lance5500",
+        "title": "LM",
+        "id": "lance5500"
+      },
+      "rating": 2389,
+      "ratingDiff": 4
+    },
+    "black": {
+      "user": {
+        "name": "TryingHard87",
+        "id": "tryinghard87"
+      },
+      "rating": 2498,
+      "ratingDiff": -4
+    }
+  },
+  "plies": 125,
+  "timeControl": "300+3",
+  "clocks": 125,
+  "pgnPreserved": true,
+  "cors": "*"
+}

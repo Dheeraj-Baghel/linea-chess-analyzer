@@ -1,0 +1,40 @@
+{
+  "name": "chess-game-analyzer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4325 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4335 --strictPort",
+    "test": "vitest run",
+    "test:browser": "playwright test",
+    "test:engine": "playwright test --config playwright.engine.config.js",
+    "test:crossbrowser": "playwright test --config playwright.crossbrowser.config.js",
+    "test:production": "playwright test --config playwright.production.config.js",
+    "test:live": "LINEA_LIVE_PROVIDER=1 playwright test --config playwright.live.config.js",
+    "test:lichess-live": "LINEA_LIVE_PROVIDER=1 playwright test --config playwright.lichess-live.config.js",
+    "check:openings": "node scripts/build-openings-index.mjs --check",
+    "test:baseline": "npm run lint && npm run check:openings && npm test && npm run build && npm run test:browser && npm run test:engine && npm run test:crossbrowser && npm run test:production",
+    "lint": "eslint src server tests scripts *.config.js"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.8.2",
+    "@vitejs/plugin-react": "^5.0.0",
+    "chess.js": "^1.4.0",
+    "gsap": "3.15.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "three": "0.186.1",
+    "vite": "^7.0.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.11.0",
+    "@playwright/test": "^1.64.1",
+    "eslint": "^9.39.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^16.0.0",
+    "vitest": "^4.0.0"
+  }
+}

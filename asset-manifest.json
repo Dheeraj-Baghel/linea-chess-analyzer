@@ -1,0 +1,36 @@
+{
+  "schema": "linea-product-assets-1",
+  "hero": {
+    "direction": { "pieces": "classic Staunton", "board": "realistic wood", "confirmedByUser": true },
+    "finalAssetApproved": false,
+    "approvalStatus": "The final model/finish question was skipped; no approval is inferred.",
+    "currentRenderer": "Original neutral temporary blockout in src/HeroChessScene.jsx; not the final wooden hero",
+    "staticFallback": "Legal illustrative midgame using existing attributed skak SVGs; no continuous motion",
+    "position": "Derived from bundled illustrative SAMPLE_PGN after 16...c4; not a provider account game",
+    "candidate": {
+      "name": "1DesignTool Chess Set",
+      "source": "https://1designtool.com/3d/models/chess-set",
+      "download": "https://assets.stoicsoft.com/1designtool/3d/models/chess-set/4ad801da1a/model.glb",
+      "license": "https://1designtool.com/3d/license",
+      "licenseName": "1DesignTool 3D library license (not CC0)",
+      "observedTerms": "Personal/commercial games/apps/websites and modifications allowed; may ship inside product. Standalone file/model-pack redistribution, marketplace upload and authorship claims prohibited.",
+      "localInspectionAsset": "artifacts/reference-assets/staunton-candidate/chess-set.glb",
+      "localPreview": "artifacts/reference-assets/staunton-candidate/preview.webp",
+      "observedStructure": "28 meshes; pieces grouped by side and type, including multi-piece pawns/rooks/bishops/knights. Individual-piece separation/placement still needs implementation and validation after approval.",
+      "observedMaterials": ["rosewood", "stringing", "maple", "walnut", "boxwood", "felt", "ebony"],
+      "format": "GLB 2.0, THREE.GLTFExporter r180",
+      "publiclyServed": false,
+      "remaining": ["Explicit source and finish approval", "Connected-piece separation for legal midgame", "Validate scale, axes, pivots and board-square alignment", "Optimize geometry and materials without losing six-type recognition", "Render approved-asset fallback and device benchmarks"]
+    }
+  },
+  "previews": [
+    { "path": "public/previews/review.jpg", "source": "Local product browser test screenshot", "meaning": "Fictional fixture players; actual local engine evidence. Not an imported account or expected score." },
+    { "path": "public/previews/report.jpg", "source": "Local mixed-color batch report test screenshot", "meaning": "Explicit test sample, native review evidence and actual denominators. Not lifetime player statistics." }
+  ],
+  "dependencies": [
+    { "name": "three", "version": "0.186.1", "license": "MIT", "scope": "Lazy homepage renderer only" },
+    { "name": "@react-three/fiber", "version": "9.8.2", "license": "MIT", "scope": "Lazy homepage renderer only" },
+    { "name": "gsap", "version": "3.15.0", "license": "See pinned package license; no proprietary licensing claim", "scope": "Scoped ScrollTrigger; cleaned on unmount" }
+  ],
+  "unchangedAssets": "Stockfish 19.0.1 lite-single JS/WASM, GPL source notices and original skak SVG/LPPL attribution retained in THIRD_PARTY.md."
+}

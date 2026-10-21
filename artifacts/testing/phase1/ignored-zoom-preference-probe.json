@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-19T16:45:43.671Z",
+  "mechanism": "Chromium native profile default_zoom_level; no CSS zoom, transform or pinch emulation",
+  "targetZoom": 2,
+  "checks": [],
+  "geometry": {
+    "innerWidth": 1440,
+    "innerHeight": 900,
+    "outerWidth": 1440,
+    "outerHeight": 900,
+    "devicePixelRatio": 1,
+    "cssZoom": "1",
+    "visualScale": 1,
+    "pageWidth": 1440
+  },
+  "status": "failed",
+  "error": "expect(received).toBe(expected) // Object.is equality\n\nExpected: 2\nReceived: 1"
+}

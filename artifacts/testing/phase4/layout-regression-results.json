@@ -1,0 +1,244 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/.bin/playwright",
+      "test",
+      "tests/browser/phase4-review.spec.js",
+      "--grep",
+      "partial counts",
+      "--reporter=list,json",
+      "--output=artifacts/testing/phase4/layout-regression-output"
+    ],
+    "configFile": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/playwright.config.js",
+    "rootDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/qa/global-setup.js",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "suite": "browser",
+      "production": false,
+      "liveProvider": false,
+      "engine": "Stockfish 19 Lite 19.0.1",
+      "engineVariant": "lite-single",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/phase4/layout-regression-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "suite": "browser",
+          "production": false,
+          "liveProvider": false,
+          "engine": "Stockfish 19 Lite 19.0.1",
+          "engineVariant": "lite-single",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "testIgnore": [
+          "**/production.spec.js",
+          "**/crossbrowser.spec.js",
+          "**/live-*.spec.js",
+          "**/engine-review.spec.js",
+          "**/smoke.spec.js"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/phase4/layout-regression-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "suite": "browser",
+          "production": false,
+          "liveProvider": false,
+          "engine": "Stockfish 19 Lite 19.0.1",
+          "engineVariant": "lite-single",
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "snapshotDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "testIgnore": [
+          "**/production.spec.js",
+          "**/crossbrowser.spec.js",
+          "**/live-*.spec.js",
+          "**/engine-review.spec.js",
+          "**/smoke.spec.js"
+        ],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4336",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "video": "off",
+          "actionTimeout": 10000,
+          "navigationTimeout": 20000,
+          "serviceWorkers": "block",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npx vite --host 127.0.0.1 --port 4336 --strictPort",
+      "url": "http://127.0.0.1:4336",
+      "reuseExistingServer": false,
+      "timeout": 30000,
+      "gracefulShutdown": {
+        "signal": "SIGTERM",
+        "timeout": 5000
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "phase4-review.spec.js",
+      "file": "phase4-review.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "F04 partial counts, full totals and provenance remain accessible across report layouts",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4376,
+                  "error": {
+                    "message": "Error: Report evidence/accessibility labels must stay inside its scrollport\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m1207\u001b[39m\nReceived:    \u001b[31m1268\u001b[39m",
+                    "stack": "Error: Report evidence/accessibility labels must stay inside its scrollport\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m1207\u001b[39m\nReceived:    \u001b[31m1268\u001b[39m\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/phase4-review.spec.js:158:105",
+                    "location": {
+                      "file": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/phase4-review.spec.js",
+                      "column": 105,
+                      "line": 158
+                    },
+                    "snippet": "  156 |     if (width >= 1440) {\n  157 |       const pageBounds = await page.evaluate(() => ({ scroll: document.documentElement.scrollHeight, flow: Math.max(innerHeight, document.body.getBoundingClientRect().height) }));\n> 158 |       expect(pageBounds.scroll, 'Report evidence/accessibility labels must stay inside its scrollport').toBeLessThanOrEqual(Math.ceil(pageBounds.flow) + 4);\n      |                                                                                                         ^\n  159 |     }\n  160 |     await scan(page, `report-${width}`);\n  161 |     if (width >= 1440) await page.locator('.review-breakdown').scrollIntoViewIfNeeded();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/phase4-review.spec.js",
+                        "column": 105,
+                        "line": 158
+                      },
+                      "message": "Error: Report evidence/accessibility labels must stay inside its scrollport\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m1207\u001b[39m\nReceived:    \u001b[31m1268\u001b[39m\n\n  156 |     if (width >= 1440) {\n  157 |       const pageBounds = await page.evaluate(() => ({ scroll: document.documentElement.scrollHeight, flow: Math.max(innerHeight, document.body.getBoundingClientRect().height) }));\n> 158 |       expect(pageBounds.scroll, 'Report evidence/accessibility labels must stay inside its scrollport').toBeLessThanOrEqual(Math.ceil(pageBounds.flow) + 4);\n      |                                                                                                         ^\n  159 |     }\n  160 |     await scan(page, `report-${width}`);\n  161 |     if (width >= 1440) await page.locator('.review-breakdown').scrollIntoViewIfNeeded();\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/phase4-review.spec.js:158:105"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T04:19:37.624Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/phase4/layout-regression-output/phase4-review-F04-partial--7c1b7-sible-across-report-layouts-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiBmYWxzZSwKICAiZm9udHMiOiAic3lzdGVtIGZhbGxiYWNrIiwKICAid29ya2VycyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2L2VuZ2luZS9zdG9ja2Zpc2gtMTktbGl0ZS1zaW5nbGUuanMiCiAgXSwKICAiZXJyb3JzIjogW10sCiAgInJlcXVlc3RGYWlsdXJlcyI6IFtdLAogICJodHRwRXJyb3JzIjogW10sCiAgIm5hdmlnYXRpb25zIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi8iCiAgXSwKICAidW5leHBlY3RlZFJlcXVlc3RzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/phase4/layout-regression-output/phase4-review-F04-partial--7c1b7-sible-across-report-layouts-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/phase4/layout-regression-output/phase4-review-F04-partial--7c1b7-sible-across-report-layouts-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/phase4-review.spec.js",
+                    "column": 105,
+                    "line": 158
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "198a32a2902983fa4a08-b0efd8efd1a564a5b592",
+          "file": "phase4-review.spec.js",
+          "line": 141,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-20T04:19:35.825Z",
+    "duration": 7515.329,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

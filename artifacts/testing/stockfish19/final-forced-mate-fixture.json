@@ -1,0 +1,55 @@
+{
+  "before": {
+    "rank": 1,
+    "depth": 18,
+    "cp": 99800,
+    "mate": 2,
+    "pv": [
+      "e6g8",
+      "f8g8",
+      "h6f7"
+    ]
+  },
+  "after": {
+    "rank": 1,
+    "depth": 18,
+    "cp": 99900,
+    "mate": 1,
+    "pv": [
+      "f8g8",
+      "h6f7"
+    ]
+  },
+  "move": {
+    "san": "Qg8+",
+    "uci": "e6g8"
+  },
+  "candidate": null,
+  "accepted": null,
+  "final": {
+    "type": "best",
+    "loss": 0,
+    "before": {
+      "rank": 1,
+      "depth": 18,
+      "cp": 99800,
+      "mate": 2,
+      "pv": [
+        "e6g8",
+        "f8g8",
+        "h6f7"
+      ]
+    },
+    "after": {
+      "rank": 1,
+      "depth": 18,
+      "cp": 99900,
+      "mate": 1,
+      "pv": [
+        "f8g8",
+        "h6f7"
+      ]
+    },
+    "alternative": "e6g8"
+  }
+}

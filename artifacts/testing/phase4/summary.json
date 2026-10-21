@@ -1,0 +1,249 @@
+{
+  "verifiedAt": "2026-10-20T05:27:23.370251+00:00",
+  "phase": "4 only",
+  "phase5": "explicitly deferred; not implemented",
+  "sourceSha256": "d6f39d172a1a43e70ef69719e17ddd657be54bcb4481f0fbef26dcfe05374141",
+  "unit": {
+    "numTotalTests": 220,
+    "numPassedTests": 220,
+    "numFailedTests": 0,
+    "numPendingTests": 0,
+    "success": true
+  },
+  "suites": [
+    {
+      "suite": "browser",
+      "startTime": "2026-10-20T04:52:40.821Z",
+      "duration": 225284.039,
+      "expected": 75,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "errors": [],
+      "sourceSha256": "d6f39d172a1a43e70ef69719e17ddd657be54bcb4481f0fbef26dcfe05374141",
+      "sourceUnchanged": true,
+      "executionGaps": [],
+      "unexpectedRequests": []
+    },
+    {
+      "suite": "engine-browser",
+      "startTime": "2026-10-20T04:56:27.059Z",
+      "duration": 109812.48499999999,
+      "expected": 16,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "errors": [],
+      "sourceSha256": "d6f39d172a1a43e70ef69719e17ddd657be54bcb4481f0fbef26dcfe05374141",
+      "sourceUnchanged": true,
+      "executionGaps": [],
+      "unexpectedRequests": []
+    },
+    {
+      "suite": "crossbrowser",
+      "startTime": "2026-10-20T05:05:26.636Z",
+      "duration": 39695.21799999999,
+      "expected": 6,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "errors": [],
+      "sourceSha256": "d6f39d172a1a43e70ef69719e17ddd657be54bcb4481f0fbef26dcfe05374141",
+      "sourceUnchanged": true,
+      "executionGaps": [],
+      "unexpectedRequests": []
+    },
+    {
+      "suite": "production-browser",
+      "startTime": "2026-10-20T05:06:07.040Z",
+      "duration": 12824.325,
+      "expected": 3,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "errors": [],
+      "sourceSha256": "d6f39d172a1a43e70ef69719e17ddd657be54bcb4481f0fbef26dcfe05374141",
+      "sourceUnchanged": true,
+      "executionGaps": [],
+      "unexpectedRequests": []
+    },
+    {
+      "suite": "lichess-live",
+      "startTime": "2026-10-20T05:06:41.032Z",
+      "duration": 9461.073999999999,
+      "expected": 2,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "errors": [],
+      "sourceSha256": "d6f39d172a1a43e70ef69719e17ddd657be54bcb4481f0fbef26dcfe05374141",
+      "sourceUnchanged": true,
+      "executionGaps": [],
+      "unexpectedRequests": []
+    },
+    {
+      "suite": "live-browser",
+      "startTime": "2026-10-20T05:06:51.131Z",
+      "duration": 19936.68,
+      "expected": 2,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "errors": [],
+      "sourceSha256": "d6f39d172a1a43e70ef69719e17ddd657be54bcb4481f0fbef26dcfe05374141",
+      "sourceUnchanged": true,
+      "executionGaps": [],
+      "unexpectedRequests": []
+    }
+  ],
+  "runtime": {
+    "node": "v24.13.0",
+    "platform": "darwin",
+    "osRelease": "27.2.0",
+    "arch": "arm64"
+  },
+  "browserVersions": {
+    "chromium": "156.0.8078.4",
+    "firefox": "157.0",
+    "webkit": "27.2"
+  },
+  "unchangedProtectedFiles": [
+    "src/engine.js",
+    "src/engineBuild.js",
+    "src/chess.js",
+    "src/Board.jsx",
+    "src/chesscom.js",
+    "src/lichess.js",
+    "src/importState.js",
+    "src/openings.js",
+    "src/displaySettings.js",
+    "server/chesscom-resolver.js",
+    "package.json",
+    "package-lock.json",
+    "public/engine/LICENSE.txt",
+    "public/engine/NOTICE.md",
+    "public/engine/stockfish-19-lite-single.js",
+    "public/engine/stockfish-19-lite-single.wasm",
+    "public/favicon.svg",
+    "public/pieces/skak/LICENSE-LPPL-1.3c.txt",
+    "public/pieces/skak/NOTICE.txt",
+    "public/pieces/skak/bb.svg",
+    "public/pieces/skak/bk.svg",
+    "public/pieces/skak/bn.svg",
+    "public/pieces/skak/bp.svg",
+    "public/pieces/skak/bq.svg",
+    "public/pieces/skak/br.svg",
+    "public/pieces/skak/wb.svg",
+    "public/pieces/skak/wk.svg",
+    "public/pieces/skak/wn.svg",
+    "public/pieces/skak/wp.svg",
+    "public/pieces/skak/wq.svg",
+    "public/pieces/skak/wr.svg",
+    "vendor/chess-openings/NOTICE.md",
+    "vendor/chess-openings/README.md",
+    "vendor/chess-openings/a.tsv",
+    "vendor/chess-openings/b.tsv",
+    "vendor/chess-openings/c.tsv",
+    "vendor/chess-openings/d.tsv",
+    "vendor/chess-openings/e.tsv",
+    "vendor/chess-openings/provenance.json"
+  ],
+  "unchangedFunctions": [
+    "usePositionEngine",
+    "moveAccuracy",
+    "accuracySummary",
+    "sacrificeCandidate and exchangeGain",
+    "withBrilliance verification threshold expression",
+    "moveExplanation",
+    "coachingSummary",
+    "classify and other chess.js functions"
+  ],
+  "policies": [
+    {
+      "id": "quick",
+      "policy": {
+        "id": "quick",
+        "label": "Quick",
+        "version": "linea-review-policy-1",
+        "targetDepth": 12,
+        "positionMs": 450,
+        "sacrificeMs": 600,
+        "description": "Shorter searches; more depth-limited judgments."
+      },
+      "beforeDepth": 12,
+      "afterDepth": 12,
+      "acceptanceDepth": 12,
+      "classification": "brilliant"
+    },
+    {
+      "id": "balanced",
+      "policy": {
+        "id": "balanced",
+        "label": "Balanced",
+        "version": "linea-review-policy-1",
+        "targetDepth": 16,
+        "positionMs": 1100,
+        "sacrificeMs": 1400,
+        "description": "The existing default review budget."
+      },
+      "beforeDepth": 16,
+      "afterDepth": 16,
+      "acceptanceDepth": 16,
+      "classification": "brilliant"
+    },
+    {
+      "id": "deeper",
+      "policy": {
+        "id": "deeper",
+        "label": "Deeper",
+        "version": "linea-review-policy-1",
+        "targetDepth": 20,
+        "positionMs": 3000,
+        "sacrificeMs": 4000,
+        "description": "More time per position; still not a guaranteed depth or verdict."
+      },
+      "beforeDepth": 20,
+      "afterDepth": 20,
+      "acceptanceDepth": 20,
+      "classification": "brilliant"
+    }
+  ],
+  "accessibility": {
+    "savedSurfaces": 26,
+    "violations": 0,
+    "additionalLichessPicker": "passed in default browser suite"
+  },
+  "supplemental": {
+    "checkedAt": "2026-10-20T05:26:29.834Z",
+    "compiled": {
+      "status": "passed",
+      "origin": "http://127.0.0.1:4335",
+      "quickReview": true,
+      "pendingDidNotRerun": true,
+      "explicitDeeperRerun": true
+    },
+    "nativeZoom": {
+      "status": "passed",
+      "factor": 2,
+      "geometry": {
+        "innerWidth": 720,
+        "outerWidth": 1440,
+        "devicePixelRatio": 2,
+        "page": 720,
+        "cssZoom": "1",
+        "visualScale": 1
+      },
+      "reviewControlUsable": true,
+      "actualReviewCompleted": true
+    }
+  },
+  "notes": [
+    "One combined tool command hit its 360-second execution limit after browser/native passes; only its verified orphaned QA server was cleaned up and cross-browser/production/live suites ran separately without source changes.",
+    "The report/rail scroll-container overflow found by visual review was fixed and regression tested.",
+    "No accuracy formula, Brilliant threshold, engine asset, provider adapter or opening dataset change.",
+    "Existing lazy opening-data chunk size advisory and 35-second WASM startup-failure timeout remain disclosed.",
+    "Physical devices and human assistive-technology review remain manual."
+  ],
+  "deployed": false,
+  "published": false
+}

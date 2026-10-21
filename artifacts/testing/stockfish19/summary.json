@@ -1,0 +1,511 @@
+{
+  "verifiedAt": "2026-10-19T18:55:17.255752+00:00",
+  "task": "Stockfish 19 Lite upgrade only, before Phase 2",
+  "engineBuild": {
+    "name": "Stockfish 19 Lite",
+    "version": "19.0.1",
+    "variant": "lite-single",
+    "threads": 1,
+    "uciName": "Stockfish 19 Lite WASM",
+    "workerUrl": "/engine/stockfish-19-lite-single.js",
+    "wasmUrl": "/engine/stockfish-19-lite-single.wasm",
+    "release": "https://github.com/nmrugg/stockfish.js/releases/tag/v19.0.1",
+    "sourceCommit": "0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6",
+    "workerSha256": "ccb130d7ff29408531c47d859a49f91d59d4f482d05a53eb1a3231a4f624c91a",
+    "wasmSha256": "ee4f115bdb2d32cadf96cada104a05b5ec257d7ad6f57582190b49bc71f096de"
+  },
+  "sourceSha256": "8106c6e19da19f1577a0663b80267a616c6c4cbe8f78f93e6227bb883710cbcf",
+  "unit": {
+    "numTotalTests": 137,
+    "numPassedTests": 137,
+    "numFailedTests": 0,
+    "numPendingTests": 0
+  },
+  "suites": [
+    {
+      "suite": "browser",
+      "startTime": "2026-10-19T18:49:10.798Z",
+      "duration": 111448.047,
+      "expected": 48,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "reportLevelErrors": [],
+      "sourceSha256": "8106c6e19da19f1577a0663b80267a616c6c4cbe8f78f93e6227bb883710cbcf",
+      "sourceUnchanged": true,
+      "executionGaps": [],
+      "unexpectedRequests": [],
+      "engineBuild": {
+        "name": "Stockfish 19 Lite",
+        "version": "19.0.1",
+        "variant": "lite-single",
+        "threads": 1,
+        "uciName": "Stockfish 19 Lite WASM",
+        "workerUrl": "/engine/stockfish-19-lite-single.js",
+        "wasmUrl": "/engine/stockfish-19-lite-single.wasm",
+        "release": "https://github.com/nmrugg/stockfish.js/releases/tag/v19.0.1",
+        "sourceCommit": "0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6",
+        "workerSha256": "ccb130d7ff29408531c47d859a49f91d59d4f482d05a53eb1a3231a4f624c91a",
+        "wasmSha256": "ee4f115bdb2d32cadf96cada104a05b5ec257d7ad6f57582190b49bc71f096de"
+      }
+    },
+    {
+      "suite": "engine-browser",
+      "startTime": "2026-10-19T18:51:03.085Z",
+      "duration": 119745.084,
+      "expected": 16,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "reportLevelErrors": [],
+      "sourceSha256": "8106c6e19da19f1577a0663b80267a616c6c4cbe8f78f93e6227bb883710cbcf",
+      "sourceUnchanged": true,
+      "executionGaps": [],
+      "unexpectedRequests": [],
+      "engineBuild": {
+        "name": "Stockfish 19 Lite",
+        "version": "19.0.1",
+        "variant": "lite-single",
+        "threads": 1,
+        "uciName": "Stockfish 19 Lite WASM",
+        "workerUrl": "/engine/stockfish-19-lite-single.js",
+        "wasmUrl": "/engine/stockfish-19-lite-single.wasm",
+        "release": "https://github.com/nmrugg/stockfish.js/releases/tag/v19.0.1",
+        "sourceCommit": "0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6",
+        "workerSha256": "ccb130d7ff29408531c47d859a49f91d59d4f482d05a53eb1a3231a4f624c91a",
+        "wasmSha256": "ee4f115bdb2d32cadf96cada104a05b5ec257d7ad6f57582190b49bc71f096de"
+      }
+    },
+    {
+      "suite": "crossbrowser",
+      "startTime": "2026-10-19T18:53:03.711Z",
+      "duration": 40148.883,
+      "expected": 6,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "reportLevelErrors": [],
+      "sourceSha256": "8106c6e19da19f1577a0663b80267a616c6c4cbe8f78f93e6227bb883710cbcf",
+      "sourceUnchanged": true,
+      "executionGaps": [],
+      "unexpectedRequests": [],
+      "engineBuild": {
+        "name": "Stockfish 19 Lite",
+        "version": "19.0.1",
+        "variant": "lite-single",
+        "threads": 1,
+        "uciName": "Stockfish 19 Lite WASM",
+        "workerUrl": "/engine/stockfish-19-lite-single.js",
+        "wasmUrl": "/engine/stockfish-19-lite-single.wasm",
+        "release": "https://github.com/nmrugg/stockfish.js/releases/tag/v19.0.1",
+        "sourceCommit": "0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6",
+        "workerSha256": "ccb130d7ff29408531c47d859a49f91d59d4f482d05a53eb1a3231a4f624c91a",
+        "wasmSha256": "ee4f115bdb2d32cadf96cada104a05b5ec257d7ad6f57582190b49bc71f096de"
+      }
+    },
+    {
+      "suite": "production-browser",
+      "startTime": "2026-10-19T18:53:44.690Z",
+      "duration": 10429.917000000001,
+      "expected": 3,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "reportLevelErrors": [],
+      "sourceSha256": "8106c6e19da19f1577a0663b80267a616c6c4cbe8f78f93e6227bb883710cbcf",
+      "sourceUnchanged": true,
+      "executionGaps": [],
+      "unexpectedRequests": [],
+      "engineBuild": {
+        "name": "Stockfish 19 Lite",
+        "version": "19.0.1",
+        "variant": "lite-single",
+        "threads": 1,
+        "uciName": "Stockfish 19 Lite WASM",
+        "workerUrl": "/engine/stockfish-19-lite-single.js",
+        "wasmUrl": "/engine/stockfish-19-lite-single.wasm",
+        "release": "https://github.com/nmrugg/stockfish.js/releases/tag/v19.0.1",
+        "sourceCommit": "0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6",
+        "workerSha256": "ccb130d7ff29408531c47d859a49f91d59d4f482d05a53eb1a3231a4f624c91a",
+        "wasmSha256": "ee4f115bdb2d32cadf96cada104a05b5ec257d7ad6f57582190b49bc71f096de"
+      }
+    }
+  ],
+  "browsers": {
+    "chromium": "156.0.8078.4",
+    "firefox": "157.0",
+    "webkit": "27.2"
+  },
+  "runtime": {
+    "node": "v24.13.0",
+    "platform": "darwin",
+    "osRelease": "27.2.0",
+    "arch": "arm64"
+  },
+  "unchangedFiles": [
+    "src/chess.js",
+    "src/review.js",
+    "src/useEngine.js",
+    "src/Board.jsx",
+    "src/App.jsx",
+    "src/UI.jsx",
+    "src/ReviewInsights.jsx",
+    "src/ChessComImport.jsx",
+    "src/chesscom.js",
+    "src/displaySettings.js",
+    "src/styles.css",
+    "src/review.css",
+    "src/accessibility.css",
+    "server/chesscom-resolver.js",
+    "package.json",
+    "package-lock.json",
+    "public/pieces/skak/LICENSE-LPPL-1.3c.txt",
+    "public/pieces/skak/NOTICE.txt",
+    "public/pieces/skak/bb.svg",
+    "public/pieces/skak/bk.svg",
+    "public/pieces/skak/bn.svg",
+    "public/pieces/skak/bp.svg",
+    "public/pieces/skak/bq.svg",
+    "public/pieces/skak/br.svg",
+    "public/pieces/skak/wb.svg",
+    "public/pieces/skak/wk.svg",
+    "public/pieces/skak/wn.svg",
+    "public/pieces/skak/wp.svg",
+    "public/pieces/skak/wq.svg",
+    "public/pieces/skak/wr.svg"
+  ],
+  "nativeIdentity": {
+    "build": {
+      "name": "Stockfish 19 Lite",
+      "version": "19.0.1",
+      "variant": "lite-single",
+      "threads": 1,
+      "uciName": "Stockfish 19 Lite WASM",
+      "workerUrl": "/engine/stockfish-19-lite-single.js",
+      "wasmUrl": "/engine/stockfish-19-lite-single.wasm",
+      "release": "https://github.com/nmrugg/stockfish.js/releases/tag/v19.0.1",
+      "sourceCommit": "0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6",
+      "workerSha256": "ccb130d7ff29408531c47d859a49f91d59d4f482d05a53eb1a3231a4f624c91a",
+      "wasmSha256": "ee4f115bdb2d32cadf96cada104a05b5ec257d7ad6f57582190b49bc71f096de"
+    },
+    "native": {
+      "engines": [
+        {
+          "url": "/engine/stockfish-19-lite-single.js",
+          "identity": "Stockfish 19 Lite WASM",
+          "threadOption": "option name Threads type spin default 1 min 1 max 1",
+          "searches": 1
+        },
+        {
+          "url": "/engine/stockfish-19-lite-single.js",
+          "identity": "Stockfish 19 Lite WASM",
+          "threadOption": "option name Threads type spin default 1 min 1 max 1",
+          "searches": 4
+        }
+      ],
+      "crossOriginIsolated": false
+    },
+    "assets": [
+      {
+        "url": "http://127.0.0.1:4336/engine/stockfish-19-lite-single.js",
+        "status": 200,
+        "type": "text/javascript"
+      },
+      {
+        "url": "http://127.0.0.1:4336/engine/stockfish-19-lite-single.wasm",
+        "status": 200,
+        "type": "application/wasm"
+      },
+      {
+        "url": "http://127.0.0.1:4336/engine/stockfish-19-lite-single.js",
+        "status": 200,
+        "type": "text/javascript"
+      },
+      {
+        "url": "http://127.0.0.1:4336/engine/stockfish-19-lite-single.wasm",
+        "status": 200,
+        "type": "application/wasm"
+      }
+    ]
+  },
+  "positiveSacrifice": {
+    "build": {
+      "name": "Stockfish 19 Lite",
+      "version": "19.0.1",
+      "variant": "lite-single",
+      "threads": 1,
+      "uciName": "Stockfish 19 Lite WASM",
+      "workerUrl": "/engine/stockfish-19-lite-single.js",
+      "wasmUrl": "/engine/stockfish-19-lite-single.wasm",
+      "release": "https://github.com/nmrugg/stockfish.js/releases/tag/v19.0.1",
+      "sourceCommit": "0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6",
+      "workerSha256": "ccb130d7ff29408531c47d859a49f91d59d4f482d05a53eb1a3231a4f624c91a",
+      "wasmSha256": "ee4f115bdb2d32cadf96cada104a05b5ec257d7ad6f57582190b49bc71f096de"
+    },
+    "pgn": "[Event \"Constructed drawing-sacrifice regression\"]\n[Site \"Linea test fixture, not a historical game\"]\n[White \"Fixture White\"]\n[Black \"Fixture Black\"]\n[Result \"*\"]\n[SetUp \"1\"]\n[FEN \"8/8/8/8/8/2R3p1/2pk2P1/7K w - - 0 1\"]\n\n1. Rxc2+ *\n",
+    "before": {
+      "rank": 1,
+      "depth": 16,
+      "cp": 0,
+      "mate": null,
+      "pv": [
+        "c3c2",
+        "d2c2",
+        "h1g1",
+        "c2d2",
+        "g1f1",
+        "d2d1",
+        "f1g1"
+      ]
+    },
+    "after": {
+      "rank": 1,
+      "depth": 16,
+      "cp": 0,
+      "mate": null,
+      "pv": [
+        "d2c2",
+        "h1g1",
+        "c2d1",
+        "g1f1",
+        "d1d2",
+        "f1g1",
+        "d2c1",
+        "g1f1",
+        "c1d1",
+        "f1g1"
+      ]
+    },
+    "candidate": {
+      "cost": 4,
+      "acceptance": "d2c2",
+      "san": "Kxc2",
+      "fen": "8/8/8/8/8/6p1/2k3P1/7K w - - 0 2",
+      "offeredPiece": "r",
+      "square": "c2"
+    },
+    "accepted": {
+      "rank": 1,
+      "depth": 16,
+      "cp": 0,
+      "mate": null,
+      "pv": [
+        "h1g1",
+        "c2d1",
+        "g1f1",
+        "d1d2",
+        "f1g1",
+        "d2e2",
+        "g1h1",
+        "e2d1",
+        "h1g1"
+      ]
+    },
+    "final": {
+      "type": "brilliant",
+      "loss": 0,
+      "before": {
+        "rank": 1,
+        "depth": 16,
+        "cp": 0,
+        "mate": null,
+        "pv": [
+          "c3c2",
+          "d2c2",
+          "h1g1",
+          "c2d2",
+          "g1f1",
+          "d2d1",
+          "f1g1"
+        ]
+      },
+      "after": {
+        "rank": 1,
+        "depth": 16,
+        "cp": 0,
+        "mate": null,
+        "pv": [
+          "d2c2",
+          "h1g1",
+          "c2d1",
+          "g1f1",
+          "d1d2",
+          "f1g1",
+          "d2c1",
+          "g1f1",
+          "c1d1",
+          "f1g1"
+        ]
+      },
+      "alternative": "c3c2",
+      "brilliance": {
+        "verified": true,
+        "cost": 4,
+        "acceptance": "d2c2",
+        "san": "Kxc2",
+        "offeredPiece": "r",
+        "square": "c2",
+        "evaluation": {
+          "rank": 1,
+          "depth": 16,
+          "cp": 0,
+          "mate": null,
+          "pv": [
+            "h1g1",
+            "c2d1",
+            "g1f1",
+            "d1d2",
+            "f1g1",
+            "d2e2",
+            "g1h1",
+            "e2d1",
+            "h1g1"
+          ]
+        },
+        "depth": 16,
+        "explanation": "Offers a rook on c2. Bounded legal exchange analysis estimates 4 points at risk; after Kxc2, Stockfish still finds compensation at depth 16."
+      },
+      "accuracy": 100
+    }
+  },
+  "historicalClassification": {
+    "before": {
+      "rank": 1,
+      "depth": 20,
+      "cp": -112,
+      "mate": null,
+      "pv": [
+        "a5c6",
+        "a8c6",
+        "f4d6",
+        "d8d6",
+        "d5c6",
+        "a7b6",
+        "e1e7",
+        "b6c6",
+        "f3f4",
+        "c6b6",
+        "d1e1",
+        "h8f8",
+        "h3g2",
+        "f6d5",
+        "g2d5",
+        "d6d5",
+        "b1c1",
+        "c5c4",
+        "c1d2",
+        "d4d3",
+        "e7e5"
+      ]
+    },
+    "after": {
+      "rank": 1,
+      "depth": 20,
+      "cp": -36,
+      "mate": null,
+      "pv": [
+        "a7b6",
+        "b2b4",
+        "d6f4",
+        "d4f4",
+        "f6d5",
+        "f4f7",
+        "c5b4",
+        "a3b4",
+        "d5b4",
+        "a5b3",
+        "a8d5",
+        "f7f6",
+        "b4c6",
+        "b3d4",
+        "d8f8",
+        "f6f8",
+        "h8f8",
+        "d4c6",
+        "d5c6",
+        "f3f4",
+        "f8e8"
+      ]
+    },
+    "candidate": null,
+    "accepted": null,
+    "final": {
+      "type": "excellent",
+      "loss": 0,
+      "before": {
+        "rank": 1,
+        "depth": 20,
+        "cp": -112,
+        "mate": null,
+        "pv": [
+          "a5c6",
+          "a8c6",
+          "f4d6",
+          "d8d6",
+          "d5c6",
+          "a7b6",
+          "e1e7",
+          "b6c6",
+          "f3f4",
+          "c6b6",
+          "d1e1",
+          "h8f8",
+          "h3g2",
+          "f6d5",
+          "g2d5",
+          "d6d5",
+          "b1c1",
+          "c5c4",
+          "c1d2",
+          "d4d3",
+          "e7e5"
+        ]
+      },
+      "after": {
+        "rank": 1,
+        "depth": 20,
+        "cp": -36,
+        "mate": null,
+        "pv": [
+          "a7b6",
+          "b2b4",
+          "d6f4",
+          "d4f4",
+          "f6d5",
+          "f4f7",
+          "c5b4",
+          "a3b4",
+          "d5b4",
+          "a5b3",
+          "a8d5",
+          "f7f6",
+          "b4c6",
+          "b3d4",
+          "d8f8",
+          "f6f8",
+          "h8f8",
+          "d4c6",
+          "d5c6",
+          "f3f4",
+          "f8e8"
+        ]
+      },
+      "alternative": "a5c6",
+      "brilliance": null,
+      "accuracy": 100
+    },
+    "fen": "b2r3r/k4p1p/p2q1np1/NppP4/3p1Q2/P4PPB/1PP4P/1K1RR3 w - - 1 24"
+  },
+  "accessibility": {
+    "surfaces": 18,
+    "violations": 0
+  },
+  "scopeNotes": [
+    "Single-thread local JS/WASM pair, no cross-origin isolation or Threads selector.",
+    "Review depth/time budgets and all classification thresholds remain byte-for-byte unchanged.",
+    "Previous Kasparov fixture now returns Excellent, not Brilliant; no label is copied from the older engine.",
+    "New explicitly synthetic positive fixture is independently verified with native before/after/acceptance searches and actual review UI.",
+    "No phase 2 layout work, deployment or publication.",
+    "Live external provider tests not rerun; deterministic import/automatic review regressions pass."
+  ]
+}

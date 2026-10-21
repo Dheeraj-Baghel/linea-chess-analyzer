@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-20T05:26:29.834Z",
+  "compiled": {
+    "status": "passed",
+    "origin": "http://127.0.0.1:4335",
+    "quickReview": true,
+    "pendingDidNotRerun": true,
+    "explicitDeeperRerun": true
+  },
+  "nativeZoom": {
+    "status": "passed",
+    "factor": 2,
+    "geometry": {
+      "innerWidth": 720,
+      "outerWidth": 1440,
+      "devicePixelRatio": 2,
+      "page": 720,
+      "cssZoom": "1",
+      "visualScale": 1
+    },
+    "reviewControlUsable": true,
+    "actualReviewCompleted": true
+  }
+}

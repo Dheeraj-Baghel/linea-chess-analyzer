@@ -1,0 +1,24 @@
+{
+  "node_id": "TA_kwDOATwPh9oAKDhkOWNhNTcwNDM1OTRhOGZhNmFlMGI3M2ZiNjg1ZDkxMDViZjUxZGY",
+  "sha": "8d9ca57043594a8fa6ae0b73fb685d9105bf51df",
+  "url": "https://api.github.com/repos/nmrugg/stockfish.js/git/tags/8d9ca57043594a8fa6ae0b73fb685d9105bf51df",
+  "tagger": {
+    "name": "Nathan Rugg",
+    "email": "nmrugg@gmail.com",
+    "date": "2026-10-09T21:37:50Z"
+  },
+  "object": {
+    "sha": "0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6",
+    "type": "commit",
+    "url": "https://api.github.com/repos/nmrugg/stockfish.js/git/commits/0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6"
+  },
+  "tag": "v19.0.1",
+  "message": "stockfish 19.0.1\n",
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

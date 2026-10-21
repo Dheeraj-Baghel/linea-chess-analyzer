@@ -1,0 +1,24 @@
+{
+  "workers": 1,
+  "searches": 3,
+  "stored": {
+    "current": {
+      "theme": "slate",
+      "pieces": "classic",
+      "coordinates": true,
+      "animation": false,
+      "sound": false,
+      "moveBadges": true
+    },
+    "legacy": {
+      "theme": "walnut",
+      "pieces": "classic",
+      "coordinates": true,
+      "animation": false,
+      "sound": false,
+      "moveBadges": true
+    }
+  },
+  "originalPgnPreserved": true,
+  "variationAndMarksPreserved": true
+}

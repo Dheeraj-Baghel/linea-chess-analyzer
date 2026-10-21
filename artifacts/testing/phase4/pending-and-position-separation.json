@@ -1,0 +1,68 @@
+{
+  "generation": "68078c4a-aaae-4301-8889-77c4fc62322b",
+  "baselineJobs": [
+    {
+      "url": "/engine/stockfish-19-lite-single.js",
+      "searches": []
+    },
+    {
+      "url": "/engine/stockfish-19-lite-single.js",
+      "searches": [
+        "go depth 16 movetime 1100",
+        "go depth 16 movetime 1100",
+        "go depth 16 movetime 1100",
+        "go depth 16 movetime 1100"
+      ]
+    }
+  ],
+  "separated": [
+    {
+      "url": "/engine/stockfish-19-lite-single.js",
+      "searches": [
+        "go depth 16 movetime 2600",
+        "go depth 12 movetime 2600"
+      ]
+    },
+    {
+      "url": "/engine/stockfish-19-lite-single.js",
+      "searches": [
+        "go depth 16 movetime 1100",
+        "go depth 16 movetime 1100",
+        "go depth 16 movetime 1100",
+        "go depth 16 movetime 1100"
+      ]
+    }
+  ],
+  "updatedJobs": [
+    {
+      "url": "/engine/stockfish-19-lite-single.js",
+      "searches": [
+        "go depth 16 movetime 2600",
+        "go depth 12 movetime 2600"
+      ]
+    },
+    {
+      "url": "/engine/stockfish-19-lite-single.js",
+      "searches": [
+        "go depth 16 movetime 1100",
+        "go depth 16 movetime 1100",
+        "go depth 16 movetime 1100",
+        "go depth 16 movetime 1100"
+      ]
+    },
+    {
+      "url": "/engine/stockfish-19-lite-single.js",
+      "searches": [
+        "go depth 20 movetime 3000",
+        "go depth 20 movetime 3000",
+        "go depth 20 movetime 3000",
+        "go depth 20 movetime 3000"
+      ]
+    }
+  ],
+  "scores": [
+    "41.6%",
+    "100.0%"
+  ],
+  "originalPgnPreserved": true
+}

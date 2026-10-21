@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-20T00:39:38.154Z",
+  "provider": "Chess.com Published Data API",
+  "username": "erik",
+  "month": "2026-10",
+  "exactGameUrl": "https://www.chess.com/game/daily/1040912862",
+  "white": "erik",
+  "black": "Riphyak",
+  "caption": "1–0\nerik vs Riphyak\nchess.com · White 1489 / Black 1432\ndaily · 1/259200 · 10/18/2026 · Rated",
+  "pgnPreserved": true,
+  "usernameImport": "passed",
+  "linkWithUsernameImport": "passed",
+  "networkFailures": []
+}

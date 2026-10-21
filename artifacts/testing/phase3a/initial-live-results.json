@@ -1,0 +1,275 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.lichess-live.config.js"
+    ],
+    "configFile": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/playwright.lichess-live.config.js",
+    "rootDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/qa/global-setup.js",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "suite": "lichess-live",
+      "production": false,
+      "liveProvider": true,
+      "engine": "Stockfish 19 Lite 19.0.1",
+      "engineVariant": "lite-single",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/lichess-live-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "suite": "lichess-live",
+          "production": false,
+          "liveProvider": true,
+          "engine": "Stockfish 19 Lite 19.0.1",
+          "engineVariant": "lite-single",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "live-lichess.spec.js"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/lichess-live-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "suite": "lichess-live",
+          "production": false,
+          "liveProvider": true,
+          "engine": "Stockfish 19 Lite 19.0.1",
+          "engineVariant": "lite-single",
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "snapshotDir": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "live-lichess.spec.js"
+        ],
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4336",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "video": "off",
+          "actionTimeout": 10000,
+          "navigationTimeout": 20000,
+          "serviceWorkers": "block",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "artifacts/testing/lichess-live-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npx vite --host 127.0.0.1 --port 4336 --strictPort",
+      "url": "http://127.0.0.1:4336",
+      "reuseExistingServer": false,
+      "timeout": 30000,
+      "gracefulShutdown": {
+        "signal": "SIGTERM",
+        "timeout": 5000
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "live-lichess.spec.js",
+      "file": "live-lichess.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "live public Lichess export imports a longer completed game with exact PGN and recorded clocks",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3686,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T23:42:07.545Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiB0cnVlLAogICJmb250cyI6ICJzeXN0ZW0gZmFsbGJhY2siLAogICJ3b3JrZXJzIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE5LWxpdGUtc2luZ2xlLmpzIiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvZW5naW5lL3N0b2NrZmlzaC0xOS1saXRlLXNpbmdsZS5qcyIKICBdLAogICJlcnJvcnMiOiBbXSwKICAicmVxdWVzdEZhaWx1cmVzIjogW10sCiAgImh0dHBFcnJvcnMiOiBbXSwKICAibmF2aWdhdGlvbnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MzM2LyIKICBdLAogICJ1bmV4cGVjdGVkUmVxdWVzdHMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "32e6a6229237185c0ac3-f56cb6ab4c2ea882a4d1",
+          "file": "live-lichess.spec.js",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "live public Lichess username history is bounded, non-authenticated and selectable",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 41098,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog').locator('.archive-game').first()\nExpected: visible\nTimeout: 40000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog').locator('.archive-game').first() with timeout 40000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog').locator('.archive-game').first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog').locator('.archive-game').first()\nExpected: visible\nTimeout: 40000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog').locator('.archive-game').first() with timeout 40000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog').locator('.archive-game').first()\u001b[22m\n\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/live-lichess.spec.js:36:136",
+                    "location": {
+                      "file": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/live-lichess.spec.js",
+                      "column": 136,
+                      "line": 36
+                    },
+                    "snippet": "  34 |   await start(page); await page.getByRole('button', { name: 'Import game', exact: true }).click(); const dialog = page.getByRole('dialog');\n  35 |   await dialog.getByRole('button', { name: 'Lichess', exact: true }).click(); await dialog.locator('#lichess-user').fill('Lance5500');\n> 36 |   await dialog.getByRole('button', { name: 'Find games', exact: true }).click(); await expect(dialog.locator('.archive-game').first()).toBeVisible({ timeout: 40000 });\n     |                                                                                                                                        ^\n  37 |   expect(responses).toHaveLength(1); expect(new URL(responses[0].url()).searchParams.get('max')).toBe('20');\n  38 |   const rows = (await responses[0].text()).trim().split('\\n').map(line => JSON.parse(line));\n  39 |   expect(rows.length).toBeLessThanOrEqual(20); const selectedId = await dialog.locator('.archive-game').first().getAttribute('data-game-id');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/live-lichess.spec.js",
+                        "column": 136,
+                        "line": 36
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog').locator('.archive-game').first()\nExpected: visible\nTimeout: 40000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog').locator('.archive-game').first() with timeout 40000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog').locator('.archive-game').first()\u001b[22m\n\n\n  34 |   await start(page); await page.getByRole('button', { name: 'Import game', exact: true }).click(); const dialog = page.getByRole('dialog');\n  35 |   await dialog.getByRole('button', { name: 'Lichess', exact: true }).click(); await dialog.locator('#lichess-user').fill('Lance5500');\n> 36 |   await dialog.getByRole('button', { name: 'Find games', exact: true }).click(); await expect(dialog.locator('.archive-game').first()).toBeVisible({ timeout: 40000 });\n     |                                                                                                                                        ^\n  37 |   expect(responses).toHaveLength(1); expect(new URL(responses[0].url()).searchParams.get('max')).toBe('20');\n  38 |   const rows = (await responses[0].text()).trim().split('\\n').map(line => JSON.parse(line));\n  39 |   expect(rows.length).toBeLessThanOrEqual(20); const selectedId = await dialog.locator('.archive-game').first().getAttribute('data-game-id');\n    at /Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/live-lichess.spec.js:36:136"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T23:42:11.713Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/lichess-live-output/live-lichess-live-public-L-c9a31-uthenticated-and-selectable-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "runtime-and-network-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJvcmlnaW4iOiAiaHR0cDovLzEyNy4wLjAuMTo0MzM2IiwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJsaXZlUHJvdmlkZXIiOiB0cnVlLAogICJmb250cyI6ICJzeXN0ZW0gZmFsbGJhY2siLAogICJ3b3JrZXJzIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDMzNi9lbmdpbmUvc3RvY2tmaXNoLTE5LWxpdGUtc2luZ2xlLmpzIgogIF0sCiAgImVycm9ycyI6IFtdLAogICJyZXF1ZXN0RmFpbHVyZXMiOiBbXSwKICAiaHR0cEVycm9ycyI6IFtdLAogICJuYXZpZ2F0aW9ucyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQzMzYvIgogIF0sCiAgInVuZXhwZWN0ZWRSZXF1ZXN0cyI6IFtdCn0="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/lichess-live-output/live-lichess-live-public-L-c9a31-uthenticated-and-selectable-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/artifacts/testing/lichess-live-output/live-lichess-live-public-L-c9a31-uthenticated-and-selectable-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/dheerazzz/Designer Projects/starter/chess-game-analyzer/tests/browser/live-lichess.spec.js",
+                    "column": 136,
+                    "line": 36
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "32e6a6229237185c0ac3-80546961dba05cf8e46c",
+          "file": "live-lichess.spec.js",
+          "line": 30,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-19T23:42:05.967Z",
+    "duration": 47099.331999999995,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

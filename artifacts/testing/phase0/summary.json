@@ -1,0 +1,314 @@
+{
+  "verifiedAt": "2026-10-19T16:08:49.751210+00:00",
+  "phase": "0 only",
+  "gate": "passed; no current critical app defect reproduced",
+  "sourceSha256": "db527a1929b2fcbe5653736c6ee6c3633bd68e28da89633141f43d7ea3e97e28",
+  "checkpointSha256": "6395de2ea13b15de51f7ad1732569d29cb5856caebfeb5e107e8380d2c8bfd06",
+  "runtime": {
+    "node": "v24.13.0",
+    "platform": "darwin",
+    "osRelease": "27.2.0",
+    "arch": "arm64"
+  },
+  "browserVersions": {
+    "chromium": "156.0.8078.4",
+    "firefox": "157.0",
+    "webkit": "27.2"
+  },
+  "unitTests": {
+    "numTotalTests": 114,
+    "numPassedTests": 114,
+    "numFailedTests": 0,
+    "numPendingTests": 0,
+    "success": true
+  },
+  "suites": [
+    {
+      "suite": "browser",
+      "startTime": "2026-10-19T16:00:28.295Z",
+      "duration": 93076.663,
+      "expected": 42,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "reportLevelErrors": [],
+      "origin": "http://127.0.0.1:4336",
+      "sourceSha256": "db527a1929b2fcbe5653736c6ee6c3633bd68e28da89633141f43d7ea3e97e28",
+      "sourceUnchanged": true,
+      "executionGaps": [],
+      "unexpectedRequests": [],
+      "browsers": {
+        "chromium": "156.0.8078.4"
+      }
+    },
+    {
+      "suite": "engine-browser",
+      "startTime": "2026-10-19T16:02:02.073Z",
+      "duration": 112489.81700000001,
+      "expected": 13,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "reportLevelErrors": [],
+      "origin": "http://127.0.0.1:4336",
+      "sourceSha256": "db527a1929b2fcbe5653736c6ee6c3633bd68e28da89633141f43d7ea3e97e28",
+      "sourceUnchanged": true,
+      "executionGaps": [],
+      "unexpectedRequests": [],
+      "browsers": {
+        "chromium": "156.0.8078.4"
+      }
+    },
+    {
+      "suite": "crossbrowser",
+      "startTime": "2026-10-19T16:03:55.462Z",
+      "duration": 41940.896,
+      "expected": 6,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "reportLevelErrors": [],
+      "origin": "http://127.0.0.1:4336",
+      "sourceSha256": "db527a1929b2fcbe5653736c6ee6c3633bd68e28da89633141f43d7ea3e97e28",
+      "sourceUnchanged": true,
+      "executionGaps": [],
+      "unexpectedRequests": [],
+      "browsers": {
+        "firefox": "157.0",
+        "webkit": "27.2"
+      }
+    },
+    {
+      "suite": "production-browser",
+      "startTime": "2026-10-19T16:04:38.188Z",
+      "duration": 8718.775,
+      "expected": 3,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "reportLevelErrors": [],
+      "origin": "http://127.0.0.1:4337",
+      "sourceSha256": "db527a1929b2fcbe5653736c6ee6c3633bd68e28da89633141f43d7ea3e97e28",
+      "sourceUnchanged": true,
+      "executionGaps": [],
+      "unexpectedRequests": [],
+      "browsers": {
+        "chromium": "156.0.8078.4"
+      }
+    },
+    {
+      "suite": "live-browser",
+      "startTime": "2026-10-19T16:05:12.890Z",
+      "duration": 14432.574,
+      "expected": 2,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "reportLevelErrors": [],
+      "origin": "http://127.0.0.1:4336",
+      "sourceSha256": "db527a1929b2fcbe5653736c6ee6c3633bd68e28da89633141f43d7ea3e97e28",
+      "sourceUnchanged": true,
+      "executionGaps": [],
+      "unexpectedRequests": [],
+      "browsers": {
+        "chromium": "156.0.8078.4"
+      }
+    }
+  ],
+  "automatedAccessibility": [
+    {
+      "path": "artifacts/testing/accessibility/archive-results.json",
+      "violations": 0,
+      "incomplete": 2
+    },
+    {
+      "path": "artifacts/testing/accessibility/chesscom-dialog.json",
+      "violations": 0,
+      "incomplete": 1
+    },
+    {
+      "path": "artifacts/testing/accessibility/coaching.json",
+      "violations": 0,
+      "incomplete": 2
+    },
+    {
+      "path": "artifacts/testing/accessibility/desktop-board.json",
+      "violations": 0,
+      "incomplete": 2
+    },
+    {
+      "path": "artifacts/testing/accessibility/fen-dialog.json",
+      "violations": 0,
+      "incomplete": 1
+    },
+    {
+      "path": "artifacts/testing/accessibility/firefox-mobile.json",
+      "violations": 0,
+      "incomplete": 2
+    },
+    {
+      "path": "artifacts/testing/accessibility/mobile-board.json",
+      "violations": 0,
+      "incomplete": 2
+    },
+    {
+      "path": "artifacts/testing/accessibility/mobile-insights.json",
+      "violations": 0,
+      "incomplete": 2
+    },
+    {
+      "path": "artifacts/testing/accessibility/pgn-dialog.json",
+      "violations": 0,
+      "incomplete": 1
+    },
+    {
+      "path": "artifacts/testing/accessibility/production-coaching.json",
+      "violations": 0,
+      "incomplete": 2
+    },
+    {
+      "path": "artifacts/testing/accessibility/promotion-dialog.json",
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "path": "artifacts/testing/accessibility/reviewed-moves.json",
+      "violations": 0,
+      "incomplete": 2
+    },
+    {
+      "path": "artifacts/testing/accessibility/settings-dialog.json",
+      "violations": 0,
+      "incomplete": 1
+    },
+    {
+      "path": "artifacts/testing/accessibility/url-error.json",
+      "violations": 0,
+      "incomplete": 1
+    },
+    {
+      "path": "artifacts/testing/accessibility/webkit-mobile.json",
+      "violations": 0,
+      "incomplete": 2
+    }
+  ],
+  "appSourceAndAssetsUnchanged": true,
+  "baselineChanges": [
+    {
+      "path": ".gitignore",
+      "change": "modified"
+    },
+    {
+      "path": "package.json",
+      "change": "modified"
+    },
+    {
+      "path": "playwright.config.js",
+      "change": "modified"
+    },
+    {
+      "path": "playwright.crossbrowser.config.js",
+      "change": "modified"
+    },
+    {
+      "path": "playwright.production.config.js",
+      "change": "modified"
+    },
+    {
+      "path": "tests/browser/accessibility.spec.js",
+      "change": "modified"
+    },
+    {
+      "path": "tests/browser/board.spec.js",
+      "change": "modified"
+    },
+    {
+      "path": "tests/browser/chesscom-import.spec.js",
+      "change": "modified"
+    },
+    {
+      "path": "tests/browser/crossbrowser.spec.js",
+      "change": "modified"
+    },
+    {
+      "path": "tests/browser/engine-review.spec.js",
+      "change": "modified"
+    },
+    {
+      "path": "tests/browser/helpers.js",
+      "change": "modified"
+    },
+    {
+      "path": "tests/browser/live-chesscom.spec.js",
+      "change": "modified"
+    },
+    {
+      "path": "tests/browser/mobile.spec.js",
+      "change": "modified"
+    },
+    {
+      "path": "tests/browser/production.spec.js",
+      "change": "modified"
+    },
+    {
+      "path": "tests/browser/smoke.spec.js",
+      "change": "modified"
+    },
+    {
+      "path": "playwright.engine.config.js",
+      "change": "added"
+    },
+    {
+      "path": "playwright.live.config.js",
+      "change": "added"
+    },
+    {
+      "path": "tests/browser/fixtures.js",
+      "change": "added"
+    },
+    {
+      "path": "tests/qa/config.js",
+      "change": "added"
+    },
+    {
+      "path": "tests/qa/global-setup.js",
+      "change": "added"
+    },
+    {
+      "path": "tests/qa/guards.js",
+      "change": "added"
+    },
+    {
+      "path": "tests/unit/qa.test.js",
+      "change": "added"
+    }
+  ],
+  "liveImport": {
+    "checkedAt": "2026-10-19T16:05:21.417Z",
+    "provider": "Chess.com Published Data API",
+    "username": "erik",
+    "month": "2026-10",
+    "exactGameUrl": "https://www.chess.com/game/daily/1040912862",
+    "white": "erik",
+    "black": "Riphyak",
+    "caption": "1\u20130\nerik vs Riphyak\ndaily \u00b7 1/259200 \u00b7 10/18/2026 \u00b7 Rated",
+    "pgnPreserved": true,
+    "usernameImport": "passed",
+    "linkWithUsernameImport": "passed",
+    "networkFailures": []
+  },
+  "liveUrlOnly": {
+    "checkedAt": "2026-10-19T16:05:26.722Z",
+    "exactGameUrl": "https://www.chess.com/game/daily/1040912862",
+    "importedWithoutUsername": true,
+    "fallback": null,
+    "note": "Public metadata can be blocked. Exact-ID archive verification remains mandatory. Fallback is not a URL-only import success."
+  },
+  "limitations": [
+    "No Phase 1+ redesign acceptance claimed.",
+    "Automated WebKit/Firefox/Chromium do not establish physical Safari/phone/assistive technology behavior.",
+    "Browser QA uses the documented system font fallback; the font-failure recovery path is explicitly tested.",
+    "Blocked WASM initialization reports an unavailable engine after the existing 35-second watchdog; retry succeeds without losing the board.",
+    "No fresh dependency audit, deployment, or GitHub publication in Phase 0."
+  ]
+}

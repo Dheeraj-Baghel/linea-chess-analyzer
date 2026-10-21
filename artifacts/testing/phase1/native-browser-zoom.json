@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-19T17:28:14.952Z",
+  "mechanism": "chrome.tabs.setZoom(2), disposable Chromium test profile",
+  "checks": [
+    "Native API zoom factor 2 and 720 CSS pixels in a 1440-pixel window",
+    "No CSS/pinch zoom, no horizontal overflow",
+    "Board transport and scrollable keyboard settings work at native 200%",
+    "Settled, unclipped device-pixel viewport screenshots"
+  ],
+  "nativeZoom": {
+    "factor": 2,
+    "settings": {
+      "defaultZoomFactor": 1,
+      "mode": "automatic",
+      "scope": "per-origin"
+    }
+  },
+  "geometry": {
+    "innerWidth": 720,
+    "innerHeight": 406,
+    "outerWidth": 1440,
+    "outerHeight": 900,
+    "devicePixelRatio": 2,
+    "cssZoom": "1",
+    "visualScale": 1,
+    "pageWidth": 720
+  },
+  "status": "passed"
+}

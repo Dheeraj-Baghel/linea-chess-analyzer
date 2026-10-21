@@ -1,0 +1,141 @@
+{
+  "build": {
+    "name": "Stockfish 19 Lite",
+    "version": "19.0.1",
+    "variant": "lite-single",
+    "threads": 1,
+    "uciName": "Stockfish 19 Lite WASM",
+    "workerUrl": "/engine/stockfish-19-lite-single.js",
+    "wasmUrl": "/engine/stockfish-19-lite-single.wasm",
+    "release": "https://github.com/nmrugg/stockfish.js/releases/tag/v19.0.1",
+    "sourceCommit": "0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6",
+    "workerSha256": "ccb130d7ff29408531c47d859a49f91d59d4f482d05a53eb1a3231a4f624c91a",
+    "wasmSha256": "ee4f115bdb2d32cadf96cada104a05b5ec257d7ad6f57582190b49bc71f096de"
+  },
+  "pgn": "[Event \"Constructed drawing-sacrifice regression\"]\n[Site \"Linea test fixture, not a historical game\"]\n[White \"Fixture White\"]\n[Black \"Fixture Black\"]\n[Result \"*\"]\n[SetUp \"1\"]\n[FEN \"8/8/8/8/8/2R3p1/2pk2P1/7K w - - 0 1\"]\n\n1. Rxc2+ *\n",
+  "before": {
+    "rank": 1,
+    "depth": 16,
+    "cp": 0,
+    "mate": null,
+    "pv": [
+      "c3c2",
+      "d2c2",
+      "h1g1",
+      "c2d2",
+      "g1f1",
+      "d2d1",
+      "f1g1"
+    ]
+  },
+  "after": {
+    "rank": 1,
+    "depth": 16,
+    "cp": 0,
+    "mate": null,
+    "pv": [
+      "d2c2",
+      "h1g1",
+      "c2d1",
+      "g1f1",
+      "d1d2",
+      "f1g1",
+      "d2c1",
+      "g1f1",
+      "c1d1",
+      "f1g1"
+    ]
+  },
+  "candidate": {
+    "cost": 4,
+    "acceptance": "d2c2",
+    "san": "Kxc2",
+    "fen": "8/8/8/8/8/6p1/2k3P1/7K w - - 0 2",
+    "offeredPiece": "r",
+    "square": "c2",
+    "exchangeCompleteWithinBounds": true
+  },
+  "accepted": {
+    "rank": 1,
+    "depth": 16,
+    "cp": 0,
+    "mate": null,
+    "pv": [
+      "h1g1",
+      "c2d1",
+      "g1f1",
+      "d1d2",
+      "f1g1",
+      "d2e2",
+      "g1h1",
+      "e2d1",
+      "h1g1"
+    ]
+  },
+  "final": {
+    "type": "brilliant",
+    "loss": 0,
+    "before": {
+      "rank": 1,
+      "depth": 16,
+      "cp": 0,
+      "mate": null,
+      "pv": [
+        "c3c2",
+        "d2c2",
+        "h1g1",
+        "c2d2",
+        "g1f1",
+        "d2d1",
+        "f1g1"
+      ]
+    },
+    "after": {
+      "rank": 1,
+      "depth": 16,
+      "cp": 0,
+      "mate": null,
+      "pv": [
+        "d2c2",
+        "h1g1",
+        "c2d1",
+        "g1f1",
+        "d1d2",
+        "f1g1",
+        "d2c1",
+        "g1f1",
+        "c1d1",
+        "f1g1"
+      ]
+    },
+    "alternative": "c3c2",
+    "brilliance": {
+      "verified": true,
+      "cost": 4,
+      "acceptance": "d2c2",
+      "san": "Kxc2",
+      "offeredPiece": "r",
+      "square": "c2",
+      "evaluation": {
+        "rank": 1,
+        "depth": 16,
+        "cp": 0,
+        "mate": null,
+        "pv": [
+          "h1g1",
+          "c2d1",
+          "g1f1",
+          "d1d2",
+          "f1g1",
+          "d2e2",
+          "g1h1",
+          "e2d1",
+          "h1g1"
+        ]
+      },
+      "depth": 16,
+      "explanation": "Offers a rook on c2. Bounded legal exchange analysis estimates 4 points at risk; after Kxc2, Stockfish still finds compensation at depth 16."
+    },
+    "accuracy": 100
+  }
+}

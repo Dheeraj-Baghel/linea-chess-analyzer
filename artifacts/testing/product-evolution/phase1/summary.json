@@ -1,0 +1,134 @@
+{
+  "generatedAt": "2026-10-20T18:07:46.010Z",
+  "units": {
+    "passed": 281,
+    "failed": 0
+  },
+  "browserWorkflowTotal": 115,
+  "suites": [
+    {
+      "suite": "browser",
+      "passed": 75,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "errors": 0,
+      "source": "be0674a9117235acff576c9fe993ea06a1a87d552f7b29058afcc1c7f0805525",
+      "finalSource": "be0674a9117235acff576c9fe993ea06a1a87d552f7b29058afcc1c7f0805525",
+      "sourceUnchanged": true,
+      "executionGaps": []
+    },
+    {
+      "suite": "engine-browser",
+      "passed": 18,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "errors": 0,
+      "source": "be0674a9117235acff576c9fe993ea06a1a87d552f7b29058afcc1c7f0805525",
+      "finalSource": "be0674a9117235acff576c9fe993ea06a1a87d552f7b29058afcc1c7f0805525",
+      "sourceUnchanged": true,
+      "executionGaps": []
+    },
+    {
+      "suite": "crossbrowser",
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "errors": 0,
+      "source": "be0674a9117235acff576c9fe993ea06a1a87d552f7b29058afcc1c7f0805525",
+      "finalSource": "be0674a9117235acff576c9fe993ea06a1a87d552f7b29058afcc1c7f0805525",
+      "sourceUnchanged": true,
+      "executionGaps": []
+    },
+    {
+      "suite": "production-browser",
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "errors": 0,
+      "source": "be0674a9117235acff576c9fe993ea06a1a87d552f7b29058afcc1c7f0805525",
+      "finalSource": "be0674a9117235acff576c9fe993ea06a1a87d552f7b29058afcc1c7f0805525",
+      "sourceUnchanged": true,
+      "executionGaps": []
+    },
+    {
+      "suite": "product-foundation",
+      "passed": 12,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "errors": 0,
+      "source": "be0674a9117235acff576c9fe993ea06a1a87d552f7b29058afcc1c7f0805525",
+      "finalSource": "be0674a9117235acff576c9fe993ea06a1a87d552f7b29058afcc1c7f0805525",
+      "sourceUnchanged": true,
+      "executionGaps": []
+    },
+    {
+      "suite": "product-offline",
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "errors": 0,
+      "source": "be0674a9117235acff576c9fe993ea06a1a87d552f7b29058afcc1c7f0805525",
+      "finalSource": "be0674a9117235acff576c9fe993ea06a1a87d552f7b29058afcc1c7f0805525",
+      "sourceUnchanged": true,
+      "executionGaps": []
+    }
+  ],
+  "unchangedCore": [
+    {
+      "path": "src/accuracy.js",
+      "sha256": "46a88c4d5afd81855efbf1df345d800d4b7a1fa7fb79778399d42c2f197bd6b4",
+      "unchanged": true
+    },
+    {
+      "path": "src/chess.js",
+      "sha256": "60eb8ec4cb6b50ad30fc89b92b113ec63ba45487372cb008d7dcbaa841160d85",
+      "unchanged": true
+    },
+    {
+      "path": "src/review.js",
+      "sha256": "a6101ba17c31b8f5985222e2e9c69bb14b4c1cd7b6d7f5d84cb0791cbdce69ed",
+      "unchanged": true
+    },
+    {
+      "path": "src/reviewPolicy.js",
+      "sha256": "18b65dd62d64ee52d23811a068bcc93e6b209d1af9b8ac36232595b583477bce",
+      "unchanged": true
+    },
+    {
+      "path": "src/reviewBook.js",
+      "sha256": "fe5165966be3197d65344dbfffad81a430783db3ed06a2aa4ff3aee076b3bdf7",
+      "unchanged": true
+    },
+    {
+      "path": "src/gameRating.js",
+      "sha256": "ea48951dd59a5f50befdef0db9d3bf9cf95d2ce8d854bf0267d00e642d8b6837",
+      "unchanged": true
+    },
+    {
+      "path": "src/engine.js",
+      "sha256": "cc0bae36882de5243a8e1f0b833890821c810e97cd4762e225b254b9140622ba",
+      "unchanged": true
+    },
+    {
+      "path": "src/engineBuild.js",
+      "sha256": "a7a7fbe8e9e3660cf48bcb3bfa8884396173b480717299fe6aa9b4af6ac9af8b",
+      "unchanged": true
+    },
+    {
+      "path": "public/engine/stockfish-19-lite-single.js",
+      "sha256": "ccb130d7ff29408531c47d859a49f91d59d4f482d05a53eb1a3231a4f624c91a",
+      "unchanged": true
+    },
+    {
+      "path": "public/engine/stockfish-19-lite-single.wasm",
+      "sha256": "ee4f115bdb2d32cadf96cada104a05b5ec257d7ad6f57582190b49bc71f096de",
+      "unchanged": true
+    }
+  ]
+}

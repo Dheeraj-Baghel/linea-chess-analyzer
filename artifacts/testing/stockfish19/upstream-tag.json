@@ -1,0 +1,10 @@
+{
+  "ref": "refs/tags/v19.0.1",
+  "node_id": "MDM6UmVmMjA3MTMzNTE6cmVmcy90YWdzL3YxOS4wLjE=",
+  "url": "https://api.github.com/repos/nmrugg/stockfish.js/git/refs/tags/v19.0.1",
+  "object": {
+    "sha": "8d9ca57043594a8fa6ae0b73fb685d9105bf51df",
+    "type": "tag",
+    "url": "https://api.github.com/repos/nmrugg/stockfish.js/git/tags/8d9ca57043594a8fa6ae0b73fb685d9105bf51df"
+  }
+}

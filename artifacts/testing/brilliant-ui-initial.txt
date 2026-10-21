@@ -1,0 +1,12 @@
+AT THIS POSITION
+!!
+Brilliant
+24. Rxd4
+
+Offers a rook on d4. Bounded legal exchange analysis estimates 3 points at risk; after cxd4, Stockfish still finds compensation at depth 16. The engine continuation begins 24… Kb6 25. b4 25… Qxf4.
+
+Evaluation
+−0.35 → −0.37
+Move accuracy
+99.2%
+Linea sacrifice check · acceptance search depth 16 · independent heuristic

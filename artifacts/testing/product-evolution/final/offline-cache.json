@@ -1,0 +1,35 @@
+{
+  "manifest": {
+    "name": "linea-offline-4b4882fb81c3b371edb91a5c0f3a6e1a4476fd938f7bc70a2f79436d21365b7b",
+    "paths": [
+      "/assets/index-BnMdO-Ky.js",
+      "/assets/index-C2q84Jr8.css",
+      "/assets/openings-index-sGmbfRn7.js",
+      "/engine/LICENSE.txt",
+      "/engine/NOTICE.md",
+      "/engine/stockfish-19-lite-single.js",
+      "/engine/stockfish-19-lite-single.wasm",
+      "/favicon.svg",
+      "/index.html",
+      "/pieces/skak/bb.svg",
+      "/pieces/skak/bk.svg",
+      "/pieces/skak/bn.svg",
+      "/pieces/skak/bp.svg",
+      "/pieces/skak/bq.svg",
+      "/pieces/skak/br.svg",
+      "/pieces/skak/LICENSE-LPPL-1.3c.txt",
+      "/pieces/skak/NOTICE.txt",
+      "/pieces/skak/wb.svg",
+      "/pieces/skak/wk.svg",
+      "/pieces/skak/wn.svg",
+      "/pieces/skak/wp.svg",
+      "/pieces/skak/wq.svg",
+      "/pieces/skak/wr.svg",
+      "/previews/report.jpg",
+      "/previews/review.jpg"
+    ]
+  },
+  "savedReviewReload": true,
+  "recomputationWorkers": 0,
+  "explicitOfflinePositionWorker": 1
+}

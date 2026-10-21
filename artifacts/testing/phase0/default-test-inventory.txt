@@ -1,0 +1,44 @@
+Listing tests:
+  [chromium] › accessibility.spec.js:18:1 › desktop board meets automated WCAG A/AA checks
+  [chromium] › accessibility.spec.js:19:1 › Chess.com import dialog meets automated WCAG A/AA checks
+  [chromium] › accessibility.spec.js:20:1 › display settings and promotion picker meet automated WCAG A/AA checks
+  [chromium] › accessibility.spec.js:25:1 › reviewed move list and populated coaching meet automated WCAG A/AA checks
+  [chromium] › accessibility.spec.js:31:1 › phone board and insights meet automated WCAG A/AA checks
+  [chromium] › accessibility.spec.js:36:1 › populated archive results, URL error state and PGN/FEN dialogs have accessible labels and contrast
+  [chromium] › board.spec.js:8:1 › the highlighted move stays within the move-list scroll viewport
+  [chromium] › board.spec.js:22:1 › all navigation controls, keyboard shortcuts and clicked move highlight stay synchronized
+  [chromium] › board.spec.js:39:1 › legal hints, capture rings and illegal moves use real chess legality
+  [chromium] › board.spec.js:59:1 › alternative click moves and variation navigation never mutate the original game
+  [chromium] › board.spec.js:75:1 › drag moves work, variations can branch and recorded-move clicks return to game
+  [chromium] › board.spec.js:89:1 › annotation drag, right-pointer drawing, color replacement, eraser and clear cannot move pieces
+  [chromium] › board.spec.js:108:1 › two-tap arrow tool and per-position marks survive navigation without mixing with engine arrows
+  [chromium] › board.spec.js:119:1 › flip keeps board square colors, coordinates, and White-perspective evaluation orientation correct
+  [chromium] › board.spec.js:136:3 › promotion picker promotes to queen and preserves the FEN source
+  [chromium] › board.spec.js:136:3 › promotion picker promotes to rook and preserves the FEN source
+  [chromium] › board.spec.js:136:3 › promotion picker promotes to bishop and preserves the FEN source
+  [chromium] › board.spec.js:136:3 › promotion picker promotes to knight and preserves the FEN source
+  [chromium] › board.spec.js:147:1 › canceling promotion leaves the position untouched
+  [chromium] › board.spec.js:153:1 › castling moves king and rook and en-passant removes the passed pawn
+  [chromium] › board.spec.js:162:1 › check/checkmate, last-move highlights and recorded clocks display from real game metadata
+  [chromium] › board.spec.js:174:1 › autoplay uses selectable speeds, pauses on board interaction and restarts at the end
+  [chromium] › board.spec.js:185:1 › keyboard square selection, Escape cancellation and focus mode remain operable
+  [chromium] › board.spec.js:197:1 › FEN/PGN clipboard and download preserve exact source, including original comments
+  [chromium] › board.spec.js:208:1 › invalid import shows feedback without deleting the current game; PGN file upload works
+  [chromium] › board.spec.js:219:1 › settings persist separately from transient games and respect reduced motion
+  [chromium] › board.spec.js:231:1 › help dialog traps focus and restores focus to the invoking control
+  [chromium] › chesscom-import.spec.js:26:1 › username archives, month/format filters and selected game import start an actual local review
+  [chromium] › chesscom-import.spec.js:44:1 › game URL plus username/month finds exactly the requested live game
+  [chromium] › chesscom-import.spec.js:53:1 › URL-only lookup uses metadata but still requires the exact game in public archives
+  [chromium] › chesscom-import.spec.js:61:1 › URL-only fallback asks for a player without deleting the existing game
+  [chromium] › chesscom-import.spec.js:70:39 › Chess.com HTTP 404 remains a recoverable import error
+  [chromium] › chesscom-import.spec.js:70:39 › Chess.com HTTP 429 remains a recoverable import error
+  [chromium] › chesscom-import.spec.js:70:39 › Chess.com HTTP 503 remains a recoverable import error
+  [chromium] › chesscom-import.spec.js:76:1 › cancellation and closing the import dialog ignore late archive results
+  [chromium] › chesscom-import.spec.js:85:1 › invalid username, non-Chess.com link and nonexistent game show meaningful feedback
+  [chromium] › mobile.spec.js:18:1 › phone tap-to-move, hints, Return to game and all workspace tabs work
+  [chromium] › mobile.spec.js:28:1 › real browser touch dragging moves pieces without creating annotations
+  [chromium] › mobile.spec.js:33:1 › touch annotation mode, two-tap arrows, highlights and eraser lock piece moves
+  [chromium] › mobile.spec.js:44:1 › touch promotion picker and expanded navigation remain accessible
+  [chromium] › mobile.spec.js:53:1 › phone review, player coaching and engine continuation navigation are functional
+  [chromium] › mobile.spec.js:65:1 › 320px, phone landscape and tablet layouts have no horizontal overflow
+Total: 42 tests in 4 files

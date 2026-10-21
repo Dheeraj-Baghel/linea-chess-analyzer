@@ -1,0 +1,5731 @@
+{
+  "testEngine": {
+    "name": "axe-core",
+    "version": "4.14.0"
+  },
+  "testRunner": {
+    "name": "axe"
+  },
+  "testEnvironment": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+    "windowWidth": 1440,
+    "windowHeight": 1000,
+    "orientationAngle": 0,
+    "orientationType": "landscape-primary"
+  },
+  "timestamp": "2026-10-20T22:59:39.218Z",
+  "url": "http://127.0.0.1:4336/",
+  "toolOptions": {
+    "runOnly": {
+      "type": "tag",
+      "values": [
+        "wcag2a",
+        "wcag2aa",
+        "wcag21a",
+        "wcag21aa"
+      ]
+    },
+    "reporter": "v1"
+  },
+  "inapplicable": [
+    {
+      "id": "area-alt",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag244",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.2.4.4",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-1.1.2"
+      ],
+      "description": "Ensure <area> elements of image maps have alternative text",
+      "help": "Active <area> elements must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/area-alt?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "aria-braille-equivalent",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensure aria-braillelabel and aria-brailleroledescription have a non-braille equivalent",
+      "help": "aria-braille attributes must have a non-braille equivalent",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-braille-equivalent?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "aria-command-name",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.9.1"
+      ],
+      "description": "Ensure every ARIA button, link and menuitem has an accessible name",
+      "help": "ARIA commands must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-command-name?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "aria-input-field-name",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.1.1"
+      ],
+      "description": "Ensure every ARIA input field has an accessible name",
+      "help": "ARIA input fields must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-input-field-name?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "aria-meter-name",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag111",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "RGAAv4",
+        "RGAA-11.1.1"
+      ],
+      "description": "Ensure every ARIA meter node has an accessible name",
+      "help": "ARIA meter nodes must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-meter-name?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "aria-progressbar-name",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag111",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "RGAAv4",
+        "RGAA-11.1.1"
+      ],
+      "description": "Ensure every ARIA progressbar node has an accessible name",
+      "help": "ARIA progressbar nodes must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-progressbar-name?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "aria-required-children",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ],
+      "description": "Ensure elements with an ARIA role that require child roles contain them",
+      "help": "Certain ARIA roles must contain particular children",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-required-children?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "aria-required-parent",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ],
+      "description": "Ensure elements with an ARIA role that require parent roles are contained by them",
+      "help": "Certain ARIA roles must be contained by particular parents",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-required-parent?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "aria-tab-name",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure every ARIA tab node has an accessible name",
+      "help": "ARIA tab nodes must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-tab-name?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "aria-toggle-field-name",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure every ARIA toggle field has an accessible name",
+      "help": "ARIA toggle fields must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-toggle-field-name?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "aria-tooltip-name",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensure every ARIA tooltip node has an accessible name",
+      "help": "ARIA tooltip nodes must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-tooltip-name?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "autocomplete-valid",
+      "impact": null,
+      "tags": [
+        "cat.forms",
+        "wcag21aa",
+        "wcag135",
+        "EN-301-549",
+        "EN-9.1.3.5",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.13.1"
+      ],
+      "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
+      "help": "autocomplete attribute must be used correctly",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/autocomplete-valid?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "blink",
+      "impact": null,
+      "tags": [
+        "cat.time-and-media",
+        "wcag2a",
+        "wcag222",
+        "section508",
+        "section508.22.j",
+        "TTv5",
+        "TT2.b",
+        "EN-301-549",
+        "EN-9.2.2.2",
+        "RGAAv4",
+        "RGAA-13.8.1"
+      ],
+      "description": "Ensure <blink> elements are not used",
+      "help": "<blink> elements are deprecated and must not be used",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/blink?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "definition-list",
+      "impact": null,
+      "tags": [
+        "cat.structure",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.3"
+      ],
+      "description": "Ensure <dl> elements are structured correctly",
+      "help": "<dl> elements must only directly contain properly-ordered <dt> and <dd> groups, <script>, <template> or <div> elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/definition-list?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "dlitem",
+      "impact": null,
+      "tags": [
+        "cat.structure",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.3"
+      ],
+      "description": "Ensure <dt> and <dd> elements are contained by a <dl>",
+      "help": "<dt> and <dd> elements must be contained by a <dl>",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/dlitem?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "duplicate-id-aria",
+      "impact": null,
+      "tags": [
+        "cat.parsing",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-8.2.1"
+      ],
+      "description": "Ensure every id attribute value used in ARIA and in labels is unique",
+      "help": "IDs used in ARIA and labels must be unique",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/duplicate-id-aria?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "form-field-multiple-labels",
+      "impact": null,
+      "tags": [
+        "cat.forms",
+        "wcag2a",
+        "wcag332",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.3.3.2",
+        "RGAAv4",
+        "RGAA-11.2.1"
+      ],
+      "description": "Ensure form field does not have multiple label elements",
+      "help": "Form field must not have multiple label elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/form-field-multiple-labels?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "frame-focusable-content",
+      "impact": null,
+      "tags": [
+        "cat.keyboard",
+        "wcag2a",
+        "wcag211",
+        "TTv5",
+        "TT4.a",
+        "EN-301-549",
+        "EN-9.2.1.1",
+        "RGAAv4",
+        "RGAA-7.3.2"
+      ],
+      "description": "Ensure <frame> and <iframe> elements with focusable content do not have tabindex=-1",
+      "help": "Frames with focusable content must not have tabindex=-1",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/frame-focusable-content?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "frame-title-unique",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT12.d",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-2.2.1"
+      ],
+      "description": "Ensure <iframe> and <frame> elements contain a unique title attribute",
+      "help": "Frames must have a unique title attribute",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/frame-title-unique?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "frame-title",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.i",
+        "TTv5",
+        "TT12.d",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-2.1.1"
+      ],
+      "description": "Ensure <iframe> and <frame> elements have an accessible name",
+      "help": "Frames must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/frame-title?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "html-xml-lang-mismatch",
+      "impact": null,
+      "tags": [
+        "cat.language",
+        "wcag2a",
+        "wcag311",
+        "EN-301-549",
+        "EN-9.3.1.1",
+        "ACT",
+        "RGAAv4",
+        "RGAA-8.3.1"
+      ],
+      "description": "Ensure that HTML elements with both valid lang and xml:lang attributes agree on the base language of the page",
+      "help": "HTML elements with lang and xml:lang must have the same base language",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/html-xml-lang-mismatch?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "input-button-name",
+      "impact": null,
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.9.1"
+      ],
+      "description": "Ensure input buttons have discernible text",
+      "help": "Input buttons must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/input-button-name?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "input-image-alt",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT7.a",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-1.1.3"
+      ],
+      "description": "Ensure <input type=\"image\"> elements have alternative text",
+      "help": "Image buttons must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/input-image-alt?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "label",
+      "impact": null,
+      "tags": [
+        "cat.forms",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.n",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.1.1"
+      ],
+      "description": "Ensure every form element has a label",
+      "help": "Form elements must have labels",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "link-in-text-block",
+      "impact": null,
+      "tags": [
+        "cat.color",
+        "wcag2a",
+        "wcag141",
+        "TTv5",
+        "TT13.a",
+        "EN-301-549",
+        "EN-9.1.4.1",
+        "RGAAv4",
+        "RGAA-10.6.1"
+      ],
+      "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
+      "help": "Links must be distinguishable without relying on color",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "list",
+      "impact": null,
+      "tags": [
+        "cat.structure",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ],
+      "description": "Ensure that lists are structured correctly",
+      "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/list?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "listitem",
+      "impact": null,
+      "tags": [
+        "cat.structure",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ],
+      "description": "Ensure <li> elements are used semantically",
+      "help": "<li> elements must be contained in a <ul> or <ol>",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/listitem?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "marquee",
+      "impact": null,
+      "tags": [
+        "cat.parsing",
+        "wcag2a",
+        "wcag222",
+        "TTv5",
+        "TT2.b",
+        "EN-301-549",
+        "EN-9.2.2.2",
+        "RGAAv4",
+        "RGAA-13.8.1"
+      ],
+      "description": "Ensure <marquee> elements are not used",
+      "help": "<marquee> elements are deprecated and must not be used",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/marquee?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "meta-refresh",
+      "impact": null,
+      "tags": [
+        "cat.time-and-media",
+        "wcag2a",
+        "wcag221",
+        "TTv5",
+        "TT8.a",
+        "EN-301-549",
+        "EN-9.2.2.1",
+        "RGAAv4",
+        "RGAA-13.1.2"
+      ],
+      "description": "Ensure <meta http-equiv=\"refresh\"> is not used for delayed refresh",
+      "help": "Delayed refresh under 20 hours must not be used",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/meta-refresh?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "object-alt",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "section508",
+        "section508.22.a",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "RGAAv4",
+        "RGAA-1.1.6"
+      ],
+      "description": "Ensure <object> elements have alternative text",
+      "help": "<object> elements must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/object-alt?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "scrollable-region-focusable",
+      "impact": null,
+      "tags": [
+        "cat.keyboard",
+        "wcag2a",
+        "wcag211",
+        "wcag213",
+        "TTv5",
+        "TT4.a",
+        "EN-301-549",
+        "EN-9.2.1.1",
+        "EN-9.2.1.3",
+        "RGAAv4",
+        "RGAA-7.3.2"
+      ],
+      "description": "Ensure elements that have scrollable content are accessible by keyboard in Safari",
+      "help": "Scrollable region must have keyboard access",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/scrollable-region-focusable?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "select-name",
+      "impact": null,
+      "tags": [
+        "cat.forms",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.n",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.1.1"
+      ],
+      "description": "Ensure select element has an accessible name",
+      "help": "Select element must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/select-name?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "server-side-image-map",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag211",
+        "section508",
+        "section508.22.f",
+        "TTv5",
+        "TT4.a",
+        "EN-301-549",
+        "EN-9.2.1.1",
+        "RGAAv4",
+        "RGAA-1.1.4"
+      ],
+      "description": "Ensure that server-side image maps are not used",
+      "help": "Server-side image maps must not be used",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/server-side-image-map?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "summary-name",
+      "impact": null,
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensure summary elements have discernible text",
+      "help": "Summary elements must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/summary-name?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "svg-img-alt",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT7.a",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "ACT",
+        "RGAAv4",
+        "RGAA-1.1.5"
+      ],
+      "description": "Ensure <svg> elements with an img, image, graphics-document or graphics-symbol role have accessible text",
+      "help": "<svg> elements with an img or image role must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/svg-img-alt?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "td-headers-attr",
+      "impact": null,
+      "tags": [
+        "cat.tables",
+        "wcag2a",
+        "wcag131",
+        "section508",
+        "section508.22.g",
+        "TTv5",
+        "TT14.b",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-5.7.4"
+      ],
+      "description": "Ensure that each cell in a table that uses the headers attribute refers only to other <th> elements in that table",
+      "help": "Table cell headers attributes must refer to other <th> elements in the same table",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/td-headers-attr?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "th-has-data-cells",
+      "impact": null,
+      "tags": [
+        "cat.tables",
+        "wcag2a",
+        "wcag131",
+        "section508",
+        "section508.22.g",
+        "TTv5",
+        "TT14.b",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-5.7.1"
+      ],
+      "description": "Ensure that <th> elements and elements with role=columnheader/rowheader have data cells they describe",
+      "help": "Table headers in a data table must refer to data cells",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/th-has-data-cells?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "valid-lang",
+      "impact": null,
+      "tags": [
+        "cat.language",
+        "wcag2aa",
+        "wcag312",
+        "TTv5",
+        "TT11.b",
+        "EN-301-549",
+        "EN-9.3.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-8.8.1"
+      ],
+      "description": "Ensure lang attributes have valid values",
+      "help": "lang attribute must have a valid value",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/valid-lang?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "video-caption",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag122",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT17.a",
+        "EN-301-549",
+        "EN-9.1.2.2",
+        "RGAAv4",
+        "RGAA-4.3.1"
+      ],
+      "description": "Ensure <video> elements have captions",
+      "help": "<video> elements must have captions",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/video-caption?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "no-autoplay-audio",
+      "impact": null,
+      "tags": [
+        "cat.time-and-media",
+        "wcag2a",
+        "wcag142",
+        "TTv5",
+        "TT2.a",
+        "EN-301-549",
+        "EN-9.1.4.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-4.10.1"
+      ],
+      "description": "Ensure <video> or <audio> elements do not autoplay audio for more than 3 seconds without a control mechanism to stop or mute the audio",
+      "help": "<video> or <audio> elements must not play automatically",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/no-autoplay-audio?application=playwright",
+      "nodes": []
+    }
+  ],
+  "passes": [
+    {
+      "id": "aria-allowed-attr",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure an element's role supports its ARIA attributes",
+      "help": "Elements must only use supported ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-allowed-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role"
+            },
+            {
+              "id": "aria-allowed-attr-elm",
+              "data": null,
+              "relatedNodes": [],
+              "message": "ARIA attributes are allowed for this element",
+              "impact": "critical"
+            },
+            {
+              "id": "aria-no-deprecated-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "No deprecated ARIA attributes are used"
+            }
+          ],
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<a href=\"/\" class=\"brand\" aria-label=\"Linea chess analysis\"><img alt=\"\" src=\"/favicon.svg\"><span>linea<span class=\"brand-dot\">.</span></span></a>",
+          "target": [
+            ".brand"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role"
+            },
+            {
+              "id": "aria-allowed-attr-elm",
+              "data": null,
+              "relatedNodes": [],
+              "message": "ARIA attributes are allowed for this element",
+              "impact": "critical"
+            },
+            {
+              "id": "aria-no-deprecated-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "No deprecated ARIA attributes are used"
+            }
+          ],
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<nav class=\"header-actions\" aria-label=\"Workspace controls\">",
+          "target": [
+            "nav"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role"
+            },
+            {
+              "id": "aria-allowed-attr-elm",
+              "data": null,
+              "relatedNodes": [],
+              "message": "ARIA attributes are allowed for this element",
+              "impact": "critical"
+            },
+            {
+              "id": "aria-no-deprecated-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "No deprecated ARIA attributes are used"
+            }
+          ],
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<button type=\"button\" class=\"icon-button  \" aria-label=\"Keyboard shortcuts and help (?)\" title=\"Keyboard shortcuts and help (?)\">",
+          "target": [
+            ".icon-button[type=\"button\"]:nth-child(3)"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role"
+            },
+            {
+              "id": "aria-allowed-attr-elm",
+              "data": null,
+              "relatedNodes": [],
+              "message": "ARIA attributes are allowed for this element",
+              "impact": "critical"
+            },
+            {
+              "id": "aria-no-deprecated-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "No deprecated ARIA attributes are used"
+            }
+          ],
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<button type=\"button\" class=\"icon-button  \" aria-label=\"Display settings\" title=\"Display settings\">",
+          "target": [
+            "button[aria-label=\"Display settings\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role"
+            },
+            {
+              "id": "aria-allowed-attr-elm",
+              "data": null,
+              "relatedNodes": [],
+              "message": "ARIA attributes are allowed for this element",
+              "impact": "critical"
+            },
+            {
+              "id": "aria-no-deprecated-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "No deprecated ARIA attributes are used"
+            }
+          ],
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<button class=\"button primary import-button\" aria-label=\"Import game\">",
+          "target": [
+            ".import-button"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role"
+            },
+            {
+              "id": "aria-allowed-attr-elm",
+              "data": null,
+              "relatedNodes": [],
+              "message": "ARIA attributes are allowed for this element",
+              "impact": "critical"
+            },
+            {
+              "id": "aria-no-deprecated-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "No deprecated ARIA attributes are used"
+            }
+          ],
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<div class=\"hero-static\" role=\"img\" aria-label=\"Static preview of a legal illustrative midgame\">",
+          "target": [
+            ".hero-static"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role"
+            },
+            {
+              "id": "aria-allowed-attr-elm",
+              "data": null,
+              "relatedNodes": [],
+              "message": "ARIA attributes are allowed for this element",
+              "impact": "critical"
+            },
+            {
+              "id": "aria-no-deprecated-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "No deprecated ARIA attributes are used"
+            }
+          ],
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<div class=\"sr-only\" aria-live=\"polite\" aria-atomic=\"true\"></div>",
+          "target": [
+            ".sr-only"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-conditional-attr",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure ARIA attributes are used as described in the specification of the element's role",
+      "help": "ARIA attributes must be used as specified for the element's role",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-conditional-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/\" class=\"brand\" aria-label=\"Linea chess analysis\"><img alt=\"\" src=\"/favicon.svg\"><span>linea<span class=\"brand-dot\">.</span></span></a>",
+          "target": [
+            ".brand"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<nav class=\"header-actions\" aria-label=\"Workspace controls\">",
+          "target": [
+            "nav"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<button type=\"button\" class=\"icon-button  \" aria-label=\"Keyboard shortcuts and help (?)\" title=\"Keyboard shortcuts and help (?)\">",
+          "target": [
+            ".icon-button[type=\"button\"]:nth-child(3)"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<button type=\"button\" class=\"icon-button  \" aria-label=\"Display settings\" title=\"Display settings\">",
+          "target": [
+            "button[aria-label=\"Display settings\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"button primary import-button\" aria-label=\"Import game\">",
+          "target": [
+            ".import-button"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"hero-static\" role=\"img\" aria-label=\"Static preview of a legal illustrative midgame\">",
+          "target": [
+            ".hero-static"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"sr-only\" aria-live=\"polite\" aria-atomic=\"true\"></div>",
+          "target": [
+            ".sr-only"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-deprecated-role",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure elements do not use deprecated roles",
+      "help": "Deprecated ARIA roles must not be used",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-deprecated-role?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "deprecatedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "ARIA role is not deprecated"
+            }
+          ],
+          "impact": null,
+          "html": "<div class=\"hero-static\" role=\"img\" aria-label=\"Static preview of a legal illustrative midgame\">",
+          "target": [
+            ".hero-static"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-hidden-body",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-10.8.1"
+      ],
+      "description": "Ensure aria-hidden=\"true\" is not present on the document body.",
+      "help": "aria-hidden=\"true\" must not be present on the document body",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-hidden-body?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-hidden-body",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "No aria-hidden attribute is present on document body"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<body style=\"\">",
+          "target": [
+            "body"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-hidden-focus",
+      "impact": null,
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-10.8.1"
+      ],
+      "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
+      "help": "ARIA hidden element must not be focusable or contain focusable elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-hidden-focus?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<span aria-hidden=\"true\">↗</span>",
+          "target": [
+            "span[aria-hidden=\"true\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<b aria-hidden=\"true\">↗</b>",
+          "target": [
+            "button:nth-child(1) > b"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<b aria-hidden=\"true\">↗</b>",
+          "target": [
+            "button:nth-child(2) > b"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<b aria-hidden=\"true\">↗</b>",
+          "target": [
+            "button:nth-child(3) > b"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<b aria-hidden=\"true\">↗</b>",
+          "target": [
+            "button:nth-child(4) > b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-prohibited-attr",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure ARIA attributes are not prohibited for an element's role",
+      "help": "Elements must only use permitted ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-prohibited-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "impact": null,
+          "html": "<a href=\"/\" class=\"brand\" aria-label=\"Linea chess analysis\"><img alt=\"\" src=\"/favicon.svg\"><span>linea<span class=\"brand-dot\">.</span></span></a>",
+          "target": [
+            ".brand"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "impact": null,
+          "html": "<nav class=\"header-actions\" aria-label=\"Workspace controls\">",
+          "target": [
+            "nav"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "impact": null,
+          "html": "<button type=\"button\" class=\"icon-button  \" aria-label=\"Keyboard shortcuts and help (?)\" title=\"Keyboard shortcuts and help (?)\">",
+          "target": [
+            ".icon-button[type=\"button\"]:nth-child(3)"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "impact": null,
+          "html": "<button type=\"button\" class=\"icon-button  \" aria-label=\"Display settings\" title=\"Display settings\">",
+          "target": [
+            "button[aria-label=\"Display settings\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "impact": null,
+          "html": "<button class=\"button primary import-button\" aria-label=\"Import game\">",
+          "target": [
+            ".import-button"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "impact": null,
+          "html": "<div class=\"hero-static\" role=\"img\" aria-label=\"Static preview of a legal illustrative midgame\">",
+          "target": [
+            ".hero-static"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "impact": null,
+          "html": "<div class=\"sr-only\" aria-live=\"polite\" aria-atomic=\"true\"></div>",
+          "target": [
+            ".sr-only"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-required-attr",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure elements with ARIA roles have all required ARIA attributes",
+      "help": "Required ARIA attributes must be provided",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-required-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-required-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "All required ARIA attributes are present"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"hero-static\" role=\"img\" aria-label=\"Static preview of a legal illustrative midgame\">",
+          "target": [
+            ".hero-static"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-roles",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all elements with a role attribute use a valid value",
+      "help": "ARIA roles used must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-roles?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "invalidrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is valid"
+            },
+            {
+              "id": "abstractrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Abstract roles are not used"
+            },
+            {
+              "id": "unsupportedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<div class=\"hero-static\" role=\"img\" aria-label=\"Static preview of a legal illustrative midgame\">",
+          "target": [
+            ".hero-static"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-valid-attr-value",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-valid-attr-value?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute values are valid"
+            },
+            {
+              "id": "aria-errormessage",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
+            },
+            {
+              "id": "aria-level",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-level values are valid"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/\" class=\"brand\" aria-label=\"Linea chess analysis\"><img alt=\"\" src=\"/favicon.svg\"><span>linea<span class=\"brand-dot\">.</span></span></a>",
+          "target": [
+            ".brand"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute values are valid"
+            },
+            {
+              "id": "aria-errormessage",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
+            },
+            {
+              "id": "aria-level",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-level values are valid"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<nav class=\"header-actions\" aria-label=\"Workspace controls\">",
+          "target": [
+            "nav"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute values are valid"
+            },
+            {
+              "id": "aria-errormessage",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
+            },
+            {
+              "id": "aria-level",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-level values are valid"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<button type=\"button\" class=\"icon-button  \" aria-label=\"Keyboard shortcuts and help (?)\" title=\"Keyboard shortcuts and help (?)\">",
+          "target": [
+            ".icon-button[type=\"button\"]:nth-child(3)"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute values are valid"
+            },
+            {
+              "id": "aria-errormessage",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
+            },
+            {
+              "id": "aria-level",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-level values are valid"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<button type=\"button\" class=\"icon-button  \" aria-label=\"Display settings\" title=\"Display settings\">",
+          "target": [
+            "button[aria-label=\"Display settings\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute values are valid"
+            },
+            {
+              "id": "aria-errormessage",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
+            },
+            {
+              "id": "aria-level",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-level values are valid"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"button primary import-button\" aria-label=\"Import game\">",
+          "target": [
+            ".import-button"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute values are valid"
+            },
+            {
+              "id": "aria-errormessage",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
+            },
+            {
+              "id": "aria-level",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-level values are valid"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"hero-static\" role=\"img\" aria-label=\"Static preview of a legal illustrative midgame\">",
+          "target": [
+            ".hero-static"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute values are valid"
+            },
+            {
+              "id": "aria-errormessage",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
+            },
+            {
+              "id": "aria-level",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-level values are valid"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"sr-only\" aria-live=\"polite\" aria-atomic=\"true\"></div>",
+          "target": [
+            ".sr-only"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-valid-attr",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure attributes that begin with aria- are valid ARIA attributes",
+      "help": "ARIA attributes must conform to valid names",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-valid-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute name is valid"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/\" class=\"brand\" aria-label=\"Linea chess analysis\"><img alt=\"\" src=\"/favicon.svg\"><span>linea<span class=\"brand-dot\">.</span></span></a>",
+          "target": [
+            ".brand"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute name is valid"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<nav class=\"header-actions\" aria-label=\"Workspace controls\">",
+          "target": [
+            "nav"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute name is valid"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button type=\"button\" class=\"icon-button  \" aria-label=\"Keyboard shortcuts and help (?)\" title=\"Keyboard shortcuts and help (?)\">",
+          "target": [
+            ".icon-button[type=\"button\"]:nth-child(3)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute name is valid"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button type=\"button\" class=\"icon-button  \" aria-label=\"Display settings\" title=\"Display settings\">",
+          "target": [
+            "button[aria-label=\"Display settings\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute name is valid"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"button primary import-button\" aria-label=\"Import game\">",
+          "target": [
+            ".import-button"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute name is valid"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"hero-static\" role=\"img\" aria-label=\"Static preview of a legal illustrative midgame\">",
+          "target": [
+            ".hero-static"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute name is valid"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"sr-only\" aria-live=\"polite\" aria-atomic=\"true\"></div>",
+          "target": [
+            ".sr-only"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avoid-inline-spacing",
+      "impact": null,
+      "tags": [
+        "cat.structure",
+        "wcag21aa",
+        "wcag1412",
+        "EN-301-549",
+        "EN-9.1.4.12",
+        "ACT"
+      ],
+      "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
+      "help": "Inline text spacing must be adjustable with custom stylesheets",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/avoid-inline-spacing?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<body style=\"\">",
+          "target": [
+            "body"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "button-name",
+      "impact": null,
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.9.1"
+      ],
+      "description": "Ensure buttons have discernible text",
+      "help": "Buttons must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/button-name?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"text-button recent-games-button\">Recent local games</button>",
+          "target": [
+            ".recent-games-button"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute exists and is not empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a title attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button type=\"button\" class=\"icon-button  \" aria-label=\"Keyboard shortcuts and help (?)\" title=\"Keyboard shortcuts and help (?)\">",
+          "target": [
+            ".icon-button[type=\"button\"]:nth-child(3)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute exists and is not empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a title attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button type=\"button\" class=\"icon-button  \" aria-label=\"Display settings\" title=\"Display settings\">",
+          "target": [
+            "button[aria-label=\"Display settings\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute exists and is not empty"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"button primary import-button\" aria-label=\"Import game\">",
+          "target": [
+            ".import-button"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"button primary\">Import a game <span aria-hidden=\"true\">↗</span></button>",
+          "target": [
+            ".hero-actions > .button.primary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"text-button\">Try a sample →</button>",
+          "target": [
+            ".hero-actions > .text-button"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"button primary\">Find my games ↗</button>",
+          "target": [
+            "div:nth-child(1) > .button.primary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button><strong>Chess.com</strong><span>Public username &amp; game links</span><b aria-hidden=\"true\">↗</b></button>",
+          "target": [
+            ".home-source-grid > button:nth-child(1)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button><strong>Lichess</strong><span>Public history from lichess.org</span><b aria-hidden=\"true\">↗</b></button>",
+          "target": [
+            ".home-source-grid > button:nth-child(2)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button><strong>Your PGN</strong><span>Paste or upload a single game</span><b aria-hidden=\"true\">↗</b></button>",
+          "target": [
+            ".home-source-grid > button:nth-child(3)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button><strong>Saved locally</strong><span>Pick up where you left off</span><b aria-hidden=\"true\">↗</b></button>",
+          "target": [
+            ".home-source-grid > button:nth-child(4)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"text-button\">Open the sample review →</button>",
+          "target": [
+            ".product-preview.home-section:nth-child(3) > div > .text-button"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"button primary\">Analyze my games ↗</button>",
+          "target": [
+            ".report-preview > div > .button.primary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"text-button\">Recent player reports →</button>",
+          "target": [
+            ".report-preview > div > .text-button"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"button primary\">Import a game ↗</button>",
+          "target": [
+            ".home-finale > .button.primary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"text-button\">Open local library</button>",
+          "target": [
+            "footer > .text-button"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bypass",
+      "impact": null,
+      "tags": [
+        "cat.keyboard",
+        "wcag2a",
+        "wcag241",
+        "section508",
+        "section508.22.o",
+        "TTv5",
+        "TT9.a",
+        "EN-301-549",
+        "EN-9.2.4.1",
+        "RGAAv4",
+        "RGAA-12.7.1"
+      ],
+      "description": "Ensure each page has at least one mechanism for a user to bypass navigation and jump straight to the content",
+      "help": "Page must have means to bypass repeated blocks",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/bypass?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "internal-link-present",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Valid skip link found"
+            },
+            {
+              "id": "header-present",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<h1>Understand<br><em>every move.</em></h1>",
+                  "target": [
+                    "h1"
+                  ]
+                },
+                {
+                  "html": "<h2>Less setup.<br>More understanding.</h2>",
+                  "target": [
+                    ".bring-games > div:nth-child(1) > h2"
+                  ]
+                },
+                {
+                  "html": "<h2>A review, not<br>a wall of numbers.</h2>",
+                  "target": [
+                    ".product-preview.home-section:nth-child(3) > div > h2"
+                  ]
+                },
+                {
+                  "html": "<h2>A small sample.<br>Useful patterns.</h2>",
+                  "target": [
+                    ".report-preview > div > h2"
+                  ]
+                },
+                {
+                  "html": "<h2>Your next move<br>starts here.</h2>",
+                  "target": [
+                    ".home-finale > h2"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Page has a heading"
+            },
+            {
+              "id": "landmark",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"homepage reduced\">",
+                  "target": [
+                    "main"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Page has a landmark region"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<html lang=\"en\">",
+          "target": [
+            "html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#f3f2ea",
+                "bgColor": "#191b19",
+                "contrastRatio": 15.42,
+                "fontSize": "21.0pt (28px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.42"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span>linea<span class=\"brand-dot\">.</span></span>",
+          "target": [
+            ".brand > span"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#b1b5a9",
+                "bgColor": "#191b19",
+                "contrastRatio": 8.29,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 8.29"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"privacy-label\">",
+          "target": [
+            ".privacy-label"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#f5cf49",
+                "bgColor": "#191b19",
+                "contrastRatio": 11.47,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 11.47"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"text-button recent-games-button\">Recent local games</button>",
+          "target": [
+            ".recent-games-button"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#16180f",
+                "bgColor": "#ffdf79",
+                "contrastRatio": 13.72,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 13.72"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span>Import<span class=\"import-word\"> game</span></span>",
+          "target": [
+            ".import-button > span"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#16180f",
+                "bgColor": "#ffdf79",
+                "contrastRatio": 13.72,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 13.72"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"import-word\"> game</span>",
+          "target": [
+            ".import-word"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#b1b5a9",
+                "bgColor": "#101110",
+                "contrastRatio": 9.05,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 9.05"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"eyebrow\">YOUR GAMES. A CLEARER PICTURE.</span>",
+          "target": [
+            ".hero-copy > .eyebrow"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#f3f2ea",
+                "bgColor": "#101110",
+                "contrastRatio": 16.85,
+                "fontSize": "84.0pt (112px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.85"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h1>Understand<br><em>every move.</em></h1>",
+          "target": [
+            "h1"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#f5cf49",
+                "bgColor": "#101110",
+                "contrastRatio": 12.52,
+                "fontSize": "84.0pt (112px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 12.52"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<em>every move.</em>",
+          "target": [
+            "em"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#b1b5a9",
+                "bgColor": "#101110",
+                "contrastRatio": 9.05,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 9.05"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p>Find the moments that mattered.<br>Bring that clarity to your next game.</p>",
+          "target": [
+            ".hero-copy > p"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#16180f",
+                "bgColor": "#f5cf49",
+                "contrastRatio": 11.86,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 11.86"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"button primary\">Import a game <span aria-hidden=\"true\">↗</span></button>",
+          "target": [
+            ".hero-actions > .button.primary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#f5cf49",
+                "bgColor": "#101110",
+                "contrastRatio": 12.52,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 12.52"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"text-button\">Try a sample →</button>",
+          "target": [
+            ".hero-actions > .text-button"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#b1b5a9",
+                "bgColor": "#101110",
+                "contrastRatio": 9.05,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 9.05"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"hero-approval-note\">Neutral 3D blockout preview. Your chosen Staunton + wooden-board direction is recorded; the exact sourced set and finish await approval.</p>",
+          "target": [
+            ".hero-approval-note"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#f5cf49",
+                "bgColor": "#101110",
+                "contrastRatio": 12.52,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 12.52"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"chapter-number\">01 / BRING YOUR GAMES</span>",
+          "target": [
+            ".bring-games > div:nth-child(1) > .chapter-number"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#f3f2ea",
+                "bgColor": "#101110",
+                "contrastRatio": 16.85,
+                "fontSize": "43.5pt (58px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.85"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h2>Less setup.<br>More understanding.</h2>",
+          "target": [
+            ".bring-games > div:nth-child(1) > h2"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#b1b5a9",
+                "bgColor": "#101110",
+                "contrastRatio": 9.05,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 9.05"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p>Find completed public games from Chess.com or Lichess. Or paste a PGN. No account connection, login or ownership verification.</p>",
+          "target": [
+            ".bring-games > div:nth-child(1) > p"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#16180f",
+                "bgColor": "#f5cf49",
+                "contrastRatio": 11.86,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 11.86"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"button primary\">Find my games ↗</button>",
+          "target": [
+            "div:nth-child(1) > .button.primary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#f3f2ea",
+                "bgColor": "#191b19",
+                "contrastRatio": 15.42,
+                "fontSize": "14.3pt (19px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.42"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<strong>Chess.com</strong>",
+          "target": [
+            "button:nth-child(1) > strong"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#b1b5a9",
+                "bgColor": "#191b19",
+                "contrastRatio": 8.29,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 8.29"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span>Public username &amp; game links</span>",
+          "target": [
+            ".home-source-grid > button:nth-child(1) > span"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#f3f2ea",
+                "bgColor": "#191b19",
+                "contrastRatio": 15.42,
+                "fontSize": "14.3pt (19px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.42"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<strong>Lichess</strong>",
+          "target": [
+            "button:nth-child(2) > strong"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#b1b5a9",
+                "bgColor": "#191b19",
+                "contrastRatio": 8.29,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 8.29"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span>Public history from lichess.org</span>",
+          "target": [
+            "button:nth-child(2) > span"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#f3f2ea",
+                "bgColor": "#191b19",
+                "contrastRatio": 15.42,
+                "fontSize": "14.3pt (19px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.42"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<strong>Your PGN</strong>",
+          "target": [
+            "button:nth-child(3) > strong"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#b1b5a9",
+                "bgColor": "#191b19",
+                "contrastRatio": 8.29,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 8.29"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span>Paste or upload a single game</span>",
+          "target": [
+            "button:nth-child(3) > span"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#f3f2ea",
+                "bgColor": "#191b19",
+                "contrastRatio": 15.42,
+                "fontSize": "14.3pt (19px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.42"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<strong>Saved locally</strong>",
+          "target": [
+            "button:nth-child(4) > strong"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#b1b5a9",
+                "bgColor": "#191b19",
+                "contrastRatio": 8.29,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 8.29"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span>Pick up where you left off</span>",
+          "target": [
+            "button:nth-child(4) > span"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#f5cf49",
+                "bgColor": "#101110",
+                "contrastRatio": 12.52,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 12.52"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"chapter-number\">02 / UNDERSTAND KEY MOMENTS</span>",
+          "target": [
+            ".product-preview.home-section:nth-child(3) > div > .chapter-number"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#f3f2ea",
+                "bgColor": "#101110",
+                "contrastRatio": 16.85,
+                "fontSize": "43.5pt (58px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.85"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h2>A review, not<br>a wall of numbers.</h2>",
+          "target": [
+            ".product-preview.home-section:nth-child(3) > div > h2"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#b1b5a9",
+                "bgColor": "#101110",
+                "contrastRatio": 9.05,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 9.05"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p>Start with both players’ accuracy. Then replay the decisions, find engine-supported alternatives and explore without changing your original game.</p>",
+          "target": [
+            ".product-preview.home-section:nth-child(3) > div > p:nth-child(3)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#f5cf49",
+                "bgColor": "#101110",
+                "contrastRatio": 12.52,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 12.52"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"text-button\">Open the sample review →</button>",
+          "target": [
+            ".product-preview.home-section:nth-child(3) > div > .text-button"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#b1b5a9",
+                "bgColor": "#101110",
+                "contrastRatio": 9.05,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 9.05"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"home-fineprint\">Example screenshot: fictional fixture players, real local engine evidence. Not an imported account or a promised score.</p>",
+          "target": [
+            ".product-preview.home-section:nth-child(3) > div > .home-fineprint"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#f5cf49",
+                "bgColor": "#101110",
+                "contrastRatio": 12.52,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 12.52"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"chapter-number\">03 / LEARN FROM YOUR LAST TEN</span>",
+          "target": [
+            ".report-preview > div > .chapter-number"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#f3f2ea",
+                "bgColor": "#101110",
+                "contrastRatio": 16.85,
+                "fontSize": "43.5pt (58px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.85"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h2>A small sample.<br>Useful patterns.</h2>",
+          "target": [
+            ".report-preview > div > h2"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#b1b5a9",
+                "bgColor": "#101110",
+                "contrastRatio": 9.05,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 9.05"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p>Analyze up to ten eligible or selected games. See costly moments, opening results and observed ratings—with coverage and denominators, not invented lifetime statistics.</p>",
+          "target": [
+            ".report-preview > div > p:nth-child(3)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#16180f",
+                "bgColor": "#f5cf49",
+                "contrastRatio": 11.86,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 11.86"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"button primary\">Analyze my games ↗</button>",
+          "target": [
+            ".report-preview > div > .button.primary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#f5cf49",
+                "bgColor": "#101110",
+                "contrastRatio": 12.52,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 12.52"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"text-button\">Recent player reports →</button>",
+          "target": [
+            ".report-preview > div > .text-button"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#b1b5a9",
+                "bgColor": "#101110",
+                "contrastRatio": 9.05,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 9.05"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"home-fineprint\">Browser analysis runs while the app stays open. Pause, return or resume a checkpoint. No promise of complete analysis in seconds.</p>",
+          "target": [
+            ".report-preview > div > .home-fineprint"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#16180f",
+                "bgColor": "#f5cf49",
+                "contrastRatio": 11.86,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 11.86"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"button primary\">Import a game ↗</button>",
+          "target": [
+            ".home-finale > .button.primary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#f3f2ea",
+                "bgColor": "#101110",
+                "contrastRatio": 16.85,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.85"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span>linea.</span>",
+          "target": [
+            "footer > span"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#b1b5a9",
+                "bgColor": "#101110",
+                "contrastRatio": 9.05,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 9.05"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p>Independent chess review · Stockfish 19 Lite · Local-first</p>",
+          "target": [
+            "footer > p"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#f5cf49",
+                "bgColor": "#101110",
+                "contrastRatio": 12.52,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 12.52"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"text-button\">Open local library</button>",
+          "target": [
+            "footer > .text-button"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "document-title",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag242",
+        "TTv5",
+        "TT12.a",
+        "EN-301-549",
+        "EN-9.2.4.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-8.5.1"
+      ],
+      "description": "Ensure each HTML document contains a non-empty <title> element",
+      "help": "Documents must have <title> element to aid in navigation",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/document-title?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "doc-has-title",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Document has a non-empty <title> element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<html lang=\"en\">",
+          "target": [
+            "html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-has-lang",
+      "impact": null,
+      "tags": [
+        "cat.language",
+        "wcag2a",
+        "wcag311",
+        "TTv5",
+        "TT11.a",
+        "EN-301-549",
+        "EN-9.3.1.1",
+        "ACT",
+        "RGAAv4",
+        "RGAA-8.3.1"
+      ],
+      "description": "Ensure every HTML document has a lang attribute",
+      "help": "<html> element must have a lang attribute",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/html-has-lang?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-lang",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "The <html> element has a lang attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<html lang=\"en\">",
+          "target": [
+            "html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-lang-valid",
+      "impact": null,
+      "tags": [
+        "cat.language",
+        "wcag2a",
+        "wcag311",
+        "TTv5",
+        "TT11.a",
+        "EN-301-549",
+        "EN-9.3.1.1",
+        "ACT",
+        "RGAAv4",
+        "RGAA-8.4.1"
+      ],
+      "description": "Ensure the lang attribute of the <html> element has a valid value",
+      "help": "<html> element must have a valid value for the lang attribute",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/html-lang-valid?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "valid-lang",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Value of lang attribute is included in the list of valid languages"
+            }
+          ],
+          "impact": null,
+          "html": "<html lang=\"en\">",
+          "target": [
+            "html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "image-alt",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT7.a",
+        "TT7.b",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "ACT",
+        "RGAAv4",
+        "RGAA-1.1.1"
+      ],
+      "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+      "help": "Images must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/image-alt?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/favicon.svg\">",
+          "target": [
+            "img[src$=\"favicon.svg\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/br.svg\">",
+          "target": [
+            ".light:nth-child(1) > img[src$=\"br.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/bq.svg\">",
+          "target": [
+            "img[src$=\"bq.svg\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/br.svg\">",
+          "target": [
+            ".light:nth-child(5) > img[src$=\"br.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/bb.svg\">",
+          "target": [
+            ".dark:nth-child(6) > img[src$=\"bb.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/bk.svg\">",
+          "target": [
+            "img[src$=\"bk.svg\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/bb.svg\">",
+          "target": [
+            ".light:nth-child(10) > img[src$=\"bb.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/bn.svg\">",
+          "target": [
+            ".light:nth-child(12) > img[src$=\"bn.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/bp.svg\">",
+          "target": [
+            ".light:nth-child(14) > img[src$=\"bp.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/bp.svg\">",
+          "target": [
+            ".light:nth-child(16) > img[src$=\"bp.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/bp.svg\">",
+          "target": [
+            ".light:nth-child(17) > img[src$=\"bp.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/bp.svg\">",
+          "target": [
+            ".dark:nth-child(20) > img[src$=\"bp.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/bn.svg\">",
+          "target": [
+            ".dark:nth-child(22) > img[src$=\"bn.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/bp.svg\">",
+          "target": [
+            ".light:nth-child(23) > img[src$=\"bp.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/bp.svg\">",
+          "target": [
+            ".light:nth-child(26) > img[src$=\"bp.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/wp.svg\">",
+          "target": [
+            ".light:nth-child(28) > img[src$=\"wp.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/bp.svg\">",
+          "target": [
+            ".dark:nth-child(29) > img[src$=\"bp.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/wp.svg\">",
+          "target": [
+            ".light:nth-child(33) > img[src$=\"wp.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/bp.svg\">",
+          "target": [
+            ".light:nth-child(35) > img[src$=\"bp.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/wp.svg\">",
+          "target": [
+            ".light:nth-child(37) > img[src$=\"wp.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/wp.svg\">",
+          "target": [
+            ".dark:nth-child(43) > img[src$=\"wp.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/wn.svg\">",
+          "target": [
+            ".light:nth-child(46) > img[src$=\"wn.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/wn.svg\">",
+          "target": [
+            ".dark:nth-child(47) > img[src$=\"wn.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/wp.svg\">",
+          "target": [
+            ".light:nth-child(48) > img[src$=\"wp.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/wp.svg\">",
+          "target": [
+            ".dark:nth-child(50) > img[src$=\"wp.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/wb.svg\">",
+          "target": [
+            ".light:nth-child(51) > img[src$=\"wb.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/wp.svg\">",
+          "target": [
+            ".dark:nth-child(54) > img[src$=\"wp.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/wp.svg\">",
+          "target": [
+            ".light:nth-child(55) > img[src$=\"wp.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/wr.svg\">",
+          "target": [
+            ".dark:nth-child(57) > img[src$=\"wr.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/wb.svg\">",
+          "target": [
+            ".dark:nth-child(59) > img[src$=\"wb.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/wq.svg\">",
+          "target": [
+            "img[src$=\"wq.svg\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/wr.svg\">",
+          "target": [
+            ".dark:nth-child(61) > img[src$=\"wr.svg\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"\" src=\"/pieces/skak/wk.svg\">",
+          "target": [
+            "img[src$=\"wk.svg\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"Example of Linea’s two-column review with a playable board and focused review panel\" loading=\"lazy\" width=\"1440\" height=\"1000\" src=\"/previews/review.jpg\">",
+          "target": [
+            "img[height=\"1000\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"Example player report showing actual sample counts and separately labelled reviewed metrics\" loading=\"lazy\" width=\"1440\" height=\"2100\" src=\"/previews/report.jpg\">",
+          "target": [
+            "img[height=\"2100\"]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "label-content-name-mismatch",
+      "impact": null,
+      "tags": [
+        "cat.semantics",
+        "wcag21a",
+        "wcag253",
+        "EN-301-549",
+        "EN-9.2.5.3",
+        "RGAAv4",
+        "RGAA-6.1.5"
+      ],
+      "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+      "help": "Elements must have their visible text as part of their accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "label-content-name-mismatch",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element contains visible text as part of its accessible name"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/\" class=\"brand\" aria-label=\"Linea chess analysis\"><img alt=\"\" src=\"/favicon.svg\"><span>linea<span class=\"brand-dot\">.</span></span></a>",
+          "target": [
+            ".brand"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "label-content-name-mismatch",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element contains visible text as part of its accessible name"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"button primary import-button\" aria-label=\"Import game\">",
+          "target": [
+            ".import-button"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "link-name",
+      "impact": null,
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag244",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.2.4.4",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-6.2.1"
+      ],
+      "description": "Ensure links have discernible text",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-name?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is not in tab order or has accessible text"
+            }
+          ],
+          "impact": null,
+          "html": "<a class=\"skip-link\" href=\"#product-main\">Skip to content</a>",
+          "target": [
+            ".skip-link"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute exists and is not empty"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is not in tab order or has accessible text"
+            }
+          ],
+          "impact": null,
+          "html": "<a href=\"/\" class=\"brand\" aria-label=\"Linea chess analysis\"><img alt=\"\" src=\"/favicon.svg\"><span>linea<span class=\"brand-dot\">.</span></span></a>",
+          "target": [
+            ".brand"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meta-viewport",
+      "impact": null,
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag2aa",
+        "wcag144",
+        "EN-301-549",
+        "EN-9.1.4.4",
+        "ACT",
+        "RGAAv4",
+        "RGAA-10.4.2"
+      ],
+      "description": "Ensure <meta name=\"viewport\"> does not disable text scaling and zooming",
+      "help": "Zooming and scaling must not be disabled",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/meta-viewport?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "meta-viewport",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "<meta> tag does not disable zooming on mobile devices"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+          "target": [
+            "meta[name=\"viewport\"]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nested-interactive",
+      "impact": null,
+      "tags": [
+        "cat.keyboard",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+      "help": "Interactive controls must not be nested",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/nested-interactive?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"text-button recent-games-button\">Recent local games</button>",
+          "target": [
+            ".recent-games-button"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button type=\"button\" class=\"icon-button  \" aria-label=\"Keyboard shortcuts and help (?)\" title=\"Keyboard shortcuts and help (?)\">",
+          "target": [
+            ".icon-button[type=\"button\"]:nth-child(3)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button type=\"button\" class=\"icon-button  \" aria-label=\"Display settings\" title=\"Display settings\">",
+          "target": [
+            "button[aria-label=\"Display settings\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"button primary import-button\" aria-label=\"Import game\">",
+          "target": [
+            ".import-button"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"button primary\">Import a game <span aria-hidden=\"true\">↗</span></button>",
+          "target": [
+            ".hero-actions > .button.primary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"text-button\">Try a sample →</button>",
+          "target": [
+            ".hero-actions > .text-button"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"hero-static\" role=\"img\" aria-label=\"Static preview of a legal illustrative midgame\">",
+          "target": [
+            ".hero-static"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"button primary\">Find my games ↗</button>",
+          "target": [
+            "div:nth-child(1) > .button.primary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button><strong>Chess.com</strong><span>Public username &amp; game links</span><b aria-hidden=\"true\">↗</b></button>",
+          "target": [
+            ".home-source-grid > button:nth-child(1)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button><strong>Lichess</strong><span>Public history from lichess.org</span><b aria-hidden=\"true\">↗</b></button>",
+          "target": [
+            ".home-source-grid > button:nth-child(2)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button><strong>Your PGN</strong><span>Paste or upload a single game</span><b aria-hidden=\"true\">↗</b></button>",
+          "target": [
+            ".home-source-grid > button:nth-child(3)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button><strong>Saved locally</strong><span>Pick up where you left off</span><b aria-hidden=\"true\">↗</b></button>",
+          "target": [
+            ".home-source-grid > button:nth-child(4)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"text-button\">Open the sample review →</button>",
+          "target": [
+            ".product-preview.home-section:nth-child(3) > div > .text-button"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<img alt=\"Example of Linea’s two-column review with a playable board and focused review panel\" loading=\"lazy\" width=\"1440\" height=\"1000\" src=\"/previews/review.jpg\">",
+          "target": [
+            "img[height=\"1000\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<img alt=\"Example player report showing actual sample counts and separately labelled reviewed metrics\" loading=\"lazy\" width=\"1440\" height=\"2100\" src=\"/previews/report.jpg\">",
+          "target": [
+            "img[height=\"2100\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"button primary\">Analyze my games ↗</button>",
+          "target": [
+            ".report-preview > div > .button.primary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"text-button\">Recent player reports →</button>",
+          "target": [
+            ".report-preview > div > .text-button"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"button primary\">Import a game ↗</button>",
+          "target": [
+            ".home-finale > .button.primary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"text-button\">Open local library</button>",
+          "target": [
+            "footer > .text-button"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "role-img-alt",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT7.a",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "ACT",
+        "RGAAv4",
+        "RGAA-1.1.1"
+      ],
+      "description": "Ensure [role=\"img\"] and [role=\"image\"] elements have alternative text",
+      "help": "[role=\"img\"] and [role=\"image\"] elements must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/role-img-alt?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute exists and is not empty"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"hero-static\" role=\"img\" aria-label=\"Static preview of a legal illustrative midgame\">",
+          "target": [
+            ".hero-static"
+          ]
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"hero-stage\">",
+                  "target": [
+                    ".hero-stage"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"home-privacy\">No login · Local Stockfish · Your browser, your games</span>",
+          "target": [
+            ".home-privacy"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"hero-stage\">",
+                  "target": [
+                    ".hero-stage"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>LEGAL MIDGAME · ILLUSTRATIVE POSITION</span>",
+          "target": [
+            ".hero-stage-caption > span:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"hero-stage\">",
+                  "target": [
+                    ".hero-stage"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span>Reduced-motion static edition</span>",
+          "target": [
+            ".hero-stage-caption > span:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"home-finale\"><span class=\"eyebrow\">ONE GAME. ONE CLEARER NEXT STEP.</span><h2>Your next move<br>starts here.</h2><button class=\"button primary\">Import a game ↗</button><p>Private by design. Independent estimates.<br>Always room for a deeper look.</p></section>",
+                  "target": [
+                    ".home-finale"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"eyebrow\">ONE GAME. ONE CLEARER NEXT STEP.</span>",
+          "target": [
+            ".home-finale > .eyebrow"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "69.0pt (92px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"home-finale\"><span class=\"eyebrow\">ONE GAME. ONE CLEARER NEXT STEP.</span><h2>Your next move<br>starts here.</h2><button class=\"button primary\">Import a game ↗</button><p>Private by design. Independent estimates.<br>Always room for a deeper look.</p></section>",
+                  "target": [
+                    ".home-finale"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2>Your next move<br>starts here.</h2>",
+          "target": [
+            ".home-finale > h2"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"home-finale\"><span class=\"eyebrow\">ONE GAME. ONE CLEARER NEXT STEP.</span><h2>Your next move<br>starts here.</h2><button class=\"button primary\">Import a game ↗</button><p>Private by design. Independent estimates.<br>Always room for a deeper look.</p></section>",
+                  "target": [
+                    ".home-finale"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Private by design. Independent estimates.<br>Always room for a deeper look.</p>",
+          "target": [
+            ".home-finale > p"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ],
+  "violations": []
+}

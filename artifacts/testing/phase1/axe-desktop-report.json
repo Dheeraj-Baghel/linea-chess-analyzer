@@ -1,0 +1,232 @@
+{
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure ARIA attributes are not prohibited for an element's role",
+      "help": "Elements must only use permitted ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-prohibited-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-label"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div class=\"segmented wide\" aria-label=\"Game import source\"><button type=\"button\" aria-pressed=\"false\" class=\"\">Chess.com</button><button type=\"button\" aria-pressed=\"false\" class=\"\">Lichess</button><button type=\"button\" aria-pressed=\"true\" class=\"selected\">PGN game</button></div>",
+          "target": [
+            ".segmented"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-label"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div class=\"captured-pieces\" aria-label=\"Pieces captured by ?: none\"><span class=\"no-captures\">No captures yet</span></div>",
+          "target": [
+            ".player-to-move > .player-details > .captured-pieces[aria-label=\"Pieces captured by ?: none\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-label"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div class=\"captured-pieces\" aria-label=\"Pieces captured by ?: none\"><span class=\"no-captures\">No captures yet</span></div>",
+          "target": [
+            ".player-align:nth-child(3) > .player-row > .player-details > .captured-pieces[aria-label=\"Pieces captured by ?: none\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-label"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div class=\"annotation-colors\" aria-label=\"Annotation colors\">",
+          "target": [
+            ".annotation-colors"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-label"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div class=\"review-chart\" aria-label=\"Game evaluation chart. Positive scores favor White.\">",
+          "target": [
+            ".review-chart"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "nonBmp"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element content contains only non-text characters"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"footer-knight\">♞</span>",
+          "target": [
+            ".footer-knight"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+        }
+      ]
+    },
+    {
+      "id": "label-content-name-mismatch",
+      "impact": "serious",
+      "tags": [
+        "cat.semantics",
+        "wcag21a",
+        "wcag253",
+        "EN-301-549",
+        "EN-9.2.5.3",
+        "RGAAv4",
+        "RGAA-6.1.5"
+      ],
+      "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+      "help": "Elements must have their visible text as part of their accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "label-content-name-mismatch",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Unable to determine if the visible text is part of the accessible name"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" role=\"gridcell\" data-square=\"g4\" tabindex=\"-1\" aria-selected=\"false\" aria-label=\"g4, White pawn, last move, Blunder move\" class=\"square light last-move   \">",
+          "target": [
+            "button[data-square=\"g4\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "AccuracyPercent.scala",
+    "url": "https://raw.githubusercontent.com/lichess-org/lila/ea60d3bc7e9997f8f182d9dc3f3d468a036df20a/modules/analyse/src/main/AccuracyPercent.scala",
+    "sha256": "8aa3b53486b09ab933bb4184e538f4e027e8963fe2650df38c950fe9a2ebc376"
+  },
+  {
+    "name": "LICENSE-AGPL-3.0.txt",
+    "url": "https://raw.githubusercontent.com/lichess-org/lila/ea60d3bc7e9997f8f182d9dc3f3d468a036df20a/LICENSE",
+    "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+  },
+  {
+    "name": "Maths.scala",
+    "url": "https://raw.githubusercontent.com/lichess-org/scalalib/31fc151b931ca65d9c59bf24b6084e0a49408fbe/lila/src/main/scala/Maths.scala",
+    "sha256": "0f0c61692b6f05c85e6cfcfdf24f6479a96a906066f6cb0f6219e90eba123437"
+  },
+  {
+    "name": "LICENSE-scalalib.txt",
+    "url": "https://raw.githubusercontent.com/lichess-org/scalalib/31fc151b931ca65d9c59bf24b6084e0a49408fbe/LICENSE",
+    "sha256": "605ba72174da0c484ab5232dccfbf2be9cf27d869d2060fe8f762757f61c779a"
+  },
+  {
+    "name": "eval.scala",
+    "url": "https://raw.githubusercontent.com/lichess-org/scalachess/11ac4c5a2b8a852e0e3c4a7c0c5ae0904aa40025/core/src/main/scala/eval.scala",
+    "sha256": "cc13e013fbfe5fdc8fea202984f52f359e7e6d806ed9fb370dafdd6b5b0696da"
+  },
+  {
+    "name": "LICENSE-scalachess.txt",
+    "url": "https://raw.githubusercontent.com/lichess-org/scalachess/11ac4c5a2b8a852e0e3c4a7c0c5ae0904aa40025/LICENSE",
+    "sha256": "8e015da4220dce88e2ffd6a164897284dae1881bb31c18af6652be35721723ec"
+  }
+]

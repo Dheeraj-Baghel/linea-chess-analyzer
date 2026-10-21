@@ -1,0 +1,107 @@
+{
+  "checkedAt": "2026-10-19T16:48:59.956Z",
+  "origin": "http://127.0.0.1:4325",
+  "fontRequests": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;650;700&display=swap",
+      "status": 200
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2",
+      "status": 200
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;650;700&display=swap",
+      "status": 200
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2",
+      "status": 200
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;550;600;650;700&display=swap",
+      "status": 200
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2",
+      "status": 200
+    }
+  ],
+  "requestFailures": [
+    {
+      "url": "http://127.0.0.1:4325/engine/stockfish-18-lite-single.js",
+      "failure": "net::ERR_ABORTED"
+    }
+  ],
+  "checks": [
+    "Real DM Sans loaded from Google Fonts without interception or errors",
+    "Real-font desktop and mobile layouts have no horizontal overflow",
+    "Styled loading and error states captured by held/aborted JS transport; release/retry uses the real engine"
+  ],
+  "fonts": {
+    "declared": "\"DM Sans\", -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+    "faces": [
+      {
+        "family": "DM Sans",
+        "weight": "400",
+        "status": "unloaded"
+      },
+      {
+        "family": "DM Sans",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "DM Sans",
+        "weight": "500",
+        "status": "unloaded"
+      },
+      {
+        "family": "DM Sans",
+        "weight": "500",
+        "status": "loaded"
+      },
+      {
+        "family": "DM Sans",
+        "weight": "550",
+        "status": "unloaded"
+      },
+      {
+        "family": "DM Sans",
+        "weight": "550",
+        "status": "unloaded"
+      },
+      {
+        "family": "DM Sans",
+        "weight": "600",
+        "status": "unloaded"
+      },
+      {
+        "family": "DM Sans",
+        "weight": "600",
+        "status": "loaded"
+      },
+      {
+        "family": "DM Sans",
+        "weight": "650",
+        "status": "unloaded"
+      },
+      {
+        "family": "DM Sans",
+        "weight": "650",
+        "status": "loaded"
+      },
+      {
+        "family": "DM Sans",
+        "weight": "700",
+        "status": "unloaded"
+      },
+      {
+        "family": "DM Sans",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ]
+  },
+  "status": "passed"
+}

@@ -1,0 +1,31 @@
+{
+  "repo": "lichess-org/chess-openings",
+  "sha": "a6189a30dc273ccb21fc2536a9a2fefd5592a67a",
+  "url": "https://github.com/lichess-org/chess-openings/commit/a6189a30dc273ccb21fc2536a9a2fefd5592a67a",
+  "commit": {
+    "author": {
+      "name": "Christopher Akiki",
+      "email": "christopher.akiki@gmail.com",
+      "date": "2026-10-06T18:31:10Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-10-06T18:31:10Z"
+    },
+    "message": "Merge pull request #406 from Zinkelburger/kasparov-vaganian-gambit\n\nRename Kasparov Gambit to Kasparov-Vaganian Gambit (A31)",
+    "tree": {
+      "sha": "5b4fc89aec77a5e81435722eaa9a3eec020efa22",
+      "url": "https://api.github.com/repos/lichess-org/chess-openings/git/trees/5b4fc89aec77a5e81435722eaa9a3eec020efa22"
+    },
+    "url": "https://api.github.com/repos/lichess-org/chess-openings/git/commits/a6189a30dc273ccb21fc2536a9a2fefd5592a67a",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqxT5uCRC1aQ7uu5UhlAAABfUQAGVr2+D2sghgvKG20kVjC9uK\nGZfc91fBJxGyNiVTC8yxJY6Oc0GvpGfmobdMpph4QevuyA6DqwfT1UL4HyxtscSi\nhKjJLo0pC3UaeDuuCFKyHIZ7hS1/LJg8/r/KCojnRL9B1Rcd6U4sVZa+SGUCvrVn\nBNUNRL/d5KNRDgeMX6cQ35W0xH6ys2IE/qeCMA/8J/aNW525DRRSI0S1XcqbFzQs\n1mx40bDgwbO/nTpyApQAu1OvCxDKVqC3yafPipw+W7zIpl/+0d4Lb4Qjs1WAaA+4\nZNuy8t6d4YuAM7Tots3S21YH3Com8ZY5YZJZN4gB0GK0pHTVYnTo8zLWxoHOE/TD\nfMupqV66sByXq3AxIpM/1kR6WpTSgnGKzLLAOrQhq6cX+whOZE6tnYsXtgO6txmF\n390ZknQNmiQdj0FIakD2O2X+6oaiyLC0QneB8vfWO3e7djc6R0ai/Wo2e2ph35GN\n4QSE/YD4+uZRcUKJRNgwwmM27t4YNBDHgsSt4ukHGqDBNVhY2hY8D/Hvv8qfeV+z\nl7/L5PvzVGcbmSM1X9qr+9H3VAo8neKjuVwcOf+8HibuKazFBSnfVwC2GigwDjIf\n3fhjfx4K61xkALpoZCBP1FJCDEYbFf9Z2vI3v/JJASsMdCiRAZmgRMu8a2wWxEyR\n6BZ4JxVObkcHOp4RCy+6\n=MWPu\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 5b4fc89aec77a5e81435722eaa9a3eec020efa22\nparent 65bb03f76c7f077984db01a2f2d0534e4181ddfe\nparent 2e370feebbdbf00503a9f07e2033fbdfc2103c74\nauthor Christopher Akiki <christopher.akiki@gmail.com> 1791311470 +0200\ncommitter GitHub <noreply@github.com> 1791311470 +0200\n\nMerge pull request #406 from Zinkelburger/kasparov-vaganian-gambit\n\nRename Kasparov Gambit to Kasparov-Vaganian Gambit (A31)",
+      "verified_at": "2026-10-06T18:31:10Z"
+    }
+  }
+}

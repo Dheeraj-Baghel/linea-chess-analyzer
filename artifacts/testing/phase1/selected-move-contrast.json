@@ -1,0 +1,222 @@
+[
+  {
+    "category": "book",
+    "selected": "false",
+    "label": "▤Book",
+    "notationRatio": 15.427105270681961,
+    "badgeRatio": 8.292641789055452,
+    "iconRatio": 8.292641789055452,
+    "badgeForeground": "rgb(177, 181, 169)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "book",
+    "selected": "true",
+    "label": "▤Book",
+    "notationRatio": 11.86671920453432,
+    "badgeRatio": 8.292641789055452,
+    "iconRatio": 8.292641789055452,
+    "badgeForeground": "rgb(177, 181, 169)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "forced",
+    "selected": "false",
+    "label": "□Forced",
+    "notationRatio": 15.427105270681961,
+    "badgeRatio": 8.292641789055452,
+    "iconRatio": 8.292641789055452,
+    "badgeForeground": "rgb(177, 181, 169)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "forced",
+    "selected": "true",
+    "label": "□Forced",
+    "notationRatio": 11.86671920453432,
+    "badgeRatio": 8.292641789055452,
+    "iconRatio": 8.292641789055452,
+    "badgeForeground": "rgb(177, 181, 169)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "brilliant",
+    "selected": "false",
+    "label": "!!Brilliant",
+    "notationRatio": 15.427105270681961,
+    "badgeRatio": 10.308414658578071,
+    "iconRatio": 8.161931427893943,
+    "badgeForeground": "rgb(117, 214, 228)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "brilliant",
+    "selected": "true",
+    "label": "!!Brilliant",
+    "notationRatio": 11.86671920453432,
+    "badgeRatio": 10.308414658578071,
+    "iconRatio": 8.161931427893943,
+    "badgeForeground": "rgb(117, 214, 228)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "great",
+    "selected": "false",
+    "label": "!Great",
+    "notationRatio": 15.427105270681961,
+    "badgeRatio": 10.308414658578071,
+    "iconRatio": 10.308414658578071,
+    "badgeForeground": "rgb(117, 214, 228)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "great",
+    "selected": "true",
+    "label": "!Great",
+    "notationRatio": 11.86671920453432,
+    "badgeRatio": 10.308414658578071,
+    "iconRatio": 10.308414658578071,
+    "badgeForeground": "rgb(117, 214, 228)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "best",
+    "selected": "false",
+    "label": "★Best",
+    "notationRatio": 15.427105270681961,
+    "badgeRatio": 9.702983451387462,
+    "iconRatio": 9.702983451387462,
+    "badgeForeground": "rgb(143, 209, 155)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "best",
+    "selected": "true",
+    "label": "★Best",
+    "notationRatio": 11.86671920453432,
+    "badgeRatio": 9.702983451387462,
+    "iconRatio": 9.702983451387462,
+    "badgeForeground": "rgb(143, 209, 155)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "excellent",
+    "selected": "false",
+    "label": "✓Excellent",
+    "notationRatio": 15.427105270681961,
+    "badgeRatio": 10.507065550339698,
+    "iconRatio": 10.507065550339698,
+    "badgeForeground": "rgb(167, 215, 139)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "excellent",
+    "selected": "true",
+    "label": "✓Excellent",
+    "notationRatio": 11.86671920453432,
+    "badgeRatio": 10.507065550339698,
+    "iconRatio": 10.507065550339698,
+    "badgeForeground": "rgb(167, 215, 139)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "good",
+    "selected": "false",
+    "label": "•Good",
+    "notationRatio": 15.427105270681961,
+    "badgeRatio": 10.218681256670973,
+    "iconRatio": 10.218681256670973,
+    "badgeForeground": "rgb(163, 209, 186)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "good",
+    "selected": "true",
+    "label": "•Good",
+    "notationRatio": 11.86671920453432,
+    "badgeRatio": 10.218681256670973,
+    "iconRatio": 10.218681256670973,
+    "badgeForeground": "rgb(163, 209, 186)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "inaccuracy",
+    "selected": "false",
+    "label": "?!Inaccuracy",
+    "notationRatio": 15.427105270681961,
+    "badgeRatio": 11.470434666944492,
+    "iconRatio": 11.470434666944492,
+    "badgeForeground": "rgb(245, 207, 73)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "inaccuracy",
+    "selected": "true",
+    "label": "?!Inaccuracy",
+    "notationRatio": 11.86671920453432,
+    "badgeRatio": 11.470434666944492,
+    "iconRatio": 11.470434666944492,
+    "badgeForeground": "rgb(245, 207, 73)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "mistake",
+    "selected": "false",
+    "label": "?Mistake",
+    "notationRatio": 15.427105270681961,
+    "badgeRatio": 9.926775887924398,
+    "iconRatio": 9.926775887924398,
+    "badgeForeground": "rgb(255, 180, 116)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "mistake",
+    "selected": "true",
+    "label": "?Mistake",
+    "notationRatio": 11.86671920453432,
+    "badgeRatio": 9.926775887924398,
+    "iconRatio": 9.926775887924398,
+    "badgeForeground": "rgb(255, 180, 116)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "miss",
+    "selected": "false",
+    "label": "×Miss",
+    "notationRatio": 15.427105270681961,
+    "badgeRatio": 9.926775887924398,
+    "iconRatio": 9.926775887924398,
+    "badgeForeground": "rgb(255, 180, 116)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "miss",
+    "selected": "true",
+    "label": "×Miss",
+    "notationRatio": 11.86671920453432,
+    "badgeRatio": 9.926775887924398,
+    "iconRatio": 9.926775887924398,
+    "badgeForeground": "rgb(255, 180, 116)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "blunder",
+    "selected": "false",
+    "label": "??Blunder",
+    "notationRatio": 15.427105270681961,
+    "badgeRatio": 7.872169548324232,
+    "iconRatio": 7.872169548324232,
+    "badgeForeground": "rgb(255, 143, 137)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  },
+  {
+    "category": "blunder",
+    "selected": "true",
+    "label": "??Blunder",
+    "notationRatio": 11.86671920453432,
+    "badgeRatio": 7.872169548324232,
+    "iconRatio": 7.872169548324232,
+    "badgeForeground": "rgb(255, 143, 137)",
+    "badgeBackground": "rgb(25, 27, 25)"
+  }
+]

@@ -1,0 +1,485 @@
+{
+  "generatedAt": "2026-10-20T13:18:00.685Z",
+  "nativeFixtureCount": 14,
+  "nativeReviewRuns": 20,
+  "suites": [
+    {
+      "suite": "browser",
+      "stats": {
+        "startTime": "2026-10-20T13:13:07.377Z",
+        "duration": 195457.003,
+        "expected": 75,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "errors": 0,
+      "sourceSha256": "6bec194f2ddf8e54b2c41d74020e981d3c9ec886c530cdf028e2f7d7f5b6cf53",
+      "finalSourceSha256": "6bec194f2ddf8e54b2c41d74020e981d3c9ec886c530cdf028e2f7d7f5b6cf53",
+      "sourceUnchanged": true,
+      "executionGaps": []
+    },
+    {
+      "suite": "engine-browser",
+      "stats": {
+        "startTime": "2026-10-20T13:08:29.457Z",
+        "duration": 251768.259,
+        "expected": 18,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "errors": 0,
+      "sourceSha256": "6bec194f2ddf8e54b2c41d74020e981d3c9ec886c530cdf028e2f7d7f5b6cf53",
+      "finalSourceSha256": "6bec194f2ddf8e54b2c41d74020e981d3c9ec886c530cdf028e2f7d7f5b6cf53",
+      "sourceUnchanged": true,
+      "executionGaps": []
+    },
+    {
+      "suite": "crossbrowser",
+      "stats": {
+        "startTime": "2026-10-20T13:16:23.589Z",
+        "duration": 30723.411,
+        "expected": 6,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "errors": 0,
+      "sourceSha256": "6bec194f2ddf8e54b2c41d74020e981d3c9ec886c530cdf028e2f7d7f5b6cf53",
+      "finalSourceSha256": "6bec194f2ddf8e54b2c41d74020e981d3c9ec886c530cdf028e2f7d7f5b6cf53",
+      "sourceUnchanged": true,
+      "executionGaps": []
+    },
+    {
+      "suite": "production-browser",
+      "stats": {
+        "startTime": "2026-10-20T13:16:54.918Z",
+        "duration": 9783.755000000001,
+        "expected": 3,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "errors": 0,
+      "sourceSha256": "6bec194f2ddf8e54b2c41d74020e981d3c9ec886c530cdf028e2f7d7f5b6cf53",
+      "finalSourceSha256": "6bec194f2ddf8e54b2c41d74020e981d3c9ec886c530cdf028e2f7d7f5b6cf53",
+      "sourceUnchanged": true,
+      "executionGaps": []
+    }
+  ],
+  "variability": [
+    {
+      "fixture": "short-loss",
+      "qualities": [
+        "quick",
+        "balanced",
+        "deeper"
+      ],
+      "accuracyRanges": {
+        "w": {
+          "min": 25.336531591657142,
+          "max": 27.624386625418524,
+          "range": 2.2878550337613817
+        },
+        "b": {
+          "min": 99.89323865159687,
+          "max": 100,
+          "range": 0.10676134840312557
+        }
+      },
+      "pliesWithLabelChanges": [],
+      "elapsedMs": [
+        {
+          "quality": "quick",
+          "ms": 456
+        },
+        {
+          "quality": "balanced",
+          "ms": 1921
+        },
+        {
+          "quality": "deeper",
+          "ms": 6591
+        }
+      ]
+    },
+    {
+      "fixture": "Black-start-mate",
+      "qualities": [
+        "balanced"
+      ],
+      "accuracyRanges": {
+        "w": {
+          "min": null,
+          "max": null,
+          "range": null
+        },
+        "b": {
+          "min": 100,
+          "max": 100,
+          "range": 0
+        }
+      },
+      "pliesWithLabelChanges": [],
+      "elapsedMs": [
+        {
+          "quality": "balanced",
+          "ms": 68
+        }
+      ]
+    },
+    {
+      "fixture": "White-mate",
+      "qualities": [
+        "balanced"
+      ],
+      "accuracyRanges": {
+        "w": {
+          "min": 100,
+          "max": 100,
+          "range": 0
+        },
+        "b": {
+          "min": null,
+          "max": null,
+          "range": null
+        }
+      },
+      "pliesWithLabelChanges": [],
+      "elapsedMs": [
+        {
+          "quality": "balanced",
+          "ms": 68
+        }
+      ]
+    },
+    {
+      "fixture": "underpromotion",
+      "qualities": [
+        "balanced"
+      ],
+      "accuracyRanges": {
+        "w": {
+          "min": 10.84741180636119,
+          "max": 10.84741180636119,
+          "range": 0
+        },
+        "b": {
+          "min": null,
+          "max": null,
+          "range": null
+        }
+      },
+      "pliesWithLabelChanges": [],
+      "elapsedMs": [
+        {
+          "quality": "balanced",
+          "ms": 143
+        }
+      ]
+    },
+    {
+      "fixture": "endgame",
+      "qualities": [
+        "balanced"
+      ],
+      "accuracyRanges": {
+        "w": {
+          "min": 100,
+          "max": 100,
+          "range": 0
+        },
+        "b": {
+          "min": 99.84306941347084,
+          "max": 99.84306941347084,
+          "range": 0
+        }
+      },
+      "pliesWithLabelChanges": [],
+      "elapsedMs": [
+        {
+          "quality": "balanced",
+          "ms": 1022
+        }
+      ]
+    },
+    {
+      "fixture": "en-passant",
+      "qualities": [
+        "balanced"
+      ],
+      "accuracyRanges": {
+        "w": {
+          "min": 79.86616966249306,
+          "max": 79.86616966249306,
+          "range": 0
+        },
+        "b": {
+          "min": 88.38212143442027,
+          "max": 88.38212143442027,
+          "range": 0
+        }
+      },
+      "pliesWithLabelChanges": [],
+      "elapsedMs": [
+        {
+          "quality": "balanced",
+          "ms": 2012
+        }
+      ]
+    },
+    {
+      "fixture": "castling",
+      "qualities": [
+        "balanced"
+      ],
+      "accuracyRanges": {
+        "w": {
+          "min": 90.28361336984565,
+          "max": 90.28361336984565,
+          "range": 0
+        },
+        "b": {
+          "min": 100,
+          "max": 100,
+          "range": 0
+        }
+      },
+      "pliesWithLabelChanges": [],
+      "elapsedMs": [
+        {
+          "quality": "balanced",
+          "ms": 1439
+        }
+      ]
+    },
+    {
+      "fixture": "history-repetition",
+      "qualities": [
+        "balanced"
+      ],
+      "accuracyRanges": {
+        "w": {
+          "min": 75.81979036316795,
+          "max": 75.81979036316795,
+          "range": 0
+        },
+        "b": {
+          "min": 74.7211798998649,
+          "max": 74.7211798998649,
+          "range": 0
+        }
+      },
+      "pliesWithLabelChanges": [],
+      "elapsedMs": [
+        {
+          "quality": "balanced",
+          "ms": 3516
+        }
+      ]
+    },
+    {
+      "fixture": "forced-Black",
+      "qualities": [
+        "balanced"
+      ],
+      "accuracyRanges": {
+        "w": {
+          "min": null,
+          "max": null,
+          "range": null
+        },
+        "b": {
+          "min": 100,
+          "max": 100,
+          "range": 0
+        }
+      },
+      "pliesWithLabelChanges": [],
+      "elapsedMs": [
+        {
+          "quality": "balanced",
+          "ms": 68
+        }
+      ]
+    },
+    {
+      "fixture": "missed-mate",
+      "qualities": [
+        "balanced"
+      ],
+      "accuracyRanges": {
+        "w": {
+          "min": 26.663955456036852,
+          "max": 26.663955456036852,
+          "range": 0
+        },
+        "b": {
+          "min": 42.92133416881009,
+          "max": 42.92133416881009,
+          "range": 0
+        }
+      },
+      "pliesWithLabelChanges": [],
+      "elapsedMs": [
+        {
+          "quality": "balanced",
+          "ms": 2997
+        }
+      ]
+    },
+    {
+      "fixture": "stalemate",
+      "qualities": [
+        "balanced"
+      ],
+      "accuracyRanges": {
+        "w": {
+          "min": 10.84741180636119,
+          "max": 10.84741180636119,
+          "range": 0
+        },
+        "b": {
+          "min": null,
+          "max": null,
+          "range": null
+        }
+      },
+      "pliesWithLabelChanges": [],
+      "elapsedMs": [
+        {
+          "quality": "balanced",
+          "ms": 67
+        }
+      ]
+    },
+    {
+      "fixture": "long-losing-endgame",
+      "qualities": [
+        "balanced"
+      ],
+      "accuracyRanges": {
+        "w": {
+          "min": 52.33229476186892,
+          "max": 52.33229476186892,
+          "range": 0
+        },
+        "b": {
+          "min": 45.02507222010811,
+          "max": 45.02507222010811,
+          "range": 0
+        }
+      },
+      "pliesWithLabelChanges": [],
+      "elapsedMs": [
+        {
+          "quality": "balanced",
+          "ms": 7331
+        }
+      ]
+    },
+    {
+      "fixture": "verified-sacrifice",
+      "qualities": [
+        "quick",
+        "balanced",
+        "deeper"
+      ],
+      "accuracyRanges": {
+        "w": {
+          "min": 100,
+          "max": 100,
+          "range": 0
+        },
+        "b": {
+          "min": null,
+          "max": null,
+          "range": null
+        }
+      },
+      "pliesWithLabelChanges": [],
+      "elapsedMs": [
+        {
+          "quality": "quick",
+          "ms": 72
+        },
+        {
+          "quality": "balanced",
+          "ms": 76
+        },
+        {
+          "quality": "deeper",
+          "ms": 80
+        }
+      ]
+    },
+    {
+      "fixture": "historical-reference-prefix",
+      "qualities": [
+        "quick",
+        "balanced",
+        "deeper"
+      ],
+      "accuracyRanges": {
+        "w": {
+          "min": 93.760893026775,
+          "max": 98.30204052289584,
+          "range": 4.541147496120843
+        },
+        "b": {
+          "min": 97.355952849815,
+          "max": 98.06598030558676,
+          "range": 0.7100274557717654
+        }
+      },
+      "pliesWithLabelChanges": [
+        9,
+        10,
+        11,
+        13,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        39,
+        40,
+        43,
+        44,
+        45
+      ],
+      "elapsedMs": [
+        {
+          "quality": "quick",
+          "ms": 1995
+        },
+        {
+          "quality": "balanced",
+          "ms": 12502
+        },
+        {
+          "quality": "deeper",
+          "ms": 95979
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Reference parity is checked against pinned-source transliteration and explicit numeric fixtures, not an executed Scala runtime.",
+    "The historical prefix is an existing reference regression, not an independent held-out game corpus.",
+    "Finite scenario coverage does not establish every possible chess scenario.",
+    "No Elo calibration dataset, account-strength validation, tablebase proof or Chess.com percentage parity is claimed."
+  ]
+}

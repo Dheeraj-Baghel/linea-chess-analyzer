@@ -1,0 +1,11 @@
+{
+  "status": 200,
+  "contentType": "application/json; charset=utf-8",
+  "archiveCount": 232,
+  "latest": [
+    "https://api.chess.com/pub/player/erik/games/2026/08",
+    "https://api.chess.com/pub/player/erik/games/2026/09",
+    "https://api.chess.com/pub/player/erik/games/2026/10"
+  ],
+  "responsePreview": "{\"archives\":[\"https://api.chess.com/pub/player/erik/games/2007/07\",\"https://api.chess.com/pub/player/erik/games/2007/08\",\"https://api.chess.com/pub/player/erik/"
+}

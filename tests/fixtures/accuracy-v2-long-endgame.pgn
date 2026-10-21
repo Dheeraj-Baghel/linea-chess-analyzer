@@ -1,0 +1,11 @@
+[Event "Synthetic long-losing endgame regression"]
+[Site "Linea test fixture, not a historical game"]
+[White "Fixture White"]
+[Black "Fixture Black"]
+[WhiteElo "1500"]
+[BlackElo "1500"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "7k/8/8/8/8/8/P7/K7 w - - 0 1"]
+
+1. a3 Kg8 2. a4 Kf8 3. a5 Ke8 4. a6 Kd8 5. a7 Kc8 6. Kb2 Kd8 7. Kc3 Ke8 8. Kd4 Kf8 9. Ke5 Kg8 10. Kf6 Kh7 11. a8=Q 1-0
