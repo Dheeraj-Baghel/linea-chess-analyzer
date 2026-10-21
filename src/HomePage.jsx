@@ -1,7 +1,7 @@
 import { Component, lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Chess } from 'chess.js';
 import { SAMPLE_PGN } from './chess';
-import ProductDemo from './ProductDemo';
+import ProductDemo, { TiltCard } from './ProductDemo';
 const loadHeroScene = () => import('./HeroChessScene');
 if (typeof window !== 'undefined' && !matchMedia('(prefers-reduced-motion: reduce)').matches) loadHeroScene();
 const HeroChessScene = lazy(loadHeroScene);
@@ -72,8 +72,8 @@ export default function HomePage({ onImport, onSample, onReviewSample = onSample
     <section className="home-upcoming" id="coming-soon" aria-labelledby="upcoming-title">
       <div className="upcoming-head"><h2 id="upcoming-title">More ways to learn. <em>Coming soon.</em></h2><p>We are building the next steps beyond game review.</p></div>
       <div className="upcoming-grid">
-        <article><ProductDemo id="ai-coach-concept-loop" poster="/previews/ai-coach-concept-loop.jpg" sources={sources('ai-coach-concept-loop')} status="Coming soon" label="Concept preview" alt="Concept preview: Linea's rook mascot explains a knight development move beside the board" width={1280} height={800} /><h3>A coach for your next question.</h3><p>Planned: ask why a move works, explore an alternative, and get an explanation you can follow.</p></article>
-        <article><ProductDemo id="opening-lesson-concept-loop" poster="/previews/opening-lesson-concept-loop.jpg" sources={sources('opening-lesson-concept-loop')} status="Coming soon" label="Concept preview" alt="Concept preview: an Italian Game lesson replays 1.e4 e5 2.Nf3 Nc6 3.Bc4" width={1280} height={800} /><h3>Learn the ideas behind the opening.</h3><p>Planned: practise common openings, understand the key moves, and learn the plans behind them.</p></article>
+        <TiltCard as="article" className="upcoming-card"><ProductDemo tilt={false} id="ai-coach-concept-loop" poster="/previews/ai-coach-concept-loop.jpg" sources={sources('ai-coach-concept-loop')} status="Coming soon" label="Concept preview" alt="Concept preview: Linea's rook mascot explains a knight development move beside the board" width={1280} height={800} /><h3>A coach for your next question.</h3><p>Planned: ask why a move works, explore an alternative, and get an explanation you can follow.</p></TiltCard>
+        <TiltCard as="article" className="upcoming-card"><ProductDemo tilt={false} id="opening-lesson-concept-loop" poster="/previews/opening-lesson-concept-loop.jpg" sources={sources('opening-lesson-concept-loop')} status="Coming soon" label="Concept preview" alt="Concept preview: an Italian Game lesson replays 1.e4 e5 2.Nf3 Nc6 3.Bc4" width={1280} height={800} /><h3>Learn the ideas behind the opening.</h3><p>Planned: practise common openings, understand the key moves, and learn the plans behind them.</p></TiltCard>
       </div>
     </section>
 

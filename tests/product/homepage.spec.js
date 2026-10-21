@@ -74,20 +74,18 @@ test('v2: source buttons preselect the import provider and the sample CTA opens 
   await expect(page.locator('.move-entry').first()).toContainText('Rxc2+');
 });
 
-test('v2: demo clips load lazily, play one at a time, and keep a user pause; Coming soon stays labelled', async ({ page }) => {
+test('v2: demo clips load lazily and loop with no playback buttons; Coming soon stays labelled', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('[data-demo] .demo-status.soon')).toHaveCount(2);
   await expect(page.locator('[data-demo="ai-coach-concept-loop"]')).toContainText('Concept preview');
+  await expect(page.locator('.product-demo-controls')).toHaveCount(0);
   const review = page.locator('[data-demo="brilliant-review-loop"]');
   await review.scrollIntoViewIfNeeded();
-  await expect.poll(() => review.locator('video').evaluate(v => !v.paused && v.currentTime > 0), { timeout: 10000 }).toBe(true);
-  await review.getByRole('button', { name: /Pause Sample demo/ }).focus(); await page.keyboard.press('Enter');
-  await expect.poll(() => review.locator('video').evaluate(v => v.paused)).toBe(true);
-  await page.evaluate(() => window.scrollTo(0, 0)); await page.waitForTimeout(400); await review.scrollIntoViewIfNeeded(); await page.waitForTimeout(800);
-  expect(await review.locator('video').evaluate(v => v.paused)).toBe(true);
-  await review.getByRole('button', { name: /Replay Sample demo/ }).click();
-  await expect.poll(() => review.locator('video').evaluate(v => !v.paused)).toBe(true);
-  const playing = await page.locator('video').evaluateAll(videos => videos.filter(v => !v.paused).length); expect(playing).toBeLessThanOrEqual(1);
+  await expect.poll(() => review.locator('video').evaluate(v => !v.paused && v.loop && v.muted), { timeout: 10000 }).toBe(true);
+  const card = review.locator('.tilt-card'); const box = await card.boundingBox();
+  await page.mouse.move(box.x + box.width * .8, box.y + box.height * .2); await page.waitForTimeout(500);
+  const transform = await card.evaluate(el => getComputedStyle(el).transform);
+  expect(transform).not.toBe('none');
 });
 
 test('v2: reduced motion shows posters without autoplay and passes axe', async ({ page }) => {
