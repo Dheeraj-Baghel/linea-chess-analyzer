@@ -25,7 +25,10 @@ import { readWorkspaceRoute, writeWorkspaceRoute } from './workspaceRoute';
 import ReviewWorkspacePanel from './ReviewWorkspacePanel';
 import { createBatchReview } from './batchReview';
 import PlayerReportPage from './PlayerReportPage';
-import HomePage from './HomePage';
+import HomePage, { HOME_SECTIONS } from './HomePage';
+// Clips that have been recorded/encoded into public/previews (see scripts/record-demos.mjs).
+import demoManifest from '../public/previews/demo-manifest.json';
+const DEMO_CLIPS = Object.fromEntries((demoManifest.clips || []).filter(item => item.encoded).map(item => [item.id, true]));
 import SavedReportsDialog from './SavedReportsDialog';
 
 // Manual ink keeps its original colors and separate meaning from engine arrows.
@@ -329,19 +332,20 @@ export default function App() {
       <div className="header-inner">
         <a href="/" className="brand" aria-label="Linea chess analysis" onClick={event => { event.preventDefault(); goHome(); }}><img alt="" src="/favicon.svg" /><span>linea<span className="brand-dot">.</span></span></a>
         <span className="header-divider" /><span className="brand-caption">Analysis studio</span>
+        {screen === 'home' && <nav className="home-nav" aria-label="Homepage sections">{HOME_SECTIONS.map(([id, label]) => <a key={id} href={`#${id}`} onClick={event => { event.preventDefault(); document.getElementById(id)?.scrollIntoView({ block: 'start' }); }}>{label}</a>)}</nav>}
         <nav className="header-actions" aria-label="Workspace controls">
           <span className="privacy-label"><ShieldCheck size={15} />Local analysis</span>
           <button className="text-button recent-games-button" onClick={() => local.show()}>Recent local games</button>
           <IconButton icon={Keyboard} label="Keyboard shortcuts and help (?)" onClick={() => setModal('help')} />
           <IconButton icon={Settings2} label="Display settings" onClick={() => setModal('settings')} />
-          <button className="button primary import-button" aria-label="Import game" onClick={() => { setPlaying(false); setModal('import'); }}>
-            <Upload size={16} /><span>Import<span className="import-word"> game</span></span>
+          <button className="button primary import-button" aria-label={screen === 'home' ? 'Review my game' : 'Import game'} onClick={() => { setPlaying(false); setModal('import'); }}>
+            <Upload size={16} /><span>{screen === 'home' ? <>Review<span className="import-word"> my game</span></> : <>Import<span className="import-word"> game</span></>}</span>
           </button>
         </nav>
       </div>
     </header>
     <div id="product-main" tabIndex={-1}>
-    {screen === 'home' && <HomePage paused={Boolean(modal)} onImport={() => setModal('import')} onLibrary={() => local.show()} onReport={() => setModal('reports')} onSample={() => { review.stop(); setEngineEnabled(false); const next = createSample(); setGame(next); setSampleAutoId(next.id); setPly(0); setVariation(null); setVariationPly(0); setScreen('review'); setActivePanel('report'); writeWorkspaceRoute('/sample'); }} />}
+    {screen === 'home' && <HomePage paused={Boolean(modal)} demos={DEMO_CLIPS} onImport={source => { if (source) { imports.store.setProductDraft({ productSource: source }); if (source === 'pgn') imports.store.setTab('pgn'); } setModal('import'); }} onLibrary={() => local.show()} onReport={() => setModal('reports')} onSample={() => { review.stop(); setEngineEnabled(false); const next = createSample(); setGame(next); setSampleAutoId(next.id); setPly(0); setVariation(null); setVariationPly(0); setScreen('review'); setActivePanel('report'); writeWorkspaceRoute('/sample'); }} />}
     {screen !== 'player-report' && batchState.manifest && ['running', 'paused'].includes(batchState.manifest.status) && <div className="batch-background-banner" role="status"><span>{batchState.running ? `Batch running · ${batchState.progress?.game || 1} / ${batchState.manifest.selectedGames.length} games` : 'Batch paused · checkpoints saved; resume explicitly from its report.'}</span><button className="text-button" onClick={() => openReport(batchState.manifest.key)}>Return to player report →</button></div>}
     {screen === 'games' && <GamesPage state={browseState} browser={browser} onImport={() => setModal('import')} onOpen={row => importGame('pgn', row.pgn, { provider: row.provider, id: row.id, url: row.url, username: row.username || browseState.username, color: row.color, autoReview: true })} onAnalyze={async sample => { review.stop(); setEngineEnabled(false); const key = await batch.start(sample); setScreen('player-report'); writeWorkspaceRoute(`/player-report/${encodeURIComponent(key)}`); }} />}
     {screen === 'player-report' && <PlayerReportPage state={batchState} batch={batch} onBack={goGames} onOpen={(item, selectedPly, reportId, quality) => { review.setQuality(quality); importGame('pgn', item.pgn, { provider: item.provider, id: item.id, url: item.url, username: batchState.manifest.username, color: item.color, returnReportId: reportId, autoReview: true }, { ply: selectedPly, snapshot: item.snapshot }); }} />}
