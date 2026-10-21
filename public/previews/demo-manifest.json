@@ -1,9 +1,0 @@
-{
-  "note": "Homepage demo clips. 'encoded' becomes true only after scripts/record-demos.mjs records and encodes a clip; until then the homepage shows the poster only.",
-  "clips": [
-    { "id": "brilliant-review-loop", "status": "live", "encoded": false },
-    { "id": "player-report-loop", "status": "live", "encoded": false },
-    { "id": "ai-coach-concept-loop", "status": "concept", "encoded": false },
-    { "id": "opening-lesson-concept-loop", "status": "concept", "encoded": false }
-  ]
-}

@@ -29,3 +29,4 @@ artifacts/testing/phase4/*-output/
 artifacts/testing/phase4/checkpoint-*.tar.gz
 artifacts/testing/phase0/checkpoint-*.tar.gz
 *.tar.gz
+artifacts/demo-recording/

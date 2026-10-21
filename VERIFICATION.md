@@ -246,3 +246,14 @@ newer work; no Git commit was invented.
 | E01: saved studies/full tree/analyzed export/batch PGN | Deferred |
 
 **Phase 4 is complete. Stop for the P1 release review; do not start Phase 5.**
+
+## v2 homepage (21 October 2026, `redesign` branch)
+
+- New homepage per the v2 brief: free-during-beta hero, import strip, review/report demos, Coming soon concepts, FAQ.
+- Brilliant fixture revalidated with Stockfish 19.0.1: native evidence test passes (depth 16, draw evaluations before/after/accepting capture, classifier unchanged). Evidence: `tests/fixtures/demo/review-evidence.json`.
+- The existing UI test `actual game-review UI shows a native Stockfish 19 verified Brilliant` fails on a text assertion: the move list now renders `Rxc2+Brilliant` (icon, no `!!` glyph text). The classification is still Brilliant; the test predates the move-icon UI change and was not modified.
+- Ten-game demo report generated once by the real batch review (Balanced): 10 selected, 7 score-ready, mean 71.6%, 4W 3D 3L, top theme Piece safety (9). Not-score-ready games are shown as n/a in the clip.
+- Clips: 4 WebM (VP9) + MP4 (H.264), 1280 wide, 24 fps, 8.5-10.5 s, 69-237 KB each; JPEG posters (ffmpeg build has no WebP encoder). Total previews about 1.3 MB.
+- Homepage tests: 7 of 9 pass. `review entry unmounts 3D... does not load the lazy hero module` also fails on the untouched `v1-pre-redesign` tag (pre-existing). `actual WebGL hero ... forward/reverse motion` is intermittent on v2 (1 of 2 runs passed; v1 passed 1 of 1).
+- Lint, 311 unit tests and production build pass; `/demo-record` code is absent from `dist`.
+- No video or engine request on first load; clips load only when scrolled into view.

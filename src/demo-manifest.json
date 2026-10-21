@@ -1,0 +1,99 @@
+{
+  "note": "Homepage demo clips recorded by scripts/record-demos.mjs from the dev-only /demo-record views (real Board/report components, engine off). encoded=true enables playback.",
+  "clips": [
+    {
+      "id": "brilliant-review-loop",
+      "status": "live",
+      "encoded": true,
+      "view": "review",
+      "duration": 8.5,
+      "width": 1280,
+      "height": 900,
+      "fps": 24,
+      "bytes": {
+        "webm": 86852,
+        "mp4": 69896,
+        "poster": 60526
+      },
+      "recordedAt": "2026-10-21T18:16:04.453Z",
+      "kind": "live feature",
+      "source": "tests/fixtures/stockfish19-drawing-sacrifice.pgn (synthetic, not a historical game)",
+      "evidence": "tests/fixtures/demo/review-evidence.json",
+      "ply": 1,
+      "move": "Rxc2+",
+      "classification": "brilliant",
+      "engine": "Stockfish 19.0.1 lite-single",
+      "cta": "Open sample review imports this same fixture"
+    },
+    {
+      "id": "player-report-loop",
+      "status": "live",
+      "encoded": true,
+      "view": "report",
+      "duration": 10.5,
+      "width": 1280,
+      "height": 800,
+      "fps": 24,
+      "bytes": {
+        "webm": 226594,
+        "mp4": 236594,
+        "poster": 81861
+      },
+      "recordedAt": "2026-10-21T18:16:04.453Z",
+      "kind": "live feature",
+      "source": "tests/fixtures/demo/report-games.js (10 legal fixture games, fictional identities)",
+      "evidence": "tests/fixtures/demo/report-evidence.json (real batch review, balanced policy)",
+      "sample": {
+        "selected": 10,
+        "scoreReady": 7,
+        "meanAccuracy": 71.6,
+        "results": {
+          "win": 4,
+          "draw": 3,
+          "loss": 3,
+          "unknown": 0
+        },
+        "topTheme": "Piece safety"
+      }
+    },
+    {
+      "id": "ai-coach-concept-loop",
+      "status": "concept",
+      "encoded": true,
+      "view": "coach",
+      "duration": 9,
+      "width": 1280,
+      "height": 800,
+      "fps": 24,
+      "bytes": {
+        "webm": 106164,
+        "mp4": 69493,
+        "poster": 80603
+      },
+      "recordedAt": "2026-10-21T18:16:04.453Z",
+      "kind": "concept preview (Coming soon)",
+      "source": "Storyboard: 1.e4 e5 2.Nf3; highlighted squares d4/e5 computed with chess.js",
+      "mascot": "public/mascot/rook-coach.svg (original)",
+      "note": "Not an implemented AI conversation"
+    },
+    {
+      "id": "opening-lesson-concept-loop",
+      "status": "concept",
+      "encoded": true,
+      "view": "opening",
+      "duration": 10.5,
+      "width": 1280,
+      "height": 800,
+      "fps": 24,
+      "bytes": {
+        "webm": 117994,
+        "mp4": 109186,
+        "poster": 78353
+      },
+      "recordedAt": "2026-10-21T18:16:04.453Z",
+      "kind": "concept preview (Coming soon)",
+      "source": "Storyboard: 1.e4 e5 2.Nf3 Nc6 3.Bc4; f7 attack verified with chess.js attackers()",
+      "note": "Italian Game only; not a promised catalogue"
+    }
+  ]
+}

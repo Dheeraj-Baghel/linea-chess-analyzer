@@ -1,0 +1,71 @@
+{
+  "clip": "brilliant-review-loop",
+  "fixture": "tests/fixtures/stockfish19-drawing-sacrifice.pgn",
+  "fixtureSha256": "65688cb65668df34b1b79d9a171346e8d909950a28bfe39a782ba5c372fd7c8c",
+  "synthetic": true,
+  "ply": 1,
+  "move": "Rxc2+",
+  "uci": "c3c2",
+  "engine": {
+    "name": "Stockfish 19 Lite",
+    "version": "19.0.1",
+    "variant": "lite-single",
+    "threads": 1,
+    "uciName": "Stockfish 19 Lite WASM",
+    "workerUrl": "/engine/stockfish-19-lite-single.js",
+    "wasmUrl": "/engine/stockfish-19-lite-single.wasm",
+    "release": "https://github.com/nmrugg/stockfish.js/releases/tag/v19.0.1",
+    "sourceCommit": "0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6",
+    "workerSha256": "ccb130d7ff29408531c47d859a49f91d59d4f482d05a53eb1a3231a4f624c91a",
+    "wasmSha256": "ee4f115bdb2d32cadf96cada104a05b5ec257d7ad6f57582190b49bc71f096de"
+  },
+  "searches": {
+    "before": {
+      "depth": 16,
+      "cp": 0,
+      "mate": null,
+      "pv": [
+        "c3c2",
+        "d2c2",
+        "h1g1",
+        "c2d2"
+      ]
+    },
+    "after": {
+      "depth": 16,
+      "cp": 0,
+      "mate": null,
+      "pv": [
+        "d2c2",
+        "h1g1",
+        "c2d1",
+        "g1f1"
+      ]
+    },
+    "accepted": {
+      "depth": 16,
+      "cp": 0,
+      "mate": null,
+      "pv": [
+        "h1g1",
+        "c2d1",
+        "g1f1",
+        "d1d2"
+      ]
+    }
+  },
+  "candidate": {
+    "cost": 4,
+    "acceptance": "d2c2",
+    "san": "Kxc2",
+    "fen": "8/8/8/8/8/6p1/2k3P1/7K w - - 0 2",
+    "offeredPiece": "r",
+    "square": "c2",
+    "exchangeCompleteWithinBounds": true,
+    "rule": "material-at-risk"
+  },
+  "classification": "brilliant",
+  "brillianceVerified": true,
+  "validatedAt": "2026-10-21",
+  "note": "Revalidated with the unchanged classifier and review budgets before recording."
+}

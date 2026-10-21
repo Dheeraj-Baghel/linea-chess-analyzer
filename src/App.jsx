@@ -27,9 +27,11 @@ import { createBatchReview } from './batchReview';
 import PlayerReportPage from './PlayerReportPage';
 import HomePage, { HOME_SECTIONS } from './HomePage';
 // Clips that have been recorded/encoded into public/previews (see scripts/record-demos.mjs).
-import demoManifest from '../public/previews/demo-manifest.json';
+import demoManifest from './demo-manifest.json';
 const DEMO_CLIPS = Object.fromEntries((demoManifest.clips || []).filter(item => item.encoded).map(item => [item.id, true]));
 import SavedReportsDialog from './SavedReportsDialog';
+// Homepage review clip and its 'Open sample review' CTA use the same validated fixture.
+import BRILLIANT_SAMPLE_PGN from '../tests/fixtures/stockfish19-drawing-sacrifice.pgn?raw';
 
 // Manual ink keeps its original colors and separate meaning from engine arrows.
 const COLORS = [
@@ -345,7 +347,7 @@ export default function App() {
       </div>
     </header>
     <div id="product-main" tabIndex={-1}>
-    {screen === 'home' && <HomePage paused={Boolean(modal)} demos={DEMO_CLIPS} onImport={source => { if (source) { imports.store.setProductDraft({ productSource: source }); if (source === 'pgn') imports.store.setTab('pgn'); } setModal('import'); }} onLibrary={() => local.show()} onReport={() => setModal('reports')} onSample={() => { review.stop(); setEngineEnabled(false); const next = createSample(); setGame(next); setSampleAutoId(next.id); setPly(0); setVariation(null); setVariationPly(0); setScreen('review'); setActivePanel('report'); writeWorkspaceRoute('/sample'); }} />}
+    {screen === 'home' && <HomePage paused={Boolean(modal)} demos={DEMO_CLIPS} onImport={source => { if (source) { imports.store.setProductDraft({ productSource: source }); if (source === 'pgn') imports.store.setTab('pgn'); } setModal('import'); }} onLibrary={() => local.show()} onReport={() => setModal('reports')} onReviewSample={() => importGame('pgn', BRILLIANT_SAMPLE_PGN.trim(), { provider: 'pgn', autoReview: true, color: 'w' })} onSample={() => { review.stop(); setEngineEnabled(false); const next = createSample(); setGame(next); setSampleAutoId(next.id); setPly(0); setVariation(null); setVariationPly(0); setScreen('review'); setActivePanel('report'); writeWorkspaceRoute('/sample'); }} />}
     {screen !== 'player-report' && batchState.manifest && ['running', 'paused'].includes(batchState.manifest.status) && <div className="batch-background-banner" role="status"><span>{batchState.running ? `Batch running · ${batchState.progress?.game || 1} / ${batchState.manifest.selectedGames.length} games` : 'Batch paused · checkpoints saved; resume explicitly from its report.'}</span><button className="text-button" onClick={() => openReport(batchState.manifest.key)}>Return to player report →</button></div>}
     {screen === 'games' && <GamesPage state={browseState} browser={browser} onImport={() => setModal('import')} onOpen={row => importGame('pgn', row.pgn, { provider: row.provider, id: row.id, url: row.url, username: row.username || browseState.username, color: row.color, autoReview: true })} onAnalyze={async sample => { review.stop(); setEngineEnabled(false); const key = await batch.start(sample); setScreen('player-report'); writeWorkspaceRoute(`/player-report/${encodeURIComponent(key)}`); }} />}
     {screen === 'player-report' && <PlayerReportPage state={batchState} batch={batch} onBack={goGames} onOpen={(item, selectedPly, reportId, quality) => { review.setQuality(quality); importGame('pgn', item.pgn, { provider: item.provider, id: item.id, url: item.url, username: batchState.manifest.username, color: item.color, returnReportId: reportId, autoReview: true }, { ply: selectedPly, snapshot: item.snapshot }); }} />}

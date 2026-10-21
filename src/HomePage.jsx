@@ -29,7 +29,7 @@ const FAQ = [
 ];
 export const HOME_SECTIONS = [['how-it-works', 'How it works'], ['game-review', 'Game review'], ['coming-soon', 'Coming soon']];
 
-export default function HomePage({ onImport, onSample, onLibrary, onReport, paused, demos = {} }) {
+export default function HomePage({ onImport, onSample, onReviewSample = onSample, onLibrary, onReport, paused, demos = {} }) {
   const root = useRef(null), [reduced, setReduced] = useState(() => matchMedia('(prefers-reduced-motion: reduce)').matches), [supported, setSupported] = useState(() => { try { const probe = document.createElement('canvas'), context = probe.getContext('webgl2'); context?.getExtension('WEBGL_lose_context')?.loseContext(); return Boolean(context); } catch { return false; } }), [failed, setFailed] = useState(false);
   const failure = useCallback(() => setFailed(true), []);
   const fen = useMemo(() => { const board = new Chess(); board.loadPgn(SAMPLE_PGN); return board.history({ verbose: true })[31].after; }, []);
@@ -61,7 +61,7 @@ export default function HomePage({ onImport, onSample, onLibrary, onReport, paus
 
     <section className="home-feature" id="game-review" aria-labelledby="review-title">
       <ProductDemo id="brilliant-review-loop" poster="/previews/brilliant-review-loop.jpg" sources={sources('brilliant-review-loop')} status="Available in beta" label="Sample demo" alt="Linea game review: a rook sacrifice is played and labelled Brilliant by the local engine review" summary="Sample demo: a constructed position where the review labels a rook sacrifice Brilliant, using saved local Stockfish evidence." width={1280} height={900} />
-      <div className="feature-copy"><span className="chapter-number">GAME REVIEW</span><h2 id="review-title">See the moves that mattered.</h2><p>Spot mistakes, revisit brilliant ideas, and compare your move with a stronger alternative.</p><div className="feature-actions"><button className="button primary" onClick={() => onImport()}>Review my game ↗</button><button className="text-button" onClick={onSample}>Open sample review →</button></div></div>
+      <div className="feature-copy"><span className="chapter-number">GAME REVIEW</span><h2 id="review-title">See the moves that mattered.</h2><p>Spot mistakes, revisit brilliant ideas, and compare your move with a stronger alternative.</p><div className="feature-actions"><button className="button primary" onClick={() => onImport()}>Review my game ↗</button><button className="text-button" onClick={onReviewSample}>Open sample review →</button></div></div>
     </section>
 
     <section className="home-feature reverse" id="player-insights" aria-labelledby="report-title">

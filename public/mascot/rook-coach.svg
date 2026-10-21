@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" role="img" aria-label="Linea's rook coach mascot">
+  <!-- Original Linea mascot ("Rook"): simple rook silhouette, charcoal body, yellow trim, friendly face.
+       Designed to read at 48px; not derived from any third-party character. -->
+  <ellipse cx="60" cy="132" rx="38" ry="6" fill="#000" opacity=".28"/>
+  <path d="M24 18h14v10h10V18h24v10h10V18h14v26l-10 10v52h12v20H22v-20h12V54L24 44z" fill="#2b2c28" stroke="#f5cf49" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="34" y="104" width="52" height="6" rx="3" fill="#f5cf49"/>
+  <circle cx="48" cy="70" r="6" fill="#f3f0e6"/><circle cx="72" cy="70" r="6" fill="#f3f0e6"/>
+  <circle cx="49.5" cy="71" r="3" fill="#15140f"/><circle cx="73.5" cy="71" r="3" fill="#15140f"/>
+  <path d="M50 86q10 8 20 0" fill="none" stroke="#f5cf49" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="40" cy="82" r="4" fill="#f5cf49" opacity=".35"/><circle cx="80" cy="82" r="4" fill="#f5cf49" opacity=".35"/>
+</svg>
