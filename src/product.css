@@ -338,3 +338,32 @@
 .demo-tilt { overflow: visible; }
 @media (hover: none) { .tilt-card:hover { transform: none; } }
 @media (prefers-reduced-motion: reduce) { .tilt-card, .tilt-card:hover { transition: none; transform: none; } }
+
+/* Review my game popup (user mockup, 22 Oct 2026). Scoped so other dialogs are unchanged. */
+.import-modal-v2 { max-width: 560px; padding: 32px; border-radius: 20px; }
+.import-modal-v2 .modal-header h2 { font-size: 32px; letter-spacing: -.035em; }
+.import-modal-v2 .modal-header p { margin-top: 8px; color: var(--text-secondary); }
+.import-modal-v2 .import-source-cards { gap: 12px; margin: 22px 0 24px; }
+.import-modal-v2 .import-source-cards button { position: relative; display: flex; align-items: center; gap: 12px; min-height: 72px; padding: 14px 16px; border-radius: 12px; border: 1px solid var(--border-control); background: var(--surface-raised); color: var(--text-primary); transition: border-color .2s, box-shadow .2s, background .2s; }
+.import-modal-v2 .import-source-cards button:hover { border-color: rgba(245, 207, 73, .5); }
+.import-modal-v2 .import-source-cards button.chosen { border-color: var(--action); color: var(--text-primary); background: color-mix(in srgb, var(--action) 6%, var(--surface-raised)); box-shadow: 0 0 0 1px var(--action), 0 0 20px rgba(245, 207, 73, .14); }
+.import-modal-v2 .src-icon { flex: none; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 9px; background: var(--surface-hover); color: var(--text-primary); font-size: 22px; }
+.import-modal-v2 .src-icon.chesscom { background: #7fa650; color: #fff; }
+.import-modal-v2 .src-icon.lichess { background: #f3f0e6; color: #15140f; }
+.import-modal-v2 .src-text { display: flex; flex-direction: column; min-width: 0; text-align: left; }
+.import-modal-v2 .src-text strong { font-size: 15px; }
+.import-modal-v2 .src-text small { margin-top: 3px; color: var(--text-secondary); font-size: 12px; }
+.import-modal-v2 .src-check { position: absolute; top: 9px; right: 9px; display: grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: var(--action); color: #15140f; font-size: 11px; font-weight: 800; }
+.import-modal-v2 .field-label { font-weight: 600; }
+.prefixed-input { display: flex; align-items: center; margin-top: 8px; border: 1px solid var(--border-control); border-radius: 10px; background: var(--canvas); transition: border-color .2s, box-shadow .2s; }
+.prefixed-input:focus-within { border-color: var(--action); box-shadow: 0 0 0 3px rgba(245, 207, 73, .18); }
+.prefixed-input > span { padding-left: 14px; color: var(--text-secondary); font-size: 16px; }
+.prefixed-input input { flex: 1; min-width: 0; border: 0 !important; background: transparent !important; box-shadow: none !important; padding: 14px 14px 14px 8px; font-size: 15px; outline: none; }
+.import-modal-v2 .import-username-form .subtle-note { margin-top: 12px; }
+.import-submit { display: flex; width: 100%; justify-content: center; gap: 10px; min-height: 52px; margin-top: 20px; border-radius: 12px; font-size: 16px; }
+.import-trust { list-style: none; margin: 26px 0 0; padding: 20px 0 0; border-top: 1px solid var(--border); display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.import-trust li { display: flex; gap: 9px; align-items: flex-start; color: var(--action); }
+.import-trust li > svg { flex: none; margin-top: 2px; }
+.import-trust strong { display: block; color: var(--text-primary); font-size: 13px; }
+.import-trust small { display: block; margin-top: 2px; color: var(--text-secondary); font-size: 11px; line-height: 1.4; }
+@media (max-width: 560px) { .import-modal-v2 { padding: 22px 18px; } .import-modal-v2 .modal-header h2 { font-size: 26px; } .import-trust { grid-template-columns: 1fr; } }
