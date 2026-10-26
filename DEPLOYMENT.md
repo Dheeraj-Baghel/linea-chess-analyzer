@@ -18,6 +18,9 @@ Vercel on 26 October 2026. Only Linea is covered; no other project is uploaded.
 
 - Account/team: `softtech10` (existing Vercel Hobby account).
 - Dedicated project: `linea-chess-analyzer`; framework Vite; Node.js **24.x**.
+- Public URL: **https://linea-chess-analyzer.vercel.app**.
+- Initial verified deployment: `dpl_2uvyjuv5wYDVzyyU3KUdMyfyJpNR`, source
+  commit `1f8ce87` on `redesign`; Git-triggered Linux cloud build is Ready.
 - Repository root is this application folder, not the multi-app workspace.
 - Install: `npm ci`.
 - Cloud gate: lint, pinned opening-data check, full unit tests, then `vite build`.
@@ -89,7 +92,54 @@ Initial hosting gate: lint, legal opening-data check, **417/417 unit tests**
 (including three new hosted-handler checks), production build and production
 package audit pass (zero reported vulnerabilities). Existing large optional
 opening/3D bundle warnings remain unchanged; this task does not redesign chunks.
-Local production browser and hosted deployment checks are in progress.
+The Git-triggered Linux cloud clean installation, lint/data check, all 417 unit
+tests, build and deploy succeeded; no portable-lockfile change was needed.
+Vercel removed 592 ignored source/evidence files before building. Only the
+production app assets and one 4.38 KB API function were deployed.
+
+**19/19 local production Chromium workflows** passed in one final run (no retries),
+covering branch review, current-root explanations, illustration/playback and
+evidence preservation. This is the targeted relevance/branch/explanation suite,
+not every historical browser suite.
+
+**12/12 real hosted Chromium checks** passed in the final full run:
+
+- Public HTTPS and security headers.
+- SHA-256 byte equality for all 63 app, model, demo, piece/notice and engine files
+  checked; pinned worker/WASM hashes and WASM MIME. The version manifest is
+  excluded from equality because Vercel omits OS metadata; its cache installs
+  correctly in the separate native offline test.
+- Secret/source/capture/missing paths return 404; numeric-game resolver rejects
+  unsafe URLs (400) and unsupported methods (405), with real JSON responses.
+- Extensionless `/sample` navigation/reload.
+- Native four-ply Stockfish review and persisted accepted evidence, legal
+  alternate-move grading, exact Return to original PGN/position and reload.
+- All four visible homepage demo videos decode and play, without mocked media.
+- Emulated iPhone PGN import/tap moves, review-panel Return, square board and
+  no horizontal overflow.
+- No console/page errors or unexpected failed app requests. Explicit Chromium
+  `net::ERR_ABORTED` cancelled lazy video range downloads are recorded separately;
+  HTTP errors or decoder failures are not exempted.
+
+**Hosted native offline workflow passed:** a real completed review was saved,
+the versioned service worker installed/controlled the app, and a direct game-route
+reload while offline retained 64 board squares, original PGN and the exact
+immutable accepted evidence hash. Normal restore wrapper timestamps/ids may
+update; this is not a reanalysis. External Google Fonts may use fallback offline.
+
+Hosted desktop home and phone board captures were visually inspected. All test
+contexts used temporary synthetic studies, not a user's browser profile.
+Run `node scripts/verify-hosted.mjs` and
+`node scripts/verify-hosted-offline.mjs` after a fresh build to repeat hosted checks.
+The two scripts use local dev-only Playwright; no testing library is sent to the
+client. Results/captures are local under `artifacts/testing/vercel/`.
+
+Initial hosted test assertions were corrected without changing the application:
+lazy clips were checked while visible in normal-motion mode rather than hidden
+in reduced-motion mode; mobile Return was correctly accessed in the user-selected
+review panel; explicit cancelled video ranges were separated from real failures;
+and offline comparison now checks immutable evidence rather than restore metadata.
+The final full hosted run and final offline workflow both passed.
 
 Safari/Firefox, physical phones, long-session engine performance, human screen
 readers and real-user provider imports remain release checks. This deployment

@@ -1,5 +1,23 @@
 # Linea — Chess Game Analyzer
 
+**[Live Linea](https://linea-chess-analyzer.vercel.app)** — deployed on the user's
+Vercel Hobby account (26 October 2026), with
+[private GitHub source](https://github.com/Dheeraj-Baghel/linea-chess-analyzer).
+The user authorized both steps. **`redesign` is the production branch**; its pushes
+automatically deploy. Existing `main` and the pre-redesign tag are preserved.
+Node 24, a cloud lint/data/test/build gate and the existing restricted Chess.com
+public-link handler as a Vercel function are configured. No account, AI provider,
+paid upgrade or database was added.
+
+Local and Linux cloud gates passed **417 unit tests**; **19 local production
+Chromium workflows**, **12 hosted checks** and a native hosted **offline saved-review
+reload** passed. All 63 deployed app/engine/demo/model/notice files checked match
+local production bytes. PGN import, real Stockfish review, variation feedback,
+exact original return, stored-evidence reload, four video playback and phone-sized
+tap flows are verified. Physical devices, other browsers and real provider imports
+remain manual checks. Localhost browser saves are not transferred to the hosted
+origin. See [deployment and safe updates](DEPLOYMENT.md).
+
 Local preview: [**http://127.0.0.1:4325**](http://127.0.0.1:4325).
 
 A new, independent React + Vite project implementing the requested chess analysis

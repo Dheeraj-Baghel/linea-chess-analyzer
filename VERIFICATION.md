@@ -1,5 +1,21 @@
 # Linea verification
 
+## GitHub / Vercel release — 26 October 2026
+
+**[Live Linea](https://linea-chess-analyzer.vercel.app)** is deployed from the
+existing private repository's `redesign` branch. Baseline `main` is untouched.
+Local lint/data/build, **417 units**, **19 targeted production Chromium workflows**,
+and Vercel's Git-triggered Linux clean install/full unit/build gate passed.
+**12 real hosted checks plus one native offline workflow** passed: exact asset/
+engine hashes, MIME/headers, public PGN import, real Stockfish review/branch feedback,
+original return, saved-review reload, video playback, emulated-phone tap/layout,
+restricted API denials and offline evidence preservation. Desktop/mobile captures
+were inspected. No engine results, saved evidence or provider responses were mocked.
+
+See [deployment evidence, intermediate QA corrections and safe-update instructions](DEPLOYMENT.md).
+This is not every historical suite, real-user provider import, physical-device,
+other-browser or human-accessibility verification. No other application changed.
+
 ## Explanation relevance and supporting visuals - 25 October 2026
 
 Lint/build, **411 unit tests and 19 production Chromium workflows pass**. Eighteen
