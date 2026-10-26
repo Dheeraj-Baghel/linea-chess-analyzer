@@ -1,7 +1,7 @@
 import { test, expect } from './fixtures.js';
 import AxeBuilder from '@axe-core/playwright';
 import fs from 'node:fs/promises';
-import { clickMove, collectErrors, counter, drag, importText, matePgn, originalPgn, shortPgn, square, start, advancedReview } from './helpers.js';
+import { clickMove, collectErrors, counter, drag, importText, matePgn, originalPgn, shortPgn, square, start, advancedReview, tool } from './helpers.js';
 
 test('native engine and actual MultiPV candidates work across browser engines', async ({ page }) => {
   const errors = collectErrors(page); await start(page, { pause: false });
@@ -19,7 +19,7 @@ test('legal drag variation and Return to game work across browser engines', asyn
 
 test('manual drag annotations lock moves across browser engines', async ({ page }) => {
   const errors = collectErrors(page); await start(page);
-  await page.getByRole('button', { name: /^Annotate/ }).click(); await drag(page, 'e2', 'e4'); await expect(page.locator('.manual-arrow')).toHaveCount(1); await expect(counter(page)).toHaveText('0');
+  await (await tool(page, /^Annotate/)).click(); await drag(page, 'e2', 'e4'); await expect(page.locator('.manual-arrow')).toHaveCount(1); await expect(counter(page)).toHaveText('0');
   expect(errors).toEqual([]);
 });
 

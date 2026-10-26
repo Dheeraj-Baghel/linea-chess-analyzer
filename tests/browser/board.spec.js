@@ -1,14 +1,14 @@
 import { test, expect } from './fixtures.js';
 import { Chess } from 'chess.js';
 import fs from 'node:fs/promises';
-import { clickMove, collectErrors, counter, currentFen, drag, importText, matePgn, originalPgn, shortPgn, square, start } from './helpers.js';
+import { clickMove, collectErrors, counter, currentFen, drag, importText, matePgn, originalPgn, shortPgn, square, start, tool, advancedReview, closeTools } from './helpers.js';
 
 const initial = new Chess().fen();
 
-test('the highlighted move stays within the single review-panel scroll viewport', async ({ page }) => {
-  await start(page); await page.getByRole('tab', { name: 'Moves', exact: true }).click();
+test('the highlighted move stays within the guided move-list scroll viewport', async ({ page }) => {
+  await start(page);
   const visible = async () => page.evaluate(() => {
-    const list = document.querySelector('.review-panel-body').getBoundingClientRect();
+    const list = document.querySelector('.gr-moves').getBoundingClientRect();
     const current = document.querySelector('.move-entry.current').getBoundingClientRect();
     return current.top >= list.top && current.bottom <= list.bottom;
   });
@@ -31,8 +31,9 @@ test('all navigation controls, keyboard shortcuts and clicked move highlight sta
   await page.getByRole('button', { name: 'Last position (End)', exact: true }).click(); await expect(counter(page)).toHaveText('8');
   await expect(page.getByRole('button', { name: 'Next move (Right arrow)', exact: true })).toBeDisabled();
   await page.keyboard.press('Home'); await expect(counter(page)).toHaveText('0');
-  await page.getByRole('button', { name: 'Go to 2. Nf3', exact: true }).click(); await expect(counter(page)).toHaveText('3');
-  await expect(page.locator('.move-entry.current')).toHaveAttribute('aria-label', 'Go to 2. Nf3');
+  // Reviewed moves append their classification to the accessible name ("Go to 2. Nf3, Book").
+  await page.getByRole('button', { name: /^Go to 2\. Nf3(,|$)/ }).click(); await expect(counter(page)).toHaveText('3');
+  await expect(page.locator('.move-entry.current')).toHaveAttribute('aria-label', /^Go to 2\. Nf3(,|$)/);
   expect(errors).toEqual([]);
 });
 
@@ -45,7 +46,7 @@ test('legal hints, capture rings and illegal moves use real chess legality', asy
   await square(page, 'e5').click(); await expect(counter(page)).toHaveText('0');
   expect(await currentFen(page)).toBe(initial);
   await importText(page, '1. e4 d5 2. exd5 *');
-  await page.getByRole('button', { name: 'Go to 1… d5', exact: true }).click();
+  await page.getByRole('button', { name: /^Go to 1… d5(,|$)/ }).click();
   await square(page, 'e4').click();
   await expect(square(page, 'd5')).toHaveAttribute('aria-label', /legal capture/);
   await expect(square(page, 'd5').locator('.capture-hint')).toHaveCount(1);
@@ -88,26 +89,26 @@ test('drag moves work, variations can branch and recorded-move clicks return to 
 
 test('annotation drag, right-pointer drawing, color replacement, eraser and clear cannot move pieces', async ({ page }) => {
   const errors = collectErrors(page); await start(page); await importText(page, shortPgn);
-  await page.getByRole('button', { name: /^Annotate/ }).click();
+  await (await tool(page, /^Annotate/)).click();
   await drag(page, 'e2', 'e4'); await expect(page.locator('.manual-arrow')).toHaveCount(1); await expect(counter(page)).toHaveText('0');
   await square(page, 'd4').click(); await expect(square(page, 'd4').locator('.square-mark')).toHaveCount(1);
-  await page.getByRole('button', { name: 'Rose annotation color', exact: true }).click();
+  await (await tool(page, 'Rose annotation color')).click();
   await drag(page, 'e2', 'e4'); await expect(page.locator('.manual-arrow')).toHaveCount(1);
   await expect(page.locator('.manual-arrow line')).toHaveCSS('stroke', 'rgb(188, 92, 105)');
   await page.getByRole('button', { name: 'Exit annotation mode', exact: true }).click();
   await drag(page, 'g1', 'f3', 'right'); await expect(page.locator('.manual-arrow')).toHaveCount(2); await expect(counter(page)).toHaveText('0');
   await square(page, 'b3').click({ button: 'right' }); await expect(square(page, 'b3').locator('.square-mark')).toHaveCount(1);
   expect(await currentFen(page)).toBe(initial);
-  await page.getByRole('button', { name: 'Eraser: remove annotations touching a square', exact: true }).click(); await square(page, 'e4').click();
+  await (await tool(page, 'Eraser: remove annotations touching a square')).click(); await square(page, 'e4').click();
   await expect(page.locator('.manual-arrow')).toHaveCount(1);
-  await page.getByRole('button', { name: 'Clear annotations for this position', exact: true }).click();
+  await (await tool(page, 'Clear annotations for this position')).click();
   await expect(page.locator('.manual-arrow')).toHaveCount(0); await expect(page.locator('.square-mark')).toHaveCount(0);
   expect(errors).toEqual([]);
 });
 
 test('two-tap arrow tool and per-position marks survive navigation without mixing with engine arrows', async ({ page }) => {
   await start(page); await importText(page, shortPgn);
-  await page.getByRole('button', { name: 'Two-tap arrow tool: choose the start, then the destination', exact: true }).click();
+  await (await tool(page, 'Two-tap arrow tool: choose the start, then the destination')).click();
   await square(page, 'e2').click(); await expect(square(page, 'e2')).toHaveClass(/arrow-origin/);
   await square(page, 'e4').click(); await expect(page.locator('.manual-arrow')).toHaveCount(1);
   await page.getByRole('button', { name: 'Next move (Right arrow)', exact: true }).click();
@@ -152,22 +153,22 @@ test('canceling promotion leaves the position untouched', async ({ page }) => {
 
 test('castling moves king and rook and en-passant removes the passed pawn', async ({ page }) => {
   await start(page); await importText(page, '1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. O-O *');
-  await page.getByRole('button', { name: 'Go to 3… Nf6', exact: true }).click(); await clickMove(page, 'e1', 'g1');
+  await page.getByRole('button', { name: /^Go to 3… Nf6(,|$)/ }).click(); await clickMove(page, 'e1', 'g1');
   await expect(square(page, 'g1')).toHaveAttribute('aria-label', /White king/); await expect(square(page, 'f1')).toHaveAttribute('aria-label', /White rook/);
   await importText(page, '1. e4 h5 2. e5 d5 3. exd6 *');
-  await page.getByRole('button', { name: 'Go to 2… d5', exact: true }).click(); await clickMove(page, 'e5', 'd6');
+  await page.getByRole('button', { name: /^Go to 2… d5(,|$)/ }).click(); await clickMove(page, 'e5', 'd6');
   await expect(square(page, 'd5')).toHaveAttribute('aria-label', /empty/); await expect(square(page, 'd6')).toHaveAttribute('aria-label', /White pawn/);
 });
 
 test('check/checkmate, last-move highlights and recorded clocks display from real game metadata', async ({ page }) => {
   await start(page); await importText(page, shortPgn);
-  await page.getByRole('button', { name: 'Go to 1… e5', exact: true }).click();
+  await page.getByRole('button', { name: /^Go to 1… e5(,|$)/ }).click();
   await expect(page.locator('.player-clock').first()).toHaveText(/04:59/); await expect(page.locator('.player-clock').last()).toHaveText(/05:01/);
   await expect(square(page, 'e7')).toHaveClass(/last-move/); await expect(square(page, 'e5')).toHaveClass(/last-move/);
   await importText(page, matePgn); await page.getByRole('button', { name: 'Last position (End)', exact: true }).click();
   await expect(page.locator('.turn-info')).toHaveText('Checkmate · Black wins');
   await expect(square(page, 'e1')).toHaveClass(/in-check/);
-  await expect(page.locator('.engine-evaluation strong')).toHaveText('−M0');
+  await advancedReview(page); await expect(page.locator('.engine-evaluation strong')).toHaveText('−M0');
   await expect(page.locator('.engine-evaluation')).toHaveText(/Black wins by checkmate/);
 });
 
@@ -188,18 +189,18 @@ test('keyboard square selection, Escape cancellation and focus mode remain opera
   await page.keyboard.press('Alt+ArrowUp'); await expect(square(page, 'e3')).toBeFocused();
   await page.keyboard.press('Alt+ArrowUp'); await expect(square(page, 'e4')).toBeFocused(); await page.keyboard.press('Enter'); await expect(counter(page)).toHaveText('1');
   await square(page, 'e7').focus(); await page.keyboard.press('Enter'); await page.keyboard.press('Escape'); await expect(square(page, 'e7')).toHaveAttribute('aria-selected', 'false');
-  await page.getByRole('button', { name: 'Expand board into focus view', exact: true }).click();
+  await (await tool(page, 'Expand board into focus view')).click();
   await expect(page.locator('.app')).toHaveClass(/focus-view/); await expect(page.locator('.navigation-bar')).toBeVisible();
   await page.getByRole('button', { name: 'Next move (Right arrow)', exact: true }).click(); await expect(counter(page)).toHaveText('2');
-  await page.getByRole('button', { name: 'Exit expanded board view', exact: true }).click(); await expect(page.locator('.review-panel')).toBeVisible();
+  await page.getByRole('button', { name: 'Exit focus view', exact: true }).click(); await expect(page.locator('.review-panel')).toBeVisible();
 });
 
 test('FEN/PGN clipboard and download preserve exact source, including original comments', async ({ page, context }) => {
   await context.grantPermissions(['clipboard-read', 'clipboard-write']);
   await start(page); await importText(page, shortPgn); await clickMove(page, 'd2', 'd4');
-  await page.getByRole('button', { name: 'Copy FEN', exact: true }).click();
+  await (await tool(page, 'Copy FEN')).click();
   const copiedFen = await page.evaluate(() => navigator.clipboard.readText()); expect(new Chess(copiedFen).get('d4')?.type).toBe('p');
-  await page.getByRole('button', { name: 'Copy PGN', exact: true }).click(); expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(shortPgn);
+  await (await tool(page, 'Copy PGN')).click(); expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(shortPgn);
   await page.getByRole('button', { name: 'Export', exact: true }).click();
   const download = page.waitForEvent('download'); await page.getByRole('button', { name: 'Download PGN', exact: true }).click();
   const file = await download; expect(await fs.readFile(await file.path(), 'utf8')).toBe(shortPgn);
@@ -213,16 +214,16 @@ test('invalid import shows feedback without deleting the current game; PGN file 
   await dialog.getByRole('button', { name: 'PGN game', exact: true }).first().click();
   await dialog.locator('input[type=file]').setInputFiles({ name: 'study.pgn', mimeType: 'application/x-chess-pgn', buffer: Buffer.from(shortPgn) });
   await expect(dialog.locator('#import-text')).toHaveValue(shortPgn); await dialog.getByRole('combobox', { name: 'PGN player to focus on' }).selectOption('w'); await dialog.getByRole('button', { name: 'Load game', exact: true }).click();
-  await expect(counter(page)).toHaveText('0'); await expect(page.locator('.move-entry')).toHaveCount(8);
+  await expect(counter(page)).toHaveText('0'); await page.getByRole('button', { name: 'Start Game Review', exact: true }).click(); await expect(page.locator('.move-entry')).toHaveCount(8);
 });
 
 test('settings persist separately from transient games and respect reduced motion', async ({ page }) => {
   await start(page); await page.getByRole('button', { name: 'Display settings', exact: true }).click();
   const dialog = page.getByRole('dialog'); await dialog.getByRole('button', { name: 'Walnut', exact: true }).click();
-  await dialog.getByRole('button', { name: 'Figurine', exact: true }).click();
+  await expect(dialog.getByRole('button', { name: 'Figurine', exact: true })).toHaveCount(0);
   await dialog.getByText('Move sounds', { exact: true }).click(); await dialog.getByText('Board animation', { exact: true }).click();
   await page.keyboard.press('Escape');
-  await expect(page.locator('.chessboard')).toHaveClass(/theme-walnut/); await expect(page.locator('.chessboard .figurine')).toHaveCount(32);
+  await expect(page.locator('.chessboard')).toHaveClass(/theme-walnut/); await expect(page.locator('.chessboard img.piece-image[src*="/pieces/cburnett/"]')).toHaveCount(32);
   await page.reload(); await expect(page.locator('.chessboard')).toHaveClass(/theme-walnut/); await expect(page.locator('.app')).toHaveClass(/motion-off/);
   await page.emulateMedia({ reducedMotion: 'reduce' });
   const animation = await square(page, 'e4').locator('.piece-wrap').evaluate(node => getComputedStyle(node).animationName); expect(animation).toBe('none');

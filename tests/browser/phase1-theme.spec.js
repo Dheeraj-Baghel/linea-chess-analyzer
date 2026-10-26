@@ -1,7 +1,7 @@
 import { test, expect } from './fixtures.js';
 import fs from 'node:fs/promises';
 import AxeBuilder from '@axe-core/playwright';
-import { clickMove, counter, currentFen, importText, originalPgn, shortPgn, square, start, advancedReview, guidedReview } from './helpers.js';
+import { clickMove, counter, currentFen, importText, originalPgn, shortPgn, square, start, advancedReview, guidedReview, tool } from './helpers.js';
 
 const screenshots = 'artifacts/screenshots/phase1';
 const evidence = 'artifacts/testing/phase1';
@@ -83,7 +83,7 @@ test('L02 saved palettes migrate without changing board state, annotations, orig
   await importText(page, shortPgn); await advancedReview(page);
   await page.getByRole('button', { name: 'Resume position analysis', exact: true }).click();
   await clickMove(page, 'd2', 'd4');
-  await page.getByRole('button', { name: 'Rose annotation color', exact: true }).click();
+  await (await tool(page, 'Rose annotation color')).click();
   await square(page, 'c4').click();
   await expect(page.locator('.engine-status')).toHaveText('Search complete', { timeout: 30000 });
   const fen = await currentFen(page), beforeWorkers = workers;

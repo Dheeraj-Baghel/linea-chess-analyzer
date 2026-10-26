@@ -170,11 +170,27 @@ not a confidence interval. It never affects accuracy/classification. The UI says
 this before presenting a number, inside an explicit expansion.
 
 Requires a completed recorded result, complete compatible non-provisional review,
-not the fictional bundled sample, and >=10 non-Book/non-Forced decisions **for
-that player**. Otherwise display Unavailable and the reason. Actual imported
-rating tags are evidence supplied by the PGN, not verified account ownership.
+not the fictional bundled sample, the player's PGN rating, and >=10
+non-Book/non-Forced decisions **for both players**. Otherwise display Unavailable
+and the reason. Actual imported rating tags are evidence supplied by the PGN, not
+verified account ownership.
 
-Version `linea-experimental-game-elo-1`:
+**Current version `linea-experimental-game-elo-4` (22 Oct 2026 reliability audit):**
+
+```
+estimate = ownPgnRating + clamp(20 * (ownAccuracy - opponentAccuracy), -600, 600)
+Output = clamp(estimate, 100, 3200), rounded to nearest 10; calibrated: false
+```
+
+elo-3 fitted two constants exactly to the two sides of one Chess.com review
+(game 185626013138), which is interpolation, not calibration; it is retired and
+kept only as fixture provenance. The accuracy-difference form cancels effects the
+two players share. Its single scale factor was chosen on a small public-game set
+with disclosed holdout contamination; see the
+[reliability audit](artifacts/testing/review-comparison/REPORT.md). Policy-3,
+classifier-3 and book-2 from the same audit are described there as well.
+
+Historical version `linea-experimental-game-elo-1`:
 
 ```
 v = mean of that player's volatility weights

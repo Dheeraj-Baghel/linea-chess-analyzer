@@ -3,7 +3,7 @@ import { Chess } from 'chess.js';
 import { accuracyFromLoss, accuracySummary, aggregateAccuracy, chanceLoss, standardDeviation, volatilityWeights, whiteWinPercent } from '../../src/accuracy.js';
 import { classify, parseGame, toUci } from '../../src/chess.js';
 import { reviewTerminalEvaluation, ruleDrawClaims } from '../../src/reviewPolicy.js';
-import { accuracyLevel, expectedAccuracy, experimentalGameRatings, performanceRating, reviewExport, timeClass } from '../../src/gameRating.js';
+import { GAME_RATING_VERSION, PERFORMANCE_CAP, PERFORMANCE_SCALE, RATING_PROVENANCE, experimentalGameRatings, performanceEstimate, reviewExport, timeClass } from '../../src/gameRating.js';
 import { bookMoveEvidence } from '../../src/reviewBook.js';
 
 const ev = (cp, mate = null) => ({ cp, mate, depth: 16, pv: [] });
@@ -126,50 +126,51 @@ describe('experimental game Elo gating and independent inputs', () => {
   function fixture(rating) {
     const game = parseGame('1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3 O-O 9. h3 Nb8 10. d4 Nbd7 11. Nbd2 Bb7 1/2-1/2');
     if (rating) game.headers.WhiteElo = String(rating);
-    const records = Object.fromEntries(game.moves.map((_, i) => [i + 1, { type: 'good', loss: 2, before: ev(0), after: ev(0) }]));
+    // White loses 2 points per move, Black 6: a known, nonzero accuracy difference.
+    const records = Object.fromEntries(game.moves.map((move, i) => [i + 1, { type: 'good', loss: move.color === 'w' ? 2 : 6, before: ev(0), after: ev(0) }]));
     return { game, review: { records, generation: { status: 'completed' } } };
   }
   it('requires enough decisions and full compatible evidence', () => {
     const { game, review } = fixture(1500);
-    expect(experimentalGameRatings(game, review).w).toMatchObject({ calibrated: false, anchor: 1500, mode: 'PGN-rating-anchored heuristic' });
+    expect(experimentalGameRatings(game, review).w).toMatchObject({ calibrated: false, anchor: 1500, mode: 'PGN-rating-anchored relative heuristic', version: GAME_RATING_VERSION });
     expect(experimentalGameRatings(game, review).w.value).toBeGreaterThan(100);
     review.records[1].provisional = true; expect(experimentalGameRatings(game, review).w.value).toBeNull();
     expect(experimentalGameRatings(parseGame('1. f3 e5 2. g4 Qh4# 0-1'), { records: {} }).w.value).toBeNull();
+  });
+  it('withholds an unanchored estimate instead of inventing a scale', () => {
+    const { game, review } = fixture();
+    expect(experimentalGameRatings(game, review).w).toMatchObject({ value: null, anchor: null });
+    expect(experimentalGameRatings(game, review).w.reason).toMatch(/rating in the PGN/);
   });
   it('rating changes do not change accuracy or classification', () => {
     const { game, review } = fixture(1500), first = accuracySummary(game, review.records);
     game.headers.WhiteElo = '2500'; expect(accuracySummary(game, review.records)).toEqual(first);
     expect(experimentalGameRatings(game, review).w.anchor).toBe(2500);
   });
-  it('v2 uses Chess.com-stated inputs: own rating, opponent rating, time control', () => {
-    const { game, review } = fixture(1500);
-    // Moderate accuracy (~67%) so results stay inside the +/-700 cap and differences are visible.
-    for (const record of Object.values(review.records)) record.loss = 9;
-    const base = experimentalGameRatings(game, review).w.value;
-    game.headers.WhiteElo = '2200'; expect(experimentalGameRatings(game, review).w.value).toBeGreaterThan(base);
-    game.headers.WhiteElo = '1500'; game.headers.BlackElo = '2200'; expect(experimentalGameRatings(game, review).w.value).toBeGreaterThan(base);
-    delete game.headers.BlackElo;
-    game.headers.TimeControl = '60'; const bullet = experimentalGameRatings(game, review).w;
-    game.headers.TimeControl = '1800'; const classical = experimentalGameRatings(game, review).w;
-    expect(bullet.timeClass).toBe('bullet'); expect(classical.timeClass).toBe('classical');
-    expect(bullet.value).toBeGreaterThan(classical.value);
+  it('elo-4 is relative: own rating plus a capped accuracy-difference term', () => {
+    const { game, review } = fixture(1500), w = experimentalGameRatings(game, review).w;
+    const summary = accuracySummary(game, review.records);
+    expect(w.accuracyDifference).toBeCloseTo(summary.w.accuracy - summary.b.accuracy, 9);
+    expect(w.value).toBe(Math.round((1500 + PERFORMANCE_SCALE * w.accuracyDifference) / 10) * 10);
+    // Symmetric and antisymmetric: equal play leaves the anchor unchanged, mirrored play mirrors the delta.
+    expect(performanceEstimate(80, 80, 1500).value).toBe(1500);
+    expect(performanceEstimate(90, 80, 1500).delta).toBe(-performanceEstimate(80, 90, 1500).delta);
+    expect(performanceEstimate(100, 0, 1500)).toMatchObject({ delta: PERFORMANCE_CAP, capped: true });
+    // The opponent's PGN rating and time control are recorded but never move the number.
+    game.headers.BlackElo = '2600'; game.headers.TimeControl = '60';
+    expect(experimentalGameRatings(game, review).w.value).toBe(w.value);
   });
-  it('v3 reproduces the user-supplied Chess.com reference game 185626013138', () => {
-    const game = parseGame(`[White "Doener1000"]\n[Black "GodL-Dheeraj"]\n[Result "0-1"]\n[WhiteElo "1197"]\n[BlackElo "1203"]\n[TimeControl "600"]\n\n1. d4 d5 2. Bf4 Bf5 3. Nc3 Nf6 4. Nf3 e6 5. e3 Bb4 6. Bd3 Bg6 7. Qd2 Nc6 8. O-O-O Qe7 9. a3 Bxa3 10. bxa3 Qxa3+ 11. Kb1 Nb4 12. Qc1 Qxc3 0-1`);
-    for (const [color, accuracy, expected] of [['w', 85.4, 1700], ['b', 92.1, 1950]]) {
-      const own = Number(game.headers[color === 'w' ? 'WhiteElo' : 'BlackElo']), opp = Number(game.headers[color === 'w' ? 'BlackElo' : 'WhiteElo']);
-      const fit = performanceRating(accuracy, own, opp, timeClass(game.headers.TimeControl).offset);
-      expect(Math.round((fit.reference + fit.delta) / 10) * 10).toBe(expected);
-    }
-  });
-  it('accuracy level inverts the expected-accuracy curve', () => {
-    for (const rating of [600, 1200, 1800, 2400]) expect(accuracyLevel(expectedAccuracy(rating, -3.5), -3.5)).toBeCloseTo(rating, 6);
+  it('contains no game-specific fit or reference lookup at runtime', () => {
+    expect(RATING_PROVENANCE.calibrated).toBe(false);
+    expect(RATING_PROVENANCE.retiredFit.version).toBe('fit-1-game-185626013138');
+    expect(JSON.stringify(experimentalGameRatings(fixture(1500).game, fixture(1500).review))).not.toMatch(/185626013138[^"]*"\s*,\s*"value"/);
     expect(timeClass('180+2')).toMatchObject({ name: 'blitz', estimatedSeconds: 260 });
-    expect(timeClass('-')).toMatchObject({ name: 'unknown', offset: 0 });
+    expect(timeClass('-')).toMatchObject({ name: 'unknown' });
   });
   it('exports unrounded evidence, versions, weights and original PGN', () => {
     const { game, review } = fixture(); const output = reviewExport(game, review);
     expect(output.originalPgn).toBe(game.rawPgn); expect(output.accuracy.modelVersion).toBe('linea-accuracy-2'); expect(output.records).toHaveLength(game.moves.length);
     expect(output.experimentalGameElo.w.calibrated).toBe(false); expect(output.records[0].weight).toBe(0.5);
+    expect(output.schema).toBe('linea-review-evidence-3'); expect(output.versions).toMatchObject({ gameRating: GAME_RATING_VERSION, book: 'linea-book-2' });
   });
 });

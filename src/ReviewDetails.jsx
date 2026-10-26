@@ -18,9 +18,10 @@ export function ReviewQuality({ game, review }) {
     <p className="subtle-note">Disputed moves can add two same-root verification searches and an optional candidate-gap search, each at up to twice the position budget. Analysis can take longer; reached depth is not calibrated confidence.</p>
     <p className="review-policy-state" role="status">{generation ? review.hasPendingSettings ? `Pending: ${selected.label}. Displayed results and any running review still use ${generation.policy.label}. Rerun to apply this selection.` : `Displayed review: ${generation.policy.label} · ${generation.status}.` : `Next review: ${selected.label}. No game review has run.`}</p>
     <div className="review-quality-actions">
-      <button className="button primary" disabled={!game.moves.length} onClick={generation ? review.rerun : review.start}>{generation ? <RefreshCw size={15} /> : <Sparkles size={15} />}{generation ? 'Rerun game review' : 'Review this game'}</button>
-      {review.running ? <button className="button secondary" onClick={review.stop}><Pause size={15} />Pause review · {review.done}/{game.moves.length}</button> : review.canResume && <button className="button secondary" onClick={review.resume}>Continue game review</button>}
+      <button className="button primary" disabled={!game.moves.length || review.suspended} onClick={generation ? review.rerun : review.start}>{generation ? <RefreshCw size={15} /> : <Sparkles size={15} />}{generation ? 'Rerun game review' : 'Review this game'}</button>
+      {review.running ? <button className="button secondary" onClick={review.stop}><Pause size={15} />Pause review · {review.done}/{game.moves.length}</button> : review.canResume && <button className="button secondary" disabled={review.suspended} onClick={review.resume}>Continue game review</button>}
     </div>
+    {review.suspended && <p className="subtle-note">{review.illustrating ? 'This illustration reads stored evidence only. Back to review restores the source move; rerun/deeper review is an explicit action there.' : 'Live move feedback owns the engine while you explore. Return to game to continue the original review.'}</p>}
     <p className="subtle-note">Position depth controls only the current board. Changing this selection does not rerun, relabel or mix existing results. Rerun replaces this review; it does not edit your PGN or analysis branch.</p>
   </section>;
 }
@@ -81,7 +82,8 @@ export function MoveReviewEvidence({ record }) {
   return <details className="move-review-evidence" data-generation-id={provenance.generationId}>
     <summary>Evidence for this move</summary>
     <dl>
-      <dt>Original ply / mover</dt><dd>{provenance.ply} · {provenance.color === 'w' ? 'White' : 'Black'} · {provenance.san}</dd>
+      <dt>{provenance.scope === 'variation' ? 'Branch ply / mover' : 'Original ply / mover'}</dt><dd>{provenance.scope === 'variation' ? provenance.branchPly : provenance.ply} · {provenance.color === 'w' ? 'White' : 'Black'} · {provenance.san}</dd>
+      {provenance.scope === 'variation' && <><dt>Branch point</dt><dd>After original ply {provenance.branchBasePly}. Separate exploration evidence; excluded from the game report.</dd></>}
       <dt>Before</dt><dd>{evaluationDepthLabel(record.before)}</dd>
       <dt>After</dt><dd>{evaluationDepthLabel(record.after)}</dd>
       <dt>Judgment</dt><dd>{record.provisional ? 'Provisional bounded-search evidence' : 'Reviewed at recorded search limits'}</dd>

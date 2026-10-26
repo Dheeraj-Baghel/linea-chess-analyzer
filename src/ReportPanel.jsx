@@ -1,4 +1,5 @@
 import { Activity, Lightbulb, Pause, Sparkles, X } from 'lucide-react';
+import { useState } from 'react';
 import { FEEDBACK, moveLabel, scoreText } from './chess';
 import { AccuracySummary, MoveCoaching, PersonalCoach } from './ReviewInsights';
 import { IconButton } from './UI';
@@ -9,19 +10,22 @@ import { MoveReviewEvidence, ReviewBreakdown, ReviewProvenance, ReviewQuality } 
 // (Linea yellow instead of Chess.com white); the cursor takes the current move's colour.
 const chartY = point => 50 - Math.tanh((Number.isFinite(point.cp) ? point.cp : point.mate > 0 ? 1000 : point.mate < 0 ? -1000 : 0) / 400) * 40;
 export function ReviewChart({ game, review, ply, onNavigate }) {
+  const [hovered, setHovered] = useState(null);
   const records = Object.entries(review.records).sort(([a], [b]) => Number(a) - Number(b));
   const points = records.length ? [{ ply: 0, ...records[0][1].before }, ...records.map(([index, record]) => ({ ply: Number(index), type: record.type, ...record.after }))] : [];
   const total = Math.max(game.moves.length, 1);
   const coordinates = points.map(point => `${point.ply / total * 600},${chartY(point)}`).join(' ');
   const current = review.records[ply], cursor = current ? FEEDBACK[current.type].color : 'var(--chart-cursor)';
-  return <div className="review-chart" aria-label="Game evaluation chart. Positive scores favor White.">
+  const shown = hovered;
+  return <div className="review-chart interactive-review-chart" aria-label="Game evaluation chart. Positive scores favor White." onMouseLeave={() => setHovered(null)}>
     <svg viewBox="0 0 600 100" preserveAspectRatio="none" aria-hidden="true">
-      {points.length > 0 && <><polygon className="chart-white-area" points={`0,100 ${coordinates} ${points.at(-1).ply / total * 600},100`} fill="var(--action)" /></>}
+      {points.length > 0 && <><polyline className="chart-line" points={coordinates} /><polygon className="chart-white-area" points={`0,100 ${coordinates} ${points.at(-1).ply / total * 600},100`} fill="var(--action)" /></>}
       <line x1={ply / total * 600} y1="0" x2={ply / total * 600} y2="100" stroke={cursor} strokeWidth="2" vectorEffect="non-scaling-stroke" />
     <line x1="0" y1="50" x2="600" y2="50" stroke="var(--chart-grid)" strokeDasharray="5 5" vectorEffect="non-scaling-stroke" />
     </svg>
     {!points.length && <span className="chart-empty">Review the game to plot its evaluation.</span>}
-    {points.map(point => <button key={point.ply} className="chart-point" style={{ left: `${point.ply / total * 100}%`, width: `${Math.max(2, 100 / total)}%` }} aria-label={`Go to ${point.ply === 0 ? 'starting position' : moveLabel(game.moves[point.ply - 1])}, evaluation ${scoreText(point)}${point.type ? `, ${FEEDBACK[point.type].label}` : ''}`} title={`${moveLabel(game.moves[point.ply - 1])} · ${scoreText(point)}${point.type ? ` · ${FEEDBACK[point.type].label}` : ''}`} onClick={() => onNavigate(point.ply)} />)}
+    {shown && shown.ply > 0 && <div className="chart-tooltip" style={{ left: `${Math.max(16, Math.min(84, shown.ply / total * 100))}%` }}><strong>{moveLabel(game.moves[shown.ply - 1])}</strong><span>{scoreText(shown)}{shown.type ? ` · ${FEEDBACK[shown.type].label}` : ''}</span></div>}
+    {points.map(point => <span key={point.ply} className="chart-point" style={{ left: `${point.ply / total * 100}%`, width: `${Math.max(2, 100 / total)}%` }} onMouseEnter={() => setHovered(point)} />)}
   </div>;
 }
 

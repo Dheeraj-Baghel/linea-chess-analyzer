@@ -2,7 +2,7 @@ import { test, expect } from './fixtures.js';
 import fs from 'node:fs/promises';
 import AxeBuilder from '@axe-core/playwright';
 import { lichessRecord } from '../fixtures/lichess-games.js';
-import { counter, originalPgn, start, advancedReview } from './helpers.js';
+import { counter, originalPgn, start, advancedReview, closeTools } from './helpers.js';
 
 async function open(page, mode = 'username') {
   await page.getByRole('button', { name: 'Import game', exact: true }).click(); const dialog = page.getByRole('dialog');
@@ -24,7 +24,7 @@ test('F01 Lichess history picker preserves PGN/clocks and starts real local revi
   await dialog.locator('.archive-game').click(); await expect(dialog).not.toBeVisible(); await expect(page.locator('.sample-badge')).toHaveText('LICHESS');
   expect(await originalPgn(page)).toBe(data.pgn); await advancedReview(page); await expect(page.locator('.personal-coach select')).toHaveValue('b');
   await expect(page.locator('.accuracy-coverage')).toHaveText(/Full game reviewed/, { timeout: 30000 });
-  await page.getByRole('tab', { name: /^Moves/ }).click(); await page.getByRole('button', { name: 'Next move (Right arrow)', exact: true }).click();
+  await closeTools(page); await page.getByRole('button', { name: 'Next move (Right arrow)', exact: true }).click();
   await expect(page.locator('.player-clock').last()).toHaveText(/05:00/);
   await open(page); await expect(page.getByRole('dialog').locator('.archive-game')).toBeDisabled();
 });

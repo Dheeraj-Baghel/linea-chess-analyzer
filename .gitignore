@@ -30,3 +30,11 @@ artifacts/testing/phase4/checkpoint-*.tar.gz
 artifacts/testing/phase0/checkpoint-*.tar.gz
 *.tar.gz
 artifacts/demo-recording/
+
+# Hosted project link and local capture scratch files are never source.
+.vercel/
+.shot.mjs
+# New generated captures remain local; historical tracked evidence is preserved.
+artifacts/
+.vercel
+.env*

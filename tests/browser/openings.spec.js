@@ -1,6 +1,6 @@
 import { test, expect } from './fixtures.js';
 import fs from 'node:fs/promises';
-import { clickMove, counter, importText, originalPgn, start } from './helpers.js';
+import { clickMove, counter, importText, originalPgn, start, closeTools, advancedReview } from './helpers.js';
 
 const info = page => page.getByLabel('Recorded game opening', { exact: true });
 
@@ -37,8 +37,8 @@ test('F02 delayed local data does not block the board/engine and cannot overwrit
   await page.route('**/src/data/openings-index.json*', async route => { requests++; await held; await route.continue(); });
   await page.goto('/sample', { waitUntil: 'domcontentloaded' }); await expect(page.getByRole('gridcell')).toHaveCount(64);
   await expect(info(page)).toHaveText(/Identifying opening/);
-  await page.getByText('Advanced analysis & evidence', { exact: true }).click(); await page.getByRole('button', { name: 'Resume position analysis', exact: true }).click();
-  await expect(page.locator('.engine-status')).toHaveText('Search complete', { timeout: 30000 });
+  await advancedReview(page); await page.getByRole('button', { name: 'Resume position analysis', exact: true }).click();
+  await expect(page.locator('.engine-status')).toHaveText('Search complete', { timeout: 30000 }); await closeTools(page);
   const before = workers;
   await importText(page, '[Opening "New supplied context"]\n[ECO "A00"]\n\n1. a3 *');
   await expect(info(page)).toHaveText(/New supplied context/); release();

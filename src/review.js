@@ -1,6 +1,7 @@
 import { Chess } from 'chess.js';
-import { FEEDBACK, PIECE_NAMES, VALUES, moveLabel, pvToSan, scoreText, uciMove } from './chess';
-import { accuracyFromLoss } from './accuracy.js';
+import { FEEDBACK, PIECE_NAMES, VALUES, moveLabel, scoreText, uciMove } from './chess';
+import { moveMeaning } from './moveMeaning.js';
+import { accuracyFromLoss, accuracySummary, aggregateAccuracy } from './accuracy.js';
 export { accuracySummary } from './accuracy.js';
 
 // Classification never overwrites numeric accuracy, including Brilliant/Best.
@@ -90,32 +91,44 @@ export function withBrilliance(record, candidate, acceptedEvaluation, move) {
   return { ...record, type: verified ? 'brilliant' : record.type, brilliance, accuracy: moveAccuracy(record) };
 }
 
-export function moveExplanation(move, record) {
-  if (!move || !record) return null;
-  const player = move.color === 'w' ? 'White' : 'Black', opponent = move.color === 'w' ? 'Black' : 'White';
-  const alternatives = pvToSan(move.before, (record.comparisonBefore || record.before).pv || [], 6);
-  const response = pvToSan(move.after, record.after.pv || [], 4);
-  const replyChess = new Chess(move.after);
-  let reply = null;
-  try { if (record.after.pv?.[0]) reply = replyChess.move(uciMove(record.after.pv[0])); } catch { /* Stale or truncated engine PV must never invent a reply. */ }
-  const parts = [];
-  if (record.type === 'brilliant') parts.push(record.brilliance.explanation);
-  else if (record.type === 'forced') parts.push('This was the only legal move. Numeric accuracy still follows the recorded evaluations; the label does not assign a perfect score.');
-  else if (record.type === 'book') parts.push('This move matches a position in the pinned local opening dataset. Book recognition does not override its engine-derived accuracy.');
-  else parts.push(`${moveLabel(move)} is ${FEEDBACK[record.type].label.toLowerCase()} at this review depth. ${record.type === 'best' ? 'It matches the engine’s first choice.' : `The estimated winning-chance loss is ${record.loss.toFixed(1)} percentage points.`}`);
-  if (record.provisional) parts.push('Provisional: bounded searches disagree or did not reach the verification minimum. Reanalyze at Deeper quality before relying on this judgment.');
-  if (reply?.captured) parts.push(`${opponent} can respond with ${reply.san}, capturing ${reply.captured === 'p' ? 'a pawn' : `a ${PIECE_NAMES[reply.captured]}`}${reply.flags.includes('e') ? ' en passant' : ''}.`);
-  else if (reply) parts.push(`The engine continuation begins ${response.slice(0, 3).map(moveLabel).join(' ')}.`);
-  const alternative = alternatives[0]?.uci !== move.uci ? alternatives[0] : null;
-  return { title: `${player} · ${moveLabel(move)}`, body: parts.join(' '), alternatives, response, alternative, before: scoreText(record.before), after: scoreText(record.after), accuracy: moveAccuracy(record) };
+export function moveExplanation(move, record, context = {}) {
+  const meaning = moveMeaning(move, record, context);
+  if (!meaning) return null;
+  return { ...meaning, title: `${move.color === 'w' ? 'White' : 'Black'} · ${moveLabel(move)}`, body: meaning.reason, before: scoreText(record.comparisonBefore || record.before), after: scoreText(record.comparisonAfter || record.after), accuracy: moveAccuracy(record) };
 }
 
+// Phase split shared by coaching and the overview's phase rows. Low material is an
+// endgame even in the first moves (e.g. a FEN-started king-and-pawn ending is never
+// rated as an "opening"); otherwise the first 12 moves are the opening.
 function phase(move) {
-  if (move.number <= 12) return 'opening';
   const chess = new Chess(move.before);
   const material = chess.board().flat().filter(Boolean).reduce((sum, piece) => sum + VALUES[piece.type], 0);
-  return material <= 26 ? 'endgame' : 'middlegame';
+  if (material <= 26) return 'endgame';
+  return move.number <= 12 ? 'opening' : 'middlegame';
 }
+// Game-phase performance (overview panel). Reuses the canonical phase() split above and
+// the same volatility-weighted aggregation as player accuracy, restricted to the phase's
+// scored moves of one color. Fewer than PHASE_MIN_MOVES scored moves is reported as
+// unavailable instead of rating a phase from one or two moves.
+export const GAME_PHASES = ['opening', 'middlegame', 'endgame'];
+export const PHASE_MIN_MOVES = 3;
+// Presentation band only: maps a phase accuracy to the nearest classification icon.
+export function phaseRating(accuracy) {
+  if (!Number.isFinite(accuracy)) return null;
+  return accuracy >= 90 ? 'best' : accuracy >= 80 ? 'excellent' : accuracy >= 68 ? 'good' : accuracy >= 55 ? 'inaccuracy' : accuracy >= 40 ? 'mistake' : 'blunder';
+}
+export function phasePerformance(game, records, generationId = null) {
+  const summary = accuracySummary(game, records, generationId), phases = game.moves.map(phase);
+  return Object.fromEntries(GAME_PHASES.map(stage => [stage, Object.fromEntries(['w', 'b'].map(color => {
+    const played = game.moves.some((move, index) => move.color === color && phases[index] === stage);
+    const entries = summary[color].entries.filter(entry => phases[entry.ply - 1] === stage);
+    if (!played) return [color, { accuracy: null, type: null, moves: 0, reason: 'Phase not reached' }];
+    if (entries.length < PHASE_MIN_MOVES) return [color, { accuracy: null, type: null, moves: entries.length, reason: entries.length ? `Only ${entries.length} reviewed ${entries.length === 1 ? 'move' : 'moves'}; too few to rate` : 'Not yet reviewed' }];
+    const accuracy = aggregateAccuracy(entries);
+    return [color, { accuracy, type: phaseRating(accuracy), moves: entries.length, reason: accuracy === null ? 'No scoring evidence' : null }];
+  }))]));
+}
+
 function theme(move, record) {
   try {
     const chess = new Chess(move.after);

@@ -16,8 +16,8 @@ const SOURCES = [
   ['secondary', 'Game link / FEN', 'Single game or position', 'link'],
 ];
 function SourceIcon({ kind }) {
-  if (kind === 'chesscom') return <span className="src-icon chesscom" aria-hidden="true">♟</span>;
-  if (kind === 'lichess') return <span className="src-icon lichess" aria-hidden="true">♞</span>;
+  if (kind === 'chesscom') return <span className="src-icon chesscom" aria-hidden="true"><img src="/icons/sources/chesscom.png" alt="" width="20" height="30" decoding="async" /></span>;
+  if (kind === 'lichess') return <span className="src-icon lichess" aria-hidden="true"><img src="/icons/sources/lichess.png" alt="" width="38" height="38" decoding="async" /></span>;
   if (kind === 'pgn') return <span className="src-icon" aria-hidden="true"><FileText size={20} /></span>;
   return <span className="src-icon" aria-hidden="true"><Link2 size={20} /></span>;
 }

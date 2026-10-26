@@ -85,3 +85,5 @@ Cburnett SVG set by Colin M.L. Burnett (Wikimedia Commons), used under its BSD o
 ## Move sounds
 
 `public/sounds/` holds Chess.com move/capture/check MP3s added at the user's request. **No licence verified - replace before any public deployment.** See [notice](public/sounds/NOTICE.txt).
+
+`public/icons/sources/` holds the Chess.com pawn and Lichess knight logos supplied by the user for the Review my game source cards (resized to 192 px). They are trademarks of their owners, used only to identify import sources; **trademark/brand-guideline use not verified - confirm before any public deployment.**

@@ -14,9 +14,9 @@ export function createEngineCoordinator({ createEngine = () => new LocalEngine()
     getSnapshot: () => state,
     subscribe(listener) { listeners.add(listener); return () => listeners.delete(listener); },
     createClient(role, onPreempt = () => {}) {
-      if (!['review', 'position', 'batch'].includes(role)) throw new Error('Unknown engine owner.');
+      if (!['review', 'variation', 'position', 'batch'].includes(role)) throw new Error('Unknown engine owner.');
       let ticket = null;
-      const requests = new Set(), priority = { batch: 10, review: 20, position: 30 }[role];
+      const requests = new Set(), priority = { batch: 10, review: 20, variation: 25, position: 30 }[role];
       const release = () => { if (ticket?.cancelled && !requests.size) ticket.released.resolve(); };
       const acquire = () => {
         if (client.closed || disposed) return Promise.reject(cancelled());
@@ -36,7 +36,7 @@ export function createEngineCoordinator({ createEngine = () => new LocalEngine()
             emit({ status: 'loading', message: 'Loading the shared local Stockfish engine…' });
             try { await engine.ready; } catch (error) { engine?.dispose(); engine = null; throw error; }
             if (next.cancelled || disposed) throw cancelled();
-            emit({ status: 'running', message: role === 'position' ? 'Live position analysis' : role === 'review' ? 'Game review' : 'Batch review' });
+            emit({ status: 'running', message: role === 'position' ? 'Live position analysis' : role === 'variation' ? 'Live variation move review' : role === 'review' ? 'Game review' : 'Batch review' });
             next.ready.resolve(engine);
             await next.released.promise;
           });

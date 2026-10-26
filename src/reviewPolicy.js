@@ -1,15 +1,30 @@
 // Phase 4: game-review policy is independent of the position-engine depth.
 // Balanced preserves the existing 16 / 1100 / 1400 ms review behavior. Budgets
 // are limits/targets, never claims that the worker actually reached that depth.
-export const REVIEW_POLICY_VERSION = 'linea-review-policy-2';
-export const REVIEW_CLASSIFIER_VERSION = 'linea-classifier-2';
+// policy-3 (22 Oct 2026, reliability audit): every review search clears the
+// transposition table first (isolation); a recheck whose unrestricted first
+// choice is the played move reuses that search instead of a noisy duplicate;
+// Great/Miss gaps come from one completed MultiPV iteration. Old reports keep
+// their recorded policy and fail checkpoint validation, so they are never mixed.
+export const REVIEW_POLICY_VERSION = 'linea-review-policy-3';
+// classifier-3 (22 Oct 2026, reliability audit): Miss after an opponent error
+// requires a real opportunity (mover chance >= 65 before the move), and Book uses
+// linea-book-2 documented-line positions. Numeric accuracy is unaffected.
+export const REVIEW_CLASSIFIER_VERSION = 'linea-classifier-3';
 export const REVIEW_ACCURACY_VERSION = 'linea-accuracy-2';
 export const REVIEW_POLICIES = Object.freeze({
-  quick: Object.freeze({ id: 'quick', label: 'Quick', version: REVIEW_POLICY_VERSION, targetDepth: 12, positionMs: 450, sacrificeMs: 600, description: 'Shorter searches; more depth-limited judgments.' }),
-  balanced: Object.freeze({ id: 'balanced', label: 'Balanced', version: REVIEW_POLICY_VERSION, targetDepth: 16, positionMs: 1100, sacrificeMs: 1400, description: 'The existing default review budget.' }),
-  deeper: Object.freeze({ id: 'deeper', label: 'Deeper', version: REVIEW_POLICY_VERSION, targetDepth: 20, positionMs: 3000, sacrificeMs: 4000, description: 'More time per position; still not a guaranteed depth or verdict.' }),
+  quick: Object.freeze({ id: 'quick', label: 'Quick', version: REVIEW_POLICY_VERSION, targetDepth: 12, positionMs: 450, sacrificeMs: 600, freshHash: true, description: 'Shorter searches; more depth-limited judgments.' }),
+  balanced: Object.freeze({ id: 'balanced', label: 'Balanced', version: REVIEW_POLICY_VERSION, targetDepth: 16, positionMs: 1100, sacrificeMs: 1400, freshHash: true, description: 'The existing default review budget.' }),
+  deeper: Object.freeze({ id: 'deeper', label: 'Deeper', version: REVIEW_POLICY_VERSION, targetDepth: 20, positionMs: 3000, sacrificeMs: 4000, freshHash: true, description: 'More time per position; still not a guaranteed depth or verdict.' }),
 });
 export const DEFAULT_REVIEW_QUALITY = 'balanced';
+// Same-root search noise tolerance, in chance points. Measured (22 Oct 2026) on
+// the shipped Stockfish 19.0.1 lite-single build: unrestricted vs `searchmoves`
+// of the SAME move, same root/history, fresh table, depth 18, 60 roots from the
+// diagnostic set: median 0.71, p80 1.47, p90 2.28, p95 3.22, max 5.83. A
+// disagreement no larger than ~p95 is not evidence of a real contradiction. This
+// is a search-reliability constant; it was not fitted to any provider score.
+export const SAME_ROOT_NOISE_TOLERANCE = 3;
 
 export function reviewGamePayload(game) {
   // Deliberately excludes the session id: reimporting the same original game

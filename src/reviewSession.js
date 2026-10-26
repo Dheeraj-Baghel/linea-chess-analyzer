@@ -1,10 +1,9 @@
 import { Chess } from 'chess.js';
 import { LocalEngine } from './engine.js';
 import { ENGINE_BUILD } from './engineBuild.js';
-import { classify, uciMove } from './chess.js';
-import { sacrificeCandidate, withBrilliance } from './review.js';
-import { DEFAULT_REVIEW_QUALITY, REVIEW_ACCURACY_VERSION, REVIEW_CLASSIFIER_VERSION, REVIEW_POLICIES, reviewGamePayload, reviewGameSignature, reviewTerminalEvaluation, ruleDrawClaims } from './reviewPolicy.js';
-import { chanceLoss, whiteWinPercent } from './accuracy.js';
+import { uciMove } from './chess.js';
+import { DEFAULT_REVIEW_QUALITY, REVIEW_ACCURACY_VERSION, REVIEW_CLASSIFIER_VERSION, REVIEW_POLICIES, reviewGamePayload, reviewGameSignature } from './reviewPolicy.js';
+import { evaluateReviewPosition, verifyReviewMove, scoreReviewMove } from './moveReview.js';
 import { bookMoveEvidence } from './reviewBook.js';
 import { validateReviewCheckpoint } from './reviewCheckpoint.js';
 
@@ -72,17 +71,8 @@ export function createReviewSession({
         assertActive();
         const cached = kind === 'position' ? state.positions[ply] : state.acceptances[ply];
         if (cached) return cached;
-        let evaluation = reviewTerminalEvaluation(board);
-        const budgetMs = kind === 'position' ? policy.positionMs : policy.sacrificeMs;
-        if (!evaluation) {
-          const began = elapsedTime();
-          const result = await worker.analyze({ fen: board.fen(), position, depth: policy.targetDepth, ms: budgetMs, multiPv: 1, signal: job.controller.signal });
-          assertActive();
-          const line = result?.lines?.[0];
-          if (!line || !Number.isFinite(line.cp) || !Number.isInteger(line.depth) || line.depth < 1) throw new Error('The engine did not return a scored review depth. Resume or rerun the review.');
-          evaluation = { ...line, pv: [...(line.pv || [])], source: 'engine', kind: 'search', exact: false, nodes: result.nodes ?? null, nps: result.nps ?? null, bestMove: result.bestMove ?? null, targetDepth: policy.targetDepth, budgetMs, elapsedMs: Math.max(0, Math.round(elapsedTime() - began)) };
-        }
-        evaluation = { ...evaluation, generationId, ply, phase: kind, fen: board.fen(), claims: ruleDrawClaims(board), legalMovesCount: board.moves().length, evaluatedAt: timestamp() };
+        const evaluated = await evaluateReviewPosition({ board, position, worker, policy, kind, signal: job.controller.signal, assertActive, timestamp, elapsedTime });
+        const evaluation = { ...evaluated, generationId, ply, phase: kind };
         assertActive();
         if (kind === 'position') emit({ positions: { ...state.positions, [ply]: evaluation }, generation: updateGeneration({}) });
         else emit({ acceptances: { ...state.acceptances, [ply]: evaluation }, generation: updateGeneration({}) });
@@ -91,34 +81,9 @@ export function createReviewSession({
       const positionAt = ply => `position fen ${game.initialFen}${ply ? ` moves ${game.moves.slice(0, ply).map(move => move.uci).join(' ')}` : ''}`;
       const recheck = async (ply, move, before, after) => {
         if (state.rechecks[ply]) return state.rechecks[ply];
-        const initialLoss = chanceLoss(before, after, move.color), sign = move.color === 'w' ? 1 : -1;
-        const swing = Math.abs(whiteWinPercent(before) - whiteWinPercent(after));
-        const missedMate = before.mate * sign > 0 && !(after.mate * sign > 0);
-        const boundary = [3, 7, 15].some(value => Math.abs(initialLoss - value) <= 0.35);
-        const needed = !after.exact && before.legalMovesCount > 1 && (initialLoss > 7 || swing > 12 || missedMate || before.pv?.[0] === move.uci && initialLoss > 1 || boundary);
-        if (!needed) return null;
-        emit({ stage: `Verifying disputed move ${ply} of ${game.moves.length}…` });
-        const depth = Math.min(24, policy.targetDepth + 2), ms = policy.positionMs * 2;
-        const search = async (searchMoves, multiPv) => {
-          const began = elapsedTime();
-          const result = await worker.analyze({ fen: move.before, position: positionAt(ply - 1), depth, ms, multiPv, searchMoves, signal: job.controller.signal }); assertActive();
-          const line = result?.lines?.[0];
-          const legal = new Set(new Chess(move.before).moves({ verbose: true }).map(raw => raw.from + raw.to + (raw.promotion || '')));
-          if (!line || !Number.isFinite(line.cp) || !Number.isInteger(line.depth) || line.depth < 1 || !legal.has(line.pv?.[0]) || searchMoves.length && line.pv?.[0] !== move.uci) throw new Error('The engine did not return valid restricted-search evidence. Resume or rerun the review.');
-          return { ...line, pv: [...line.pv], source: 'engine', exact: false, kind: searchMoves.length ? 'restricted-root' : 'root-candidates', multiPv, nodes: result.nodes ?? null, nps: result.nps ?? null, targetDepth: depth, budgetMs: ms, elapsedMs: Math.max(0, Math.round(elapsedTime() - began)), fen: move.before, position: positionAt(ply - 1), searchMoves, evaluatedAt: timestamp(), lines: result.lines };
-        };
-        // Same historical root, same MultiPV=1, same limits. Optional MultiPV=2
-        // evidence informs special labels only, never numeric accuracy.
-        const best = await search([], 1), played = await search([move.uci], 1); assertActive();
-        const refinedLoss = chanceLoss(best, played, move.color);
-        const improvement = (whiteWinPercent(played) - whiteWinPercent(best)) * sign;
-        const provisional = best.depth < 12 || played.depth < 12 || improvement > 1 || best.pv[0] === move.uci && refinedLoss > 1;
-        const previous = state.records[ply - 1];
-        const candidates = !provisional && (best.pv[0] === move.uci && refinedLoss <= 1 || previous && ['mistake', 'blunder', 'miss'].includes(previous.type) && refinedLoss > 7) ? await search([], 2) : null;
-        const second = candidates?.lines.find(line => line.rank === 2 && line.depth === candidates.depth && line.depth >= 12);
-        const gapUsable = second && candidates.pv[0] === best.pv[0] && Math.abs(whiteWinPercent(candidates) - whiteWinPercent(best)) <= 1;
-        const evidence = { best, played, candidates, initialLoss, refinedLoss, provisional, status: provisional ? 'unresolved' : 'verified', pvGap: gapUsable ? chanceLoss(candidates, second, move.color) : null };
-        emit({ rechecks: { ...state.rechecks, [ply]: evidence } });
+        const evidence = await verifyReviewMove({ move, before, after, previous: state.records[ply - 1], position: positionAt(ply - 1), worker, policy, signal: job.controller.signal, assertActive, timestamp, elapsedTime, onVerify: () => emit({ stage: `Verifying disputed move ${ply} of ${game.moves.length}…` }) });
+        assertActive();
+        if (evidence) emit({ rechecks: { ...state.rechecks, [ply]: evidence } });
         return evidence;
       };
       let before = await evaluate(chess, state.done, 'position', positionAt(state.done));
@@ -129,30 +94,21 @@ export function createReviewSession({
         chess.move(uciMove(move.uci));
         const after = await evaluate(chess, ply, 'position', positionAt(ply)); assertActive();
         const verification = await recheck(ply, move, before, after); assertActive();
-        const previous = state.records[ply - 1];
-        const base = classify(before, after, move, { legalMovesCount: before.legalMovesCount, isBookMove: book.plies.has(ply), bookSource: book.source, provisional: Boolean(verification?.provisional) || !before.exact && before.depth < 12 || !after.exact && after.depth < 12, recheck: verification, pvGap: verification?.pvGap ?? null, opponentError: Boolean(previous && ['mistake', 'blunder', 'miss'].includes(previous.type)), ...(verification ? { comparisonBefore: verification.best, comparisonAfter: verification.played } : {}) });
-        if (!base) throw new Error('The engine did not return a scored review. Resume the review.');
-        const candidate = sacrificeCandidate(move, base);
-        let accepted = null;
-        if (candidate) {
+        const scored = await scoreReviewMove({ move, before, after, previous: state.records[ply - 1], verification, book, ply, evaluateAcceptance: async candidate => {
           emit({ stage: `Checking a possible brilliant sacrifice at ${move.number}${move.color === 'w' ? '.' : '…'} ${move.san}…` });
           const capture = new Chess(game.initialFen);
           for (const original of game.moves.slice(0, ply)) capture.move(uciMove(original.uci));
           capture.move(uciMove(candidate.acceptance));
-          accepted = await evaluate(capture, ply, 'sacrifice', `${positionAt(ply)} ${candidate.acceptance}`);
-        }
+          return evaluate(capture, ply, 'sacrifice', `${positionAt(ply)} ${candidate.acceptance}`);
+        } });
         assertActive();
-        const scored = withBrilliance(base, candidate, accepted, move);
         const provenance = Object.freeze({
           generationId, gameId: game.id, gameSignature: state.generation.game.signature,
           engine: state.generation.engine, policy: state.generation.policy,
           classifierVersion: REVIEW_CLASSIFIER_VERSION, accuracyVersion: REVIEW_ACCURACY_VERSION,
           reviewedAt: timestamp(), ply, color: move.color, uci: move.uci, san: move.san,
         });
-        const record = { ...scored, provenance, sacrificeCheck: {
-          status: candidate ? scored.brilliance?.verified ? 'verified' : 'not-verified' : Math.min(before.depth, after.depth) < 12 ? 'below-minimum-mainline-depth' : 'not-a-candidate',
-          minimumDepth: 12, candidate, evaluation: accepted,
-        } };
+        const record = { ...scored, provenance };
         emit({ records: { ...state.records, [ply]: record }, done: ply, generation: updateGeneration({ status: 'running', coverage: { reviewed: ply, total: game.moves.length, unreviewed: game.moves.length - ply, complete: ply === game.moves.length } }) });
         before = after;
       }

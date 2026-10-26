@@ -1,26 +1,28 @@
 import { useEffect, useId, useMemo, useRef, useState } from 'react';
-import { PIECE_NAMES, UNICODE, FEEDBACK, scoreText, advantage } from './chess';
+import { PIECE_NAMES, FEEDBACK, scoreText, advantage } from './chess';
 import MoveIcon from './MoveIcon';
 
-export function Piece({ piece, style = 'classic', className = '' }) {
+// Linea renders every board/piece surface with the cburnett SVG set (user request,
+// 22 Oct 2026). The old Unicode "figurine" style was removed; `style` is ignored.
+export function Piece({ piece, className = '' }) {
   if (!piece) return null;
-  return style === 'figurine'
-    ? <span aria-hidden="true" className={`figurine ${piece.color === 'w' ? 'white-piece' : 'black-piece'} ${className}`}>{UNICODE[`b${piece.type}`]}</span>
-    : <img aria-hidden="true" alt="" draggable="false" className={`piece-image ${className}`} src={`/pieces/cburnett/${piece.color}${piece.type}.svg`} />;
+  return <img aria-hidden="true" alt="" draggable="false" className={`piece-image ${className}`} src={`/pieces/cburnett/${piece.color}${piece.type}.svg`} />;
 }
 
-function Arrow({ from, to, color, engine, index, point, id }) {
+function Arrow({ from, to, color, engine, best, illustrative, recommendation, explanationKind, label, index, point, id }) {
   const a = point(from), b = point(to);
   if (!a || !b || from === to) return null;
   const length = Math.hypot(b.x - a.x, b.y - a.y);
   const dx = (b.x - a.x) / length, dy = (b.y - a.y) / length;
   const marker = `${id}-${index}`;
-  return <g className={engine ? 'engine-arrow' : 'manual-arrow'}>
+  return <g data-explanation-kind={explanationKind} data-next-move-recommendation={recommendation || undefined} data-arrow-from={from} data-arrow-to={to} className={illustrative ? 'illustration-arrow' : engine ? `engine-arrow ${best ? 'best-move-arrow' : ''}` : 'manual-arrow'}>
+    {(illustrative || recommendation) && <title>{label || 'Next move in the illustrative engine line'}</title>}
     <defs><marker id={marker} markerWidth={engine ? 5.5 : 4.8} markerHeight={engine ? 5.5 : 4.8} refX="9" refY="5" orient="auto" markerUnits="strokeWidth" viewBox="0 0 12 10">
       {engine ? <path d="M1 1 L8 5 L1 9" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /> : <path d="M0 0 L10 5 L0 10 Z" fill={color} />}
     </marker></defs>
     <line x1={a.x + dx * 14} y1={a.y + dy * 14} x2={b.x - dx * (engine ? 21 : 27)} y2={b.y - dy * (engine ? 21 : 27)} stroke={color} strokeWidth={engine ? 7 : 12} strokeLinecap="round" strokeDasharray={engine ? '15 12' : undefined} markerEnd={`url(#${marker})`} opacity={engine ? .93 : .76} />
-    {engine && <g transform={`translate(${a.x + (b.x - a.x) * .48},${a.y + (b.y - a.y) * .48})`}><circle r="16" fill={color} stroke="var(--engine-arrow-label)" strokeWidth="2" /><text textAnchor="middle" dominantBaseline="central" fill="var(--engine-arrow-label)" fontSize="19" fontWeight="700">{index + 1}</text></g>}
+    {engine && !best && !illustrative && <g transform={`translate(${a.x + (b.x - a.x) * .48},${a.y + (b.y - a.y) * .48})`}><circle r="16" fill={color} stroke="var(--engine-arrow-label)" strokeWidth="2" /><text textAnchor="middle" dominantBaseline="central" fill="var(--engine-arrow-label)" fontSize="19" fontWeight="700">{index + 1}</text></g>}
+    {engine && best && <g className="best-move-label" transform={`translate(${a.x + (b.x - a.x) * .46},${a.y + (b.y - a.y) * .46})`}><circle r="20" fill={color} stroke="white" strokeWidth="3" /><text textAnchor="middle" dominantBaseline="central" fill="white" fontSize="17" fontWeight="800">★</text></g>}
   </g>;
 }
 
@@ -33,7 +35,7 @@ export function EvaluationBar({ line, flipped, thinking }) {
   </div>;
 }
 
-export default function Board({ chess, flipped, settings, lastMove, feedback, annotations, onAnnotate, mode, tool, ink, engineArrows, onMove, announce, resetKey, onInteraction }) {
+export default function Board({ chess, flipped, settings, lastMove, feedback, annotations, explanationMarks = [], onAnnotate, mode, tool, ink, engineArrows, onMove, announce, resetKey, onInteraction }) {
   const root = useRef(null), gesture = useRef(null);
   const [selected, setSelected] = useState(null), [drag, setDrag] = useState(null), [preview, setPreview] = useState(null);
   const [arrowStart, setArrowStart] = useState(null), [keyboardSquare, setKeyboardSquare] = useState('e4');
@@ -136,7 +138,7 @@ export default function Board({ chess, flipped, settings, lastMove, feedback, an
     }
   };
   const engineColors = ['var(--engine-arrow-1)', 'var(--engine-arrow-2)', 'var(--engine-arrow-3)'];
-  const allArrows = [...engineArrows.map((arrow, index) => ({ ...arrow, color: engineColors[index], engine: true, index })), ...annotations.filter(a => a.type === 'arrow').map((a, index) => ({ ...a, index: index + 10 })), ...(preview && preview.from !== preview.to ? [{ ...preview, index: 900 }] : [])];
+  const allArrows = [...engineArrows.map((arrow, index) => ({ ...arrow, color: arrow.explanationKind === 'played' ? 'var(--action)' : arrow.explanationKind === 'alternative' ? 'var(--annotation-blue)' : arrow.best ? 'var(--success)' : engineColors[index], engine: true, index })), ...annotations.filter(a => a.type === 'arrow').map((a, index) => ({ ...a, index: index + 10 })), ...(preview && preview.from !== preview.to ? [{ ...preview, index: 900 }] : [])];
   // Moved piece glides from its origin square (offset in square widths); badge pops after it lands.
   const slide = settings.animation && lastMove && !drag ? { '--slide-x': `${(files.indexOf(lastMove.from[0]) - files.indexOf(lastMove.to[0])) * 100 / .88}%`, '--slide-y': `${(ranks.indexOf(lastMove.from[1]) - ranks.indexOf(lastMove.to[1])) * 100 / .88}%` } : null;
   return <div ref={root} className={`chessboard theme-${settings.theme} ${mode !== 'move' ? 'is-annotating' : ''} ${settings.animation ? 'animate-pieces' : ''}`} role="grid" aria-label={`Chessboard. ${chess.turn() === 'w' ? 'White' : 'Black'} to move. Alt plus arrow keys moves between squares; Enter selects. Left and right navigate the game.`} onContextMenu={event => event.preventDefault()} onPointerDown={pointerDown} onPointerMove={pointerMove} onPointerUp={pointerUp} onPointerCancel={() => { gesture.current = null; setDrag(null); setPreview(null); }}>
@@ -148,6 +150,7 @@ export default function Board({ chess, flipped, settings, lastMove, feedback, an
         const marks = annotations.filter(a => a.type === 'square' && a.to === square);
         return <button key={square} type="button" role="gridcell" data-square={square} tabIndex={keyboardSquare === square ? 0 : -1} aria-selected={selected === square} aria-label={`${square}, ${piece ? `${piece.color === 'w' ? 'White' : 'Black'} ${PIECE_NAMES[piece.type]}` : 'empty'}${destination ? capture ? ', legal capture' : ', legal destination' : ''}${square === checkedKing ? ', in check' : ''}${settings.coordinates && col === 0 ? `, rank ${rank}` : ''}${settings.coordinates && row === 7 ? `, file ${file}` : ''}${isLast ? ', last move' : ''}${marks.length ? ', manually highlighted' : ''}${settings.moveBadges && feedback && lastMove?.to === square ? `, ${FEEDBACK[feedback.type].label} move` : ''}`} style={isLast && settings.moveBadges && feedback ? { '--move-tint': FEEDBACK[feedback.type].color } : undefined} className={`square ${(file.charCodeAt(0) - 97 + Number(rank)) % 2 === 0 ? 'light' : 'dark'} ${isLast ? 'last-move' : ''} ${isLast && settings.moveBadges && feedback ? 'move-tinted' : ''} ${selected === square ? 'selected' : ''} ${square === checkedKing ? 'in-check' : ''} ${arrowStart === square ? 'arrow-origin' : ''}`} onKeyDown={event => keyboard(event, square)}>
           {marks.map((mark, i) => <span key={i} className="square-mark" style={{ background: mark.color }} />)}
+          {explanationMarks.some(mark => mark.square === square) && <span className="explanation-square" data-explanation-square={square} title={explanationMarks.find(mark => mark.square === square).label} aria-hidden="true" />}
           {settings.coordinates && col === 0 && <span className="coordinate rank-label" aria-hidden="true" data-label={rank} />}
           {settings.coordinates && row === 7 && <span className="coordinate file-label" aria-hidden="true" data-label={file} />}
           {piece && <span key={lastMove?.to === square ? `moved-${lastMove.from}-${lastMove.to}-${lastMove.san}` : 'piece'} className={`piece-wrap ${drag?.from === square ? 'drag-origin' : ''} ${slide && lastMove?.to === square ? 'piece-slide' : ''}`} style={slide && lastMove?.to === square ? slide : undefined}><Piece piece={piece} style={settings.pieces} /></span>}

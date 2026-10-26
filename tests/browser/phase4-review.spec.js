@@ -2,7 +2,7 @@ import { test, expect } from './fixtures.js';
 import fs from 'node:fs/promises';
 import AxeBuilder from '@axe-core/playwright';
 import { REVIEW_POLICIES } from '../../src/reviewPolicy.js';
-import { clickMove, counter, importText, matePgn, originalPgn, shortPgn, square, start, advancedReview, guidedReview } from './helpers.js';
+import { clickMove, counter, importText, matePgn, originalPgn, shortPgn, square, start, advancedReview, guidedReview, tool } from './helpers.js';
 
 // Accuracy v2 intentionally changes scoring version and adds bounded rechecks.
 // Keep earlier Phase 4 delivery evidence separate from this regression rerun.
@@ -183,7 +183,7 @@ test('F04 partial counts, full totals and provenance remain accessible across re
 
 test('F03 rerun preserves original PGN, board branch and manual marks; replacement clears review provenance', async ({ page }) => {
   await start(page); await importText(page, matePgn); await clickMove(page, 'd2', 'd4');
-  await page.getByRole('button', { name: 'Rose annotation color', exact: true }).click(); await square(page, 'c4').click();
+  await (await tool(page, 'Rose annotation color')).click(); await square(page, 'c4').click();
   await expect(page.getByRole('button', { name: 'Reviewed', exact: true })).toBeVisible({ timeout: 30000 });
   await showReport(page); const oldGeneration = await provenance(page).getAttribute('data-generation-id'); await page.getByRole('combobox', { name: 'Game review quality', exact: true }).selectOption('quick');
   await page.getByRole('button', { name: 'Rerun game review', exact: true }).click(); await expect(page.getByRole('button', { name: 'Reviewed', exact: true })).toBeVisible({ timeout: 30000 });

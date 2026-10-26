@@ -1,6 +1,57 @@
 # Linea verification
 
-## Current status — product evolution foundation verified
+## Explanation relevance and supporting visuals - 25 October 2026
+
+Lint/build, **411 unit tests and 19 production Chromium workflows pass**. Eighteen
+new relevance/visual units and two native browser workflows verify that factual
+benefits are not quality proofs, later/equal exchanges do not explain inaccuracies,
+same-root immediate consequences support comparisons, and played/alternative/reply
+arrows have the correct legal roots. Existing state/search/branch regressions pass.
+Four explanation/comparison axe surfaces report zero detected A/AA violations.
+
+Final source guard is unchanged with no execution gaps, failures, retries or skips:
+`eaea5aca2e4428285835a54563163c22aa5a8f7cd5bab808949b769726d033b4`.
+Scoring/engine/review policy sources match the starting checkout byte-for-byte.
+No additional rewrite/playback searches, API, language AI or deployment. See the
+[report and examples](artifacts/testing/explanation-relevance/REPORT.md). Other
+browsers, physical devices and human usefulness/accessibility remain unverified.
+
+## Local rule-based move explanations - 24 October 2026 UTC
+
+**393 unit tests and 17/17 production Chromium workflows pass**, including eight
+new native-engine explanation/illustration workflows and nine existing branch
+regressions. Lint, dataset validation and build pass. Three explanation-specific
+axe scans report zero detected WCAG A/AA violations; screenshots were inspected.
+Source identity stayed unchanged during the final production run:
+`c36d7b52be20e984f1efc03de9cd3d03d8e3a0dfe8e7613cac0648b5d10778b2`.
+No final failures/skips/flakes/retries or host execution gaps.
+
+The tests verify accepted-root/generation handling, legal reply/recapture support,
+automatic concrete reasons, Show why without new searches, exact return, original
+PGN/accuracy/classification/evidence/annotation preservation, branch transition,
+reload, mobile controls and an uninterrupted running foreground review. Core
+scoring/review-policy/engine sources are byte-identical to the task baseline.
+The [report](artifacts/testing/move-explanations/REPORT.md) documents supported
+facts, limits, runtime cost, examples and intermediate failures. No language AI,
+API, dependency upgrade or deployment. Safari/Firefox, physical devices and human
+accessibility remain manual; this is not every historical release suite rerun.
+
+## Live branch move review - 24 October 2026
+
+Automatic alternate-move classification, board/phone feedback, cancellation-safe
+branch evidence and original-review pause/return/resume are implemented.
+Original PGN, accuracy and completed evidence are kept separate. Lint, opening
+data validation, build and **352 unit tests** passed. **9/9 production Chromium
+branch workflows** passed with unchanged source identity and no execution gaps,
+failures, retries, skips or flakes. Three scoped axe scans report zero violations.
+
+See the [branch-review report](artifacts/testing/branch-review/REPORT.md) for the
+native engine/IndexedDB evidence, screenshots, intermediate failures and concurrent
+edit handling. This is a targeted gate, not a rerun of every historical suite;
+Safari/Firefox, physical devices and human accessibility review remain manual.
+No deployment or changes to other applications were performed for this task.
+
+## Earlier status — product evolution foundation verified
 
 **20 October 2026.** Phases 0/1 of the new redesign plan are complete: baseline
 checkpoint, native IndexedDB library/checkpoints/drafts, route restoration,

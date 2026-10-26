@@ -1,7 +1,7 @@
 import { test, expect } from './fixtures.js';
 import fs from 'node:fs/promises';
 import AxeBuilder from '@axe-core/playwright';
-import { clickMove, counter, currentFen, importText, matePgn, originalPgn, shortPgn, square, start, advancedReview, guidedReview, resumeEngine } from './helpers.js';
+import { clickMove, counter, currentFen, importText, matePgn, originalPgn, shortPgn, square, start, advancedReview, guidedReview, resumeEngine, tool } from './helpers.js';
 
 // Earlier rail/four-column presentation was intentionally superseded. Preserve
 // legality, worker/provenance ownership and draft regressions in the new product.
@@ -28,7 +28,7 @@ test('two columns retain square board, player rows and usable transport at deskt
 
 test('advanced toggles and breakpoints retain branch, marks, focus player and shared engine', async ({ page }) => {
   const workers = await workerTrace(page); await start(page); await importText(page, shortPgn); await resumeEngine(page);
-  await clickMove(page, 'd2', 'd4'); await page.getByRole('button', { name: 'Rose annotation color', exact: true }).click(); await square(page, 'c4').click();
+  await clickMove(page, 'd2', 'd4'); await (await tool(page, 'Rose annotation color')).click(); await square(page, 'c4').click();
   await expect(page.locator('.engine-status')).toHaveText('Search complete', { timeout: 30000 });
   const fen = await currentFen(page), beforeWorkers = workers.length;
   await page.getByRole('combobox', { name: 'Choose player for personalized coaching', exact: true }).selectOption('b');
@@ -59,7 +59,7 @@ test('guided graph and notation synchronize board without resetting focus or rev
 });
 
 test('Go to start and confirmed New analysis preserve saved games and clear only current branch and marks', async ({ page }) => {
-  await start(page); await importText(page, shortPgn); await clickMove(page, 'd2', 'd4'); await page.getByRole('button', { name: 'Rose annotation color', exact: true }).click(); await square(page, 'e4').click();
+  await start(page); await importText(page, shortPgn); await clickMove(page, 'd2', 'd4'); await (await tool(page, 'Rose annotation color')).click(); await square(page, 'e4').click();
   await page.getByRole('button', { name: 'Go to start', exact: true }).click(); await expect(counter(page)).toHaveText('0'); await expect(page.locator('.variation-banner')).toBeVisible(); await page.getByRole('button', { name: 'Next move (Right arrow)', exact: true }).click(); await expect(square(page, 'e4').locator('.square-mark')).toHaveCount(1);
   await page.getByRole('button', { name: 'New analysis', exact: true }).click(); await page.getByRole('button', { name: 'Keep current analysis', exact: true }).click(); await expect(counter(page)).toHaveText('1');
   await page.getByRole('button', { name: 'New analysis', exact: true }).click(); await page.getByRole('button', { name: 'Create new analysis', exact: true }).click(); await expect(counter(page)).toHaveText('0'); await expect(page.locator('.move-entry, .variation-banner, .square-mark')).toHaveCount(0); await expect(page.locator('.review-panel')).toContainText('Position analysis');

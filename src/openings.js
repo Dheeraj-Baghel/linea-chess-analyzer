@@ -9,8 +9,10 @@ const text = value => typeof value === 'string' && value.trim().length <= 180 &&
 export function suppliedOpening(game) {
   const name = text(game.headers?.Opening), variation = text(game.headers?.Variation);
   const eco = /^[A-E]\d{2}$/i.test(game.headers?.ECO?.trim() || '') ? game.headers.ECO.trim().toUpperCase() : null;
-  if (!name && !eco) return null;
-  return { name: name || 'Opening name not supplied', eco, variation: name ? variation : null, source: 'pgn', sourceLabel: 'Supplied PGN metadata', matchedPly: null };
+  // An ECO code without a name is incomplete metadata. Let the local position
+  // index resolve the real family/name instead of displaying a placeholder.
+  if (!name) return null;
+  return { name, eco, variation, source: 'pgn', sourceLabel: 'Supplied PGN metadata', matchedPly: null };
 }
 export function canDetectOpening(game) {
   return game.moves.length > 0 && game.initialFen === DEFAULT_POSITION && !game.headers?.FEN && game.headers?.SetUp !== '1';
@@ -32,8 +34,11 @@ export function detectOpening(game, index) {
     if (!candidates?.length) continue;
     const sequence = uci.slice(0, ply).join(' ');
     const ranked = [...candidates].sort((a, b) => Number(b[2] === sequence) - Number(a[2] === sequence) || b[3] - a[3] || `${a[0]}\0${a[1]}\0${a[2]}`.localeCompare(`${b[0]}\0${b[1]}\0${b[2]}`, 'en'));
-    const [eco, name, line] = ranked[0];
-    return { name, eco, variation: null, source: 'local', sourceLabel: 'Detected locally · CC0 opening data', matchedPly: ply, transposed: line !== sequence, datasetRevision: index.revision };
+    const [eco, fullName, line] = ranked[0];
+    const split = fullName.indexOf(':');
+    const name = split < 0 ? fullName : fullName.slice(0, split).trim();
+    const variation = split < 0 ? null : fullName.slice(split + 1).trim() || null;
+    return { name, eco, variation, source: 'local', sourceLabel: 'Detected locally · CC0 opening data', matchedPly: ply, transposed: line !== sequence, datasetRevision: index.revision };
   }
   return unavailable('No mapped recorded opening');
 }

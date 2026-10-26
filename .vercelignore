@@ -1,0 +1,34 @@
+# Only Linea build inputs and its restricted API are uploaded to Vercel.
+# Exclude local screenshots, game archives, fixtures, credentials and other apps.
+/*
+!package.json
+!package-lock.json
+!index.html
+!vite.config.js
+!vitest.config.js
+!eslint.config.js
+!vercel.json
+!src/
+!public/
+!server/
+!api/
+!scripts/
+!tests/
+!vendor/
+!THIRD_PARTY.md
+!asset-manifest.json
+
+artifacts/
+dist/
+node_modules/
+.git/
+.vercel/
+.env
+.env.*
+**/.DS_Store
+.shot.mjs
+tests/browser/
+tests/product/
+tests/product-production/
+tests/fixtures/review-comparison/
+scripts/review-comparison/

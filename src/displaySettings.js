@@ -17,7 +17,7 @@ export function normalizeDisplaySettings(value) {
     if (typeof source[key] === 'boolean') result[key] = source[key];
   }
   if (BOARD_PALETTES.some(([key]) => key === source.theme)) result.theme = source.theme;
-  if (['classic', 'figurine'].includes(source.pieces)) result.pieces = source.pieces;
+  // Piece style is fixed to the cburnett set; any saved 'figurine' value normalizes to 'classic'.
   return result;
 }
 

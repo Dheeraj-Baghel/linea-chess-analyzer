@@ -29,7 +29,9 @@ export function validateReviewCheckpoint(game, snapshot, signature) {
     if (!Number.isInteger(ply) || ply < 1 || ply > snapshot.done + 1 || !move) return false;
     const legal = new Set(new Chess(move.before).moves({ verbose: true }).map(value => value.from + value.to + (value.promotion || '')));
     for (const value of [check.best, check.played, check.candidates].filter(Boolean)) if (!score(value) || value.fen !== move.before || !legal.has(value.pv[0])) return false;
-    if (check.played.searchMoves?.length !== 1 || check.played.searchMoves[0] !== move.uci || check.played.pv[0] !== move.uci) return false;
+    // A same-as-best played record reuses the unrestricted search whose first
+    // choice was the played move; otherwise it must be a restricted search.
+    if (check.played.sameAsBest ? check.best.pv[0] !== move.uci || check.played.pv[0] !== move.uci : check.played.searchMoves?.length !== 1 || check.played.searchMoves[0] !== move.uci || check.played.pv[0] !== move.uci) return false;
   }
   for (const [key, value] of Object.entries(snapshot.acceptances || {})) {
     const ply = Number(key), move = game.moves[ply - 1];

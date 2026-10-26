@@ -10,7 +10,9 @@ test.beforeEach(async () => { await fs.mkdir(output, { recursive: true }); await
 test('accuracy v2 actual Stockfish scenarios, common-root search and policy variability', async ({ page }) => {
   // Fourteen real-engine fixtures, three policies on selected disputed cases.
   // Dedicated benchmark budget; normal workflow timeouts remain unchanged.
-  test.setTimeout(180000);
+  // policy-3 (22 Oct 2026): isolated (cleared-table) searches made this fixed
+  // benchmark ~33% slower (Node harness: 150 s -> 199 s), so the budget is 300 s.
+  test.setTimeout(300000);
   await start(page);
   const historical = await fs.readFile('tests/fixtures/kasparov-topalov-1999-prefix.pgn', 'utf8');
   const sacrifice = await fs.readFile('tests/fixtures/stockfish19-drawing-sacrifice.pgn', 'utf8');
@@ -57,7 +59,7 @@ test('accuracy v2 actual Stockfish scenarios, common-root search and policy vari
       expect(record.accuracy).toBeGreaterThanOrEqual(0); expect(record.accuracy).toBeLessThanOrEqual(100);
       if (record.type === 'best') expect(record.loss).toBeLessThanOrEqual(1);
       if (record.type === 'brilliant') expect(record.sacrificeCheck.status).toBe('verified');
-      if (record.recheck) { expect(record.recheck.best.multiPv).toBe(1); expect(record.recheck.played.multiPv).toBe(1); expect(record.recheck.played.searchMoves).toEqual([record.provenance.uci]); }
+      if (record.recheck) { expect(record.recheck.best.multiPv).toBe(1); expect(record.recheck.played.multiPv).toBe(1); if (record.recheck.played.sameAsBest) expect(record.recheck.best.pv[0]).toBe(record.provenance.uci); else expect(record.recheck.played.searchMoves).toEqual([record.provenance.uci]); }
     }
     if (result.name === 'short-loss') { expect(result.state.records[3].loss).toBeGreaterThan(15); expect(result.summary.w.accuracy).toBeLessThan(result.summary.b.accuracy); }
     if (result.name === 'White-mate') expect(result.state.records[1].after).toMatchObject({ winner: 'w', mate: 0, source: 'rules' });
@@ -79,7 +81,7 @@ test('review evidence download, eleven labels, experimental Elo and mobile acces
   await expect(page.getByRole('button', { name: 'Reviewed', exact: true })).toBeVisible({ timeout: 40000 });
   await advancedReview(page);
   await expect(page.locator('.review-breakdown tbody tr')).toHaveCount(11);
-  await page.getByText('Experimental game Elo estimate', { exact: true }).click();
+  await page.getByText('Experimental game performance estimate', { exact: true }).click();
   await expect(page.locator('.experimental-game-rating')).toHaveText(/Uncalibrated.*Unavailable/);
   const download = page.waitForEvent('download'); await page.getByRole('button', { name: 'Download review evidence (JSON)' }).click();
   const file = await download; const path = await file.path(); const evidence = JSON.parse(await fs.readFile(path, 'utf8'));
@@ -100,7 +102,7 @@ test('review evidence download, eleven labels, experimental Elo and mobile acces
   await importText(page, pgn.trim());
   await expect(page.getByRole('button', { name: 'Reviewed', exact: true })).toBeVisible({ timeout: 40000 });
   await advancedReview(page);
-  await page.getByText('Experimental game Elo estimate', { exact: true }).click();
+  await page.getByText('Experimental game performance estimate', { exact: true }).click();
   await expect(page.locator('.experimental-game-rating')).toHaveText(/White: \d+.*Black: \d+/);
   await page.locator('.experimental-game-rating').scrollIntoViewIfNeeded();
   await page.screenshot({ path: `${images}/experimental-rating.png`, fullPage: true });

@@ -18,33 +18,43 @@ export const matePgn = `[Event "Checkmate regression"]
 export const square = (page, name) => page.locator(`[data-square="${name}"]`);
 export const counter = page => page.locator('.move-counter strong');
 
-export async function start(page, { pause = true } = {}) {
+// Board tests work in guided review, where the move list lives (analysis page v3).
+export async function start(page, { pause = true, guided = true } = {}) {
   await page.goto('/sample'); // Board-only tests enter the explicit illustrative study.
   await expect(page).toHaveTitle(/^Linea/);
   await expect(page.getByRole('link', { name: 'Linea chess analysis', exact: true })).toBeVisible();
   await expect(page.getByRole('gridcell')).toHaveCount(64);
   if (pause) await pauseEngine(page);
   else await resumeEngine(page); // Product rollout: live searches are deliberate.
+  if (guided) await guidedReview(page);
+}
+// Analysis page v3: engine, quality, evidence and coaching live in the Analysis tools dialog.
+export async function openTools(page) {
+  if (await page.getByRole('dialog', { name: 'Analysis tools' }).isVisible()) return page.getByRole('dialog', { name: 'Analysis tools' });
+  await page.getByRole('button', { name: 'Analysis tools', exact: true }).click();
+  return page.getByRole('dialog', { name: 'Analysis tools' });
+}
+// Board tools (annotation, copy, focus) moved into the Analysis tools dialog; open it first.
+export async function tool(page, name) {
+  const dialog = await openTools(page);
+  return dialog.getByRole('button', typeof name === 'string' ? { name, exact: true } : { name });
+}
+export async function closeTools(page) {
+  const dialog = page.getByRole('dialog', { name: 'Analysis tools' });
+  if (await dialog.isVisible()) await dialog.getByRole('button', { name: 'Close dialog', exact: true }).click();
 }
 export async function resumeEngine(page) {
-  const advanced = page.getByText('Advanced analysis & evidence', { exact: true });
-  if (await advanced.isVisible() && !(await page.getByRole('button', { name: 'Resume position analysis', exact: true }).isVisible())) await advanced.click();
-  const button = page.getByRole('button', { name: 'Resume position analysis', exact: true });
-  if (await button.isVisible()) { await button.click(); return; }
-  const drawer = page.getByRole('button', { name: 'Engine settings', exact: true });
-  if (await drawer.isVisible()) { await drawer.click(); if (await button.isVisible()) await button.click(); await page.getByRole('button', { name: 'Close dialog', exact: true }).click(); }
+  const dialog = await openTools(page), button = dialog.getByRole('button', { name: 'Resume position analysis', exact: true });
+  if (await button.isVisible()) await button.click();
+  await closeTools(page);
 }
 export async function pauseEngine(page) {
-  const button = page.getByRole('button', { name: 'Pause position analysis', exact: true });
-  if (await button.isVisible()) { await button.click(); return; }
-  const drawer = page.getByRole('button', { name: 'Engine settings', exact: true });
-  if (await drawer.isVisible()) {
-    await drawer.click();
-    if (await button.isVisible()) await button.click();
-    await page.getByRole('button', { name: 'Close dialog', exact: true }).click();
-  }
+  const dialog = await openTools(page), button = dialog.getByRole('button', { name: 'Pause position analysis', exact: true });
+  if (await button.isVisible()) await button.click();
+  await closeTools(page);
 }
-export async function importText(page, text, type = 'PGN game') {
+export async function importText(page, text, type = 'PGN game', { guided = true } = {}) {
+  await overviewReview(page);
   await page.getByRole('button', { name: 'Import game', exact: true }).click();
   const dialog = page.getByRole('dialog');
   if (type === 'FEN position') { await dialog.getByRole('button', { name: 'Game link / FEN', exact: true }).click(); }
@@ -54,15 +64,17 @@ export async function importText(page, text, type = 'PGN game') {
   await dialog.getByRole('button', { name: type === 'FEN position' ? 'Load position' : 'Load game', exact: true }).click();
   await expect(dialog).not.toBeVisible();
   await expect(counter(page)).toHaveText('0');
+  if (guided) await guidedReview(page);
 }
-export async function advancedReview(page) {
-  const summary = page.getByText('Advanced analysis & evidence', { exact: true });
-  if (await summary.isVisible() && !await page.locator('.advanced-review').evaluate(element => element.open)) await summary.click();
-}
+// Opens the Analysis tools dialog (former "Advanced analysis & evidence" disclosure).
+export async function advancedReview(page) { return openTools(page); }
 export async function guidedReview(page) {
-  const start = page.getByRole('button', { name: 'Start review', exact: true });
+  const start = page.getByRole('button', { name: 'Start Game Review', exact: true });
   if (await start.isVisible()) await start.click();
-  else if (await page.getByRole('button', { name: 'Explore partial review', exact: true }).isVisible()) await page.getByRole('button', { name: 'Explore partial review', exact: true }).click();
+}
+export async function overviewReview(page) {
+  const back = page.getByRole('button', { name: 'Back to Overview', exact: true });
+  if (await back.isVisible()) await back.click();
 }
 export async function currentFen(page) {
   await page.getByRole('button', { name: 'Export', exact: true }).click();

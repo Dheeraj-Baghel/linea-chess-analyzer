@@ -1,5 +1,5 @@
 import { test, expect } from './fixtures.js';
-import { counter, originalPgn, shortPgn, start, advancedReview } from './helpers.js';
+import { counter, originalPgn, shortPgn, start, advancedReview, closeTools } from './helpers.js';
 
 // Provider responses are fixtures; local Stockfish and review are real.
 const archiveUrl = month => `https://api.chess.com/pub/player/fixture-player/games/${month}`;
@@ -38,8 +38,8 @@ test('username archives, month/format filters and selected game import start an 
   await dialog.locator('.archive-game').click(); await expect(dialog).not.toBeVisible();
   await expect(page.locator('.sample-badge')).toHaveText('CHESS.COM'); await expect(counter(page)).toHaveText('0');
   await expect(page.locator('.accuracy-coverage')).toHaveText(/Loading review engine|Reviewing move|Full game reviewed/);
-  await advancedReview(page); await expect(page.locator('.personal-coach select')).toHaveValue('b');
-  await expect(page.locator('.accuracy-player small').last()).toHaveText(/partial|complete/, { timeout: 15000 });
+  await expect(page.locator('.ov-acc small').last()).toHaveText(/moves reviewed/, { timeout: 15000 });
+  await advancedReview(page); await expect(page.locator('.personal-coach select')).toHaveValue('b'); await closeTools(page);
   expect(await originalPgn(page)).toBe(shortPgn);
 });
 

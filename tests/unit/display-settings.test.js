@@ -15,8 +15,8 @@ describe('Phase 1 board-only display preferences', () => {
   for (const palette of ['sage', 'walnut', 'slate']) it(`migrates saved ${palette} and every existing preference without deleting v1`, () => {
     const saved = { theme: palette, pieces: 'figurine', coordinates: false, animation: false, sound: true, moveBadges: false };
     const original = JSON.stringify(saved), store = memory({ [LEGACY_DISPLAY_KEY]: original, 'other-app': 'untouched' });
-    expect(readDisplaySettings(store)).toEqual(saved);
-    expect(JSON.parse(store.getItem(DISPLAY_KEY))).toEqual(saved);
+    expect(readDisplaySettings(store)).toEqual({ ...saved, pieces: 'classic' });
+    expect(JSON.parse(store.getItem(DISPLAY_KEY))).toEqual({ ...saved, pieces: 'classic' });
     expect(store.getItem(LEGACY_DISPLAY_KEY)).toBe(original);
     expect(store.getItem('other-app')).toBe('untouched');
   });

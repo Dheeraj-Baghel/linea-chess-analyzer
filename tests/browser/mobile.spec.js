@@ -1,5 +1,5 @@
 import { test, expect, devices } from './fixtures.js';
-import { counter, importText, originalPgn, shortPgn, square, advancedReview } from './helpers.js';
+import { counter, importText, originalPgn, shortPgn, square, advancedReview, tool } from './helpers.js';
 import fs from 'node:fs/promises';
 
 test.use({ ...devices['Pixel 7'], viewport: { width: 390, height: 844 } });
@@ -31,13 +31,13 @@ test('real browser touch dragging moves pieces without creating annotations', as
 });
 
 test('touch annotation mode, two-tap arrows, highlights and eraser lock piece moves', async ({ page }) => {
-  await open(page); await page.getByRole('button', { name: /^Annotate/ }).tap();
+  await open(page); await (await tool(page, /^Annotate/)).tap();
   await touchDrag(page, 'e2', 'e4'); await expect(page.locator('.manual-arrow')).toHaveCount(1); await expect(counter(page)).toHaveText('0');
   await square(page, 'd4').tap(); await expect(square(page, 'd4').locator('.square-mark')).toHaveCount(1);
-  await page.getByRole('button', { name: 'Two-tap arrow tool: choose the start, then the destination', exact: true }).tap();
+  await (await tool(page, 'Two-tap arrow tool: choose the start, then the destination')).tap();
   await square(page, 'b1').tap(); await square(page, 'c3').tap(); await expect(page.locator('.manual-arrow')).toHaveCount(2);
-  await page.getByRole('button', { name: 'Eraser: remove annotations touching a square', exact: true }).tap(); await square(page, 'c3').tap(); await expect(page.locator('.manual-arrow')).toHaveCount(1);
-  await page.getByRole('button', { name: 'Clear annotations for this position', exact: true }).tap(); await expect(page.locator('.manual-arrow')).toHaveCount(0);
+  await (await tool(page, 'Eraser: remove annotations touching a square')).tap(); await square(page, 'c3').tap(); await expect(page.locator('.manual-arrow')).toHaveCount(1);
+  await (await tool(page, 'Clear annotations for this position')).tap(); await expect(page.locator('.manual-arrow')).toHaveCount(0);
   await expect(counter(page)).toHaveText('0'); await expect(square(page, 'e2')).toHaveAttribute('aria-label', /White pawn/);
 });
 
@@ -45,9 +45,9 @@ test('touch promotion picker and expanded navigation remain accessible', async (
   await open(page); await importText(page, '7k/P7/8/8/8/8/8/6K1 w - - 0 1', 'FEN position');
   await square(page, 'a7').tap(); await square(page, 'a8').tap(); await page.getByRole('button', { name: 'Promote to knight', exact: true }).tap();
   await expect(square(page, 'a8')).toHaveAttribute('aria-label', /White knight/);
-  await page.getByRole('button', { name: 'Expand board into focus view', exact: true }).tap(); await expect(page.locator('.navigation-bar')).toBeVisible();
+  await (await tool(page, 'Expand board into focus view')).tap(); await expect(page.locator('.navigation-bar')).toBeVisible();
   await page.getByRole('button', { name: 'First position (Home)', exact: true }).tap(); await expect(counter(page)).toHaveText('0');
-  await page.getByRole('button', { name: 'Exit expanded board view', exact: true }).tap();
+  await page.getByRole('button', { name: 'Exit focus view', exact: true }).tap();
 });
 
 test('phone review, player coaching and engine continuation navigation are functional', async ({ page }) => {

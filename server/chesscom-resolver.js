@@ -56,31 +56,41 @@ async function loadMetadata(url) {
   } finally { clearTimeout(timer); }
 }
 
+// Shared by the local Vite middleware and the hosted Vercel function.
+// The request returns its Promise so serverless execution waits for completion.
+let pending = 0;
+export function handleChessComResolve(req, res) {
+  const send = (status, data) => {
+    if (res.destroyed) return;
+    res.writeHead(status, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff' });
+    res.end(JSON.stringify(data));
+  };
+  if (req.method !== 'GET') { send(405, { error: 'Only GET is supported.' }); return; }
+  let url;
+  try { url = publicGameUrl(new URL(req.url, 'http://localhost').searchParams.get('url')); }
+  catch { send(400, { error: 'Invalid public game link.' }); return; }
+  const saved = cache.get(url);
+  if (saved && Date.now() - saved.time < 600000) { send(200, saved.data); return; }
+  // A warm serverless instance has a bounded serial queue, not an unlimited backlog.
+  if (pending >= 2) { send(429, { error: 'Link lookup busy. Please retry shortly.' }); return; }
+  pending++;
+  queue = queue.catch(() => {}).then(async () => {
+    try {
+      const existing = cache.get(url);
+      const data = existing && Date.now() - existing.time < 600000 ? existing.data : await loadMetadata(url);
+      if (cache.size > 80) cache.delete(cache.keys().next().value);
+      cache.set(url, { time: Date.now(), data }); send(200, data);
+    } catch { send(200, { usernames: [], month: null }); }
+    finally { pending--; }
+  });
+  return queue;
+}
+
 export function chessComResolver() {
   return {
     name: 'linea-public-chesscom-link-resolver',
     configureServer(server) {
-      server.middlewares.use('/api/chesscom/resolve', (req, res) => {
-        const send = (status, data) => {
-          if (res.destroyed) return;
-          res.writeHead(status, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff' });
-          res.end(JSON.stringify(data));
-        };
-        if (req.method !== 'GET') { send(405, { error: 'Only GET is supported.' }); return; }
-        let url;
-        try { url = publicGameUrl(new URL(req.url, 'http://localhost').searchParams.get('url')); }
-        catch { send(400, { error: 'Invalid public game link.' }); return; }
-        const saved = cache.get(url);
-        if (saved && Date.now() - saved.time < 600000) { send(200, saved.data); return; }
-        queue = queue.catch(() => {}).then(async () => {
-          try {
-            const existing = cache.get(url);
-            const data = existing && Date.now() - existing.time < 600000 ? existing.data : await loadMetadata(url);
-            if (cache.size > 80) cache.delete(cache.keys().next().value);
-            cache.set(url, { time: Date.now(), data }); send(200, data);
-          } catch { send(200, { usernames: [], month: null }); }
-        });
-      });
+      server.middlewares.use('/api/chesscom/resolve', handleChessComResolve);
     },
   };
 }

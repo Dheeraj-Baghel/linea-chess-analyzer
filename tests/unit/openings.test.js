@@ -15,8 +15,12 @@ describe('F02 supplied opening metadata precedence', () => {
   it('retains a supplied name without inventing an ECO and rejects invalid ECO', () => {
     expect(suppliedOpening(game('[Opening "My supplied opening"]\n[ECO "Z99"]\n\n1. d4 *'))).toMatchObject({ name: 'My supplied opening', eco: null });
   });
-  it('shows valid ECO-only headers without fabricating a name', () => {
-    expect(suppliedOpening(game('[ECO "c60"]\n\n1. e4 *'))).toMatchObject({ name: 'Opening name not supplied', eco: 'C60', source: 'pgn' });
+  // 22 Oct 2026 (user request): an ECO code without a name is incomplete
+  // metadata; the real name comes from the local position index instead of a
+  // "not supplied" placeholder. A supplied name still takes precedence.
+  it('treats ECO-only headers as incomplete and resolves the name locally', () => {
+    expect(suppliedOpening(game('[ECO "c60"]\n\n1. e4 *'))).toBeNull();
+    expect(detectOpening(game('[ECO "D00"]\n\n1. d4 d5 2. c4 e6 3. Nc3 Nf6 *'), index)).toMatchObject({ name: "Queen's Gambit Declined", variation: 'Normal Defense', eco: 'D35', source: 'local' });
   });
   it('falls back to local lookup for placeholder/unknown headers', () => {
     expect(detectOpening(game('[Opening "?"]\n[ECO "??"]\n\n1. e4 c5 *'), index)).toMatchObject({ name: 'Sicilian Defense', eco: 'B20', source: 'local' });
@@ -32,17 +36,18 @@ describe('F02 pinned offline opening lookup', () => {
     ['1. e4 c5 *', 'B20', 'Sicilian Defense', 2],
     ['1. e4 e5 2. Nf3 Nc6 3. Bb5 *', 'C60', 'Ruy Lopez', 5],
     ['1. e4 e6 *', 'C00', 'French Defense', 2],
-    ['1. d4 d5 2. c4 e6 3. Nc3 Nf6 *', 'D35', "Queen's Gambit Declined: Normal Defense", 6],
+    // Local names are split at the dataset's ":" into family + variation.
+    ['1. d4 d5 2. c4 e6 3. Nc3 Nf6 *', 'D35', "Queen's Gambit Declined", 6],
   ]) it(`detects ${eco} ${name}`, () => expect(detectOpening(game(pgn), index)).toMatchObject({ eco, name, matchedPly: ply, source: 'local' }));
   it('detects a transposition using board/turn/castling/legal-en-passant state', () => {
     const canonical = detectOpening(game('1. d4 d5 2. c4 e6 3. Nc3 Nf6 *'), index);
     const transposed = detectOpening(game('1. d4 Nf6 2. c4 e6 3. Nc3 d5 *'), index);
-    expect(transposed.eco).toBe(canonical.eco); expect(transposed.name).toBe(canonical.name); expect(transposed.transposed).toBe(true);
+    expect(transposed.eco).toBe(canonical.eco); expect(transposed.name).toBe(canonical.name); expect(transposed.variation).toBe(canonical.variation); expect(transposed.transposed).toBe(true);
   });
   it('uses the deepest recorded match and retains a mapped family after an unknown continuation', () => {
     const line = game('1. e4 e5 2. Nf3 Nc6 3. Bb5 a5 4. h3 h6 *');
     // The pinned dataset names 3...a5 the Bulgarian Variation; h3/h6 is unmapped.
-    expect(detectOpening(line, index)).toMatchObject({ eco: 'C60', name: 'Ruy Lopez: Bulgarian Variation', matchedPly: 6 });
+    expect(detectOpening(line, index)).toMatchObject({ eco: 'C60', name: 'Ruy Lopez', variation: 'Bulgarian Variation', matchedPly: 6 });
   });
   it('returns explicit unavailable for an unmapped line or missing local data', () => {
     expect(detectOpening(game('1. e4 *'), { positions: {} }).name).toBe('Opening unavailable');

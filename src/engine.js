@@ -45,17 +45,38 @@ export class LocalEngine {
     this.closed = true; this.worker.terminate();
     this.listeners.clear(); this.failures.clear();
   }
-  analyze({ fen, position, multiPv = 1, depth = 18, ms = 2500, searchMoves = [], signal, onUpdate }) {
+  // `fresh` clears Stockfish's transposition table first (ucinewgame + isready),
+  // so an evaluation depends only on its own root/history and limits, never on
+  // whichever game, position or branch the shared worker searched before.
+  // `nodes` replaces wall-clock movetime with a deterministic node budget.
+  analyze({ fen, position, multiPv = 1, depth = 18, ms = 2500, nodes: nodeLimit = null, fresh = false, searchMoves = [], signal, onUpdate }) {
     if (!Array.isArray(searchMoves) || searchMoves.some(move => !/^[a-h][1-8][a-h][1-8][qrbn]?$/.test(move))) return Promise.reject(new Error('Invalid restricted-search UCI moves.'));
+    if (nodeLimit !== null && !(Number.isInteger(nodeLimit) && nodeLimit > 0)) return Promise.reject(new Error('Invalid node budget.'));
     const task = this.queue.catch(() => {}).then(async () => {
       await this.ready;
       if (this.fatal) throw this.fatal;
       if (this.closed || signal?.aborted) throw new DOMException('Cancelled', 'AbortError');
+      if (fresh) await this.clearHash(signal);
       return new Promise((resolve, reject) => {
         const lines = new Map();
+        // Completed MultiPV iterations only. A time/node stop can interrupt an
+        // iteration after rank 1 printed depth N+1 but before rank 2 did; mixing
+        // ranks from different depths would invent a PV1-PV2 gap.
+        const iterations = new Map();
         const sign = fen.split(' ')[1] === 'w' ? 1 : -1;
         let cancelled = false, settled = false, nodes = 0, nps = 0;
-        const snapshot = () => ({ lines: [...lines.values()].sort((a, b) => a.rank - b.rank), nodes, nps });
+        const completeDepth = () => {
+          // Deepest depth at which every requested rank (bounded by legal moves,
+          // reported via the highest rank ever seen) has an exact line.
+          const ranks = Math.max(0, ...[...iterations.values()].flatMap(map => [...map.keys()]));
+          return [...iterations.keys()].sort((a, b) => b - a).find(d => iterations.get(d).size >= Math.min(multiPv, ranks)) ?? null;
+        };
+        const snapshot = () => {
+          const sorted = [...lines.values()].sort((a, b) => a.rank - b.rank);
+          const depthComplete = completeDepth();
+          const complete = depthComplete === null ? [] : [...iterations.get(depthComplete).values()].sort((a, b) => a.rank - b.rank);
+          return { lines: sorted, completeLines: complete, completeDepth: depthComplete, nodes, nps };
+        };
         const finish = (error, result) => {
           if (settled) return;
           settled = true;
@@ -88,6 +109,8 @@ export class LocalEngine {
               const cp = mate === null ? raw * sign : raw === 0 ? -sign * 100000 : (mate > 0 ? 1 : -1) * (100000 - Math.abs(mate) * 100);
               const entry = { rank, depth: Number(d[1]), cp, mate, pv: pv[1].trim().split(/\s+/) };
               if (!lines.has(rank) || lines.get(rank).depth <= entry.depth) lines.set(rank, entry);
+              if (!iterations.has(entry.depth)) iterations.set(entry.depth, new Map());
+              iterations.get(entry.depth).set(rank, entry);
               nodes = Number(line.match(/\bnodes (\d+)/)?.[1] || nodes);
               nps = Number(line.match(/\bnps (\d+)/)?.[1] || nps);
               onUpdate?.(snapshot());
@@ -107,11 +130,19 @@ export class LocalEngine {
         signal?.addEventListener('abort', abort, { once: true });
         this.send(`setoption name MultiPV value ${multiPv}`);
         this.send(position || `position fen ${fen}`);
-        this.send(`go depth ${depth} movetime ${ms}${searchMoves.length ? ` searchmoves ${searchMoves.join(' ')}` : ''}`);
+        this.send(`go depth ${depth} ${nodeLimit ? `nodes ${nodeLimit}` : `movetime ${ms}`}${searchMoves.length ? ` searchmoves ${searchMoves.join(' ')}` : ''}`);
       });
     });
     this.queue = task;
     return task;
+  }
+  clearHash(signal) {
+    return new Promise((resolve, reject) => {
+      const timer = setTimeout(() => { this.listeners.delete(listen); this.crash(new Error('Engine did not confirm a cleared search table. Retry the analysis.')); reject(this.fatal); }, 6000);
+      const listen = line => { if (line === 'readyok') { clearTimeout(timer); this.listeners.delete(listen); if (signal?.aborted) reject(new DOMException('Cancelled', 'AbortError')); else resolve(); } };
+      this.listeners.add(listen);
+      this.send('ucinewgame'); this.send('isready');
+    });
   }
   dispose() {
     if (this.closed) return;

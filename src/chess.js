@@ -1,5 +1,5 @@
 import { Chess, DEFAULT_POSITION } from 'chess.js';
-import { chanceLoss } from './accuracy.js';
+import { chanceLoss, whiteWinPercent } from './accuracy.js';
 
 // The starter study is illustrative, not a historical game or a pre-scored review.
 export const SAMPLE_PGN = `[Event "Ruy Lopez · an open-ended study"]
@@ -140,6 +140,13 @@ export function advantage(line) {
   return `${line.cp > 0 ? 'White' : 'Black'} is better`;
 }
 
+// Miss = a real, verified opportunity was available and not taken. After an
+// opponent error the mover must actually hold a clear winning chance before the
+// move (mover-perspective chance >= MISS_OPPORTUNITY). A large PV1-PV2 gap alone
+// is not an opportunity: in a drawn or lost position the gap usually measures the
+// only non-losing move, so failing to find it is an ordinary Mistake/Blunder.
+export const MISS_OPPORTUNITY = 65;
+export const CLASSIFIER_THRESHOLDS = Object.freeze({ best: 1, excellent: 1, good: 3, inaccuracy: 7, mistake: 15, greatGap: 12, missOpportunity: MISS_OPPORTUNITY });
 export function classify(before, after, move, context = {}) {
   if (!before || !after) return null;
   const comparisonBefore = context.comparisonBefore || before, comparisonAfter = context.comparisonAfter || after;
@@ -148,12 +155,14 @@ export function classify(before, after, move, context = {}) {
   const best = comparisonBefore.pv?.[0] === move.uci && loss <= 1;
   const sign = move.color === 'w' ? 1 : -1;
   const missedMate = comparisonBefore.mate * sign > 0 && !(comparisonAfter.mate * sign > 0) && loss > 3;
+  const moverChanceBefore = whiteWinPercent(comparisonBefore) === null ? null : sign > 0 ? whiteWinPercent(comparisonBefore) : 100 - whiteWinPercent(comparisonBefore);
+  const opportunity = moverChanceBefore !== null && moverChanceBefore >= MISS_OPPORTUNITY;
   let type = best ? 'best' : loss <= 1 ? 'excellent' : loss <= 3 ? 'good' : loss <= 7 ? 'inaccuracy' : loss <= 15 ? 'mistake' : 'blunder';
   if (context.legalMovesCount === 1) type = 'forced';
   else if (!context.provisional && context.isBookMove && loss <= 3) type = 'book';
   else if (!context.provisional && best && context.pvGap >= 12) type = 'great';
-  else if (!context.provisional && (missedMate || context.opponentError && context.pvGap >= 12 && loss > 7)) type = 'miss';
-  return { type, loss, before, after, alternative: comparisonBefore.pv?.[0] || null, ...context };
+  else if (!context.provisional && (missedMate || context.opponentError && opportunity && context.pvGap >= 12 && loss > 7)) type = 'miss';
+  return { type, loss, before, after, alternative: comparisonBefore.pv?.[0] || null, moverChanceBefore, ...context };
 }
 
 export function materialInfo(chess) {
